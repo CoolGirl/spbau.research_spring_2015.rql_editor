@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.parallels.com/aps/ide/rqleditor/xtext/rql/RQL" 
+       class = "com.parallels.aps.ide.rqleditor.xtext.rql.rQL.RQLPackage"
+       genModel = "model/generated/RQL.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>

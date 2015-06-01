@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.parallels.aps.ide.rqleditor.xtext.rql
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.parallels.aps.ide.rqleditor.xtext.rql; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: com.parallels.aps.ide.rqleditor.xtext.rql,
+ com.parallels.aps.ide.rqleditor.xtext.rql.services,
+ com.parallels.aps.ide.rqleditor.xtext.rql.rQL,
+ com.parallels.aps.ide.rqleditor.xtext.rql.rQL.impl,
+ com.parallels.aps.ide.rqleditor.xtext.rql.rQL.util,
+ com.parallels.aps.ide.rqleditor.xtext.rql.serializer,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.internal,
+ com.parallels.aps.ide.rqleditor.xtext.rql.validation,
+ com.parallels.aps.ide.rqleditor.xtext.rql.scoping,
+ com.parallels.aps.ide.rqleditor.xtext.rql.generator,
+ com.parallels.aps.ide.rqleditor.xtext.rql.formatting
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="com.parallels.aps.ide.rqleditor.xtext.rql.sdk"
+	label="RQL SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="com.parallels.aps.ide.rqleditor.xtext.rql"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="com.parallels.aps.ide.rqleditor.xtext.rql.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
