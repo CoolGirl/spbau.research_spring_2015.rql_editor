@@ -49,9 +49,9 @@ public class RQLEditor extends ViewPart {
 
 	public static final String ID = "rql_editor.views.RQLEditor";
 
-	private Action action1;
-	private MessageConsole outConsole;
-	private EmbeddedEditorModelAccess editor;
+	private Action action1; // info button at up right bottom
+	private MessageConsole outConsole; // the one for printing results
+	private EmbeddedEditorModelAccess editor; 
 	private ToolBarCombo controllersCmbBox;
 	
 
@@ -107,6 +107,7 @@ public class RQLEditor extends ViewPart {
 		});
 	}
 	
+	//finds needed console by name or creates the new one if it doesn't exist
 	private MessageConsole findConsole(String name) {
 	      ConsolePlugin plugin = ConsolePlugin.getDefault();
 	      IConsoleManager conMan = plugin.getConsoleManager();
@@ -130,6 +131,7 @@ public class RQLEditor extends ViewPart {
 		manager.add(controllersCmbBox);
 	}
 
+	//for info button in rql editor (right up bottom)
 	private void makeActions() {
 		action1 = new Action() {
 			public void run() {
