@@ -1,11 +1,16 @@
 package rql_editor;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
@@ -18,43 +23,71 @@ import com.parallels.aps.ide.ui.preferences.PanelSettings;
 import com.parallels.aps.ide.ui.preferences.SiteWithCredentials;
 
 public class PanelRequest {
-	// public PanelRequest() {
-	// tokens = new HashMap<>();
-	// }
+
 	static {
 		tokens = new HashMap<>();
 	}
-
+//TODO: Deal with unathorized status in map and continue testing
 	@SuppressWarnings("rawtypes")
 	public static String request(SiteWithCredentials controller, String request) {
 		if (!tokens.containsKey(controller)) {
-			tokens.put(controller, getToken(controller));
+			tokens.put(controller, getToken(controller.getAddress()));
 		}
 		String token = tokens.get(controller);
 		Object response = sendRequest(controller.getAddress() + "?" + request,
 				token);
 		if (tokenIsExpired((HashMap)response)) {
-			tokens.put(controller, getToken(controller));
+			tokens.put(controller, getToken(controller.getAddress()));
 			token = tokens.get(controller);
 			response = sendRequest(controller.getAddress(), token);
 		}
 		return (String)response;
 	}
 
-	private static String getToken(SiteWithCredentials controller) {
+	private static String getToken(String controllerAddress) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("subscription_id", 1);
+		PanelSettings settings = getPanelSettingsByControllerAddress(controllerAddress);
 		@SuppressWarnings("unchecked")
 		HashMap<String, Object> result = (HashMap<String, Object>)
-				executeRemoteMethod("pem.APS.getSubscriptionToken", new Object [] {params});
+				executeRemoteMethod("pem.APS.getSubscriptionToken", new Object [] {params}, settings);
 		return (String) result.get("aps_token");
 	}
 
+	private static PanelSettings getPanelSettingsByControllerAddress(String controllerAddress){
+		for (int i=0; i<mySettings.size(); i++){
+			if (mySettings.get(i).getPOASite().getAddress().equals(controllerAddress)){
+				return mySettings.get(i);
+			}
+		}
+		return null;
+	}
+	
 	private static String sendRequest(String controllerURL, String apsToken) {
-		return "";
+		HttpClient client = new HttpClient();
+		GetMethod getMethod = new GetMethod(controllerURL);
+		getMethod.addRequestHeader("APS-TOKEN", apsToken);
+		String response = null;
+		int statusCode = 0;
+		try {
+			statusCode = client.executeMethod(getMethod);
+		} catch (HttpException e) {
+			System.err.println(e.getLocalizedMessage());
+		} catch (IOException e) {
+			System.err.println(e.getLocalizedMessage());
+		}
+		if (statusCode == HttpStatus.SC_OK) {
+			try {
+				response = getMethod.getResponseBodyAsString();
+			} catch (IOException e) {
+				System.err.println(e.getLocalizedMessage());
+			}
+		}
+		return response;
 	}
 
 	//403 code, text about expiration
+	@SuppressWarnings("rawtypes")
 	private static boolean tokenIsExpired(Map response) {
 		String errorValue = (String) response.get("error");
 		String messageValue = (String) response.get("message");
@@ -65,13 +98,13 @@ public class PanelRequest {
 	private static HashMap<SiteWithCredentials, String> tokens;
 	static List<PanelSettings> mySettings = PanelSettings.loadSettings();
 
-	public static int provisionApplicationInstance(int subID, int appID,
+/*	public static int provisionApplicationInstance(int subID, int appID,
 			String resourceType, String endPoint, String packageVersion,
 			List<PanelSettings> settings) throws CoreException {
 		// Collect parameters
 		HashMap<String, Object> params = new HashMap<String, Object>();
 		params.put("subscription_id", subID);
-		params.put("rt_id", new Integer(0)/* resourceType */);
+		params.put("rt_id", new Integer(0) //*resource type*);
 		params.put("app_id", appID);
 		params.put("url_path", endPoint);
 		params.put("package_version", packageVersion);
@@ -91,6 +124,7 @@ public class PanelRequest {
 		int appInstanceId = (Integer) result.get("application_instance_id");
 		return appInstanceId;
 	}
+*/
 
 	@SuppressWarnings("rawtypes")
 	private static Object getResult(Object response, String responsePart,
@@ -103,15 +137,15 @@ public class PanelRequest {
 		@return <code>null</code> if error is occurred, "status"->"UNAUTHORIZED" if unauthorized, 
 		else the result of given method execution
 	*/
-	private static Map executeRemoteMethod(String method, Object[] params) {
+	private static Map executeRemoteMethod(String method, Object[] params, PanelSettings settings) {
 		String myErrorMessage = null;
 		try {
 			XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-			config.setBasicUserName(((PanelSettings) mySettings)
+			config.setBasicUserName(((PanelSettings) settings)
 					.getXMLRPCSite().getLogin());
-			config.setBasicPassword(((PanelSettings) mySettings)
+			config.setBasicPassword(((PanelSettings) settings)
 					.getXMLRPCSite().getPassword());
-			config.setServerURL(new URL(((PanelSettings) mySettings)
+			config.setServerURL(new URL(((PanelSettings) settings)
 					.getXMLRPCSite().getAddress()));
 			config.setReplyTimeout(60 * 1000);
 			XmlRpcClient client = new XmlRpcClient();
@@ -156,6 +190,7 @@ public class PanelRequest {
 		}
 		if (myErrorMessage != null) {
 			myErrorMessage = myErrorMessage + " [" + method + "]";
+			System.err.println(myErrorMessage);
 		}
 		return null;
 	}

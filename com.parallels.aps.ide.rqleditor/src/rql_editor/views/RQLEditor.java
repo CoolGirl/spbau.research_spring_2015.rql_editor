@@ -28,15 +28,13 @@ import rql_editor.PanelRequest;
 
 import com.parallels.aps.ide.rqleditor.xtext.rql.ui.internal.RQLActivator;
 import com.google.inject.Injector;
-//import com.parallels.aps.ide.ui.preferences.*;
-//import com.parallels.aps.ide.ui.preferences.PanelSettings;
 
 public class RQLEditor extends ViewPart {
 
 	public static final String ID = "rql_editor.views.RQLEditor";
 
-	private Action action1; // info button at up right bottom
-	private MessageConsole outConsole; // the one for printing results
+	private Action action1; // for button at up right bottom
+	private MessageConsole outConsole; 
 	private EmbeddedEditorModelAccess editor; 
 	private ToolBarCombo controllersCmbBox;
 	
@@ -117,7 +115,7 @@ public class RQLEditor extends ViewPart {
 		manager.add(controllersCmbBox);
 	}
 
-	//for info button in rql editor (right up bottom)
+	
 	private void makeActions() {
 		action1 = new Action() {
 			public void run() {
@@ -131,7 +129,6 @@ public class RQLEditor extends ViewPart {
 		action1.setToolTipText("Run against selected controller and log results");
 		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().
 			getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
-		
 	}
 
 	public void setFocus() {
