@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.action.ControlContribution;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -57,7 +54,6 @@ public class ToolBarCombo extends ControlContribution {
 				   poaControllers.add(controller.getPOASite());
 			   }
 		   }
-		   SiteWithCredentials site = controllers.get(0).getPOASite();
 	}
 	
 	private void reloadCombo() {

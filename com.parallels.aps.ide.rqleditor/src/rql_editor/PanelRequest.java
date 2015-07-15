@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
@@ -12,6 +13,7 @@ import org.apache.xmlrpc.client.XmlRpcHttpTransportException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
+
 import com.parallels.aps.ide.ui.preferences.PanelSettings;
 import com.parallels.aps.ide.ui.preferences.SiteWithCredentials;
 
@@ -23,41 +25,51 @@ public class PanelRequest {
 		tokens = new HashMap<>();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static String request(SiteWithCredentials controller, String request) {
 		if (!tokens.containsKey(controller)) {
 			tokens.put(controller, getToken(controller));
 		}
 		String token = tokens.get(controller);
-		String response = sendRequest(controller.getAddress() + "?" + request,
+		Object response = sendRequest(controller.getAddress() + "?" + request,
 				token);
-		if (tokenIsExpired(response)) {
+		if (tokenIsExpired((HashMap)response)) {
 			tokens.put(controller, getToken(controller));
 			token = tokens.get(controller);
 			response = sendRequest(controller.getAddress(), token);
 		}
-		return response;
+		return (String)response;
 	}
 
 	private static String getToken(SiteWithCredentials controller) {
-		return null;
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("subscription_id", 1);
+		@SuppressWarnings("unchecked")
+		HashMap<String, Object> result = (HashMap<String, Object>)
+				executeRemoteMethod("pem.APS.getSubscriptionToken", new Object [] {params});
+		return (String) result.get("aps_token");
 	}
 
 	private static String sendRequest(String controllerURL, String apsToken) {
 		return "";
 	}
 
-	private static boolean tokenIsExpired(String response) {
-		return false;
+	//403 code, text about expiration
+	private static boolean tokenIsExpired(Map response) {
+		String errorValue = (String) response.get("error");
+		String messageValue = (String) response.get("message");
+		return (new String("APS::Util::AuthenticationFailed").equals(errorValue)
+				&& new String("Authentication Failed").equals(messageValue));
 	}
 
 	private static HashMap<SiteWithCredentials, String> tokens;
-	List<PanelSettings> mySettings = PanelSettings.loadSettings();
+	static List<PanelSettings> mySettings = PanelSettings.loadSettings();
 
-	public int provisionApplicationInstance(int subID, int appID,
+	public static int provisionApplicationInstance(int subID, int appID,
 			String resourceType, String endPoint, String packageVersion,
 			List<PanelSettings> settings) throws CoreException {
 		// Collect parameters
-		HashMap<String, Object> params = new HashMap();
+		HashMap<String, Object> params = new HashMap<String, Object>();
 		params.put("subscription_id", subID);
 		params.put("rt_id", new Integer(0)/* resourceType */);
 		params.put("app_id", appID);
@@ -67,6 +79,7 @@ public class PanelRequest {
 			params.put("settings", settings);
 		}
 		// Send request
+		@SuppressWarnings("rawtypes")
 		Map result = executeRemoteMethod("pem.APS.provideApplicationInstance",
 				new Object[] { params });
 		if (result == null) {
@@ -79,12 +92,18 @@ public class PanelRequest {
 		return appInstanceId;
 	}
 
-	private Object getResult(Object response, String responsePart,
+	@SuppressWarnings("rawtypes")
+	private static Object getResult(Object response, String responsePart,
 			Class classToken) {
 		return classToken.cast(((Map) (response)).get(responsePart));
 	}
 
-	private Map executeRemoteMethod(String method, Object[] params) {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	/**
+		@return <code>null</code> if error is occurred, "status"->"UNAUTHORIZED" if unauthorized, 
+		else the result of given method execution
+	*/
+	private static Map executeRemoteMethod(String method, Object[] params) {
 		String myErrorMessage = null;
 		try {
 			XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
