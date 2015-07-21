@@ -1,6 +1,5 @@
 package rql_editor.views;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.action.ControlContribution;
@@ -15,61 +14,60 @@ import com.parallels.aps.ide.ui.preferences.PanelSettings.PanelType;
 
 public class ToolBarCombo extends ControlContribution {
 
-	private Combo combo;
-	private ArrayList<SiteWithCredentials> poaControllers;
-	public ToolBarCombo(String str)
-	{
+	private Combo myCombo;
+	private List<PanelSettings> myPanelSettings;
+
+	public ToolBarCombo(String str) {
 		super(str);
-		poaControllers = new ArrayList<SiteWithCredentials>();
+		myPanelSettings = PanelSettings.loadSettings();
 	}
 
 	@Override
-	protected Control createControl(Composite parent)
-	{
-		combo = new Combo(parent, SWT.NONE | SWT.DROP_DOWN | SWT.READ_ONLY);
+	protected Control createControl(Composite parent) {
+		myCombo = new Combo(parent, SWT.NONE | SWT.DROP_DOWN | SWT.READ_ONLY);
 
 		updateList();
 		reloadCombo();
-		combo.select(0);
+		myCombo.select(0);
 
-//		combo.addModifyListener(
-//				new ModifyListener()
-//				{
-//					public void modifyText(final ModifyEvent e)
-//					{
-//						MessageDialog.openInformation(
-//								null, "My App",
-//								"Item at " + combo.getSelectionIndex() + " clicked.");
-//
-//					}
-//				});
+		// combo.addModifyListener(
+		// new ModifyListener()
+		// {
+		// public void modifyText(final ModifyEvent e)
+		// {
+		// MessageDialog.openInformation(
+		// null, "My App",
+		// "Item at " + combo.getSelectionIndex() + " clicked.");
+		//
+		// }
+		// });
 
-		return combo;
+		return myCombo;
 	}
-	
+
 	public void updateList() {
-		   List<PanelSettings> controllers = PanelSettings.loadSettings();
-		   for (PanelSettings controller: controllers) {
-			   if (controller.getType() == PanelType.poa) {
-				   poaControllers.add(controller.getPOASite());
-			   }
-		   }
-	}
-	
-	private void reloadCombo() {
-		combo.removeAll();
-		for (SiteWithCredentials controller: poaControllers) {
-			combo.add(controller.getAddress());
+		List<PanelSettings> panelSettings = PanelSettings.loadSettings();
+		for (PanelSettings controller : panelSettings) {
+			if (controller.getType() == PanelType.poa) {
+				this.myPanelSettings.add(controller);
+			}
 		}
 	}
-	
-	public SiteWithCredentials getCurrent() {
-		return poaControllers.get(combo.getSelectionIndex());
+
+	private void reloadCombo() {
+		myCombo.removeAll();
+		for (PanelSettings settings : myPanelSettings) {
+			myCombo.add(settings.getPOASite().getAddress());
+		}
 	}
 
-	public void setValue(int index)
-	{
-		combo.select(index);
+	public SiteWithCredentials getCurrent() {
+		return myPanelSettings.get(myCombo.getSelectionIndex()).getXMLRPCSite();
+
+	}
+
+	public void setValue(int index) {
+		myCombo.select(index);
 	}
 
 }

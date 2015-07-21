@@ -1,7 +1,5 @@
 package rql_editor.views;
 
-
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.console.ConsolePlugin;
@@ -27,17 +25,19 @@ import rql_editor.Activator;
 import rql_editor.PanelRequest;
 
 import com.parallels.aps.ide.rqleditor.xtext.rql.ui.internal.RQLActivator;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Injector;
 
 public class RQLEditor extends ViewPart {
 
-	public static final String ID = "rql_editor.views.RQLEditor";
+	public static final String OUR_ID = "rql_editor.views.RQLEditor";
 
-	private Action action1; // for button at up right bottom
-	private MessageConsole outConsole; 
-	private EmbeddedEditorModelAccess editor; 
-	private ToolBarCombo controllersCmbBox;
-	
+	private Action myAction1; // for button at up right bottom
+	private MessageConsole myOutConsole;
+	private EmbeddedEditorModelAccess myEditor;
+	private ToolBarCombo myControllersCmbBox;
 
 	public RQLEditor() {
 	}
@@ -45,11 +45,10 @@ public class RQLEditor extends ViewPart {
 	public void createPartControl(Composite parent) {
 
 		RQLActivator activator = RQLActivator.getInstance();
-		final Injector injector = activator
-				.getInjector(RQLActivator.COM_PARALLELS_APS_IDE_RQLEDITOR_XTEXT_RQL_RQL);
+		final Injector injector = activator.getInjector(RQLActivator.COM_PARALLELS_APS_IDE_RQLEDITOR_XTEXT_RQL_RQL);
 
-		IEditedResourceProvider resourceProvider=new IEditedResourceProvider() {
-			
+		IEditedResourceProvider resourceProvider = new IEditedResourceProvider() {
+
 			private IProject project;
 
 			public IProject getProject() {
@@ -63,8 +62,10 @@ public class RQLEditor extends ViewPart {
 			@Override
 			public XtextResource createResource() {
 				try {
-					XtextResourceSet resourceSet = (XtextResourceSet)(injector.getInstance(XtextResourceSetProvider.class).get(project));//getInstance(XtextResourceSetProvider.class).get();
-					org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(URI.createURI("temp.rql"));
+					XtextResourceSet resourceSet = (XtextResourceSet) (injector
+							.getInstance(XtextResourceSetProvider.class).get(project));// getInstance(XtextResourceSetProvider.class).get();
+					org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(URI
+							.createURI("temp.rql"));
 
 					return (XtextResource) resource;
 				} catch (Exception e) {
@@ -74,35 +75,33 @@ public class RQLEditor extends ViewPart {
 		};
 
 		EmbeddedEditorFactory factory = injector.getInstance(EmbeddedEditorFactory.class);
-		EmbeddedEditor handle= factory.newEditor(resourceProvider).showErrorAndWarningAnnotations().withParent(
-				parent);
+		EmbeddedEditor handle = factory.newEditor(resourceProvider).showErrorAndWarningAnnotations().withParent(parent);
 
-		editor = handle.createPartialEditor(true);
-		outConsole = findConsole("RQL Output");
+		myEditor = handle.createPartialEditor(true);
+		myOutConsole = findConsole("RQL Output");
 		makeActions();
 		contributeToActionBars();
-		Activator.getDefault().getPreferenceStore().
-		addPropertyChangeListener(new IPropertyChangeListener() {
-			
+		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(new IPropertyChangeListener() {
+
 			@Override
 			public void propertyChange(PropertyChangeEvent event) {
-				controllersCmbBox.updateList();	//doesn't react			
+				myControllersCmbBox.updateList(); // doesn't react
 			}
 		});
 	}
-	
-	//finds needed console by name or creates the new one if it doesn't exist
+
+	// finds needed console by name or creates the new one if it doesn't exist
 	private MessageConsole findConsole(String name) {
-	      ConsolePlugin plugin = ConsolePlugin.getDefault();
-	      IConsoleManager conMan = plugin.getConsoleManager();
-	      IConsole[] existing = conMan.getConsoles();
-	      for (int i = 0; i < existing.length; i++)
-	         if (name.equals(existing[i].getName()))
-	            return (MessageConsole) existing[i];
-	      MessageConsole myConsole = new MessageConsole(name, null);
-	      conMan.addConsoles(new IConsole[]{myConsole});
-	      return myConsole;
-	   }
+		ConsolePlugin plugin = ConsolePlugin.getDefault();
+		IConsoleManager conMan = plugin.getConsoleManager();
+		IConsole[] existing = conMan.getConsoles();
+		for (int i = 0; i < existing.length; i++)
+			if (name.equals(existing[i].getName()))
+				return (MessageConsole) existing[i];
+		MessageConsole myConsole = new MessageConsole(name, null);
+		conMan.addConsoles(new IConsole[] { myConsole });
+		return myConsole;
+	}
 
 	private void contributeToActionBars() {
 		IActionBars bars = getViewSite().getActionBars();
@@ -110,25 +109,32 @@ public class RQLEditor extends ViewPart {
 	}
 
 	private void fillLocalToolBar(IToolBarManager manager) {
-		manager.add(action1);
-		controllersCmbBox = new ToolBarCombo("RQL Controller");
-		manager.add(controllersCmbBox);
+		manager.add(myAction1);
+		myControllersCmbBox = new ToolBarCombo("RQL Controller");
+		manager.add(myControllersCmbBox);
 	}
 
-	
 	private void makeActions() {
-		action1 = new Action() {
+		myAction1 = new Action() {
 			public void run() {
-			   MessageConsoleStream out = outConsole.newMessageStream();
-			   String editablePart = editor.getEditablePart();
-			   out.println(PanelRequest.request(controllersCmbBox.getCurrent(), editablePart));
-			   outConsole.activate();
+				MessageConsoleStream out = myOutConsole.newMessageStream();
+				String editablePart = myEditor.getEditablePart();
+				ObjectMapper mapper = new ObjectMapper();
+				JsonNode resultNode = PanelRequest.request(myControllersCmbBox.getCurrent(), editablePart);
+				String indented = "Error occured.";
+				try {
+					indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultNode);
+				} catch (JsonProcessingException e) {
+					System.err.println(e.getLocalizedMessage());
+				}
+				out.println(indented);
+				myOutConsole.activate();
 			}
 		};
-		action1.setText("Execute");
-		action1.setToolTipText("Run against selected controller and log results");
-		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().
-			getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
+		myAction1.setText("Execute");
+		myAction1.setToolTipText("Run against selected controller and log results");
+		myAction1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
+				.getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
 	}
 
 	public void setFocus() {
