@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.parallels.aps.ide.rqleditor.xtext.rql.rQL.Model#getOperands <em>Operands</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.parallels.aps.ide.rqleditor.xtext.rql.rQL.RQLPackage#getModel()
  * @model

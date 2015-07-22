@@ -12,58 +12,58 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalRQLLexer extends Lexer {
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_XDIGIT=7;
-    public static final int EOF=-1;
+    public static final int T__50=50;
+    public static final int RULE_WSP=4;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__10=10;
+    public static final int T__54=54;
     public static final int T__9=9;
     public static final int T__8=8;
-    public static final int T__19=19;
-    public static final int T__51=51;
-    public static final int T__16=16;
-    public static final int T__52=52;
-    public static final int T__15=15;
-    public static final int T__53=53;
-    public static final int T__18=18;
-    public static final int T__54=54;
-    public static final int T__17=17;
-    public static final int T__12=12;
-    public static final int T__11=11;
-    public static final int T__14=14;
-    public static final int T__13=13;
-    public static final int T__10=10;
-    public static final int T__50=50;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
+    public static final int RULE_DIGIT=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
     public static final int RULE_ALPHA=5;
-    public static final int RULE_WSP=4;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int RULE_DIGIT=6;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__44=44;
+    public static final int RULE_XDIGIT=7;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -1521,8 +1521,8 @@ public class InternalRQLLexer extends Lexer {
     static final String DFA1_eofS =
         "\103\uffff";
     static final String DFA1_minS =
-        "\1\11\6\uffff\1\162\1\156\1\145\1\155\2\145\2\uffff\2\75\1\145\1"+
-        "\155\1\157\1\162\1\141\33\uffff\1\153\21\uffff";
+        "\1\11\6\uffff\1\162\1\156\1\145\1\155\2\145\2\uffff\2\75\1\145"+
+        "\1\155\1\157\1\162\1\141\33\uffff\1\153\21\uffff";
     static final String DFA1_maxS =
         "\1\176\6\uffff\1\165\1\156\1\165\1\161\2\164\2\uffff\2\75\1\157"+
         "\1\163\1\157\1\162\1\141\33\uffff\1\155\21\uffff";

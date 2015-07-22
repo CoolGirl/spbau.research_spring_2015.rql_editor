@@ -59,7 +59,7 @@ public class RQLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     (('&' | ',') Ho_operand)*
+	 *     ((',' | '&') Ho_operand)*
 	 */
 	protected void emit_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

@@ -1,4 +1,4 @@
-package rql_editor;
+package com.parallels.aps.ide.rqleditor;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

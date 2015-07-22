@@ -1,4 +1,4 @@
-package rql_editor.views;
+package com.parallels.aps.ide.rqleditor.views;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.swt.widgets.Composite;
@@ -21,9 +21,8 @@ import org.eclipse.xtext.ui.editor.embedded.EmbeddedEditorModelAccess;
 import org.eclipse.xtext.ui.editor.embedded.IEditedResourceProvider;
 import org.eclipse.xtext.ui.resource.XtextResourceSetProvider;
 
-import rql_editor.Activator;
-import rql_editor.PanelRequest;
-
+import com.parallels.aps.ide.rqleditor.Activator;
+import com.parallels.aps.ide.rqleditor.PanelRequest;
 import com.parallels.aps.ide.rqleditor.xtext.rql.ui.internal.RQLActivator;
 import com.parallels.aps.ide.ui.preferences.SiteWithCredentials;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.parallels.aps.ide.rqleditor.xtext.rql.rQL.impl.ModelImpl#getOperands <em>Operands</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -5,7 +5,7 @@
     modelPluginID="com.parallels.aps.ide.rqleditor.xtext.rql" forceOverwrite="true"
     modelName="RQL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="com.parallels.aps.ide.rqleditor.xtext.rql.edit"
-    editorPluginID="com.parallels.aps.ide.rqleditor.xtext.rql.editor" runtimeVersion="2.10">
+    editorPluginID="com.parallels.aps.ide.rqleditor.xtext.rql.editor" runtimeVersion="2.11">
   <genPackages prefix="RQL" basePackage="com.parallels.aps.ide.rqleditor.xtext.rql"
       disposableProviderFactory="true" fileExtensions="rql" ecorePackage="RQL.ecore#/">
     <genClasses ecoreClass="RQL.ecore#//Model">

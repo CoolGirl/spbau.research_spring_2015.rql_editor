@@ -5,6 +5,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.parallels.aps.ide.rqleditor.xtext.rql"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.parallels.aps.ide.rqleditor.xtext.rql.ui"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/com.parallels.aps.ide.rqleditor.xtext.rql.tests"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

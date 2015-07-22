@@ -1,4 +1,4 @@
-package rql_editor.views;
+package com.parallels.aps.ide.rqleditor.views;
 
 import java.util.List;
 

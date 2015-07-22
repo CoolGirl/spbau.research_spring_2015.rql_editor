@@ -1,4 +1,4 @@
-package rql_editor;
+package com.parallels.aps.ide.rqleditor;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
