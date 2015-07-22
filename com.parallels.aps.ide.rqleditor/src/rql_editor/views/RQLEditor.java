@@ -25,6 +25,7 @@ import rql_editor.Activator;
 import rql_editor.PanelRequest;
 
 import com.parallels.aps.ide.rqleditor.xtext.rql.ui.internal.RQLActivator;
+import com.parallels.aps.ide.ui.preferences.SiteWithCredentials;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -120,6 +121,9 @@ public class RQLEditor extends ViewPart {
 				MessageConsoleStream out = myOutConsole.newMessageStream();
 				String editablePart = myEditor.getEditablePart();
 				ObjectMapper mapper = new ObjectMapper();
+				SiteWithCredentials requestSite = myControllersCmbBox.getCurrent();
+				String request = editablePart;
+				String restType = "GET ";
 				JsonNode resultNode = PanelRequest.request(myControllersCmbBox.getCurrent(), editablePart);
 				String indented = "Error occured.";
 				try {
@@ -127,6 +131,8 @@ public class RQLEditor extends ViewPart {
 				} catch (JsonProcessingException e) {
 					System.err.println(e.getLocalizedMessage());
 				}
+				out.println("Request: " + restType + requestSite.getAddress() + " aps/2/resources" + "?" + editablePart );
+				out.println("Response:");
 				out.println(indented);
 				myOutConsole.activate();
 			}
