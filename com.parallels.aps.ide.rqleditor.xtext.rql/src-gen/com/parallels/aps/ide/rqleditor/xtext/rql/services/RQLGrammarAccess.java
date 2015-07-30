@@ -768,9 +768,9 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	private NcharElements pNchar;
 	private Pct_encodedElements pPct_encoded;
 	private StrvalElements pStrval;
-	private TerminalRule tALPHA;
 	private TerminalRule tDIGIT;
 	private TerminalRule tXDIGIT;
+	private TerminalRule tALPHA;
 	private TerminalRule tWSP;
 	private TerminalRule tLOGICAL_OP_ALIASES;
 	
@@ -984,12 +984,6 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		return getStrvalAccess().getRule();
 	}
 
-	//terminal ALPHA:
-	//	"A".."Z" | "a".."z";
-	public TerminalRule getALPHARule() {
-		return (tALPHA != null) ? tALPHA : (tALPHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ALPHA"));
-	} 
-
 	//terminal DIGIT:
 	//	"0".."9";
 	public TerminalRule getDIGITRule() {
@@ -1000,6 +994,12 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	//	DIGIT | "A".."F";
 	public TerminalRule getXDIGITRule() {
 		return (tXDIGIT != null) ? tXDIGIT : (tXDIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "XDIGIT"));
+	} 
+
+	//terminal ALPHA:
+	//	"A".."Z" | "a".."z";
+	public TerminalRule getALPHARule() {
+		return (tALPHA != null) ? tALPHA : (tALPHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ALPHA"));
 	} 
 
 	//terminal WSP:

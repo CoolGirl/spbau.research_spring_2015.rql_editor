@@ -957,41 +957,13 @@ public class InternalRQLLexer extends Lexer {
     }
     // $ANTLR end "T__51"
 
-    // $ANTLR start "RULE_ALPHA"
-    public final void mRULE_ALPHA() throws RecognitionException {
-        try {
-            int _type = RULE_ALPHA;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3361:12: ( ( 'A' .. 'Z' | 'a' .. 'z' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3361:14: ( 'A' .. 'Z' | 'a' .. 'z' )
-            {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ALPHA"
-
     // $ANTLR start "RULE_DIGIT"
     public final void mRULE_DIGIT() throws RecognitionException {
         try {
             int _type = RULE_DIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3363:12: ( '0' .. '9' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3363:14: '0' .. '9'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3361:12: ( '0' .. '9' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3361:14: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1010,8 +982,8 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = RULE_XDIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3365:13: ( ( RULE_DIGIT | 'A' .. 'F' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3365:15: ( RULE_DIGIT | 'A' .. 'F' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3363:13: ( ( RULE_DIGIT | 'A' .. 'F' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3363:15: ( RULE_DIGIT | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F') ) {
                 input.consume();
@@ -1032,6 +1004,34 @@ public class InternalRQLLexer extends Lexer {
         }
     }
     // $ANTLR end "RULE_XDIGIT"
+
+    // $ANTLR start "RULE_ALPHA"
+    public final void mRULE_ALPHA() throws RecognitionException {
+        try {
+            int _type = RULE_ALPHA;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3365:12: ( ( 'A' .. 'Z' | 'a' .. 'z' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3365:14: ( 'A' .. 'Z' | 'a' .. 'z' )
+            {
+            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ALPHA"
 
     // $ANTLR start "RULE_WSP"
     public final void mRULE_WSP() throws RecognitionException {
@@ -1134,7 +1134,7 @@ public class InternalRQLLexer extends Lexer {
     // $ANTLR end "RULE_LOGICAL_OP_ALIASES"
 
     public void mTokens() throws RecognitionException {
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_ALPHA | RULE_DIGIT | RULE_XDIGIT | RULE_WSP | RULE_LOGICAL_OP_ALIASES )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP | RULE_LOGICAL_OP_ALIASES )
         int alt2=48;
         alt2 = dfa2.predict(input);
         switch (alt2) {
@@ -1440,23 +1440,23 @@ public class InternalRQLLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:267: RULE_ALPHA
-                {
-                mRULE_ALPHA(); 
-
-                }
-                break;
-            case 45 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:278: RULE_DIGIT
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:267: RULE_DIGIT
                 {
                 mRULE_DIGIT(); 
 
                 }
                 break;
-            case 46 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:289: RULE_XDIGIT
+            case 45 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:278: RULE_XDIGIT
                 {
                 mRULE_XDIGIT(); 
+
+                }
+                break;
+            case 46 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1:290: RULE_ALPHA
+                {
+                mRULE_ALPHA(); 
 
                 }
                 break;
@@ -1482,27 +1482,27 @@ public class InternalRQLLexer extends Lexer {
 
     protected DFA2 dfa2 = new DFA2(this);
     static final String DFA2_eotS =
-        "\5\uffff\4\45\2\uffff\1\61\1\63\6\45\20\uffff\1\45\34\uffff";
+        "\5\uffff\4\45\2\uffff\1\61\1\63\6\45\20\uffff\1\45\35\uffff";
     static final String DFA2_eofS =
-        "\100\uffff";
+        "\101\uffff";
     static final String DFA2_minS =
         "\1\11\4\uffff\1\145\1\155\2\145\2\uffff\2\75\1\145\1\155\1\157"+
-        "\2\162\1\141\20\uffff\1\156\11\uffff\1\153\22\uffff";
+        "\2\162\1\141\20\uffff\1\156\11\uffff\1\153\23\uffff";
     static final String DFA2_maxS =
         "\1\176\4\uffff\1\165\1\161\2\164\2\uffff\2\75\1\157\1\163\1\157"+
-        "\1\165\1\162\1\141\20\uffff\1\156\11\uffff\1\155\22\uffff";
+        "\1\165\1\162\1\141\20\uffff\1\156\11\uffff\1\155\23\uffff";
     static final String DFA2_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\4\uffff\1\14\1\15\10\uffff\1\36\1\37\1"+
         "\40\1\41\1\42\1\43\1\44\1\45\1\46\1\47\1\50\1\51\1\52\1\53\1\54"+
-        "\1\55\1\uffff\1\57\1\54\1\5\1\35\1\60\1\6\1\34\1\7\1\10\1\uffff"+
+        "\1\55\1\uffff\1\57\1\56\1\5\1\35\1\60\1\6\1\34\1\7\1\10\1\uffff"+
         "\1\11\1\12\1\17\1\16\1\21\1\20\1\22\1\23\1\25\1\27\1\30\1\26\1\31"+
-        "\1\32\1\33\1\55\1\13\1\24";
+        "\1\32\1\33\1\54\1\55\1\13\1\24";
     static final String DFA2_specialS =
-        "\100\uffff}>";
+        "\101\uffff}>";
     static final String[] DFA2_transitionS = {
             "\1\44\26\uffff\1\44\1\11\2\uffff\1\27\1\40\1\2\1\uffff\1\36"+
-            "\1\37\1\31\1\32\1\1\1\23\1\24\1\34\12\42\1\30\1\3\1\13\1\12"+
-            "\1\14\1\33\1\35\6\41\24\45\4\uffff\1\25\1\uffff\1\43\1\45\1"+
+            "\1\37\1\31\1\32\1\1\1\23\1\24\1\34\12\41\1\30\1\3\1\13\1\12"+
+            "\1\14\1\33\1\35\6\42\24\45\4\uffff\1\25\1\uffff\1\43\1\45\1"+
             "\17\1\45\1\6\1\22\1\10\1\45\1\16\2\45\1\7\1\45\1\5\1\20\3\45"+
             "\1\15\1\21\6\45\1\uffff\1\4\1\uffff\1\26",
             "",
@@ -1549,7 +1549,8 @@ public class InternalRQLLexer extends Lexer {
             "",
             "",
             "",
-            "\1\76\1\uffff\1\77",
+            "\1\77\1\uffff\1\100",
+            "",
             "",
             "",
             "",
@@ -1600,7 +1601,7 @@ public class InternalRQLLexer extends Lexer {
             this.transition = DFA2_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_ALPHA | RULE_DIGIT | RULE_XDIGIT | RULE_WSP | RULE_LOGICAL_OP_ALIASES );";
+            return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP | RULE_LOGICAL_OP_ALIASES );";
         }
     }
  

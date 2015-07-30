@@ -104,11 +104,11 @@ KEYWORD_21 : '~';
 
 
 
-RULE_ALPHA : ('A'..'Z'|'a'..'z');
-
 RULE_DIGIT : '0'..'9';
 
 RULE_XDIGIT : (RULE_DIGIT|'A'..'F');
+
+RULE_ALPHA : ('A'..'Z'|'a'..'z');
 
 RULE_WSP : (' '|'\t');
 

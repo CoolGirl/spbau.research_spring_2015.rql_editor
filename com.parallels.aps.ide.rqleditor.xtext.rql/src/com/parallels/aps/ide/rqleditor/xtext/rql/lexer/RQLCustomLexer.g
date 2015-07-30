@@ -13,32 +13,36 @@ package com.parallels.aps.ide.rqleditor.xtext.rql.lexer;
 import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
+@members{
+	private boolean afterKeyWord = false;
+}
 
 
 
-KEYWORD_43 : 'implementing';
 
-KEYWORD_42 : 'composing';
+KEYWORD_43 : {!afterKeyWord}?=> 'implementing' {afterKeyWord = true;} ;
 
-KEYWORD_40 : 'isnull';
+KEYWORD_42 : {!afterKeyWord}?=> 'composing';
 
-KEYWORD_41 : 'select';
+KEYWORD_40 : {!afterKeyWord}?=> 'isnull';
 
-KEYWORD_37 : 'empty';
+KEYWORD_41 : {!afterKeyWord}?=> 'select';
 
-KEYWORD_38 : 'false';
+KEYWORD_37 : {!afterKeyWord}?=> 'empty';
 
-KEYWORD_39 : 'limit';
+KEYWORD_38 : {!afterKeyWord}?=> 'false';
 
-KEYWORD_33 : 'like';
+KEYWORD_39 : {!afterKeyWord}?=> 'limit';
 
-KEYWORD_34 : 'null';
+KEYWORD_33 : {!afterKeyWord}?=> 'like';
 
-KEYWORD_35 : 'sort';
+KEYWORD_34 : {!afterKeyWord}?=> 'null';
 
-KEYWORD_36 : 'true';
+KEYWORD_35 : {!afterKeyWord}?=> 'sort';
 
-KEYWORD_32 : 'out';
+KEYWORD_36 : {!afterKeyWord}?=> 'true';
+
+KEYWORD_32 : {!afterKeyWord}?=> 'out';
 
 KEYWORD_22 : '!=';
 
@@ -103,16 +107,15 @@ KEYWORD_20 : '|';
 KEYWORD_21 : '~';
 
 
-
-RULE_ALPHA : ('A'..'Z'|'a'..'z');
-
 RULE_DIGIT : '0'..'9';
 
 RULE_XDIGIT : (RULE_DIGIT|'A'..'F');
 
+RULE_ALPHA : ('A'..'Z'|'a'..'z');
+
 RULE_WSP : (' '|'\t');
 
-RULE_LOGICAL_OP_ALIASES : ('or'|'and'|'not');
+RULE_LOGICAL_OP_ALIASES :  {!afterKeyWord}?=> ('or'|'and'|'not');
 
 
 
