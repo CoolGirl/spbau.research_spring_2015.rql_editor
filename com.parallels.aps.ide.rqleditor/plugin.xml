@@ -12,7 +12,7 @@
             name="RQL Editor"
             icon="icons/sample.gif"
             category="rql_editor"
-            class="rql_editor.views.RQLEditor"
+            class="com.parallels.aps.ide.rqleditor.views.RQLEditor"
             id="rql_editor.views.RQLEditor">
       </view>
    </extension>

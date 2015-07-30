@@ -10,6 +10,6 @@ public class RQLAntlrTokenFileProvider implements IAntlrTokenFileProvider {
 	
 	public InputStream getAntlrTokenFile() {
 		ClassLoader classLoader = getClass().getClassLoader();
-    	return classLoader.getResourceAsStream("com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQL.tokens");
+    	return classLoader.getResourceAsStream("com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.tokens");
 	}
 }
