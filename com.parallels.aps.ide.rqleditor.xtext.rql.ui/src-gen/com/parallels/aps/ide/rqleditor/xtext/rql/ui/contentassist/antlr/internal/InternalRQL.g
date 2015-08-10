@@ -568,6 +568,34 @@ finally {
 
 
 
+// Entry rule entryRuleLogicalOpAliases
+entryRuleLogicalOpAliases 
+:
+{ before(grammarAccess.getLogicalOpAliasesRule()); }
+	 ruleLogicalOpAliases
+{ after(grammarAccess.getLogicalOpAliasesRule()); } 
+	 EOF 
+;
+
+// Rule LogicalOpAliases
+ruleLogicalOpAliases
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getLogicalOpAliasesAccess().getAlternatives()); }
+(rule__LogicalOpAliases__Alternatives)
+{ after(grammarAccess.getLogicalOpAliasesAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 
 rule__Model__Alternatives_1_0
     @init {
@@ -1151,6 +1179,40 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__LogicalOpAliases__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getLogicalOpAliasesAccess().getOrKeyword_0()); }
+
+	'or' 
+
+{ after(grammarAccess.getLogicalOpAliasesAccess().getOrKeyword_0()); }
+)
+
+    |(
+{ before(grammarAccess.getLogicalOpAliasesAccess().getAndKeyword_1()); }
+
+	'and' 
+
+{ after(grammarAccess.getLogicalOpAliasesAccess().getAndKeyword_1()); }
+)
+
+    |(
+{ before(grammarAccess.getLogicalOpAliasesAccess().getNotKeyword_2()); }
+
+	'not' 
+
+{ after(grammarAccess.getLogicalOpAliasesAccess().getNotKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 
 
 rule__Model__Group__0
@@ -1636,9 +1698,9 @@ rule__HigherOrderCall__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getHigherOrderCallAccess().getLOGICAL_OP_ALIASESTerminalRuleCall_0()); }
-	RULE_LOGICAL_OP_ALIASES
-{ after(grammarAccess.getHigherOrderCallAccess().getLOGICAL_OP_ALIASESTerminalRuleCall_0()); }
+{ before(grammarAccess.getHigherOrderCallAccess().getLogicalOpAliasesParserRuleCall_0()); }
+	ruleLogicalOpAliases
+{ after(grammarAccess.getHigherOrderCallAccess().getLogicalOpAliasesParserRuleCall_0()); }
 )
 
 ;
@@ -3365,7 +3427,5 @@ RULE_XDIGIT : (RULE_DIGIT|'A'..'F');
 RULE_ALPHA : ('A'..'Z'|'a'..'z');
 
 RULE_WSP : (' '|'\t');
-
-RULE_LOGICAL_OP_ALIASES : ('or'|'and'|'not');
 
 

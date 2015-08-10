@@ -16,7 +16,7 @@ HoOperand:
 ;
 	
 HigherOrderCall:
-	LOGICAL_OP_ALIASES WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
+	LogicalOpAliases WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
 ;
 	
 BinaryOpAliases: ('ne'|'eq'|'lt'|'le'|'gt'|'ge'|'like');
@@ -42,10 +42,10 @@ Array: '(' WSP* Strval WSP* (',' WSP* Strval WSP* )* ')';
 Nchar: (ALPHA|DIGIT|'-'|'.'|'_'|'~'|'$'|':'|'*'|'+'|'?'|'/'|'@');
 Pct_encoded: '%' XDIGIT XDIGIT;	
 Strval:	(Nchar|Pct_encoded)+;
+LogicalOpAliases: ('or'|'and'|'not');
 
 terminal DIGIT:	('0'..'9');
 terminal XDIGIT: (DIGIT|'A'..'F');		
 terminal ALPHA:	('A'..'Z'|'a'..'z');
 terminal WSP: (' '|'\t');
-terminal LOGICAL_OP_ALIASES: ('or'|'and'|'not');
 	

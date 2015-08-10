@@ -7,5 +7,12 @@ package com.parallels.aps.ide.rqleditor.xtext.rql;
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class RQLRuntimeModule extends com.parallels.aps.ide.rqleditor.xtext.rql.AbstractRQLRuntimeModule {
-
+	
+	/*// contributed by org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment
+		public Class<? extends org.eclipse.xtext.parser.antlr.Lexer> bindLexer() {
+			return com.parallels.aps.ide.rqleditor.xtext.rql.lexer.CustomRQLLexer.class;
+		}
+		
+		
+*/
 }

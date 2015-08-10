@@ -21,16 +21,17 @@ Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: com.parallels.aps.ide.rqleditor.xtext.rql,
- com.parallels.aps.ide.rqleditor.xtext.rql.services,
+ com.parallels.aps.ide.rqleditor.xtext.rql.formatting,
+ com.parallels.aps.ide.rqleditor.xtext.rql.generator,
+ com.parallels.aps.ide.rqleditor.xtext.rql.lexer,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.internal,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.lexer,
  com.parallels.aps.ide.rqleditor.xtext.rql.rQL,
  com.parallels.aps.ide.rqleditor.xtext.rql.rQL.impl,
  com.parallels.aps.ide.rqleditor.xtext.rql.rQL.util,
- com.parallels.aps.ide.rqleditor.xtext.rql.serializer,
- com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr,
- com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.internal,
- com.parallels.aps.ide.rqleditor.xtext.rql.validation,
  com.parallels.aps.ide.rqleditor.xtext.rql.scoping,
- com.parallels.aps.ide.rqleditor.xtext.rql.generator,
- com.parallels.aps.ide.rqleditor.xtext.rql.formatting,
- com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.lexer
+ com.parallels.aps.ide.rqleditor.xtext.rql.serializer,
+ com.parallels.aps.ide.rqleditor.xtext.rql.services,
+ com.parallels.aps.ide.rqleditor.xtext.rql.validation
 

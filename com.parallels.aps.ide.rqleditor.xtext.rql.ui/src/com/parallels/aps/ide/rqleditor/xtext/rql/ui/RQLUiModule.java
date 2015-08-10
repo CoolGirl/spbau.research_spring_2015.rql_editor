@@ -12,4 +12,12 @@ public class RQLUiModule extends com.parallels.aps.ide.rqleditor.xtext.rql.ui.Ab
 	public RQLUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
+	
+	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment
+		public void configureHighlightingLexer(com.google.inject.Binder binder) {
+			binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).
+			annotatedWith(com.google.inject.name.Names.named
+					(org.eclipse.xtext.ui.LexerUIBindings.HIGHLIGHTING)).
+					to(com.parallels.aps.ide.rqleditor.xtext.rql.lexer.CustomRQLLexer.class);
+		}
 }

@@ -51,6 +51,7 @@ public class RQLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getConstFuncTblAccess().getAlternatives(), "rule__ConstFuncTbl__Alternatives");
 					put(grammarAccess.getNcharAccess().getAlternatives(), "rule__Nchar__Alternatives");
 					put(grammarAccess.getStrvalAccess().getAlternatives(), "rule__Strval__Alternatives");
+					put(grammarAccess.getLogicalOpAliasesAccess().getAlternatives(), "rule__LogicalOpAliases__Alternatives");
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getModelAccess().getGroup_1(), "rule__Model__Group_1__0");
 					put(grammarAccess.getAndAccess().getGroup(), "rule__And__Group__0");
