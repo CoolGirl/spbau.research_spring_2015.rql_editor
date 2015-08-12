@@ -1,0 +1,51 @@
+grammar com.parallels.aps.ide.rqleditor.xtext.rql.RQL
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate rQL "http://www.parallels.com/aps/ide/rqleditor/xtext/rql/RQL"
+
+Model:
+	operands+=HoOperand ( (','|'&') HoOperand )*
+;
+	
+And: '&' HoOperand;
+Or: (';'|'|') HoOperand;
+
+HoOperand:
+	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And+ | Or+) ')' ) ) WSP*
+;
+	
+HigherOrderCall:
+	LogicalOpAliases WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
+;
+	
+BinaryOpAliases: ('ne'|'eq'|'lt'|'le'|'gt'|'ge'|'like');
+CompOps : ('!='|'='|'<'|'<='|'>'|'>=');
+Comparison : Strval WSP* ( ( '=' BinaryOpAliases '=' ) | CompOps ) PrimaryExpr;
+
+CallOperator:
+	( BinaryOpAliases | FunctionsTbl ) WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')'
+;
+
+Predicate: PredTbl WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')';
+PredTbl: ('select'|'sort'|'limit'|'implementing'|'composing');
+	
+PrimaryExpr:
+	WSP* ( ( ConstFuncTbl WSP* '(' WSP* ')' ) | Array | Strval )  (=>WSP*) 
+;
+
+FunctionsTbl: ('isnull'|'in'|'out');
+ConstFuncTbl : ('true'|'false'|'empty'|'null');
+	
+Array: '(' WSP* Strval WSP* (',' WSP* Strval WSP* )* ')';
+
+Nchar: (ALPHA|DIGIT|'-'|'.'|'_'|'~'|'$'|':'|'*'|'+'|'?'|'/'|'@');
+Pct_encoded: '%' XDIGIT XDIGIT;	
+Strval:	(Nchar|Pct_encoded)+;
+LogicalOpAliases: ('or'|'and'|'not');
+
+terminal DIGIT:	('0'..'9');
+terminal XDIGIT: (DIGIT|'A'..'F');		
+terminal ALPHA:	('A'..'Z'|'a'..'z');
+terminal WSP: (' '|'\t');
+	
