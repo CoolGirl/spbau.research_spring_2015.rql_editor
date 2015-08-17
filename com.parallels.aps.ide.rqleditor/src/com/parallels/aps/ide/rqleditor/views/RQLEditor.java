@@ -32,7 +32,7 @@ import com.google.inject.Injector;
 
 public class RQLEditor extends ViewPart {
 
-	public static final String OUR_ID = "rql_editor.views.RQLEditor";
+	public static final String OUR_ID = "rqleditor.views.RQLEditor";
 
 	private Action myAction1; // for button at up right bottom
 	private MessageConsole myOutConsole;

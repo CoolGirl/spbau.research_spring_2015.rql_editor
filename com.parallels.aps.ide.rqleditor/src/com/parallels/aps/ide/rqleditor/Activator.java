@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String OUR_PLUGIN_ID = "rql_editor"; //$NON-NLS-1$
+	public static final String OUR_PLUGIN_ID = "rqleditor"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator ourPlugin;

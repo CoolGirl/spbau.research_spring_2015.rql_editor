@@ -19,27 +19,27 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class RQLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected RQLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a;
+	protected AbstractElementAlias match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___HoOperandParserRuleCall_1_1__a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (RQLGrammarAccess) access;
-		match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a = new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getModelAccess().getAmpersandKeyword_1_0_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getCommaKeyword_1_0_0())), new TokenAlias(false, false, grammarAccess.getModelAccess().getHo_operandParserRuleCall_1_1()));
+		match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___HoOperandParserRuleCall_1_1__a = new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getModelAccess().getAmpersandKeyword_1_0_1()), new TokenAlias(false, false, grammarAccess.getModelAccess().getCommaKeyword_1_0_0())), new TokenAlias(false, false, grammarAccess.getModelAccess().getHoOperandParserRuleCall_1_1()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getHo_operandRule())
-			return getHo_operandToken(semanticObject, ruleCall, node);
+		if(ruleCall.getRule() == grammarAccess.getHoOperandRule())
+			return getHoOperandToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
 	/**
-	 * Ho_operand:
-	 * 	WSP* ( Higher_order_call | Call_operator | Predicate | Comparison | ( "(" Ho_operand (And+ | Or+) ")" ) ) WSP*
+	 * HoOperand:
+	 * 	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And+ | Or+) ')' ) ) WSP*
 	 * ;
 	 */
-	protected String getHo_operandToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getHoOperandToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
 		return "or()";
@@ -51,17 +51,17 @@ public class RQLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a.equals(syntax))
-				emit_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___HoOperandParserRuleCall_1_1__a.equals(syntax))
+				emit_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___HoOperandParserRuleCall_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Syntax:
-	 *     ((',' | '&') Ho_operand)*
+	 *     (('&' | ',') HoOperand)*
 	 */
-	protected void emit_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___Ho_operandParserRuleCall_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Model_____AmpersandKeyword_1_0_1_or_CommaKeyword_1_0_0___HoOperandParserRuleCall_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -1,50 +1,50 @@
-grammar com.parallels.aps.ide.rqleditor.xtext.rql.RQL //with org.eclipse.xtext.common.Terminals
+grammar com.parallels.aps.ide.rqleditor.xtext.rql.RQL
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 generate rQL "http://www.parallels.com/aps/ide/rqleditor/xtext/rql/RQL"
 
 Model:
-	operands+=Ho_operand ( (','|'&') Ho_operand )*
+	operands+=HoOperand ( (','|'&') HoOperand )*
 ;
 	
-And: '&' Ho_operand;
-Or: (';'|'|') Ho_operand;
+And: '&' HoOperand;
+Or: (';'|'|') HoOperand;
 
-Ho_operand:
-	WSP* ( Higher_order_call | Call_operator | Predicate | Comparison | ( "(" Ho_operand (And+ | Or+) ")" ) ) WSP*
+HoOperand:
+	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And+ | Or+) ')' ) ) WSP*
 ;
 	
-Logical_op_aliases: ("or"|"and"|"not");
-Higher_order_call:
-	Logical_op_aliases WSP* '(' ( Ho_operand ( "," Ho_operand )* ) ')'
+HigherOrderCall:
+	LogicalOpAliases WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
 ;
 	
-Binary_op_aliases: ("ne"|"eq"|"lt"|"le"|"gt"|"ge"|"like");
-Comp_ops : ("!="|"="|"<"|"<="|">"|">=");
-Comparison : Strval WSP* ( ( '=' Binary_op_aliases '=' ) | Comp_ops ) Primary_expr;
+BinaryOpAliases: ('ne'|'eq'|'lt'|'le'|'gt'|'ge'|'like');
+CompOps : ('!='|'='|'<'|'<='|'>'|'>=');
+Comparison : Strval WSP* ( ( '=' BinaryOpAliases '=' ) | CompOps ) PrimaryExpr;
 
-Call_operator:
-	( Binary_op_aliases | Functions_tbl ) WSP* '(' ( Primary_expr ( "," Primary_expr )* )? ')'
-;
-
-Pred_tbl: ("select"|"sort"|"limit"|"implementing"|"composing");
-Predicate: Pred_tbl WSP* '(' ( Primary_expr ( ',' Primary_expr )* )? ')';
-	
-Primary_expr:
-	WSP* ( ( Const_func_tbl WSP* '(' WSP* ')' ) | Array | Strval ) (=> WSP*)
+CallOperator:
+	( BinaryOpAliases | FunctionsTbl ) WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')'
 ;
 
-Functions_tbl: ("isnull"|"in"|"out");
-Const_func_tbl : ("true"|"false"|"empty"|"null");
+Predicate: PredTbl WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')';
+PredTbl: ('select'|'sort'|'limit'|'implementing'|'composing');
 	
-Array: '(' WSP* Strval WSP* ("," WSP* Strval WSP* )* ')';
+PrimaryExpr:
+	WSP* ( ( ConstFuncTbl WSP* '(' WSP* ')' ) | Array | Strval )  (=>WSP*) 
+;
+
+FunctionsTbl: ('isnull'|'in'|'out');
+ConstFuncTbl : ('true'|'false'|'empty'|'null');
+	
+Array: '(' WSP* Strval WSP* (',' WSP* Strval WSP* )* ')';
 
 Nchar: (ALPHA|DIGIT|'-'|'.'|'_'|'~'|'$'|':'|'*'|'+'|'?'|'/'|'@');
 Pct_encoded: '%' XDIGIT XDIGIT;	
-Strval:	"\""(Nchar|Pct_encoded)+"\"";//*
-	
-terminal ALPHA:	('A'..'Z'|'a'..'z');
+Strval:	(Nchar|Pct_encoded)+;
+LogicalOpAliases: ('or'|'and'|'not');
+
 terminal DIGIT:	('0'..'9');
-terminal XDIGIT: (DIGIT|'A'..'F');
+terminal XDIGIT: (DIGIT|'A'..'F');		
+terminal ALPHA:	('A'..'Z'|'a'..'z');
 terminal WSP: (' '|'\t');

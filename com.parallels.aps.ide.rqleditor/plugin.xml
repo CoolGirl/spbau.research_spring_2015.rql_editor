@@ -6,14 +6,14 @@
          point="org.eclipse.ui.views">
       <category
             name="RQL"
-            id="rql_editor">
+            id="rqleditor">
       </category>
       <view
             name="RQL Editor"
             icon="icons/sample.gif"
-            category="rql_editor"
-            class="rql_editor.views.RQLEditor"
-            id="rql_editor.views.RQLEditor">
+            category="rqleditor"
+            class="com.parallels.aps.ide.rqleditor.views.RQLEditor"
+            id="rqleditor.views.RQLEditor">
       </view>
    </extension>
    <extension
@@ -24,7 +24,7 @@
                ratio="0.5"
                relative="org.eclipse.ui.views.ProblemView"
                relationship="right"
-               id="rql_editor.views.RQLEditor">
+               id="rqleditor.views.RQLEditor">
          </view>
       </perspectiveExtension>
    </extension>
