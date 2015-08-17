@@ -15,12 +15,14 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
 @members{
-	private boolean logicalOpEnabled = true;
+	private boolean enabled = false;
+	private boolean alreadyWereEnabled = false;
 }
 
 
 
-KEYWORD_46 : 'implementing';
+KEYWORD_46 : {alreadyWereEnabled = alreadyWereEnabled && !enabled || 
+!alreadyWereEnabled && enabled; enabled = alreadyWereEnabled;} 'implementing';
 
 KEYWORD_45 : 'composing';
 
@@ -34,7 +36,7 @@ KEYWORD_41 : 'false';
 
 KEYWORD_42 : 'limit';
 
-KEYWORD_36 : 'like';
+KEYWORD_36 : ((('like(')=>'like') | ({enabled}? => ( ('like=')=> 'like' )) | ('l') => 'l' {$type = RULE_ALPHA;});
 
 KEYWORD_37 : 'null';
 
@@ -44,7 +46,7 @@ KEYWORD_39 : 'true';
 
 KEYWORD_33 : ((('and(')=>'and') | ('a') => 'a' {$type = RULE_ALPHA;});
 
-KEYWORD_34 : 'not';
+KEYWORD_34 : ((('not(')=>'not') | ('n') => 'n' {$type = RULE_ALPHA;});
 
 KEYWORD_35 : 'out';
 
@@ -54,7 +56,7 @@ KEYWORD_23 : '<=';
 
 KEYWORD_24 : '>=';
 
-KEYWORD_25 : 'eq';
+KEYWORD_25 : ((('eq(')=>'eq') | ('e') => 'e' {$type = RULE_ALPHA;});
 
 KEYWORD_26 : 'ge';
 
@@ -98,7 +100,7 @@ KEYWORD_13 : ';';
 
 KEYWORD_14 : '<';
 
-KEYWORD_15 : '=';
+KEYWORD_15 : ('=')=> '=' {enabled = true;};
 
 KEYWORD_16 : '>';
 
