@@ -16,29 +16,33 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 
 
-KEYWORD_43 : 'implementing';
+KEYWORD_46 : 'implementing';
 
-KEYWORD_42 : 'composing';
+KEYWORD_45 : 'composing';
 
-KEYWORD_40 : 'isnull';
+KEYWORD_43 : 'isnull';
 
-KEYWORD_41 : 'select';
+KEYWORD_44 : 'select';
 
-KEYWORD_37 : 'empty';
+KEYWORD_40 : 'empty';
 
-KEYWORD_38 : 'false';
+KEYWORD_41 : 'false';
 
-KEYWORD_39 : 'limit';
+KEYWORD_42 : 'limit';
 
-KEYWORD_33 : 'like';
+KEYWORD_36 : 'like';
 
-KEYWORD_34 : 'null';
+KEYWORD_37 : 'null';
 
-KEYWORD_35 : 'sort';
+KEYWORD_38 : 'sort';
 
-KEYWORD_36 : 'true';
+KEYWORD_39 : 'true';
 
-KEYWORD_32 : 'out';
+KEYWORD_33 : 'and';
+
+KEYWORD_34 : 'not';
+
+KEYWORD_35 : 'out';
 
 KEYWORD_22 : '!=';
 
@@ -59,6 +63,8 @@ KEYWORD_29 : 'le';
 KEYWORD_30 : 'lt';
 
 KEYWORD_31 : 'ne';
+
+KEYWORD_32 : 'or';
 
 KEYWORD_1 : '$';
 
@@ -104,15 +110,13 @@ KEYWORD_21 : '~';
 
 
 
-RULE_ALPHA : ('A'..'Z'|'a'..'z');
-
 RULE_DIGIT : '0'..'9';
 
 RULE_XDIGIT : (RULE_DIGIT|'A'..'F');
 
-RULE_WSP : (' '|'\t');
+RULE_ALPHA : ('A'..'Z'|'a'..'z');
 
-RULE_LOGICAL_OP_ALIASES : ('or'|'and'|'not');
+RULE_WSP : (' '|'\t');
 
 
 

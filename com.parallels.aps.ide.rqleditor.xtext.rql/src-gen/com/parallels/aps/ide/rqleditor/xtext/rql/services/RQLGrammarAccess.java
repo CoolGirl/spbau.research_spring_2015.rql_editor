@@ -176,7 +176,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	public class HigherOrderCallElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HigherOrderCall");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cLOGICAL_OP_ALIASESTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final RuleCall cLogicalOpAliasesParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final RuleCall cWSPTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
@@ -187,14 +187,14 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//HigherOrderCall:
-		//	LOGICAL_OP_ALIASES WSP* "(" (HoOperand ("," HoOperand)*) ")";
+		//	LogicalOpAliases WSP* "(" (HoOperand ("," HoOperand)*) ")";
 		public ParserRule getRule() { return rule; }
 
-		//LOGICAL_OP_ALIASES WSP* "(" (HoOperand ("," HoOperand)*) ")"
+		//LogicalOpAliases WSP* "(" (HoOperand ("," HoOperand)*) ")"
 		public Group getGroup() { return cGroup; }
 
-		//LOGICAL_OP_ALIASES
-		public RuleCall getLOGICAL_OP_ALIASESTerminalRuleCall_0() { return cLOGICAL_OP_ALIASESTerminalRuleCall_0; }
+		//LogicalOpAliases
+		public RuleCall getLogicalOpAliasesParserRuleCall_0() { return cLogicalOpAliasesParserRuleCall_0; }
 
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_1() { return cWSPTerminalRuleCall_1; }
@@ -748,6 +748,30 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		//Pct_encoded
 		public RuleCall getPct_encodedParserRuleCall_1() { return cPct_encodedParserRuleCall_1; }
 	}
+
+	public class LogicalOpAliasesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LogicalOpAliases");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cOrKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cAndKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cNotKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		
+		//LogicalOpAliases:
+		//	"or" | "and" | "not";
+		public ParserRule getRule() { return rule; }
+
+		//"or" | "and" | "not"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"or"
+		public Keyword getOrKeyword_0() { return cOrKeyword_0; }
+
+		//"and"
+		public Keyword getAndKeyword_1() { return cAndKeyword_1; }
+
+		//"not"
+		public Keyword getNotKeyword_2() { return cNotKeyword_2; }
+	}
 	
 	
 	private ModelElements pModel;
@@ -768,11 +792,11 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	private NcharElements pNchar;
 	private Pct_encodedElements pPct_encoded;
 	private StrvalElements pStrval;
-	private TerminalRule tALPHA;
+	private LogicalOpAliasesElements pLogicalOpAliases;
 	private TerminalRule tDIGIT;
 	private TerminalRule tXDIGIT;
+	private TerminalRule tALPHA;
 	private TerminalRule tWSP;
-	private TerminalRule tLOGICAL_OP_ALIASES;
 	
 	private final Grammar grammar;
 
@@ -845,7 +869,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HigherOrderCall:
-	//	LOGICAL_OP_ALIASES WSP* "(" (HoOperand ("," HoOperand)*) ")";
+	//	LogicalOpAliases WSP* "(" (HoOperand ("," HoOperand)*) ")";
 	public HigherOrderCallElements getHigherOrderCallAccess() {
 		return (pHigherOrderCall != null) ? pHigherOrderCall : (pHigherOrderCall = new HigherOrderCallElements());
 	}
@@ -984,11 +1008,15 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		return getStrvalAccess().getRule();
 	}
 
-	//terminal ALPHA:
-	//	"A".."Z" | "a".."z";
-	public TerminalRule getALPHARule() {
-		return (tALPHA != null) ? tALPHA : (tALPHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ALPHA"));
-	} 
+	//LogicalOpAliases:
+	//	"or" | "and" | "not";
+	public LogicalOpAliasesElements getLogicalOpAliasesAccess() {
+		return (pLogicalOpAliases != null) ? pLogicalOpAliases : (pLogicalOpAliases = new LogicalOpAliasesElements());
+	}
+	
+	public ParserRule getLogicalOpAliasesRule() {
+		return getLogicalOpAliasesAccess().getRule();
+	}
 
 	//terminal DIGIT:
 	//	"0".."9";
@@ -1002,15 +1030,15 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		return (tXDIGIT != null) ? tXDIGIT : (tXDIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "XDIGIT"));
 	} 
 
+	//terminal ALPHA:
+	//	"A".."Z" | "a".."z";
+	public TerminalRule getALPHARule() {
+		return (tALPHA != null) ? tALPHA : (tALPHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ALPHA"));
+	} 
+
 	//terminal WSP:
 	//	" " | "\t";
 	public TerminalRule getWSPRule() {
 		return (tWSP != null) ? tWSP : (tWSP = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WSP"));
-	} 
-
-	//terminal LOGICAL_OP_ALIASES:
-	//	"or" | "and" | "not";
-	public TerminalRule getLOGICAL_OP_ALIASESRule() {
-		return (tLOGICAL_OP_ALIASES != null) ? tLOGICAL_OP_ALIASES : (tLOGICAL_OP_ALIASES = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "LOGICAL_OP_ALIASES"));
 	} 
 }
