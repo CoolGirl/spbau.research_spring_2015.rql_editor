@@ -4,12 +4,23 @@
 package com.parallels.aps.ide.rqleditor.xtext.rql.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
+
+
 
 /**
  * Use this class to register components to be used within the IDE.
  */
-public class RQLUiModule extends com.parallels.aps.ide.rqleditor.xtext.rql.ui.AbstractRQLUiModule {
+public class RQLUiModule extends com.parallels.aps.ide.rqleditor.xtext.rql.ui.AbstractRQLUiModule
+{
 	public RQLUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
+
+
+	public Class<? extends ISemanticHighlightingCalculator> bindSemanticHighlightingCalculator() {
+	        return SemanticHighlightingCalculator.class;
+	}
+
+	
 }

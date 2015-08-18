@@ -31,5 +31,6 @@ Export-Package: com.parallels.aps.ide.rqleditor.xtext.rql,
  com.parallels.aps.ide.rqleditor.xtext.rql.validation,
  com.parallels.aps.ide.rqleditor.xtext.rql.scoping,
  com.parallels.aps.ide.rqleditor.xtext.rql.generator,
- com.parallels.aps.ide.rqleditor.xtext.rql.formatting
+ com.parallels.aps.ide.rqleditor.xtext.rql.formatting,
+ com.parallels.aps.ide.rqleditor.xtext.rql.parser.antlr.lexer
 
