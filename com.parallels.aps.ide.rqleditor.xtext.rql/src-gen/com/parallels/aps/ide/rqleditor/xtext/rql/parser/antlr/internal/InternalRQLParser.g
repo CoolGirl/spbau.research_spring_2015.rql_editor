@@ -410,6 +410,76 @@ ruleHigherOrderCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
 
 
 
+// Entry rule entryRuleBinaryOpAliasesWithEqualsSign
+entryRuleBinaryOpAliasesWithEqualsSign returns [String current=null] 
+:
+	{ newCompositeNode(grammarAccess.getBinaryOpAliasesWithEqualsSignRule()); } 
+	 iv_ruleBinaryOpAliasesWithEqualsSign=ruleBinaryOpAliasesWithEqualsSign 
+	 { $current=$iv_ruleBinaryOpAliasesWithEqualsSign.current.getText(); }  
+	 EOF 
+;
+
+// Rule BinaryOpAliasesWithEqualsSign
+ruleBinaryOpAliasesWithEqualsSign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule();
+    }:
+(
+	kw=KEYWORD_41 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getNeKeyword_0()); 
+    }
+
+    |
+	kw=KEYWORD_36 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getEqKeyword_1()); 
+    }
+
+    |
+	kw=KEYWORD_40 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLtKeyword_2()); 
+    }
+
+    |
+	kw=KEYWORD_39 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLeKeyword_3()); 
+    }
+
+    |
+	kw=KEYWORD_38 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGtKeyword_4()); 
+    }
+
+    |
+	kw=KEYWORD_37 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGeKeyword_5()); 
+    }
+
+    |
+	kw=KEYWORD_49 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLikeKeyword_6()); 
+    }
+)
+    ;
+
+
+
+
+
 // Entry rule entryRuleBinaryOpAliases
 entryRuleBinaryOpAliases returns [String current=null] 
 :
@@ -468,7 +538,7 @@ ruleBinaryOpAliases returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
     }
 
     |
-	kw=KEYWORD_36 
+	kw=KEYWORD_42 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getBinaryOpAliasesAccess().getLikeKeyword_6()); 
@@ -576,36 +646,24 @@ ruleComparison returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
     { 
     newLeafNode(this_WSP_1, grammarAccess.getComparisonAccess().getWSPTerminalRuleCall_1()); 
     }
-)*((
-	kw=KEYWORD_15 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getComparisonAccess().getEqualsSignKeyword_2_0_0()); 
-    }
-
+)*(
     { 
-        newCompositeNode(grammarAccess.getComparisonAccess().getBinaryOpAliasesParserRuleCall_2_0_1()); 
+        newCompositeNode(grammarAccess.getComparisonAccess().getBinaryOpAliasesWithEqualsSignParserRuleCall_2_0()); 
     }
-    this_BinaryOpAliases_3=ruleBinaryOpAliases    {
-		$current.merge(this_BinaryOpAliases_3);
+    this_BinaryOpAliasesWithEqualsSign_2=ruleBinaryOpAliasesWithEqualsSign    {
+		$current.merge(this_BinaryOpAliasesWithEqualsSign_2);
     }
 
     { 
         afterParserOrEnumRuleCall();
     }
 
-	kw=KEYWORD_15 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getComparisonAccess().getEqualsSignKeyword_2_0_2()); 
-    }
-)
     |
     { 
         newCompositeNode(grammarAccess.getComparisonAccess().getCompOpsParserRuleCall_2_1()); 
     }
-    this_CompOps_5=ruleCompOps    {
-		$current.merge(this_CompOps_5);
+    this_CompOps_3=ruleCompOps    {
+		$current.merge(this_CompOps_3);
     }
 
     { 
@@ -615,8 +673,8 @@ ruleComparison returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
     { 
         newCompositeNode(grammarAccess.getComparisonAccess().getPrimaryExprParserRuleCall_3()); 
     }
-    this_PrimaryExpr_6=rulePrimaryExpr    {
-		$current.merge(this_PrimaryExpr_6);
+    this_PrimaryExpr_4=rulePrimaryExpr    {
+		$current.merge(this_PrimaryExpr_4);
     }
 
     { 
@@ -817,35 +875,35 @@ rulePredTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_44 
+	kw=KEYWORD_51 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getPredTblAccess().getSelectKeyword_0()); 
     }
 
     |
-	kw=KEYWORD_38 
+	kw=KEYWORD_44 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getPredTblAccess().getSortKeyword_1()); 
     }
 
     |
-	kw=KEYWORD_42 
+	kw=KEYWORD_48 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getPredTblAccess().getLimitKeyword_2()); 
     }
 
     |
-	kw=KEYWORD_46 
+	kw=KEYWORD_53 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getPredTblAccess().getImplementingKeyword_3()); 
     }
 
     |
-	kw=KEYWORD_45 
+	kw=KEYWORD_52 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getPredTblAccess().getComposingKeyword_4()); 
@@ -970,7 +1028,7 @@ ruleFunctionsTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTo
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_43 
+	kw=KEYWORD_50 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getFunctionsTblAccess().getIsnullKeyword_0()); 
@@ -1012,28 +1070,28 @@ ruleConstFuncTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTo
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_39 
+	kw=KEYWORD_45 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getConstFuncTblAccess().getTrueKeyword_0()); 
     }
 
     |
-	kw=KEYWORD_41 
+	kw=KEYWORD_47 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getConstFuncTblAccess().getFalseKeyword_1()); 
     }
 
     |
-	kw=KEYWORD_40 
+	kw=KEYWORD_46 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getConstFuncTblAccess().getEmptyKeyword_2()); 
     }
 
     |
-	kw=KEYWORD_37 
+	kw=KEYWORD_43 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getConstFuncTblAccess().getNullKeyword_3()); 

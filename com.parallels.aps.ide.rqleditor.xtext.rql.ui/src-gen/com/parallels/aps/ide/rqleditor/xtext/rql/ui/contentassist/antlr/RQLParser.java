@@ -41,6 +41,7 @@ public class RQLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOrAccess().getAlternatives_0(), "rule__Or__Alternatives_0");
 					put(grammarAccess.getHoOperandAccess().getAlternatives_1(), "rule__HoOperand__Alternatives_1");
 					put(grammarAccess.getHoOperandAccess().getAlternatives_1_4_2(), "rule__HoOperand__Alternatives_1_4_2");
+					put(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getAlternatives(), "rule__BinaryOpAliasesWithEqualsSign__Alternatives");
 					put(grammarAccess.getBinaryOpAliasesAccess().getAlternatives(), "rule__BinaryOpAliases__Alternatives");
 					put(grammarAccess.getCompOpsAccess().getAlternatives(), "rule__CompOps__Alternatives");
 					put(grammarAccess.getComparisonAccess().getAlternatives_2(), "rule__Comparison__Alternatives_2");
@@ -62,7 +63,6 @@ public class RQLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHigherOrderCallAccess().getGroup_3(), "rule__HigherOrderCall__Group_3__0");
 					put(grammarAccess.getHigherOrderCallAccess().getGroup_3_1(), "rule__HigherOrderCall__Group_3_1__0");
 					put(grammarAccess.getComparisonAccess().getGroup(), "rule__Comparison__Group__0");
-					put(grammarAccess.getComparisonAccess().getGroup_2_0(), "rule__Comparison__Group_2_0__0");
 					put(grammarAccess.getCallOperatorAccess().getGroup(), "rule__CallOperator__Group__0");
 					put(grammarAccess.getCallOperatorAccess().getGroup_3(), "rule__CallOperator__Group_3__0");
 					put(grammarAccess.getCallOperatorAccess().getGroup_3_1(), "rule__CallOperator__Group_3_1__0");

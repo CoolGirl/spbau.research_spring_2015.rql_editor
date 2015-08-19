@@ -16,27 +16,41 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 
 
-KEYWORD_46 : 'implementing';
+KEYWORD_53 : 'implementing';
 
-KEYWORD_45 : 'composing';
+KEYWORD_52 : 'composing';
 
-KEYWORD_43 : 'isnull';
+KEYWORD_49 : '=like=';
 
-KEYWORD_44 : 'select';
+KEYWORD_50 : 'isnull';
 
-KEYWORD_40 : 'empty';
+KEYWORD_51 : 'select';
 
-KEYWORD_41 : 'false';
+KEYWORD_46 : 'empty';
 
-KEYWORD_42 : 'limit';
+KEYWORD_47 : 'false';
 
-KEYWORD_36 : 'like';
+KEYWORD_48 : 'limit';
 
-KEYWORD_37 : 'null';
+KEYWORD_36 : '=eq=';
 
-KEYWORD_38 : 'sort';
+KEYWORD_37 : '=ge=';
 
-KEYWORD_39 : 'true';
+KEYWORD_38 : '=gt=';
+
+KEYWORD_39 : '=le=';
+
+KEYWORD_40 : '=lt=';
+
+KEYWORD_41 : '=ne=';
+
+KEYWORD_42 : 'like';
+
+KEYWORD_43 : 'null';
+
+KEYWORD_44 : 'sort';
+
+KEYWORD_45 : 'true';
 
 KEYWORD_33 : 'and';
 

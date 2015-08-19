@@ -221,6 +221,46 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 
+	public class BinaryOpAliasesWithEqualsSignElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryOpAliasesWithEqualsSign");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cNeKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cEqKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cLtKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cLeKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cGtKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cGeKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cLikeKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		
+		//BinaryOpAliasesWithEqualsSign:
+		//	"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+		public ParserRule getRule() { return rule; }
+
+		//"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like="
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"=ne="
+		public Keyword getNeKeyword_0() { return cNeKeyword_0; }
+
+		//"=eq="
+		public Keyword getEqKeyword_1() { return cEqKeyword_1; }
+
+		//"=lt="
+		public Keyword getLtKeyword_2() { return cLtKeyword_2; }
+
+		//"=le="
+		public Keyword getLeKeyword_3() { return cLeKeyword_3; }
+
+		//"=gt="
+		public Keyword getGtKeyword_4() { return cGtKeyword_4; }
+
+		//"=ge="
+		public Keyword getGeKeyword_5() { return cGeKeyword_5; }
+
+		//"=like="
+		public Keyword getLikeKeyword_6() { return cLikeKeyword_6; }
+	}
+
 	public class BinaryOpAliasesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryOpAliases");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -303,18 +343,15 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStrvalParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final RuleCall cWSPTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
-		private final RuleCall cBinaryOpAliasesParserRuleCall_2_0_1 = (RuleCall)cGroup_2_0.eContents().get(1);
-		private final Keyword cEqualsSignKeyword_2_0_2 = (Keyword)cGroup_2_0.eContents().get(2);
+		private final RuleCall cBinaryOpAliasesWithEqualsSignParserRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
 		private final RuleCall cCompOpsParserRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		private final RuleCall cPrimaryExprParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//Comparison:
-		//	Strval WSP* ("=" BinaryOpAliases "=" | CompOps) PrimaryExpr;
+		//	Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr;
 		public ParserRule getRule() { return rule; }
 
-		//Strval WSP* ("=" BinaryOpAliases "=" | CompOps) PrimaryExpr
+		//Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr
 		public Group getGroup() { return cGroup; }
 
 		//Strval
@@ -323,20 +360,11 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_1() { return cWSPTerminalRuleCall_1; }
 
-		//"=" BinaryOpAliases "=" | CompOps
+		//BinaryOpAliasesWithEqualsSign | CompOps
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//"=" BinaryOpAliases "="
-		public Group getGroup_2_0() { return cGroup_2_0; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_2_0_0() { return cEqualsSignKeyword_2_0_0; }
-
-		//BinaryOpAliases
-		public RuleCall getBinaryOpAliasesParserRuleCall_2_0_1() { return cBinaryOpAliasesParserRuleCall_2_0_1; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_2_0_2() { return cEqualsSignKeyword_2_0_2; }
+		//BinaryOpAliasesWithEqualsSign
+		public RuleCall getBinaryOpAliasesWithEqualsSignParserRuleCall_2_0() { return cBinaryOpAliasesWithEqualsSignParserRuleCall_2_0; }
 
 		//CompOps
 		public RuleCall getCompOpsParserRuleCall_2_1() { return cCompOpsParserRuleCall_2_1; }
@@ -779,6 +807,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	private OrElements pOr;
 	private HoOperandElements pHoOperand;
 	private HigherOrderCallElements pHigherOrderCall;
+	private BinaryOpAliasesWithEqualsSignElements pBinaryOpAliasesWithEqualsSign;
 	private BinaryOpAliasesElements pBinaryOpAliases;
 	private CompOpsElements pCompOps;
 	private ComparisonElements pComparison;
@@ -878,6 +907,16 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		return getHigherOrderCallAccess().getRule();
 	}
 
+	//BinaryOpAliasesWithEqualsSign:
+	//	"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+	public BinaryOpAliasesWithEqualsSignElements getBinaryOpAliasesWithEqualsSignAccess() {
+		return (pBinaryOpAliasesWithEqualsSign != null) ? pBinaryOpAliasesWithEqualsSign : (pBinaryOpAliasesWithEqualsSign = new BinaryOpAliasesWithEqualsSignElements());
+	}
+	
+	public ParserRule getBinaryOpAliasesWithEqualsSignRule() {
+		return getBinaryOpAliasesWithEqualsSignAccess().getRule();
+	}
+
 	//BinaryOpAliases:
 	//	"ne" | "eq" | "lt" | "le" | "gt" | "ge" | "like";
 	public BinaryOpAliasesElements getBinaryOpAliasesAccess() {
@@ -899,7 +938,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Comparison:
-	//	Strval WSP* ("=" BinaryOpAliases "=" | CompOps) PrimaryExpr;
+	//	Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr;
 	public ComparisonElements getComparisonAccess() {
 		return (pComparison != null) ? pComparison : (pComparison = new ComparisonElements());
 	}
