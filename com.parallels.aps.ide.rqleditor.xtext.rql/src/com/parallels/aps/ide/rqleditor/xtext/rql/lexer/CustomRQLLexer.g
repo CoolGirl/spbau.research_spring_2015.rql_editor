@@ -20,8 +20,6 @@ KEYWORD_53 : ('implementing(')=> 'implementing'| ('i')=> 'i' {$type = RULE_ALPHA
 
 KEYWORD_52 : ('composing(')=> 'composing'| ('c')=> 'c' {$type = RULE_ALPHA;};
 
-KEYWORD_49 : ('like(')=> 'like'| ('l')=> 'l' {$type = RULE_ALPHA;};
-
 KEYWORD_50 : ('isnull(')=> 'isnull'| ('i')=> 'i' {$type = RULE_ALPHA;};
 
 KEYWORD_51 :  ('select(')=> 'select'| ('s')=> 's' {$type = RULE_ALPHA;};
@@ -38,13 +36,13 @@ KEYWORD_37 : '=ge=';
 
 KEYWORD_38 : '=gt=';
 
-KEYWORD_39 : '=le=';
+KEYWORD_39 : '=' (('le=')=> 'le=' | ('like=') => 'like=' {$type = KEYWORD_42;} | ('lt=')=> 'lt=' {$type = KEYWORD_40;})?;
 
-KEYWORD_40 : '=lt=';
+KEYWORD_40 : '=lt=' | '\u0328';
 
 KEYWORD_41 : '=ne=';	
 
-KEYWORD_42 : '=like=';
+KEYWORD_42 : '=like=' | '\uA733';
 
 KEYWORD_43 :  ('null(')=> 'null'| ('n')=> 'n' {$type = RULE_ALPHA;};
 
@@ -71,6 +69,8 @@ KEYWORD_26 :  ('ge(')=> 'ge'| ('g')=> 'g' {$type = RULE_ALPHA;};
 KEYWORD_27 :  ('gt(')=> 'gt'| ('g')=> 'g' {$type = RULE_ALPHA;};
 
 KEYWORD_28 :  ('in(')=> 'in'| ('i')=> 'i' {$type = RULE_ALPHA;};
+
+KEYWORD_49 : ('like(')=> 'like'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
 KEYWORD_29 :  ('le(')=> 'le'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
@@ -108,7 +108,7 @@ KEYWORD_13 : ';';
 
 KEYWORD_14 : '<';
 
-KEYWORD_15 : '=';
+KEYWORD_15 : '='| '\u5467';
 
 KEYWORD_16 : '>';
 

@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalRQLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ALPHA", "RULE_DIGIT", "RULE_WSP", "RULE_XDIGIT", "','", "'&'", "';'", "'|'", "'=ne='", "'=eq='", "'=lt='", "'=le='", "'=gt='", "'=ge='", "'=like='", "'ne'", "'eq'", "'lt'", "'le'", "'gt'", "'ge'", "'like'", "'!='", "'='", "'<'", "'<='", "'>'", "'>='", "'select'", "'sort'", "'limit'", "'implementing'", "'composing'", "'isnull'", "'in'", "'out'", "'true'", "'false'", "'empty'", "'null'", "'-'", "'.'", "'_'", "'~'", "'$'", "':'", "'*'", "'+'", "'?'", "'/'", "'@'", "'or'", "'and'", "'not'", "'('", "')'", "'%'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ALPHA", "RULE_DIGIT", "RULE_WSP", "RULE_XDIGIT", "','", "'&'", "';'", "'|'", "'=ne='", "'=eq='", "'=lt='", "'=le='", "'=gt='", "'=ge='", "'=like='", "'ne'", "'eq'", "'lt'", "'le'", "'gt'", "'ge'", "'like'", "'!='", "'='", "'<'", "'<='", "'>'", "'>='", "'select'", "'sort'", "'limit'", "'implementing'", "'composing'", "'isnull'", "'in'", "'out'", "'true'", "'false'", "'empty'", "'null'", "'-'", "'.'", "'_'", "'~'", "'$'", "':'", "'*'", "'+'", "'?'", "'/'", "'@'", "'or'", "'and'", "'not'", "'\\r'", "'\\n'", "'('", "')'", "'%'"
     };
     public static final int T__50=50;
     public static final int RULE_WSP=6;
@@ -49,6 +49,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     public static final int T__9=9;
     public static final int T__60=60;
     public static final int T__8=8;
+    public static final int T__61=61;
     public static final int RULE_DIGIT=5;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -58,6 +59,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__62=62;
     public static final int T__20=20;
     public static final int T__21=21;
     public static final int RULE_ALPHA=4;
@@ -1733,7 +1735,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=RULE_ALPHA && LA1_0<=RULE_DIGIT)||(LA1_0>=44 && LA1_0<=54)||LA1_0==60) ) {
+                if ( ((LA1_0>=RULE_ALPHA && LA1_0<=RULE_DIGIT)||(LA1_0>=44 && LA1_0<=54)||LA1_0==62) ) {
                     alt1=1;
                 }
 
@@ -2081,12 +2083,12 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             case 52:
             case 53:
             case 54:
-            case 60:
+            case 62:
                 {
                 alt4=4;
                 }
                 break;
-            case 58:
+            case 60:
                 {
                 alt4=5;
                 }
@@ -2239,100 +2241,47 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Alternatives_1_4_2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:720:1: rule__HoOperand__Alternatives_1_4_2 : ( ( ( ( ruleAnd ) ) ( ( ruleAnd )* ) ) | ( ( ( ruleOr ) ) ( ( ruleOr )* ) ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:720:1: rule__HoOperand__Alternatives_1_4_2 : ( ( ruleAnd ) | ( ruleOr ) );
     public final void rule__HoOperand__Alternatives_1_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:724:1: ( ( ( ( ruleAnd ) ) ( ( ruleAnd )* ) ) | ( ( ( ruleOr ) ) ( ( ruleOr )* ) ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:724:1: ( ( ruleAnd ) | ( ruleOr ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA7_0==9) ) {
-                alt7=1;
+            if ( (LA5_0==9) ) {
+                alt5=1;
             }
-            else if ( ((LA7_0>=10 && LA7_0<=11)) ) {
-                alt7=2;
+            else if ( ((LA5_0>=10 && LA5_0<=11)) ) {
+                alt5=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt5) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:725:1: ( ( ( ruleAnd ) ) ( ( ruleAnd )* ) )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:725:1: ( ruleAnd )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:725:1: ( ( ( ruleAnd ) ) ( ( ruleAnd )* ) )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:726:1: ( ( ruleAnd ) ) ( ( ruleAnd )* )
-                    {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:726:1: ( ( ruleAnd ) )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:727:1: ( ruleAnd )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:725:1: ( ruleAnd )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:726:1: ruleAnd
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); 
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:728:1: ( ruleAnd )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:728:3: ruleAnd
-                    {
-                    pushFollow(FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21507);
+                    pushFollow(FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21504);
                     ruleAnd();
 
                     state._fsp--;
                     if (state.failed) return ;
-
-                    }
-
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); 
                     }
-
-                    }
-
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:731:1: ( ( ruleAnd )* )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:732:1: ( ruleAnd )*
-                    {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); 
-                    }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:733:1: ( ruleAnd )*
-                    loop5:
-                    do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
-
-                        if ( (LA5_0==9) ) {
-                            alt5=1;
-                        }
-
-
-                        switch (alt5) {
-                    	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:733:3: ruleAnd
-                    	    {
-                    	    pushFollow(FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21520);
-                    	    ruleAnd();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return ;
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop5;
-                        }
-                    } while (true);
-
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); 
-                    }
-
-                    }
-
 
                     }
 
@@ -2340,75 +2289,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:738:6: ( ( ( ruleOr ) ) ( ( ruleOr )* ) )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:731:6: ( ruleOr )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:738:6: ( ( ( ruleOr ) ) ( ( ruleOr )* ) )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:739:1: ( ( ruleOr ) ) ( ( ruleOr )* )
-                    {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:739:1: ( ( ruleOr ) )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:740:1: ( ruleOr )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:731:6: ( ruleOr )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:732:1: ruleOr
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); 
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:741:1: ( ruleOr )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:741:3: ruleOr
-                    {
-                    pushFollow(FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21544);
+                    pushFollow(FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21521);
                     ruleOr();
 
                     state._fsp--;
                     if (state.failed) return ;
-
-                    }
-
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); 
                     }
-
-                    }
-
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:744:1: ( ( ruleOr )* )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:745:1: ( ruleOr )*
-                    {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); 
-                    }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:746:1: ( ruleOr )*
-                    loop6:
-                    do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
-
-                        if ( ((LA6_0>=10 && LA6_0<=11)) ) {
-                            alt6=1;
-                        }
-
-
-                        switch (alt6) {
-                    	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:746:3: ruleOr
-                    	    {
-                    	    pushFollow(FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21557);
-                    	    ruleOr();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return ;
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop6;
-                        }
-                    } while (true);
-
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); 
-                    }
-
-                    }
-
 
                     }
 
@@ -2433,69 +2329,69 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BinaryOpAliasesWithEqualsSign__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:756:1: rule__BinaryOpAliasesWithEqualsSign__Alternatives : ( ( '=ne=' ) | ( '=eq=' ) | ( '=lt=' ) | ( '=le=' ) | ( '=gt=' ) | ( '=ge=' ) | ( '=like=' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:742:1: rule__BinaryOpAliasesWithEqualsSign__Alternatives : ( ( '=ne=' ) | ( '=eq=' ) | ( '=lt=' ) | ( '=le=' ) | ( '=gt=' ) | ( '=ge=' ) | ( '=like=' ) );
     public final void rule__BinaryOpAliasesWithEqualsSign__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:760:1: ( ( '=ne=' ) | ( '=eq=' ) | ( '=lt=' ) | ( '=le=' ) | ( '=gt=' ) | ( '=ge=' ) | ( '=like=' ) )
-            int alt8=7;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:746:1: ( ( '=ne=' ) | ( '=eq=' ) | ( '=lt=' ) | ( '=le=' ) | ( '=gt=' ) | ( '=ge=' ) | ( '=like=' ) )
+            int alt6=7;
             switch ( input.LA(1) ) {
             case 12:
                 {
-                alt8=1;
+                alt6=1;
                 }
                 break;
             case 13:
                 {
-                alt8=2;
+                alt6=2;
                 }
                 break;
             case 14:
                 {
-                alt8=3;
+                alt6=3;
                 }
                 break;
             case 15:
                 {
-                alt8=4;
+                alt6=4;
                 }
                 break;
             case 16:
                 {
-                alt8=5;
+                alt6=5;
                 }
                 break;
             case 17:
                 {
-                alt8=6;
+                alt6=6;
                 }
                 break;
             case 18:
                 {
-                alt8=7;
+                alt6=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt6) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:761:1: ( '=ne=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:747:1: ( '=ne=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:761:1: ( '=ne=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:762:1: '=ne='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:747:1: ( '=ne=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:748:1: '=ne='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getNeKeyword_0()); 
                     }
-                    match(input,12,FOLLOW_12_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1594); if (state.failed) return ;
+                    match(input,12,FOLLOW_12_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1554); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getNeKeyword_0()); 
                     }
@@ -2506,15 +2402,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:769:6: ( '=eq=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:755:6: ( '=eq=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:769:6: ( '=eq=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:770:1: '=eq='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:755:6: ( '=eq=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:756:1: '=eq='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getEqKeyword_1()); 
                     }
-                    match(input,13,FOLLOW_13_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1614); if (state.failed) return ;
+                    match(input,13,FOLLOW_13_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1574); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getEqKeyword_1()); 
                     }
@@ -2525,15 +2421,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:777:6: ( '=lt=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:763:6: ( '=lt=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:777:6: ( '=lt=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:778:1: '=lt='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:763:6: ( '=lt=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:764:1: '=lt='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLtKeyword_2()); 
                     }
-                    match(input,14,FOLLOW_14_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1634); if (state.failed) return ;
+                    match(input,14,FOLLOW_14_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1594); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLtKeyword_2()); 
                     }
@@ -2544,15 +2440,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:785:6: ( '=le=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:771:6: ( '=le=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:785:6: ( '=le=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:786:1: '=le='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:771:6: ( '=le=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:772:1: '=le='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLeKeyword_3()); 
                     }
-                    match(input,15,FOLLOW_15_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1654); if (state.failed) return ;
+                    match(input,15,FOLLOW_15_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1614); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLeKeyword_3()); 
                     }
@@ -2563,15 +2459,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:793:6: ( '=gt=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:779:6: ( '=gt=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:793:6: ( '=gt=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:794:1: '=gt='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:779:6: ( '=gt=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:780:1: '=gt='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGtKeyword_4()); 
                     }
-                    match(input,16,FOLLOW_16_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1674); if (state.failed) return ;
+                    match(input,16,FOLLOW_16_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1634); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGtKeyword_4()); 
                     }
@@ -2582,15 +2478,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:801:6: ( '=ge=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:787:6: ( '=ge=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:801:6: ( '=ge=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:802:1: '=ge='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:787:6: ( '=ge=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:788:1: '=ge='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGeKeyword_5()); 
                     }
-                    match(input,17,FOLLOW_17_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1694); if (state.failed) return ;
+                    match(input,17,FOLLOW_17_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1654); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGeKeyword_5()); 
                     }
@@ -2601,15 +2497,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:809:6: ( '=like=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:795:6: ( '=like=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:809:6: ( '=like=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:810:1: '=like='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:795:6: ( '=like=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:796:1: '=like='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLikeKeyword_6()); 
                     }
-                    match(input,18,FOLLOW_18_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1714); if (state.failed) return ;
+                    match(input,18,FOLLOW_18_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1674); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLikeKeyword_6()); 
                     }
@@ -2637,69 +2533,69 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BinaryOpAliases__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:822:1: rule__BinaryOpAliases__Alternatives : ( ( 'ne' ) | ( 'eq' ) | ( 'lt' ) | ( 'le' ) | ( 'gt' ) | ( 'ge' ) | ( 'like' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:808:1: rule__BinaryOpAliases__Alternatives : ( ( 'ne' ) | ( 'eq' ) | ( 'lt' ) | ( 'le' ) | ( 'gt' ) | ( 'ge' ) | ( 'like' ) );
     public final void rule__BinaryOpAliases__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:826:1: ( ( 'ne' ) | ( 'eq' ) | ( 'lt' ) | ( 'le' ) | ( 'gt' ) | ( 'ge' ) | ( 'like' ) )
-            int alt9=7;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:812:1: ( ( 'ne' ) | ( 'eq' ) | ( 'lt' ) | ( 'le' ) | ( 'gt' ) | ( 'ge' ) | ( 'like' ) )
+            int alt7=7;
             switch ( input.LA(1) ) {
             case 19:
                 {
-                alt9=1;
+                alt7=1;
                 }
                 break;
             case 20:
                 {
-                alt9=2;
+                alt7=2;
                 }
                 break;
             case 21:
                 {
-                alt9=3;
+                alt7=3;
                 }
                 break;
             case 22:
                 {
-                alt9=4;
+                alt7=4;
                 }
                 break;
             case 23:
                 {
-                alt9=5;
+                alt7=5;
                 }
                 break;
             case 24:
                 {
-                alt9=6;
+                alt7=6;
                 }
                 break;
             case 25:
                 {
-                alt9=7;
+                alt7=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt7) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:827:1: ( 'ne' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:813:1: ( 'ne' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:827:1: ( 'ne' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:828:1: 'ne'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:813:1: ( 'ne' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:814:1: 'ne'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getNeKeyword_0()); 
                     }
-                    match(input,19,FOLLOW_19_in_rule__BinaryOpAliases__Alternatives1749); if (state.failed) return ;
+                    match(input,19,FOLLOW_19_in_rule__BinaryOpAliases__Alternatives1709); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getNeKeyword_0()); 
                     }
@@ -2710,15 +2606,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:835:6: ( 'eq' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:821:6: ( 'eq' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:835:6: ( 'eq' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:836:1: 'eq'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:821:6: ( 'eq' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:822:1: 'eq'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getEqKeyword_1()); 
                     }
-                    match(input,20,FOLLOW_20_in_rule__BinaryOpAliases__Alternatives1769); if (state.failed) return ;
+                    match(input,20,FOLLOW_20_in_rule__BinaryOpAliases__Alternatives1729); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getEqKeyword_1()); 
                     }
@@ -2729,15 +2625,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:843:6: ( 'lt' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:829:6: ( 'lt' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:843:6: ( 'lt' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:844:1: 'lt'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:829:6: ( 'lt' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:830:1: 'lt'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getLtKeyword_2()); 
                     }
-                    match(input,21,FOLLOW_21_in_rule__BinaryOpAliases__Alternatives1789); if (state.failed) return ;
+                    match(input,21,FOLLOW_21_in_rule__BinaryOpAliases__Alternatives1749); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getLtKeyword_2()); 
                     }
@@ -2748,15 +2644,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:851:6: ( 'le' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:837:6: ( 'le' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:851:6: ( 'le' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:852:1: 'le'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:837:6: ( 'le' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:838:1: 'le'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getLeKeyword_3()); 
                     }
-                    match(input,22,FOLLOW_22_in_rule__BinaryOpAliases__Alternatives1809); if (state.failed) return ;
+                    match(input,22,FOLLOW_22_in_rule__BinaryOpAliases__Alternatives1769); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getLeKeyword_3()); 
                     }
@@ -2767,15 +2663,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:859:6: ( 'gt' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:845:6: ( 'gt' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:859:6: ( 'gt' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:860:1: 'gt'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:845:6: ( 'gt' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:846:1: 'gt'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getGtKeyword_4()); 
                     }
-                    match(input,23,FOLLOW_23_in_rule__BinaryOpAliases__Alternatives1829); if (state.failed) return ;
+                    match(input,23,FOLLOW_23_in_rule__BinaryOpAliases__Alternatives1789); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getGtKeyword_4()); 
                     }
@@ -2786,15 +2682,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:867:6: ( 'ge' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:853:6: ( 'ge' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:867:6: ( 'ge' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:868:1: 'ge'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:853:6: ( 'ge' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:854:1: 'ge'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getGeKeyword_5()); 
                     }
-                    match(input,24,FOLLOW_24_in_rule__BinaryOpAliases__Alternatives1849); if (state.failed) return ;
+                    match(input,24,FOLLOW_24_in_rule__BinaryOpAliases__Alternatives1809); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getGeKeyword_5()); 
                     }
@@ -2805,15 +2701,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:875:6: ( 'like' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:861:6: ( 'like' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:875:6: ( 'like' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:876:1: 'like'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:861:6: ( 'like' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:862:1: 'like'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBinaryOpAliasesAccess().getLikeKeyword_6()); 
                     }
-                    match(input,25,FOLLOW_25_in_rule__BinaryOpAliases__Alternatives1869); if (state.failed) return ;
+                    match(input,25,FOLLOW_25_in_rule__BinaryOpAliases__Alternatives1829); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getBinaryOpAliasesAccess().getLikeKeyword_6()); 
                     }
@@ -2841,64 +2737,64 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompOps__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:888:1: rule__CompOps__Alternatives : ( ( '!=' ) | ( '=' ) | ( '<' ) | ( '<=' ) | ( '>' ) | ( '>=' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:874:1: rule__CompOps__Alternatives : ( ( '!=' ) | ( '=' ) | ( '<' ) | ( '<=' ) | ( '>' ) | ( '>=' ) );
     public final void rule__CompOps__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:892:1: ( ( '!=' ) | ( '=' ) | ( '<' ) | ( '<=' ) | ( '>' ) | ( '>=' ) )
-            int alt10=6;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:878:1: ( ( '!=' ) | ( '=' ) | ( '<' ) | ( '<=' ) | ( '>' ) | ( '>=' ) )
+            int alt8=6;
             switch ( input.LA(1) ) {
             case 26:
                 {
-                alt10=1;
+                alt8=1;
                 }
                 break;
             case 27:
                 {
-                alt10=2;
+                alt8=2;
                 }
                 break;
             case 28:
                 {
-                alt10=3;
+                alt8=3;
                 }
                 break;
             case 29:
                 {
-                alt10=4;
+                alt8=4;
                 }
                 break;
             case 30:
                 {
-                alt10=5;
+                alt8=5;
                 }
                 break;
             case 31:
                 {
-                alt10=6;
+                alt8=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt10) {
+            switch (alt8) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:893:1: ( '!=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:879:1: ( '!=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:893:1: ( '!=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:894:1: '!='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:879:1: ( '!=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:880:1: '!='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getExclamationMarkEqualsSignKeyword_0()); 
                     }
-                    match(input,26,FOLLOW_26_in_rule__CompOps__Alternatives1904); if (state.failed) return ;
+                    match(input,26,FOLLOW_26_in_rule__CompOps__Alternatives1864); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getExclamationMarkEqualsSignKeyword_0()); 
                     }
@@ -2909,15 +2805,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:901:6: ( '=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:887:6: ( '=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:901:6: ( '=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:902:1: '='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:887:6: ( '=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:888:1: '='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getEqualsSignKeyword_1()); 
                     }
-                    match(input,27,FOLLOW_27_in_rule__CompOps__Alternatives1924); if (state.failed) return ;
+                    match(input,27,FOLLOW_27_in_rule__CompOps__Alternatives1884); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getEqualsSignKeyword_1()); 
                     }
@@ -2928,15 +2824,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:909:6: ( '<' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:895:6: ( '<' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:909:6: ( '<' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:910:1: '<'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:895:6: ( '<' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:896:1: '<'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getLessThanSignKeyword_2()); 
                     }
-                    match(input,28,FOLLOW_28_in_rule__CompOps__Alternatives1944); if (state.failed) return ;
+                    match(input,28,FOLLOW_28_in_rule__CompOps__Alternatives1904); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getLessThanSignKeyword_2()); 
                     }
@@ -2947,15 +2843,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:917:6: ( '<=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:903:6: ( '<=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:917:6: ( '<=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:918:1: '<='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:903:6: ( '<=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:904:1: '<='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getLessThanSignEqualsSignKeyword_3()); 
                     }
-                    match(input,29,FOLLOW_29_in_rule__CompOps__Alternatives1964); if (state.failed) return ;
+                    match(input,29,FOLLOW_29_in_rule__CompOps__Alternatives1924); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getLessThanSignEqualsSignKeyword_3()); 
                     }
@@ -2966,15 +2862,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:925:6: ( '>' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:911:6: ( '>' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:925:6: ( '>' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:926:1: '>'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:911:6: ( '>' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:912:1: '>'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getGreaterThanSignKeyword_4()); 
                     }
-                    match(input,30,FOLLOW_30_in_rule__CompOps__Alternatives1984); if (state.failed) return ;
+                    match(input,30,FOLLOW_30_in_rule__CompOps__Alternatives1944); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getGreaterThanSignKeyword_4()); 
                     }
@@ -2985,15 +2881,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:933:6: ( '>=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:919:6: ( '>=' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:933:6: ( '>=' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:934:1: '>='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:919:6: ( '>=' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:920:1: '>='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCompOpsAccess().getGreaterThanSignEqualsSignKeyword_5()); 
                     }
-                    match(input,31,FOLLOW_31_in_rule__CompOps__Alternatives2004); if (state.failed) return ;
+                    match(input,31,FOLLOW_31_in_rule__CompOps__Alternatives1964); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getCompOpsAccess().getGreaterThanSignEqualsSignKeyword_5()); 
                     }
@@ -3021,40 +2917,40 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Alternatives_2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:946:1: rule__Comparison__Alternatives_2 : ( ( ruleBinaryOpAliasesWithEqualsSign ) | ( ruleCompOps ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:932:1: rule__Comparison__Alternatives_2 : ( ( ruleBinaryOpAliasesWithEqualsSign ) | ( ruleCompOps ) );
     public final void rule__Comparison__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:950:1: ( ( ruleBinaryOpAliasesWithEqualsSign ) | ( ruleCompOps ) )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:936:1: ( ( ruleBinaryOpAliasesWithEqualsSign ) | ( ruleCompOps ) )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( ((LA11_0>=12 && LA11_0<=18)) ) {
-                alt11=1;
+            if ( ((LA9_0>=12 && LA9_0<=18)) ) {
+                alt9=1;
             }
-            else if ( ((LA11_0>=26 && LA11_0<=31)) ) {
-                alt11=2;
+            else if ( ((LA9_0>=26 && LA9_0<=31)) ) {
+                alt9=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt9) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:951:1: ( ruleBinaryOpAliasesWithEqualsSign )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:937:1: ( ruleBinaryOpAliasesWithEqualsSign )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:951:1: ( ruleBinaryOpAliasesWithEqualsSign )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:952:1: ruleBinaryOpAliasesWithEqualsSign
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:937:1: ( ruleBinaryOpAliasesWithEqualsSign )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:938:1: ruleBinaryOpAliasesWithEqualsSign
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getBinaryOpAliasesWithEqualsSignParserRuleCall_2_0()); 
                     }
-                    pushFollow(FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_rule__Comparison__Alternatives_22038);
+                    pushFollow(FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_rule__Comparison__Alternatives_21998);
                     ruleBinaryOpAliasesWithEqualsSign();
 
                     state._fsp--;
@@ -3069,15 +2965,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:957:6: ( ruleCompOps )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:943:6: ( ruleCompOps )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:957:6: ( ruleCompOps )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:958:1: ruleCompOps
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:943:6: ( ruleCompOps )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:944:1: ruleCompOps
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonAccess().getCompOpsParserRuleCall_2_1()); 
                     }
-                    pushFollow(FOLLOW_ruleCompOps_in_rule__Comparison__Alternatives_22055);
+                    pushFollow(FOLLOW_ruleCompOps_in_rule__Comparison__Alternatives_22015);
                     ruleCompOps();
 
                     state._fsp--;
@@ -3109,40 +3005,40 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Alternatives_0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:968:1: rule__CallOperator__Alternatives_0 : ( ( ruleBinaryOpAliases ) | ( ruleFunctionsTbl ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:954:1: rule__CallOperator__Alternatives_0 : ( ( ruleBinaryOpAliases ) | ( ruleFunctionsTbl ) );
     public final void rule__CallOperator__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:972:1: ( ( ruleBinaryOpAliases ) | ( ruleFunctionsTbl ) )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:958:1: ( ( ruleBinaryOpAliases ) | ( ruleFunctionsTbl ) )
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( ((LA12_0>=19 && LA12_0<=25)) ) {
-                alt12=1;
+            if ( ((LA10_0>=19 && LA10_0<=25)) ) {
+                alt10=1;
             }
-            else if ( ((LA12_0>=37 && LA12_0<=39)) ) {
-                alt12=2;
+            else if ( ((LA10_0>=37 && LA10_0<=39)) ) {
+                alt10=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt10) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:973:1: ( ruleBinaryOpAliases )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:959:1: ( ruleBinaryOpAliases )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:973:1: ( ruleBinaryOpAliases )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:974:1: ruleBinaryOpAliases
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:959:1: ( ruleBinaryOpAliases )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:960:1: ruleBinaryOpAliases
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCallOperatorAccess().getBinaryOpAliasesParserRuleCall_0_0()); 
                     }
-                    pushFollow(FOLLOW_ruleBinaryOpAliases_in_rule__CallOperator__Alternatives_02087);
+                    pushFollow(FOLLOW_ruleBinaryOpAliases_in_rule__CallOperator__Alternatives_02047);
                     ruleBinaryOpAliases();
 
                     state._fsp--;
@@ -3157,15 +3053,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:979:6: ( ruleFunctionsTbl )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:965:6: ( ruleFunctionsTbl )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:979:6: ( ruleFunctionsTbl )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:980:1: ruleFunctionsTbl
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:965:6: ( ruleFunctionsTbl )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:966:1: ruleFunctionsTbl
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getCallOperatorAccess().getFunctionsTblParserRuleCall_0_1()); 
                     }
-                    pushFollow(FOLLOW_ruleFunctionsTbl_in_rule__CallOperator__Alternatives_02104);
+                    pushFollow(FOLLOW_ruleFunctionsTbl_in_rule__CallOperator__Alternatives_02064);
                     ruleFunctionsTbl();
 
                     state._fsp--;
@@ -3197,59 +3093,59 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredTbl__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:990:1: rule__PredTbl__Alternatives : ( ( 'select' ) | ( 'sort' ) | ( 'limit' ) | ( 'implementing' ) | ( 'composing' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:976:1: rule__PredTbl__Alternatives : ( ( 'select' ) | ( 'sort' ) | ( 'limit' ) | ( 'implementing' ) | ( 'composing' ) );
     public final void rule__PredTbl__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:994:1: ( ( 'select' ) | ( 'sort' ) | ( 'limit' ) | ( 'implementing' ) | ( 'composing' ) )
-            int alt13=5;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:980:1: ( ( 'select' ) | ( 'sort' ) | ( 'limit' ) | ( 'implementing' ) | ( 'composing' ) )
+            int alt11=5;
             switch ( input.LA(1) ) {
             case 32:
                 {
-                alt13=1;
+                alt11=1;
                 }
                 break;
             case 33:
                 {
-                alt13=2;
+                alt11=2;
                 }
                 break;
             case 34:
                 {
-                alt13=3;
+                alt11=3;
                 }
                 break;
             case 35:
                 {
-                alt13=4;
+                alt11=4;
                 }
                 break;
             case 36:
                 {
-                alt13=5;
+                alt11=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt11) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:995:1: ( 'select' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:981:1: ( 'select' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:995:1: ( 'select' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:996:1: 'select'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:981:1: ( 'select' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:982:1: 'select'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPredTblAccess().getSelectKeyword_0()); 
                     }
-                    match(input,32,FOLLOW_32_in_rule__PredTbl__Alternatives2137); if (state.failed) return ;
+                    match(input,32,FOLLOW_32_in_rule__PredTbl__Alternatives2097); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getPredTblAccess().getSelectKeyword_0()); 
                     }
@@ -3260,15 +3156,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1003:6: ( 'sort' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:989:6: ( 'sort' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1003:6: ( 'sort' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1004:1: 'sort'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:989:6: ( 'sort' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:990:1: 'sort'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPredTblAccess().getSortKeyword_1()); 
                     }
-                    match(input,33,FOLLOW_33_in_rule__PredTbl__Alternatives2157); if (state.failed) return ;
+                    match(input,33,FOLLOW_33_in_rule__PredTbl__Alternatives2117); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getPredTblAccess().getSortKeyword_1()); 
                     }
@@ -3279,15 +3175,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1011:6: ( 'limit' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:997:6: ( 'limit' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1011:6: ( 'limit' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1012:1: 'limit'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:997:6: ( 'limit' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:998:1: 'limit'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPredTblAccess().getLimitKeyword_2()); 
                     }
-                    match(input,34,FOLLOW_34_in_rule__PredTbl__Alternatives2177); if (state.failed) return ;
+                    match(input,34,FOLLOW_34_in_rule__PredTbl__Alternatives2137); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getPredTblAccess().getLimitKeyword_2()); 
                     }
@@ -3298,15 +3194,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1019:6: ( 'implementing' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1005:6: ( 'implementing' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1019:6: ( 'implementing' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1020:1: 'implementing'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1005:6: ( 'implementing' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1006:1: 'implementing'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPredTblAccess().getImplementingKeyword_3()); 
                     }
-                    match(input,35,FOLLOW_35_in_rule__PredTbl__Alternatives2197); if (state.failed) return ;
+                    match(input,35,FOLLOW_35_in_rule__PredTbl__Alternatives2157); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getPredTblAccess().getImplementingKeyword_3()); 
                     }
@@ -3317,15 +3213,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1027:6: ( 'composing' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1013:6: ( 'composing' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1027:6: ( 'composing' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1028:1: 'composing'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1013:6: ( 'composing' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1014:1: 'composing'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPredTblAccess().getComposingKeyword_4()); 
                     }
-                    match(input,36,FOLLOW_36_in_rule__PredTbl__Alternatives2217); if (state.failed) return ;
+                    match(input,36,FOLLOW_36_in_rule__PredTbl__Alternatives2177); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getPredTblAccess().getComposingKeyword_4()); 
                     }
@@ -3353,26 +3249,26 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Alternatives_1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1040:1: rule__PrimaryExpr__Alternatives_1 : ( ( ( rule__PrimaryExpr__Group_1_0__0 ) ) | ( ruleArray ) | ( ruleStrval ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1026:1: rule__PrimaryExpr__Alternatives_1 : ( ( ( rule__PrimaryExpr__Group_1_0__0 ) ) | ( ruleArray ) | ( ruleStrval ) );
     public final void rule__PrimaryExpr__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1044:1: ( ( ( rule__PrimaryExpr__Group_1_0__0 ) ) | ( ruleArray ) | ( ruleStrval ) )
-            int alt14=3;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1030:1: ( ( ( rule__PrimaryExpr__Group_1_0__0 ) ) | ( ruleArray ) | ( ruleStrval ) )
+            int alt12=3;
             switch ( input.LA(1) ) {
             case 40:
             case 41:
             case 42:
             case 43:
                 {
-                alt14=1;
+                alt12=1;
                 }
                 break;
-            case 58:
+            case 60:
                 {
-                alt14=2;
+                alt12=2;
                 }
                 break;
             case RULE_ALPHA:
@@ -3388,33 +3284,33 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             case 52:
             case 53:
             case 54:
-            case 60:
+            case 62:
                 {
-                alt14=3;
+                alt12=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt12) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1045:1: ( ( rule__PrimaryExpr__Group_1_0__0 ) )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1031:1: ( ( rule__PrimaryExpr__Group_1_0__0 ) )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1045:1: ( ( rule__PrimaryExpr__Group_1_0__0 ) )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1046:1: ( rule__PrimaryExpr__Group_1_0__0 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1031:1: ( ( rule__PrimaryExpr__Group_1_0__0 ) )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1032:1: ( rule__PrimaryExpr__Group_1_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryExprAccess().getGroup_1_0()); 
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1047:1: ( rule__PrimaryExpr__Group_1_0__0 )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1047:2: rule__PrimaryExpr__Group_1_0__0
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1033:1: ( rule__PrimaryExpr__Group_1_0__0 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1033:2: rule__PrimaryExpr__Group_1_0__0
                     {
-                    pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__0_in_rule__PrimaryExpr__Alternatives_12251);
+                    pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__0_in_rule__PrimaryExpr__Alternatives_12211);
                     rule__PrimaryExpr__Group_1_0__0();
 
                     state._fsp--;
@@ -3432,15 +3328,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1051:6: ( ruleArray )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1037:6: ( ruleArray )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1051:6: ( ruleArray )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1052:1: ruleArray
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1037:6: ( ruleArray )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1038:1: ruleArray
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryExprAccess().getArrayParserRuleCall_1_1()); 
                     }
-                    pushFollow(FOLLOW_ruleArray_in_rule__PrimaryExpr__Alternatives_12269);
+                    pushFollow(FOLLOW_ruleArray_in_rule__PrimaryExpr__Alternatives_12229);
                     ruleArray();
 
                     state._fsp--;
@@ -3455,15 +3351,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1057:6: ( ruleStrval )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1043:6: ( ruleStrval )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1057:6: ( ruleStrval )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1058:1: ruleStrval
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1043:6: ( ruleStrval )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1044:1: ruleStrval
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryExprAccess().getStrvalParserRuleCall_1_2()); 
                     }
-                    pushFollow(FOLLOW_ruleStrval_in_rule__PrimaryExpr__Alternatives_12286);
+                    pushFollow(FOLLOW_ruleStrval_in_rule__PrimaryExpr__Alternatives_12246);
                     ruleStrval();
 
                     state._fsp--;
@@ -3495,49 +3391,49 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionsTbl__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1068:1: rule__FunctionsTbl__Alternatives : ( ( 'isnull' ) | ( 'in' ) | ( 'out' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1054:1: rule__FunctionsTbl__Alternatives : ( ( 'isnull' ) | ( 'in' ) | ( 'out' ) );
     public final void rule__FunctionsTbl__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1072:1: ( ( 'isnull' ) | ( 'in' ) | ( 'out' ) )
-            int alt15=3;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1058:1: ( ( 'isnull' ) | ( 'in' ) | ( 'out' ) )
+            int alt13=3;
             switch ( input.LA(1) ) {
             case 37:
                 {
-                alt15=1;
+                alt13=1;
                 }
                 break;
             case 38:
                 {
-                alt15=2;
+                alt13=2;
                 }
                 break;
             case 39:
                 {
-                alt15=3;
+                alt13=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt13) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1073:1: ( 'isnull' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1059:1: ( 'isnull' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1073:1: ( 'isnull' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1074:1: 'isnull'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1059:1: ( 'isnull' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1060:1: 'isnull'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFunctionsTblAccess().getIsnullKeyword_0()); 
                     }
-                    match(input,37,FOLLOW_37_in_rule__FunctionsTbl__Alternatives2319); if (state.failed) return ;
+                    match(input,37,FOLLOW_37_in_rule__FunctionsTbl__Alternatives2279); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getFunctionsTblAccess().getIsnullKeyword_0()); 
                     }
@@ -3548,15 +3444,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1081:6: ( 'in' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1067:6: ( 'in' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1081:6: ( 'in' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1082:1: 'in'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1067:6: ( 'in' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1068:1: 'in'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFunctionsTblAccess().getInKeyword_1()); 
                     }
-                    match(input,38,FOLLOW_38_in_rule__FunctionsTbl__Alternatives2339); if (state.failed) return ;
+                    match(input,38,FOLLOW_38_in_rule__FunctionsTbl__Alternatives2299); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getFunctionsTblAccess().getInKeyword_1()); 
                     }
@@ -3567,15 +3463,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1089:6: ( 'out' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1075:6: ( 'out' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1089:6: ( 'out' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1090:1: 'out'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1075:6: ( 'out' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1076:1: 'out'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFunctionsTblAccess().getOutKeyword_2()); 
                     }
-                    match(input,39,FOLLOW_39_in_rule__FunctionsTbl__Alternatives2359); if (state.failed) return ;
+                    match(input,39,FOLLOW_39_in_rule__FunctionsTbl__Alternatives2319); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getFunctionsTblAccess().getOutKeyword_2()); 
                     }
@@ -3603,54 +3499,54 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstFuncTbl__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1102:1: rule__ConstFuncTbl__Alternatives : ( ( 'true' ) | ( 'false' ) | ( 'empty' ) | ( 'null' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1088:1: rule__ConstFuncTbl__Alternatives : ( ( 'true' ) | ( 'false' ) | ( 'empty' ) | ( 'null' ) );
     public final void rule__ConstFuncTbl__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1106:1: ( ( 'true' ) | ( 'false' ) | ( 'empty' ) | ( 'null' ) )
-            int alt16=4;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1092:1: ( ( 'true' ) | ( 'false' ) | ( 'empty' ) | ( 'null' ) )
+            int alt14=4;
             switch ( input.LA(1) ) {
             case 40:
                 {
-                alt16=1;
+                alt14=1;
                 }
                 break;
             case 41:
                 {
-                alt16=2;
+                alt14=2;
                 }
                 break;
             case 42:
                 {
-                alt16=3;
+                alt14=3;
                 }
                 break;
             case 43:
                 {
-                alt16=4;
+                alt14=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt16) {
+            switch (alt14) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1107:1: ( 'true' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1093:1: ( 'true' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1107:1: ( 'true' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1108:1: 'true'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1093:1: ( 'true' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1094:1: 'true'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getConstFuncTblAccess().getTrueKeyword_0()); 
                     }
-                    match(input,40,FOLLOW_40_in_rule__ConstFuncTbl__Alternatives2394); if (state.failed) return ;
+                    match(input,40,FOLLOW_40_in_rule__ConstFuncTbl__Alternatives2354); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getConstFuncTblAccess().getTrueKeyword_0()); 
                     }
@@ -3661,15 +3557,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1115:6: ( 'false' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1101:6: ( 'false' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1115:6: ( 'false' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1116:1: 'false'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1101:6: ( 'false' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1102:1: 'false'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getConstFuncTblAccess().getFalseKeyword_1()); 
                     }
-                    match(input,41,FOLLOW_41_in_rule__ConstFuncTbl__Alternatives2414); if (state.failed) return ;
+                    match(input,41,FOLLOW_41_in_rule__ConstFuncTbl__Alternatives2374); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getConstFuncTblAccess().getFalseKeyword_1()); 
                     }
@@ -3680,15 +3576,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1123:6: ( 'empty' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1109:6: ( 'empty' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1123:6: ( 'empty' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1124:1: 'empty'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1109:6: ( 'empty' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1110:1: 'empty'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getConstFuncTblAccess().getEmptyKeyword_2()); 
                     }
-                    match(input,42,FOLLOW_42_in_rule__ConstFuncTbl__Alternatives2434); if (state.failed) return ;
+                    match(input,42,FOLLOW_42_in_rule__ConstFuncTbl__Alternatives2394); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getConstFuncTblAccess().getEmptyKeyword_2()); 
                     }
@@ -3699,15 +3595,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1131:6: ( 'null' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1117:6: ( 'null' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1131:6: ( 'null' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1132:1: 'null'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1117:6: ( 'null' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1118:1: 'null'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getConstFuncTblAccess().getNullKeyword_3()); 
                     }
-                    match(input,43,FOLLOW_43_in_rule__ConstFuncTbl__Alternatives2454); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_rule__ConstFuncTbl__Alternatives2414); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getConstFuncTblAccess().getNullKeyword_3()); 
                     }
@@ -3735,99 +3631,99 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Nchar__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1144:1: rule__Nchar__Alternatives : ( ( RULE_ALPHA ) | ( RULE_DIGIT ) | ( '-' ) | ( '.' ) | ( '_' ) | ( '~' ) | ( '$' ) | ( ':' ) | ( '*' ) | ( '+' ) | ( '?' ) | ( '/' ) | ( '@' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1130:1: rule__Nchar__Alternatives : ( ( RULE_ALPHA ) | ( RULE_DIGIT ) | ( '-' ) | ( '.' ) | ( '_' ) | ( '~' ) | ( '$' ) | ( ':' ) | ( '*' ) | ( '+' ) | ( '?' ) | ( '/' ) | ( '@' ) );
     public final void rule__Nchar__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1148:1: ( ( RULE_ALPHA ) | ( RULE_DIGIT ) | ( '-' ) | ( '.' ) | ( '_' ) | ( '~' ) | ( '$' ) | ( ':' ) | ( '*' ) | ( '+' ) | ( '?' ) | ( '/' ) | ( '@' ) )
-            int alt17=13;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1134:1: ( ( RULE_ALPHA ) | ( RULE_DIGIT ) | ( '-' ) | ( '.' ) | ( '_' ) | ( '~' ) | ( '$' ) | ( ':' ) | ( '*' ) | ( '+' ) | ( '?' ) | ( '/' ) | ( '@' ) )
+            int alt15=13;
             switch ( input.LA(1) ) {
             case RULE_ALPHA:
                 {
-                alt17=1;
+                alt15=1;
                 }
                 break;
             case RULE_DIGIT:
                 {
-                alt17=2;
+                alt15=2;
                 }
                 break;
             case 44:
                 {
-                alt17=3;
+                alt15=3;
                 }
                 break;
             case 45:
                 {
-                alt17=4;
+                alt15=4;
                 }
                 break;
             case 46:
                 {
-                alt17=5;
+                alt15=5;
                 }
                 break;
             case 47:
                 {
-                alt17=6;
+                alt15=6;
                 }
                 break;
             case 48:
                 {
-                alt17=7;
+                alt15=7;
                 }
                 break;
             case 49:
                 {
-                alt17=8;
+                alt15=8;
                 }
                 break;
             case 50:
                 {
-                alt17=9;
+                alt15=9;
                 }
                 break;
             case 51:
                 {
-                alt17=10;
+                alt15=10;
                 }
                 break;
             case 52:
                 {
-                alt17=11;
+                alt15=11;
                 }
                 break;
             case 53:
                 {
-                alt17=12;
+                alt15=12;
                 }
                 break;
             case 54:
                 {
-                alt17=13;
+                alt15=13;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt17) {
+            switch (alt15) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1149:1: ( RULE_ALPHA )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1135:1: ( RULE_ALPHA )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1149:1: ( RULE_ALPHA )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1150:1: RULE_ALPHA
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1135:1: ( RULE_ALPHA )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1136:1: RULE_ALPHA
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getALPHATerminalRuleCall_0()); 
                     }
-                    match(input,RULE_ALPHA,FOLLOW_RULE_ALPHA_in_rule__Nchar__Alternatives2488); if (state.failed) return ;
+                    match(input,RULE_ALPHA,FOLLOW_RULE_ALPHA_in_rule__Nchar__Alternatives2448); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getALPHATerminalRuleCall_0()); 
                     }
@@ -3838,15 +3734,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1155:6: ( RULE_DIGIT )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1141:6: ( RULE_DIGIT )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1155:6: ( RULE_DIGIT )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1156:1: RULE_DIGIT
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1141:6: ( RULE_DIGIT )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1142:1: RULE_DIGIT
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getDIGITTerminalRuleCall_1()); 
                     }
-                    match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_rule__Nchar__Alternatives2505); if (state.failed) return ;
+                    match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_rule__Nchar__Alternatives2465); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getDIGITTerminalRuleCall_1()); 
                     }
@@ -3857,15 +3753,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1161:6: ( '-' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1147:6: ( '-' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1161:6: ( '-' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1162:1: '-'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1147:6: ( '-' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1148:1: '-'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getHyphenMinusKeyword_2()); 
                     }
-                    match(input,44,FOLLOW_44_in_rule__Nchar__Alternatives2523); if (state.failed) return ;
+                    match(input,44,FOLLOW_44_in_rule__Nchar__Alternatives2483); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getHyphenMinusKeyword_2()); 
                     }
@@ -3876,15 +3772,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1169:6: ( '.' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1155:6: ( '.' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1169:6: ( '.' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1170:1: '.'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1155:6: ( '.' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1156:1: '.'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getFullStopKeyword_3()); 
                     }
-                    match(input,45,FOLLOW_45_in_rule__Nchar__Alternatives2543); if (state.failed) return ;
+                    match(input,45,FOLLOW_45_in_rule__Nchar__Alternatives2503); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getFullStopKeyword_3()); 
                     }
@@ -3895,15 +3791,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1177:6: ( '_' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1163:6: ( '_' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1177:6: ( '_' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1178:1: '_'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1163:6: ( '_' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1164:1: '_'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().get_Keyword_4()); 
                     }
-                    match(input,46,FOLLOW_46_in_rule__Nchar__Alternatives2563); if (state.failed) return ;
+                    match(input,46,FOLLOW_46_in_rule__Nchar__Alternatives2523); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().get_Keyword_4()); 
                     }
@@ -3914,15 +3810,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1185:6: ( '~' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1171:6: ( '~' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1185:6: ( '~' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1186:1: '~'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1171:6: ( '~' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1172:1: '~'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getTildeKeyword_5()); 
                     }
-                    match(input,47,FOLLOW_47_in_rule__Nchar__Alternatives2583); if (state.failed) return ;
+                    match(input,47,FOLLOW_47_in_rule__Nchar__Alternatives2543); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getTildeKeyword_5()); 
                     }
@@ -3933,15 +3829,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1193:6: ( '$' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1179:6: ( '$' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1193:6: ( '$' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1194:1: '$'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1179:6: ( '$' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1180:1: '$'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getDollarSignKeyword_6()); 
                     }
-                    match(input,48,FOLLOW_48_in_rule__Nchar__Alternatives2603); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_rule__Nchar__Alternatives2563); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getDollarSignKeyword_6()); 
                     }
@@ -3952,15 +3848,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1201:6: ( ':' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1187:6: ( ':' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1201:6: ( ':' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1202:1: ':'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1187:6: ( ':' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1188:1: ':'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getColonKeyword_7()); 
                     }
-                    match(input,49,FOLLOW_49_in_rule__Nchar__Alternatives2623); if (state.failed) return ;
+                    match(input,49,FOLLOW_49_in_rule__Nchar__Alternatives2583); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getColonKeyword_7()); 
                     }
@@ -3971,15 +3867,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1209:6: ( '*' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1195:6: ( '*' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1209:6: ( '*' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1210:1: '*'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1195:6: ( '*' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1196:1: '*'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getAsteriskKeyword_8()); 
                     }
-                    match(input,50,FOLLOW_50_in_rule__Nchar__Alternatives2643); if (state.failed) return ;
+                    match(input,50,FOLLOW_50_in_rule__Nchar__Alternatives2603); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getAsteriskKeyword_8()); 
                     }
@@ -3990,15 +3886,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1217:6: ( '+' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1203:6: ( '+' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1217:6: ( '+' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1218:1: '+'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1203:6: ( '+' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1204:1: '+'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getPlusSignKeyword_9()); 
                     }
-                    match(input,51,FOLLOW_51_in_rule__Nchar__Alternatives2663); if (state.failed) return ;
+                    match(input,51,FOLLOW_51_in_rule__Nchar__Alternatives2623); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getPlusSignKeyword_9()); 
                     }
@@ -4009,15 +3905,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1225:6: ( '?' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1211:6: ( '?' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1225:6: ( '?' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1226:1: '?'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1211:6: ( '?' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1212:1: '?'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getQuestionMarkKeyword_10()); 
                     }
-                    match(input,52,FOLLOW_52_in_rule__Nchar__Alternatives2683); if (state.failed) return ;
+                    match(input,52,FOLLOW_52_in_rule__Nchar__Alternatives2643); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getQuestionMarkKeyword_10()); 
                     }
@@ -4028,15 +3924,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 12 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1233:6: ( '/' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1219:6: ( '/' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1233:6: ( '/' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1234:1: '/'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1219:6: ( '/' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1220:1: '/'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getSolidusKeyword_11()); 
                     }
-                    match(input,53,FOLLOW_53_in_rule__Nchar__Alternatives2703); if (state.failed) return ;
+                    match(input,53,FOLLOW_53_in_rule__Nchar__Alternatives2663); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getSolidusKeyword_11()); 
                     }
@@ -4047,15 +3943,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 13 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1241:6: ( '@' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1227:6: ( '@' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1241:6: ( '@' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1242:1: '@'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1227:6: ( '@' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1228:1: '@'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNcharAccess().getCommercialAtKeyword_12()); 
                     }
-                    match(input,54,FOLLOW_54_in_rule__Nchar__Alternatives2723); if (state.failed) return ;
+                    match(input,54,FOLLOW_54_in_rule__Nchar__Alternatives2683); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNcharAccess().getCommercialAtKeyword_12()); 
                     }
@@ -4083,40 +3979,40 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Strval__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1254:1: rule__Strval__Alternatives : ( ( ruleNchar ) | ( rulePct_encoded ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1240:1: rule__Strval__Alternatives : ( ( ruleNchar ) | ( rulePct_encoded ) );
     public final void rule__Strval__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1258:1: ( ( ruleNchar ) | ( rulePct_encoded ) )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1244:1: ( ( ruleNchar ) | ( rulePct_encoded ) )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( ((LA18_0>=RULE_ALPHA && LA18_0<=RULE_DIGIT)||(LA18_0>=44 && LA18_0<=54)) ) {
-                alt18=1;
+            if ( ((LA16_0>=RULE_ALPHA && LA16_0<=RULE_DIGIT)||(LA16_0>=44 && LA16_0<=54)) ) {
+                alt16=1;
             }
-            else if ( (LA18_0==60) ) {
-                alt18=2;
+            else if ( (LA16_0==62) ) {
+                alt16=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt16) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1259:1: ( ruleNchar )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1245:1: ( ruleNchar )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1259:1: ( ruleNchar )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1260:1: ruleNchar
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1245:1: ( ruleNchar )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1246:1: ruleNchar
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getStrvalAccess().getNcharParserRuleCall_0()); 
                     }
-                    pushFollow(FOLLOW_ruleNchar_in_rule__Strval__Alternatives2757);
+                    pushFollow(FOLLOW_ruleNchar_in_rule__Strval__Alternatives2717);
                     ruleNchar();
 
                     state._fsp--;
@@ -4131,15 +4027,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1265:6: ( rulePct_encoded )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1251:6: ( rulePct_encoded )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1265:6: ( rulePct_encoded )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1266:1: rulePct_encoded
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1251:6: ( rulePct_encoded )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1252:1: rulePct_encoded
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getStrvalAccess().getPct_encodedParserRuleCall_1()); 
                     }
-                    pushFollow(FOLLOW_rulePct_encoded_in_rule__Strval__Alternatives2774);
+                    pushFollow(FOLLOW_rulePct_encoded_in_rule__Strval__Alternatives2734);
                     rulePct_encoded();
 
                     state._fsp--;
@@ -4171,49 +4067,49 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LogicalOpAliases__Alternatives"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1276:1: rule__LogicalOpAliases__Alternatives : ( ( 'or' ) | ( 'and' ) | ( 'not' ) );
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1262:1: rule__LogicalOpAliases__Alternatives : ( ( 'or' ) | ( 'and' ) | ( 'not' ) );
     public final void rule__LogicalOpAliases__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1280:1: ( ( 'or' ) | ( 'and' ) | ( 'not' ) )
-            int alt19=3;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1266:1: ( ( 'or' ) | ( 'and' ) | ( 'not' ) )
+            int alt17=3;
             switch ( input.LA(1) ) {
             case 55:
                 {
-                alt19=1;
+                alt17=1;
                 }
                 break;
             case 56:
                 {
-                alt19=2;
+                alt17=2;
                 }
                 break;
             case 57:
                 {
-                alt19=3;
+                alt17=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt19) {
+            switch (alt17) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1281:1: ( 'or' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1267:1: ( 'or' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1281:1: ( 'or' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1282:1: 'or'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1267:1: ( 'or' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1268:1: 'or'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLogicalOpAliasesAccess().getOrKeyword_0()); 
                     }
-                    match(input,55,FOLLOW_55_in_rule__LogicalOpAliases__Alternatives2807); if (state.failed) return ;
+                    match(input,55,FOLLOW_55_in_rule__LogicalOpAliases__Alternatives2767); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getLogicalOpAliasesAccess().getOrKeyword_0()); 
                     }
@@ -4224,15 +4120,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1289:6: ( 'and' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1275:6: ( 'and' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1289:6: ( 'and' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1290:1: 'and'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1275:6: ( 'and' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1276:1: 'and'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLogicalOpAliasesAccess().getAndKeyword_1()); 
                     }
-                    match(input,56,FOLLOW_56_in_rule__LogicalOpAliases__Alternatives2827); if (state.failed) return ;
+                    match(input,56,FOLLOW_56_in_rule__LogicalOpAliases__Alternatives2787); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getLogicalOpAliasesAccess().getAndKeyword_1()); 
                     }
@@ -4243,15 +4139,15 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1297:6: ( 'not' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1283:6: ( 'not' )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1297:6: ( 'not' )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1298:1: 'not'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1283:6: ( 'not' )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1284:1: 'not'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLogicalOpAliasesAccess().getNotKeyword_2()); 
                     }
-                    match(input,57,FOLLOW_57_in_rule__LogicalOpAliases__Alternatives2847); if (state.failed) return ;
+                    match(input,57,FOLLOW_57_in_rule__LogicalOpAliases__Alternatives2807); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getLogicalOpAliasesAccess().getNotKeyword_2()); 
                     }
@@ -4279,21 +4175,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1312:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1298:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1316:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1317:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1302:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1303:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02879);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02839);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__02882);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__02842);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -4317,25 +4213,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1324:1: rule__Model__Group__0__Impl : ( ( rule__Model__OperandsAssignment_0 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1310:1: rule__Model__Group__0__Impl : ( ( rule__Model__OperandsAssignment_0 ) ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1328:1: ( ( ( rule__Model__OperandsAssignment_0 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1329:1: ( ( rule__Model__OperandsAssignment_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1314:1: ( ( ( rule__Model__OperandsAssignment_0 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1315:1: ( ( rule__Model__OperandsAssignment_0 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1329:1: ( ( rule__Model__OperandsAssignment_0 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1330:1: ( rule__Model__OperandsAssignment_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1315:1: ( ( rule__Model__OperandsAssignment_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1316:1: ( rule__Model__OperandsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getOperandsAssignment_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1331:1: ( rule__Model__OperandsAssignment_0 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1331:2: rule__Model__OperandsAssignment_0
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1317:1: ( rule__Model__OperandsAssignment_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1317:2: rule__Model__OperandsAssignment_0
             {
-            pushFollow(FOLLOW_rule__Model__OperandsAssignment_0_in_rule__Model__Group__0__Impl2909);
+            pushFollow(FOLLOW_rule__Model__OperandsAssignment_0_in_rule__Model__Group__0__Impl2869);
             rule__Model__OperandsAssignment_0();
 
             state._fsp--;
@@ -4368,16 +4264,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1341:1: rule__Model__Group__1 : rule__Model__Group__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1327:1: rule__Model__Group__1 : rule__Model__Group__1__Impl ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1345:1: ( rule__Model__Group__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1346:2: rule__Model__Group__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1331:1: ( rule__Model__Group__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1332:2: rule__Model__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12939);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12899);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
@@ -4401,37 +4297,37 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1352:1: rule__Model__Group__1__Impl : ( ( rule__Model__Group_1__0 )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1338:1: rule__Model__Group__1__Impl : ( ( rule__Model__Group_1__0 )* ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1356:1: ( ( ( rule__Model__Group_1__0 )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1357:1: ( ( rule__Model__Group_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1342:1: ( ( ( rule__Model__Group_1__0 )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1343:1: ( ( rule__Model__Group_1__0 )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1357:1: ( ( rule__Model__Group_1__0 )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1358:1: ( rule__Model__Group_1__0 )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1343:1: ( ( rule__Model__Group_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1344:1: ( rule__Model__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getGroup_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1359:1: ( rule__Model__Group_1__0 )*
-            loop20:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1345:1: ( rule__Model__Group_1__0 )*
+            loop18:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( ((LA20_0>=8 && LA20_0<=9)) ) {
-                    alt20=1;
+                if ( ((LA18_0>=8 && LA18_0<=9)) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt18) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1359:2: rule__Model__Group_1__0
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1345:2: rule__Model__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2966);
+            	    pushFollow(FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2926);
             	    rule__Model__Group_1__0();
 
             	    state._fsp--;
@@ -4441,7 +4337,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop18;
                 }
             } while (true);
 
@@ -4470,21 +4366,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_1__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1373:1: rule__Model__Group_1__0 : rule__Model__Group_1__0__Impl rule__Model__Group_1__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1359:1: rule__Model__Group_1__0 : rule__Model__Group_1__0__Impl rule__Model__Group_1__1 ;
     public final void rule__Model__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1377:1: ( rule__Model__Group_1__0__Impl rule__Model__Group_1__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1378:2: rule__Model__Group_1__0__Impl rule__Model__Group_1__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1363:1: ( rule__Model__Group_1__0__Impl rule__Model__Group_1__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1364:2: rule__Model__Group_1__0__Impl rule__Model__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__03001);
+            pushFollow(FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__02961);
             rule__Model__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__03004);
+            pushFollow(FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__02964);
             rule__Model__Group_1__1();
 
             state._fsp--;
@@ -4508,25 +4404,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_1__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1385:1: rule__Model__Group_1__0__Impl : ( ( rule__Model__Alternatives_1_0 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1371:1: rule__Model__Group_1__0__Impl : ( ( rule__Model__Alternatives_1_0 ) ) ;
     public final void rule__Model__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1389:1: ( ( ( rule__Model__Alternatives_1_0 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1390:1: ( ( rule__Model__Alternatives_1_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1375:1: ( ( ( rule__Model__Alternatives_1_0 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1376:1: ( ( rule__Model__Alternatives_1_0 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1390:1: ( ( rule__Model__Alternatives_1_0 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1391:1: ( rule__Model__Alternatives_1_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1376:1: ( ( rule__Model__Alternatives_1_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1377:1: ( rule__Model__Alternatives_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getAlternatives_1_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1392:1: ( rule__Model__Alternatives_1_0 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1392:2: rule__Model__Alternatives_1_0
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1378:1: ( rule__Model__Alternatives_1_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1378:2: rule__Model__Alternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Model__Alternatives_1_0_in_rule__Model__Group_1__0__Impl3031);
+            pushFollow(FOLLOW_rule__Model__Alternatives_1_0_in_rule__Model__Group_1__0__Impl2991);
             rule__Model__Alternatives_1_0();
 
             state._fsp--;
@@ -4559,16 +4455,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_1__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1402:1: rule__Model__Group_1__1 : rule__Model__Group_1__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1388:1: rule__Model__Group_1__1 : rule__Model__Group_1__1__Impl ;
     public final void rule__Model__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1406:1: ( rule__Model__Group_1__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1407:2: rule__Model__Group_1__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1392:1: ( rule__Model__Group_1__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1393:2: rule__Model__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__13061);
+            pushFollow(FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__13021);
             rule__Model__Group_1__1__Impl();
 
             state._fsp--;
@@ -4592,22 +4488,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_1__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1413:1: rule__Model__Group_1__1__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1399:1: rule__Model__Group_1__1__Impl : ( ruleHoOperand ) ;
     public final void rule__Model__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1417:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1418:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1403:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1404:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1418:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1419:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1404:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1405:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getHoOperandParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__Model__Group_1__1__Impl3088);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__Model__Group_1__1__Impl3048);
             ruleHoOperand();
 
             state._fsp--;
@@ -4637,21 +4533,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1434:1: rule__And__Group__0 : rule__And__Group__0__Impl rule__And__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1420:1: rule__And__Group__0 : rule__And__Group__0__Impl rule__And__Group__1 ;
     public final void rule__And__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1438:1: ( rule__And__Group__0__Impl rule__And__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1439:2: rule__And__Group__0__Impl rule__And__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1424:1: ( rule__And__Group__0__Impl rule__And__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1425:2: rule__And__Group__0__Impl rule__And__Group__1
             {
-            pushFollow(FOLLOW_rule__And__Group__0__Impl_in_rule__And__Group__03121);
+            pushFollow(FOLLOW_rule__And__Group__0__Impl_in_rule__And__Group__03081);
             rule__And__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__And__Group__1_in_rule__And__Group__03124);
+            pushFollow(FOLLOW_rule__And__Group__1_in_rule__And__Group__03084);
             rule__And__Group__1();
 
             state._fsp--;
@@ -4675,22 +4571,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1446:1: rule__And__Group__0__Impl : ( '&' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1432:1: rule__And__Group__0__Impl : ( '&' ) ;
     public final void rule__And__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1450:1: ( ( '&' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1451:1: ( '&' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1436:1: ( ( '&' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1437:1: ( '&' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1451:1: ( '&' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1452:1: '&'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1437:1: ( '&' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1438:1: '&'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getAmpersandKeyword_0()); 
             }
-            match(input,9,FOLLOW_9_in_rule__And__Group__0__Impl3152); if (state.failed) return ;
+            match(input,9,FOLLOW_9_in_rule__And__Group__0__Impl3112); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndAccess().getAmpersandKeyword_0()); 
             }
@@ -4716,16 +4612,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1465:1: rule__And__Group__1 : rule__And__Group__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1451:1: rule__And__Group__1 : rule__And__Group__1__Impl ;
     public final void rule__And__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1469:1: ( rule__And__Group__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1470:2: rule__And__Group__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1455:1: ( rule__And__Group__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1456:2: rule__And__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__And__Group__1__Impl_in_rule__And__Group__13183);
+            pushFollow(FOLLOW_rule__And__Group__1__Impl_in_rule__And__Group__13143);
             rule__And__Group__1__Impl();
 
             state._fsp--;
@@ -4749,22 +4645,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1476:1: rule__And__Group__1__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1462:1: rule__And__Group__1__Impl : ( ruleHoOperand ) ;
     public final void rule__And__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1480:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1481:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1466:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1467:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1481:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1482:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1467:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1468:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndAccess().getHoOperandParserRuleCall_1()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__And__Group__1__Impl3210);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__And__Group__1__Impl3170);
             ruleHoOperand();
 
             state._fsp--;
@@ -4794,21 +4690,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1497:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1483:1: rule__Or__Group__0 : rule__Or__Group__0__Impl rule__Or__Group__1 ;
     public final void rule__Or__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1501:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1502:2: rule__Or__Group__0__Impl rule__Or__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1487:1: ( rule__Or__Group__0__Impl rule__Or__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1488:2: rule__Or__Group__0__Impl rule__Or__Group__1
             {
-            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03243);
+            pushFollow(FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03203);
             rule__Or__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03246);
+            pushFollow(FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03206);
             rule__Or__Group__1();
 
             state._fsp--;
@@ -4832,25 +4728,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1509:1: rule__Or__Group__0__Impl : ( ( rule__Or__Alternatives_0 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1495:1: rule__Or__Group__0__Impl : ( ( rule__Or__Alternatives_0 ) ) ;
     public final void rule__Or__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1513:1: ( ( ( rule__Or__Alternatives_0 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1514:1: ( ( rule__Or__Alternatives_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1499:1: ( ( ( rule__Or__Alternatives_0 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1500:1: ( ( rule__Or__Alternatives_0 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1514:1: ( ( rule__Or__Alternatives_0 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1515:1: ( rule__Or__Alternatives_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1500:1: ( ( rule__Or__Alternatives_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1501:1: ( rule__Or__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getAlternatives_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1516:1: ( rule__Or__Alternatives_0 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1516:2: rule__Or__Alternatives_0
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1502:1: ( rule__Or__Alternatives_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1502:2: rule__Or__Alternatives_0
             {
-            pushFollow(FOLLOW_rule__Or__Alternatives_0_in_rule__Or__Group__0__Impl3273);
+            pushFollow(FOLLOW_rule__Or__Alternatives_0_in_rule__Or__Group__0__Impl3233);
             rule__Or__Alternatives_0();
 
             state._fsp--;
@@ -4883,16 +4779,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1526:1: rule__Or__Group__1 : rule__Or__Group__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1512:1: rule__Or__Group__1 : rule__Or__Group__1__Impl ;
     public final void rule__Or__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1530:1: ( rule__Or__Group__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1531:2: rule__Or__Group__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1516:1: ( rule__Or__Group__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1517:2: rule__Or__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13303);
+            pushFollow(FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13263);
             rule__Or__Group__1__Impl();
 
             state._fsp--;
@@ -4916,22 +4812,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1537:1: rule__Or__Group__1__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1523:1: rule__Or__Group__1__Impl : ( ruleHoOperand ) ;
     public final void rule__Or__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1541:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1542:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1527:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1528:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1542:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1543:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1528:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1529:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrAccess().getHoOperandParserRuleCall_1()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__Or__Group__1__Impl3330);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__Or__Group__1__Impl3290);
             ruleHoOperand();
 
             state._fsp--;
@@ -4961,21 +4857,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1558:1: rule__HoOperand__Group__0 : rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1544:1: rule__HoOperand__Group__0 : rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1 ;
     public final void rule__HoOperand__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1562:1: ( rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1563:2: rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1548:1: ( rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1549:2: rule__HoOperand__Group__0__Impl rule__HoOperand__Group__1
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group__0__Impl_in_rule__HoOperand__Group__03363);
+            pushFollow(FOLLOW_rule__HoOperand__Group__0__Impl_in_rule__HoOperand__Group__03323);
             rule__HoOperand__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HoOperand__Group__1_in_rule__HoOperand__Group__03366);
+            pushFollow(FOLLOW_rule__HoOperand__Group__1_in_rule__HoOperand__Group__03326);
             rule__HoOperand__Group__1();
 
             state._fsp--;
@@ -4999,43 +4895,49 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1570:1: rule__HoOperand__Group__0__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1556:1: rule__HoOperand__Group__0__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__HoOperand__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1574:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1575:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1560:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1561:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1575:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1576:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1561:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1562:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getWSPTerminalRuleCall_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1577:1: ( RULE_WSP )*
-            loop21:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1563:1: ( RULE_WSP )*
+            loop19:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA21_0==RULE_WSP) ) {
-                    alt21=1;
+                if ( (LA19_0==RULE_WSP) ) {
+                    int LA19_2 = input.LA(2);
+
+                    if ( (synpred55_InternalRQL()) ) {
+                        alt19=1;
+                    }
+
+
                 }
 
 
-                switch (alt21) {
+                switch (alt19) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1577:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1563:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HoOperand__Group__0__Impl3394); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HoOperand__Group__0__Impl3354); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop19;
                 }
             } while (true);
 
@@ -5064,21 +4966,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1587:1: rule__HoOperand__Group__1 : rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1573:1: rule__HoOperand__Group__1 : rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2 ;
     public final void rule__HoOperand__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1591:1: ( rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1592:2: rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1577:1: ( rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1578:2: rule__HoOperand__Group__1__Impl rule__HoOperand__Group__2
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group__1__Impl_in_rule__HoOperand__Group__13425);
+            pushFollow(FOLLOW_rule__HoOperand__Group__1__Impl_in_rule__HoOperand__Group__13385);
             rule__HoOperand__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HoOperand__Group__2_in_rule__HoOperand__Group__13428);
+            pushFollow(FOLLOW_rule__HoOperand__Group__2_in_rule__HoOperand__Group__13388);
             rule__HoOperand__Group__2();
 
             state._fsp--;
@@ -5102,29 +5004,40 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1599:1: rule__HoOperand__Group__1__Impl : ( ( rule__HoOperand__Alternatives_1 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1585:1: rule__HoOperand__Group__1__Impl : ( ( rule__HoOperand__Alternatives_1 )? ) ;
     public final void rule__HoOperand__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1603:1: ( ( ( rule__HoOperand__Alternatives_1 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1604:1: ( ( rule__HoOperand__Alternatives_1 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1589:1: ( ( ( rule__HoOperand__Alternatives_1 )? ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1590:1: ( ( rule__HoOperand__Alternatives_1 )? )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1604:1: ( ( rule__HoOperand__Alternatives_1 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1605:1: ( rule__HoOperand__Alternatives_1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1590:1: ( ( rule__HoOperand__Alternatives_1 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1591:1: ( rule__HoOperand__Alternatives_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getAlternatives_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1606:1: ( rule__HoOperand__Alternatives_1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1606:2: rule__HoOperand__Alternatives_1
-            {
-            pushFollow(FOLLOW_rule__HoOperand__Alternatives_1_in_rule__HoOperand__Group__1__Impl3455);
-            rule__HoOperand__Alternatives_1();
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1592:1: ( rule__HoOperand__Alternatives_1 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
+            if ( ((LA20_0>=RULE_ALPHA && LA20_0<=RULE_DIGIT)||(LA20_0>=19 && LA20_0<=25)||(LA20_0>=32 && LA20_0<=39)||(LA20_0>=44 && LA20_0<=57)||LA20_0==60||LA20_0==62) ) {
+                alt20=1;
+            }
+            switch (alt20) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1592:2: rule__HoOperand__Alternatives_1
+                    {
+                    pushFollow(FOLLOW_rule__HoOperand__Alternatives_1_in_rule__HoOperand__Group__1__Impl3415);
+                    rule__HoOperand__Alternatives_1();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
 
             }
 
@@ -5153,17 +5066,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1616:1: rule__HoOperand__Group__2 : rule__HoOperand__Group__2__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1602:1: rule__HoOperand__Group__2 : rule__HoOperand__Group__2__Impl rule__HoOperand__Group__3 ;
     public final void rule__HoOperand__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1620:1: ( rule__HoOperand__Group__2__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1621:2: rule__HoOperand__Group__2__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1606:1: ( rule__HoOperand__Group__2__Impl rule__HoOperand__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1607:2: rule__HoOperand__Group__2__Impl rule__HoOperand__Group__3
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group__2__Impl_in_rule__HoOperand__Group__23485);
+            pushFollow(FOLLOW_rule__HoOperand__Group__2__Impl_in_rule__HoOperand__Group__23446);
             rule__HoOperand__Group__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__HoOperand__Group__3_in_rule__HoOperand__Group__23449);
+            rule__HoOperand__Group__3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5186,43 +5104,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1627:1: rule__HoOperand__Group__2__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1614:1: rule__HoOperand__Group__2__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__HoOperand__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1631:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1632:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1618:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1619:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1632:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1633:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1619:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1620:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getWSPTerminalRuleCall_2()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1634:1: ( RULE_WSP )*
-            loop22:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1621:1: ( RULE_WSP )*
+            loop21:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA22_0==RULE_WSP) ) {
-                    alt22=1;
+                if ( (LA21_0==RULE_WSP) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt21) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1634:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1621:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HoOperand__Group__2__Impl3513); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HoOperand__Group__2__Impl3477); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop21;
                 }
             } while (true);
 
@@ -5250,22 +5168,209 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HoOperand__Group__2__Impl"
 
 
+    // $ANTLR start "rule__HoOperand__Group__3"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1631:1: rule__HoOperand__Group__3 : rule__HoOperand__Group__3__Impl rule__HoOperand__Group__4 ;
+    public final void rule__HoOperand__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1635:1: ( rule__HoOperand__Group__3__Impl rule__HoOperand__Group__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1636:2: rule__HoOperand__Group__3__Impl rule__HoOperand__Group__4
+            {
+            pushFollow(FOLLOW_rule__HoOperand__Group__3__Impl_in_rule__HoOperand__Group__33508);
+            rule__HoOperand__Group__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__HoOperand__Group__4_in_rule__HoOperand__Group__33511);
+            rule__HoOperand__Group__4();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HoOperand__Group__3"
+
+
+    // $ANTLR start "rule__HoOperand__Group__3__Impl"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1643:1: rule__HoOperand__Group__3__Impl : ( ( '\\r' )? ) ;
+    public final void rule__HoOperand__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1647:1: ( ( ( '\\r' )? ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1648:1: ( ( '\\r' )? )
+            {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1648:1: ( ( '\\r' )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1649:1: ( '\\r' )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getHoOperandAccess().getControl000dKeyword_3()); 
+            }
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1650:1: ( '\\r' )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==58) ) {
+                alt22=1;
+            }
+            switch (alt22) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1651:2: '\\r'
+                    {
+                    match(input,58,FOLLOW_58_in_rule__HoOperand__Group__3__Impl3540); if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getHoOperandAccess().getControl000dKeyword_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HoOperand__Group__3__Impl"
+
+
+    // $ANTLR start "rule__HoOperand__Group__4"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1662:1: rule__HoOperand__Group__4 : rule__HoOperand__Group__4__Impl ;
+    public final void rule__HoOperand__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1666:1: ( rule__HoOperand__Group__4__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1667:2: rule__HoOperand__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__HoOperand__Group__4__Impl_in_rule__HoOperand__Group__43573);
+            rule__HoOperand__Group__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HoOperand__Group__4"
+
+
+    // $ANTLR start "rule__HoOperand__Group__4__Impl"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1673:1: rule__HoOperand__Group__4__Impl : ( ( '\\n' )? ) ;
+    public final void rule__HoOperand__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1677:1: ( ( ( '\\n' )? ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1678:1: ( ( '\\n' )? )
+            {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1678:1: ( ( '\\n' )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1679:1: ( '\\n' )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getHoOperandAccess().getControl000aKeyword_4()); 
+            }
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1680:1: ( '\\n' )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
+
+            if ( (LA23_0==59) ) {
+                alt23=1;
+            }
+            switch (alt23) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1681:2: '\\n'
+                    {
+                    match(input,59,FOLLOW_59_in_rule__HoOperand__Group__4__Impl3602); if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getHoOperandAccess().getControl000aKeyword_4()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HoOperand__Group__4__Impl"
+
+
     // $ANTLR start "rule__HoOperand__Group_1_4__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1650:1: rule__HoOperand__Group_1_4__0 : rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1702:1: rule__HoOperand__Group_1_4__0 : rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1 ;
     public final void rule__HoOperand__Group_1_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1654:1: ( rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1655:2: rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1706:1: ( rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1707:2: rule__HoOperand__Group_1_4__0__Impl rule__HoOperand__Group_1_4__1
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__0__Impl_in_rule__HoOperand__Group_1_4__03550);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__0__Impl_in_rule__HoOperand__Group_1_4__03645);
             rule__HoOperand__Group_1_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__1_in_rule__HoOperand__Group_1_4__03553);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__1_in_rule__HoOperand__Group_1_4__03648);
             rule__HoOperand__Group_1_4__1();
 
             state._fsp--;
@@ -5289,22 +5394,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1662:1: rule__HoOperand__Group_1_4__0__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1714:1: rule__HoOperand__Group_1_4__0__Impl : ( '(' ) ;
     public final void rule__HoOperand__Group_1_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1666:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1667:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1718:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1719:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1667:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1668:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1719:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1720:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getLeftParenthesisKeyword_1_4_0()); 
             }
-            match(input,58,FOLLOW_58_in_rule__HoOperand__Group_1_4__0__Impl3581); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__HoOperand__Group_1_4__0__Impl3676); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getHoOperandAccess().getLeftParenthesisKeyword_1_4_0()); 
             }
@@ -5330,21 +5435,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1681:1: rule__HoOperand__Group_1_4__1 : rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1733:1: rule__HoOperand__Group_1_4__1 : rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2 ;
     public final void rule__HoOperand__Group_1_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1685:1: ( rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1686:2: rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1737:1: ( rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1738:2: rule__HoOperand__Group_1_4__1__Impl rule__HoOperand__Group_1_4__2
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__1__Impl_in_rule__HoOperand__Group_1_4__13612);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__1__Impl_in_rule__HoOperand__Group_1_4__13707);
             rule__HoOperand__Group_1_4__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__2_in_rule__HoOperand__Group_1_4__13615);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__2_in_rule__HoOperand__Group_1_4__13710);
             rule__HoOperand__Group_1_4__2();
 
             state._fsp--;
@@ -5368,22 +5473,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1693:1: rule__HoOperand__Group_1_4__1__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1745:1: rule__HoOperand__Group_1_4__1__Impl : ( ruleHoOperand ) ;
     public final void rule__HoOperand__Group_1_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1697:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1698:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1749:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1750:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1698:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1699:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1750:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1751:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getHoOperandParserRuleCall_1_4_1()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__HoOperand__Group_1_4__1__Impl3642);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__HoOperand__Group_1_4__1__Impl3737);
             ruleHoOperand();
 
             state._fsp--;
@@ -5413,21 +5518,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1710:1: rule__HoOperand__Group_1_4__2 : rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1762:1: rule__HoOperand__Group_1_4__2 : rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3 ;
     public final void rule__HoOperand__Group_1_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1714:1: ( rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1715:2: rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1766:1: ( rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1767:2: rule__HoOperand__Group_1_4__2__Impl rule__HoOperand__Group_1_4__3
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__2__Impl_in_rule__HoOperand__Group_1_4__23671);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__2__Impl_in_rule__HoOperand__Group_1_4__23766);
             rule__HoOperand__Group_1_4__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__3_in_rule__HoOperand__Group_1_4__23674);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__3_in_rule__HoOperand__Group_1_4__23769);
             rule__HoOperand__Group_1_4__3();
 
             state._fsp--;
@@ -5451,25 +5556,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1722:1: rule__HoOperand__Group_1_4__2__Impl : ( ( rule__HoOperand__Alternatives_1_4_2 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1774:1: rule__HoOperand__Group_1_4__2__Impl : ( ( rule__HoOperand__Alternatives_1_4_2 ) ) ;
     public final void rule__HoOperand__Group_1_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1726:1: ( ( ( rule__HoOperand__Alternatives_1_4_2 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1727:1: ( ( rule__HoOperand__Alternatives_1_4_2 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1778:1: ( ( ( rule__HoOperand__Alternatives_1_4_2 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1779:1: ( ( rule__HoOperand__Alternatives_1_4_2 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1727:1: ( ( rule__HoOperand__Alternatives_1_4_2 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1728:1: ( rule__HoOperand__Alternatives_1_4_2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1779:1: ( ( rule__HoOperand__Alternatives_1_4_2 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1780:1: ( rule__HoOperand__Alternatives_1_4_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getAlternatives_1_4_2()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1729:1: ( rule__HoOperand__Alternatives_1_4_2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1729:2: rule__HoOperand__Alternatives_1_4_2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1781:1: ( rule__HoOperand__Alternatives_1_4_2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1781:2: rule__HoOperand__Alternatives_1_4_2
             {
-            pushFollow(FOLLOW_rule__HoOperand__Alternatives_1_4_2_in_rule__HoOperand__Group_1_4__2__Impl3701);
+            pushFollow(FOLLOW_rule__HoOperand__Alternatives_1_4_2_in_rule__HoOperand__Group_1_4__2__Impl3796);
             rule__HoOperand__Alternatives_1_4_2();
 
             state._fsp--;
@@ -5502,16 +5607,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1739:1: rule__HoOperand__Group_1_4__3 : rule__HoOperand__Group_1_4__3__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1791:1: rule__HoOperand__Group_1_4__3 : rule__HoOperand__Group_1_4__3__Impl ;
     public final void rule__HoOperand__Group_1_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1743:1: ( rule__HoOperand__Group_1_4__3__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1744:2: rule__HoOperand__Group_1_4__3__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1795:1: ( rule__HoOperand__Group_1_4__3__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1796:2: rule__HoOperand__Group_1_4__3__Impl
             {
-            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__3__Impl_in_rule__HoOperand__Group_1_4__33731);
+            pushFollow(FOLLOW_rule__HoOperand__Group_1_4__3__Impl_in_rule__HoOperand__Group_1_4__33826);
             rule__HoOperand__Group_1_4__3__Impl();
 
             state._fsp--;
@@ -5535,22 +5640,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HoOperand__Group_1_4__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1750:1: rule__HoOperand__Group_1_4__3__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1802:1: rule__HoOperand__Group_1_4__3__Impl : ( ')' ) ;
     public final void rule__HoOperand__Group_1_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1754:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1755:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1806:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1807:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1755:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1756:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1807:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1808:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHoOperandAccess().getRightParenthesisKeyword_1_4_3()); 
             }
-            match(input,59,FOLLOW_59_in_rule__HoOperand__Group_1_4__3__Impl3759); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__HoOperand__Group_1_4__3__Impl3854); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getHoOperandAccess().getRightParenthesisKeyword_1_4_3()); 
             }
@@ -5576,21 +5681,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1777:1: rule__HigherOrderCall__Group__0 : rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1829:1: rule__HigherOrderCall__Group__0 : rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1 ;
     public final void rule__HigherOrderCall__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1781:1: ( rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1782:2: rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1833:1: ( rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1834:2: rule__HigherOrderCall__Group__0__Impl rule__HigherOrderCall__Group__1
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__0__Impl_in_rule__HigherOrderCall__Group__03798);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__0__Impl_in_rule__HigherOrderCall__Group__03893);
             rule__HigherOrderCall__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__1_in_rule__HigherOrderCall__Group__03801);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__1_in_rule__HigherOrderCall__Group__03896);
             rule__HigherOrderCall__Group__1();
 
             state._fsp--;
@@ -5614,22 +5719,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1789:1: rule__HigherOrderCall__Group__0__Impl : ( ruleLogicalOpAliases ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1841:1: rule__HigherOrderCall__Group__0__Impl : ( ruleLogicalOpAliases ) ;
     public final void rule__HigherOrderCall__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1793:1: ( ( ruleLogicalOpAliases ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1794:1: ( ruleLogicalOpAliases )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1845:1: ( ( ruleLogicalOpAliases ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1846:1: ( ruleLogicalOpAliases )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1794:1: ( ruleLogicalOpAliases )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1795:1: ruleLogicalOpAliases
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1846:1: ( ruleLogicalOpAliases )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1847:1: ruleLogicalOpAliases
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getLogicalOpAliasesParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleLogicalOpAliases_in_rule__HigherOrderCall__Group__0__Impl3828);
+            pushFollow(FOLLOW_ruleLogicalOpAliases_in_rule__HigherOrderCall__Group__0__Impl3923);
             ruleLogicalOpAliases();
 
             state._fsp--;
@@ -5659,21 +5764,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1806:1: rule__HigherOrderCall__Group__1 : rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1858:1: rule__HigherOrderCall__Group__1 : rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2 ;
     public final void rule__HigherOrderCall__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1810:1: ( rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1811:2: rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1862:1: ( rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1863:2: rule__HigherOrderCall__Group__1__Impl rule__HigherOrderCall__Group__2
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__1__Impl_in_rule__HigherOrderCall__Group__13857);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__1__Impl_in_rule__HigherOrderCall__Group__13952);
             rule__HigherOrderCall__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__2_in_rule__HigherOrderCall__Group__13860);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__2_in_rule__HigherOrderCall__Group__13955);
             rule__HigherOrderCall__Group__2();
 
             state._fsp--;
@@ -5697,43 +5802,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1818:1: rule__HigherOrderCall__Group__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1870:1: rule__HigherOrderCall__Group__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__HigherOrderCall__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1822:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1823:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1874:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1875:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1823:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1824:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1875:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1876:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getWSPTerminalRuleCall_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1825:1: ( RULE_WSP )*
-            loop23:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1877:1: ( RULE_WSP )*
+            loop24:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA23_0==RULE_WSP) ) {
-                    alt23=1;
+                if ( (LA24_0==RULE_WSP) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt24) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1825:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1877:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HigherOrderCall__Group__1__Impl3888); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__HigherOrderCall__Group__1__Impl3983); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop24;
                 }
             } while (true);
 
@@ -5762,21 +5867,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1835:1: rule__HigherOrderCall__Group__2 : rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1887:1: rule__HigherOrderCall__Group__2 : rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3 ;
     public final void rule__HigherOrderCall__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1839:1: ( rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1840:2: rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1891:1: ( rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1892:2: rule__HigherOrderCall__Group__2__Impl rule__HigherOrderCall__Group__3
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__2__Impl_in_rule__HigherOrderCall__Group__23919);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__2__Impl_in_rule__HigherOrderCall__Group__24014);
             rule__HigherOrderCall__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__3_in_rule__HigherOrderCall__Group__23922);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__3_in_rule__HigherOrderCall__Group__24017);
             rule__HigherOrderCall__Group__3();
 
             state._fsp--;
@@ -5800,22 +5905,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1847:1: rule__HigherOrderCall__Group__2__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1899:1: rule__HigherOrderCall__Group__2__Impl : ( '(' ) ;
     public final void rule__HigherOrderCall__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1851:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1852:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1903:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1904:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1852:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1853:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1904:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1905:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getLeftParenthesisKeyword_2()); 
             }
-            match(input,58,FOLLOW_58_in_rule__HigherOrderCall__Group__2__Impl3950); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__HigherOrderCall__Group__2__Impl4045); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getHigherOrderCallAccess().getLeftParenthesisKeyword_2()); 
             }
@@ -5841,21 +5946,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1866:1: rule__HigherOrderCall__Group__3 : rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1918:1: rule__HigherOrderCall__Group__3 : rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4 ;
     public final void rule__HigherOrderCall__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1870:1: ( rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1871:2: rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1922:1: ( rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1923:2: rule__HigherOrderCall__Group__3__Impl rule__HigherOrderCall__Group__4
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__3__Impl_in_rule__HigherOrderCall__Group__33981);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__3__Impl_in_rule__HigherOrderCall__Group__34076);
             rule__HigherOrderCall__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__4_in_rule__HigherOrderCall__Group__33984);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__4_in_rule__HigherOrderCall__Group__34079);
             rule__HigherOrderCall__Group__4();
 
             state._fsp--;
@@ -5879,25 +5984,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1878:1: rule__HigherOrderCall__Group__3__Impl : ( ( rule__HigherOrderCall__Group_3__0 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1930:1: rule__HigherOrderCall__Group__3__Impl : ( ( rule__HigherOrderCall__Group_3__0 ) ) ;
     public final void rule__HigherOrderCall__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1882:1: ( ( ( rule__HigherOrderCall__Group_3__0 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1883:1: ( ( rule__HigherOrderCall__Group_3__0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1934:1: ( ( ( rule__HigherOrderCall__Group_3__0 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1935:1: ( ( rule__HigherOrderCall__Group_3__0 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1883:1: ( ( rule__HigherOrderCall__Group_3__0 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1884:1: ( rule__HigherOrderCall__Group_3__0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1935:1: ( ( rule__HigherOrderCall__Group_3__0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1936:1: ( rule__HigherOrderCall__Group_3__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getGroup_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1885:1: ( rule__HigherOrderCall__Group_3__0 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1885:2: rule__HigherOrderCall__Group_3__0
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1937:1: ( rule__HigherOrderCall__Group_3__0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1937:2: rule__HigherOrderCall__Group_3__0
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__0_in_rule__HigherOrderCall__Group__3__Impl4011);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__0_in_rule__HigherOrderCall__Group__3__Impl4106);
             rule__HigherOrderCall__Group_3__0();
 
             state._fsp--;
@@ -5930,16 +6035,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__4"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1895:1: rule__HigherOrderCall__Group__4 : rule__HigherOrderCall__Group__4__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1947:1: rule__HigherOrderCall__Group__4 : rule__HigherOrderCall__Group__4__Impl ;
     public final void rule__HigherOrderCall__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1899:1: ( rule__HigherOrderCall__Group__4__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1900:2: rule__HigherOrderCall__Group__4__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1951:1: ( rule__HigherOrderCall__Group__4__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1952:2: rule__HigherOrderCall__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group__4__Impl_in_rule__HigherOrderCall__Group__44041);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group__4__Impl_in_rule__HigherOrderCall__Group__44136);
             rule__HigherOrderCall__Group__4__Impl();
 
             state._fsp--;
@@ -5963,22 +6068,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group__4__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1906:1: rule__HigherOrderCall__Group__4__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1958:1: rule__HigherOrderCall__Group__4__Impl : ( ')' ) ;
     public final void rule__HigherOrderCall__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1910:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1911:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1962:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1963:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1911:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1912:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1963:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1964:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,59,FOLLOW_59_in_rule__HigherOrderCall__Group__4__Impl4069); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__HigherOrderCall__Group__4__Impl4164); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getHigherOrderCallAccess().getRightParenthesisKeyword_4()); 
             }
@@ -6004,21 +6109,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1935:1: rule__HigherOrderCall__Group_3__0 : rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1987:1: rule__HigherOrderCall__Group_3__0 : rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1 ;
     public final void rule__HigherOrderCall__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1939:1: ( rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1940:2: rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1991:1: ( rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1992:2: rule__HigherOrderCall__Group_3__0__Impl rule__HigherOrderCall__Group_3__1
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__0__Impl_in_rule__HigherOrderCall__Group_3__04110);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__0__Impl_in_rule__HigherOrderCall__Group_3__04205);
             rule__HigherOrderCall__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__1_in_rule__HigherOrderCall__Group_3__04113);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__1_in_rule__HigherOrderCall__Group_3__04208);
             rule__HigherOrderCall__Group_3__1();
 
             state._fsp--;
@@ -6042,22 +6147,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1947:1: rule__HigherOrderCall__Group_3__0__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1999:1: rule__HigherOrderCall__Group_3__0__Impl : ( ruleHoOperand ) ;
     public final void rule__HigherOrderCall__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1951:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1952:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2003:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2004:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1952:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1953:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2004:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2005:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getHoOperandParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3__0__Impl4140);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3__0__Impl4235);
             ruleHoOperand();
 
             state._fsp--;
@@ -6087,16 +6192,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1964:1: rule__HigherOrderCall__Group_3__1 : rule__HigherOrderCall__Group_3__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2016:1: rule__HigherOrderCall__Group_3__1 : rule__HigherOrderCall__Group_3__1__Impl ;
     public final void rule__HigherOrderCall__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1968:1: ( rule__HigherOrderCall__Group_3__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1969:2: rule__HigherOrderCall__Group_3__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2020:1: ( rule__HigherOrderCall__Group_3__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2021:2: rule__HigherOrderCall__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__1__Impl_in_rule__HigherOrderCall__Group_3__14169);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3__1__Impl_in_rule__HigherOrderCall__Group_3__14264);
             rule__HigherOrderCall__Group_3__1__Impl();
 
             state._fsp--;
@@ -6120,37 +6225,37 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1975:1: rule__HigherOrderCall__Group_3__1__Impl : ( ( rule__HigherOrderCall__Group_3_1__0 )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2027:1: rule__HigherOrderCall__Group_3__1__Impl : ( ( rule__HigherOrderCall__Group_3_1__0 )* ) ;
     public final void rule__HigherOrderCall__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1979:1: ( ( ( rule__HigherOrderCall__Group_3_1__0 )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1980:1: ( ( rule__HigherOrderCall__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2031:1: ( ( ( rule__HigherOrderCall__Group_3_1__0 )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2032:1: ( ( rule__HigherOrderCall__Group_3_1__0 )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1980:1: ( ( rule__HigherOrderCall__Group_3_1__0 )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1981:1: ( rule__HigherOrderCall__Group_3_1__0 )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2032:1: ( ( rule__HigherOrderCall__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2033:1: ( rule__HigherOrderCall__Group_3_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getGroup_3_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1982:1: ( rule__HigherOrderCall__Group_3_1__0 )*
-            loop24:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2034:1: ( rule__HigherOrderCall__Group_3_1__0 )*
+            loop25:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA24_0==8) ) {
-                    alt24=1;
+                if ( (LA25_0==8) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt25) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1982:2: rule__HigherOrderCall__Group_3_1__0
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2034:2: rule__HigherOrderCall__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__0_in_rule__HigherOrderCall__Group_3__1__Impl4196);
+            	    pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__0_in_rule__HigherOrderCall__Group_3__1__Impl4291);
             	    rule__HigherOrderCall__Group_3_1__0();
 
             	    state._fsp--;
@@ -6160,7 +6265,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop25;
                 }
             } while (true);
 
@@ -6189,21 +6294,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3_1__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1996:1: rule__HigherOrderCall__Group_3_1__0 : rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2048:1: rule__HigherOrderCall__Group_3_1__0 : rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1 ;
     public final void rule__HigherOrderCall__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2000:1: ( rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2001:2: rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2052:1: ( rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2053:2: rule__HigherOrderCall__Group_3_1__0__Impl rule__HigherOrderCall__Group_3_1__1
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__0__Impl_in_rule__HigherOrderCall__Group_3_1__04231);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__0__Impl_in_rule__HigherOrderCall__Group_3_1__04326);
             rule__HigherOrderCall__Group_3_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__1_in_rule__HigherOrderCall__Group_3_1__04234);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__1_in_rule__HigherOrderCall__Group_3_1__04329);
             rule__HigherOrderCall__Group_3_1__1();
 
             state._fsp--;
@@ -6227,22 +6332,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3_1__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2008:1: rule__HigherOrderCall__Group_3_1__0__Impl : ( ',' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2060:1: rule__HigherOrderCall__Group_3_1__0__Impl : ( ',' ) ;
     public final void rule__HigherOrderCall__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2012:1: ( ( ',' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2013:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2064:1: ( ( ',' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2065:1: ( ',' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2013:1: ( ',' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2014:1: ','
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2065:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2066:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getCommaKeyword_3_1_0()); 
             }
-            match(input,8,FOLLOW_8_in_rule__HigherOrderCall__Group_3_1__0__Impl4262); if (state.failed) return ;
+            match(input,8,FOLLOW_8_in_rule__HigherOrderCall__Group_3_1__0__Impl4357); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getHigherOrderCallAccess().getCommaKeyword_3_1_0()); 
             }
@@ -6268,16 +6373,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3_1__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2027:1: rule__HigherOrderCall__Group_3_1__1 : rule__HigherOrderCall__Group_3_1__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2079:1: rule__HigherOrderCall__Group_3_1__1 : rule__HigherOrderCall__Group_3_1__1__Impl ;
     public final void rule__HigherOrderCall__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2031:1: ( rule__HigherOrderCall__Group_3_1__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2032:2: rule__HigherOrderCall__Group_3_1__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2083:1: ( rule__HigherOrderCall__Group_3_1__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2084:2: rule__HigherOrderCall__Group_3_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__1__Impl_in_rule__HigherOrderCall__Group_3_1__14293);
+            pushFollow(FOLLOW_rule__HigherOrderCall__Group_3_1__1__Impl_in_rule__HigherOrderCall__Group_3_1__14388);
             rule__HigherOrderCall__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -6301,22 +6406,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HigherOrderCall__Group_3_1__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2038:1: rule__HigherOrderCall__Group_3_1__1__Impl : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2090:1: rule__HigherOrderCall__Group_3_1__1__Impl : ( ruleHoOperand ) ;
     public final void rule__HigherOrderCall__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2042:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2043:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2094:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2095:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2043:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2044:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2095:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2096:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHigherOrderCallAccess().getHoOperandParserRuleCall_3_1_1()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3_1__1__Impl4320);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3_1__1__Impl4415);
             ruleHoOperand();
 
             state._fsp--;
@@ -6346,21 +6451,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2059:1: rule__Comparison__Group__0 : rule__Comparison__Group__0__Impl rule__Comparison__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2111:1: rule__Comparison__Group__0 : rule__Comparison__Group__0__Impl rule__Comparison__Group__1 ;
     public final void rule__Comparison__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2063:1: ( rule__Comparison__Group__0__Impl rule__Comparison__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2064:2: rule__Comparison__Group__0__Impl rule__Comparison__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2115:1: ( rule__Comparison__Group__0__Impl rule__Comparison__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2116:2: rule__Comparison__Group__0__Impl rule__Comparison__Group__1
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__04353);
+            pushFollow(FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__04448);
             rule__Comparison__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__04356);
+            pushFollow(FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__04451);
             rule__Comparison__Group__1();
 
             state._fsp--;
@@ -6384,22 +6489,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2071:1: rule__Comparison__Group__0__Impl : ( ruleStrval ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2123:1: rule__Comparison__Group__0__Impl : ( ruleStrval ) ;
     public final void rule__Comparison__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2075:1: ( ( ruleStrval ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2076:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2127:1: ( ( ruleStrval ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2128:1: ( ruleStrval )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2076:1: ( ruleStrval )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2077:1: ruleStrval
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2128:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2129:1: ruleStrval
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getStrvalParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleStrval_in_rule__Comparison__Group__0__Impl4383);
+            pushFollow(FOLLOW_ruleStrval_in_rule__Comparison__Group__0__Impl4478);
             ruleStrval();
 
             state._fsp--;
@@ -6429,21 +6534,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2088:1: rule__Comparison__Group__1 : rule__Comparison__Group__1__Impl rule__Comparison__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2140:1: rule__Comparison__Group__1 : rule__Comparison__Group__1__Impl rule__Comparison__Group__2 ;
     public final void rule__Comparison__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2092:1: ( rule__Comparison__Group__1__Impl rule__Comparison__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2093:2: rule__Comparison__Group__1__Impl rule__Comparison__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2144:1: ( rule__Comparison__Group__1__Impl rule__Comparison__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2145:2: rule__Comparison__Group__1__Impl rule__Comparison__Group__2
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__14412);
+            pushFollow(FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__14507);
             rule__Comparison__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group__2_in_rule__Comparison__Group__14415);
+            pushFollow(FOLLOW_rule__Comparison__Group__2_in_rule__Comparison__Group__14510);
             rule__Comparison__Group__2();
 
             state._fsp--;
@@ -6467,43 +6572,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2100:1: rule__Comparison__Group__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2152:1: rule__Comparison__Group__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Comparison__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2104:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2105:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2156:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2157:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2105:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2106:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2157:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2158:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getWSPTerminalRuleCall_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2107:1: ( RULE_WSP )*
-            loop25:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2159:1: ( RULE_WSP )*
+            loop26:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA25_0==RULE_WSP) ) {
-                    alt25=1;
+                if ( (LA26_0==RULE_WSP) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt26) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2107:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2159:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Comparison__Group__1__Impl4443); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Comparison__Group__1__Impl4538); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop26;
                 }
             } while (true);
 
@@ -6532,21 +6637,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2117:1: rule__Comparison__Group__2 : rule__Comparison__Group__2__Impl rule__Comparison__Group__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2169:1: rule__Comparison__Group__2 : rule__Comparison__Group__2__Impl rule__Comparison__Group__3 ;
     public final void rule__Comparison__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2121:1: ( rule__Comparison__Group__2__Impl rule__Comparison__Group__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2122:2: rule__Comparison__Group__2__Impl rule__Comparison__Group__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2173:1: ( rule__Comparison__Group__2__Impl rule__Comparison__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2174:2: rule__Comparison__Group__2__Impl rule__Comparison__Group__3
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__2__Impl_in_rule__Comparison__Group__24474);
+            pushFollow(FOLLOW_rule__Comparison__Group__2__Impl_in_rule__Comparison__Group__24569);
             rule__Comparison__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Comparison__Group__3_in_rule__Comparison__Group__24477);
+            pushFollow(FOLLOW_rule__Comparison__Group__3_in_rule__Comparison__Group__24572);
             rule__Comparison__Group__3();
 
             state._fsp--;
@@ -6570,25 +6675,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2129:1: rule__Comparison__Group__2__Impl : ( ( rule__Comparison__Alternatives_2 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2181:1: rule__Comparison__Group__2__Impl : ( ( rule__Comparison__Alternatives_2 ) ) ;
     public final void rule__Comparison__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2133:1: ( ( ( rule__Comparison__Alternatives_2 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2134:1: ( ( rule__Comparison__Alternatives_2 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2185:1: ( ( ( rule__Comparison__Alternatives_2 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2186:1: ( ( rule__Comparison__Alternatives_2 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2134:1: ( ( rule__Comparison__Alternatives_2 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2135:1: ( rule__Comparison__Alternatives_2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2186:1: ( ( rule__Comparison__Alternatives_2 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2187:1: ( rule__Comparison__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getAlternatives_2()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2136:1: ( rule__Comparison__Alternatives_2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2136:2: rule__Comparison__Alternatives_2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2188:1: ( rule__Comparison__Alternatives_2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2188:2: rule__Comparison__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__Comparison__Alternatives_2_in_rule__Comparison__Group__2__Impl4504);
+            pushFollow(FOLLOW_rule__Comparison__Alternatives_2_in_rule__Comparison__Group__2__Impl4599);
             rule__Comparison__Alternatives_2();
 
             state._fsp--;
@@ -6621,16 +6726,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2146:1: rule__Comparison__Group__3 : rule__Comparison__Group__3__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2198:1: rule__Comparison__Group__3 : rule__Comparison__Group__3__Impl ;
     public final void rule__Comparison__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2150:1: ( rule__Comparison__Group__3__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2151:2: rule__Comparison__Group__3__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2202:1: ( rule__Comparison__Group__3__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2203:2: rule__Comparison__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Comparison__Group__3__Impl_in_rule__Comparison__Group__34534);
+            pushFollow(FOLLOW_rule__Comparison__Group__3__Impl_in_rule__Comparison__Group__34629);
             rule__Comparison__Group__3__Impl();
 
             state._fsp--;
@@ -6654,22 +6759,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comparison__Group__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2157:1: rule__Comparison__Group__3__Impl : ( rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2209:1: rule__Comparison__Group__3__Impl : ( rulePrimaryExpr ) ;
     public final void rule__Comparison__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2161:1: ( ( rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2162:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2213:1: ( ( rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2214:1: ( rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2162:1: ( rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2163:1: rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2214:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2215:1: rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonAccess().getPrimaryExprParserRuleCall_3()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Comparison__Group__3__Impl4561);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Comparison__Group__3__Impl4656);
             rulePrimaryExpr();
 
             state._fsp--;
@@ -6699,21 +6804,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2182:1: rule__CallOperator__Group__0 : rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2234:1: rule__CallOperator__Group__0 : rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1 ;
     public final void rule__CallOperator__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2186:1: ( rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2187:2: rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2238:1: ( rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2239:2: rule__CallOperator__Group__0__Impl rule__CallOperator__Group__1
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group__0__Impl_in_rule__CallOperator__Group__04598);
+            pushFollow(FOLLOW_rule__CallOperator__Group__0__Impl_in_rule__CallOperator__Group__04693);
             rule__CallOperator__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group__1_in_rule__CallOperator__Group__04601);
+            pushFollow(FOLLOW_rule__CallOperator__Group__1_in_rule__CallOperator__Group__04696);
             rule__CallOperator__Group__1();
 
             state._fsp--;
@@ -6737,25 +6842,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2194:1: rule__CallOperator__Group__0__Impl : ( ( rule__CallOperator__Alternatives_0 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2246:1: rule__CallOperator__Group__0__Impl : ( ( rule__CallOperator__Alternatives_0 ) ) ;
     public final void rule__CallOperator__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2198:1: ( ( ( rule__CallOperator__Alternatives_0 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2199:1: ( ( rule__CallOperator__Alternatives_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2250:1: ( ( ( rule__CallOperator__Alternatives_0 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2251:1: ( ( rule__CallOperator__Alternatives_0 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2199:1: ( ( rule__CallOperator__Alternatives_0 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2200:1: ( rule__CallOperator__Alternatives_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2251:1: ( ( rule__CallOperator__Alternatives_0 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2252:1: ( rule__CallOperator__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getAlternatives_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2201:1: ( rule__CallOperator__Alternatives_0 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2201:2: rule__CallOperator__Alternatives_0
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2253:1: ( rule__CallOperator__Alternatives_0 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2253:2: rule__CallOperator__Alternatives_0
             {
-            pushFollow(FOLLOW_rule__CallOperator__Alternatives_0_in_rule__CallOperator__Group__0__Impl4628);
+            pushFollow(FOLLOW_rule__CallOperator__Alternatives_0_in_rule__CallOperator__Group__0__Impl4723);
             rule__CallOperator__Alternatives_0();
 
             state._fsp--;
@@ -6788,21 +6893,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2211:1: rule__CallOperator__Group__1 : rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2263:1: rule__CallOperator__Group__1 : rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2 ;
     public final void rule__CallOperator__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2215:1: ( rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2216:2: rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2267:1: ( rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2268:2: rule__CallOperator__Group__1__Impl rule__CallOperator__Group__2
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group__1__Impl_in_rule__CallOperator__Group__14658);
+            pushFollow(FOLLOW_rule__CallOperator__Group__1__Impl_in_rule__CallOperator__Group__14753);
             rule__CallOperator__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group__2_in_rule__CallOperator__Group__14661);
+            pushFollow(FOLLOW_rule__CallOperator__Group__2_in_rule__CallOperator__Group__14756);
             rule__CallOperator__Group__2();
 
             state._fsp--;
@@ -6826,43 +6931,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2223:1: rule__CallOperator__Group__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2275:1: rule__CallOperator__Group__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__CallOperator__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2227:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2228:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2279:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2280:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2228:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2229:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2280:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2281:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getWSPTerminalRuleCall_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2230:1: ( RULE_WSP )*
-            loop26:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2282:1: ( RULE_WSP )*
+            loop27:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA26_0==RULE_WSP) ) {
-                    alt26=1;
+                if ( (LA27_0==RULE_WSP) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt27) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2230:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2282:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__CallOperator__Group__1__Impl4689); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__CallOperator__Group__1__Impl4784); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop27;
                 }
             } while (true);
 
@@ -6891,21 +6996,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2240:1: rule__CallOperator__Group__2 : rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2292:1: rule__CallOperator__Group__2 : rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3 ;
     public final void rule__CallOperator__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2244:1: ( rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2245:2: rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2296:1: ( rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2297:2: rule__CallOperator__Group__2__Impl rule__CallOperator__Group__3
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group__2__Impl_in_rule__CallOperator__Group__24720);
+            pushFollow(FOLLOW_rule__CallOperator__Group__2__Impl_in_rule__CallOperator__Group__24815);
             rule__CallOperator__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group__3_in_rule__CallOperator__Group__24723);
+            pushFollow(FOLLOW_rule__CallOperator__Group__3_in_rule__CallOperator__Group__24818);
             rule__CallOperator__Group__3();
 
             state._fsp--;
@@ -6929,22 +7034,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2252:1: rule__CallOperator__Group__2__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2304:1: rule__CallOperator__Group__2__Impl : ( '(' ) ;
     public final void rule__CallOperator__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2256:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2257:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2308:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2309:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2257:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2258:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2309:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2310:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getLeftParenthesisKeyword_2()); 
             }
-            match(input,58,FOLLOW_58_in_rule__CallOperator__Group__2__Impl4751); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__CallOperator__Group__2__Impl4846); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCallOperatorAccess().getLeftParenthesisKeyword_2()); 
             }
@@ -6970,21 +7075,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2271:1: rule__CallOperator__Group__3 : rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2323:1: rule__CallOperator__Group__3 : rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4 ;
     public final void rule__CallOperator__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2275:1: ( rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2276:2: rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2327:1: ( rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2328:2: rule__CallOperator__Group__3__Impl rule__CallOperator__Group__4
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group__3__Impl_in_rule__CallOperator__Group__34782);
+            pushFollow(FOLLOW_rule__CallOperator__Group__3__Impl_in_rule__CallOperator__Group__34877);
             rule__CallOperator__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group__4_in_rule__CallOperator__Group__34785);
+            pushFollow(FOLLOW_rule__CallOperator__Group__4_in_rule__CallOperator__Group__34880);
             rule__CallOperator__Group__4();
 
             state._fsp--;
@@ -7008,33 +7113,33 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2283:1: rule__CallOperator__Group__3__Impl : ( ( rule__CallOperator__Group_3__0 )? ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2335:1: rule__CallOperator__Group__3__Impl : ( ( rule__CallOperator__Group_3__0 )? ) ;
     public final void rule__CallOperator__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2287:1: ( ( ( rule__CallOperator__Group_3__0 )? ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2288:1: ( ( rule__CallOperator__Group_3__0 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2339:1: ( ( ( rule__CallOperator__Group_3__0 )? ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2340:1: ( ( rule__CallOperator__Group_3__0 )? )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2288:1: ( ( rule__CallOperator__Group_3__0 )? )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2289:1: ( rule__CallOperator__Group_3__0 )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2340:1: ( ( rule__CallOperator__Group_3__0 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2341:1: ( rule__CallOperator__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getGroup_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2290:1: ( rule__CallOperator__Group_3__0 )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2342:1: ( rule__CallOperator__Group_3__0 )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( ((LA27_0>=RULE_ALPHA && LA27_0<=RULE_WSP)||(LA27_0>=40 && LA27_0<=54)||LA27_0==58||LA27_0==60) ) {
-                alt27=1;
+            if ( ((LA28_0>=RULE_ALPHA && LA28_0<=RULE_WSP)||(LA28_0>=40 && LA28_0<=54)||LA28_0==60||LA28_0==62) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2290:2: rule__CallOperator__Group_3__0
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2342:2: rule__CallOperator__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__CallOperator__Group_3__0_in_rule__CallOperator__Group__3__Impl4812);
+                    pushFollow(FOLLOW_rule__CallOperator__Group_3__0_in_rule__CallOperator__Group__3__Impl4907);
                     rule__CallOperator__Group_3__0();
 
                     state._fsp--;
@@ -7070,16 +7175,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__4"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2300:1: rule__CallOperator__Group__4 : rule__CallOperator__Group__4__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2352:1: rule__CallOperator__Group__4 : rule__CallOperator__Group__4__Impl ;
     public final void rule__CallOperator__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2304:1: ( rule__CallOperator__Group__4__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2305:2: rule__CallOperator__Group__4__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2356:1: ( rule__CallOperator__Group__4__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2357:2: rule__CallOperator__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group__4__Impl_in_rule__CallOperator__Group__44843);
+            pushFollow(FOLLOW_rule__CallOperator__Group__4__Impl_in_rule__CallOperator__Group__44938);
             rule__CallOperator__Group__4__Impl();
 
             state._fsp--;
@@ -7103,22 +7208,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group__4__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2311:1: rule__CallOperator__Group__4__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2363:1: rule__CallOperator__Group__4__Impl : ( ')' ) ;
     public final void rule__CallOperator__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2315:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2316:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2367:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2368:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2316:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2317:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2368:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2369:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,59,FOLLOW_59_in_rule__CallOperator__Group__4__Impl4871); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__CallOperator__Group__4__Impl4966); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCallOperatorAccess().getRightParenthesisKeyword_4()); 
             }
@@ -7144,21 +7249,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2340:1: rule__CallOperator__Group_3__0 : rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2392:1: rule__CallOperator__Group_3__0 : rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1 ;
     public final void rule__CallOperator__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2344:1: ( rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2345:2: rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2396:1: ( rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2397:2: rule__CallOperator__Group_3__0__Impl rule__CallOperator__Group_3__1
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group_3__0__Impl_in_rule__CallOperator__Group_3__04912);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3__0__Impl_in_rule__CallOperator__Group_3__05007);
             rule__CallOperator__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group_3__1_in_rule__CallOperator__Group_3__04915);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3__1_in_rule__CallOperator__Group_3__05010);
             rule__CallOperator__Group_3__1();
 
             state._fsp--;
@@ -7182,22 +7287,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2352:1: rule__CallOperator__Group_3__0__Impl : ( rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2404:1: rule__CallOperator__Group_3__0__Impl : ( rulePrimaryExpr ) ;
     public final void rule__CallOperator__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2356:1: ( ( rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2357:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2408:1: ( ( rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2409:1: ( rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2357:1: ( rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2358:1: rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2409:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2410:1: rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getPrimaryExprParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3__0__Impl4942);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3__0__Impl5037);
             rulePrimaryExpr();
 
             state._fsp--;
@@ -7227,16 +7332,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2369:1: rule__CallOperator__Group_3__1 : rule__CallOperator__Group_3__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2421:1: rule__CallOperator__Group_3__1 : rule__CallOperator__Group_3__1__Impl ;
     public final void rule__CallOperator__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2373:1: ( rule__CallOperator__Group_3__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2374:2: rule__CallOperator__Group_3__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2425:1: ( rule__CallOperator__Group_3__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2426:2: rule__CallOperator__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group_3__1__Impl_in_rule__CallOperator__Group_3__14971);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3__1__Impl_in_rule__CallOperator__Group_3__15066);
             rule__CallOperator__Group_3__1__Impl();
 
             state._fsp--;
@@ -7260,37 +7365,37 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2380:1: rule__CallOperator__Group_3__1__Impl : ( ( rule__CallOperator__Group_3_1__0 )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2432:1: rule__CallOperator__Group_3__1__Impl : ( ( rule__CallOperator__Group_3_1__0 )* ) ;
     public final void rule__CallOperator__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2384:1: ( ( ( rule__CallOperator__Group_3_1__0 )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2385:1: ( ( rule__CallOperator__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2436:1: ( ( ( rule__CallOperator__Group_3_1__0 )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2437:1: ( ( rule__CallOperator__Group_3_1__0 )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2385:1: ( ( rule__CallOperator__Group_3_1__0 )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2386:1: ( rule__CallOperator__Group_3_1__0 )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2437:1: ( ( rule__CallOperator__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2438:1: ( rule__CallOperator__Group_3_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getGroup_3_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2387:1: ( rule__CallOperator__Group_3_1__0 )*
-            loop28:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2439:1: ( rule__CallOperator__Group_3_1__0 )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA28_0==8) ) {
-                    alt28=1;
+                if ( (LA29_0==8) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2387:2: rule__CallOperator__Group_3_1__0
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2439:2: rule__CallOperator__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__CallOperator__Group_3_1__0_in_rule__CallOperator__Group_3__1__Impl4998);
+            	    pushFollow(FOLLOW_rule__CallOperator__Group_3_1__0_in_rule__CallOperator__Group_3__1__Impl5093);
             	    rule__CallOperator__Group_3_1__0();
 
             	    state._fsp--;
@@ -7300,7 +7405,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -7329,21 +7434,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3_1__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2401:1: rule__CallOperator__Group_3_1__0 : rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2453:1: rule__CallOperator__Group_3_1__0 : rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1 ;
     public final void rule__CallOperator__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2405:1: ( rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2406:2: rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2457:1: ( rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2458:2: rule__CallOperator__Group_3_1__0__Impl rule__CallOperator__Group_3_1__1
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__0__Impl_in_rule__CallOperator__Group_3_1__05033);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__0__Impl_in_rule__CallOperator__Group_3_1__05128);
             rule__CallOperator__Group_3_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__1_in_rule__CallOperator__Group_3_1__05036);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__1_in_rule__CallOperator__Group_3_1__05131);
             rule__CallOperator__Group_3_1__1();
 
             state._fsp--;
@@ -7367,22 +7472,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3_1__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2413:1: rule__CallOperator__Group_3_1__0__Impl : ( ',' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2465:1: rule__CallOperator__Group_3_1__0__Impl : ( ',' ) ;
     public final void rule__CallOperator__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2417:1: ( ( ',' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2418:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2469:1: ( ( ',' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2470:1: ( ',' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2418:1: ( ',' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2419:1: ','
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2470:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2471:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getCommaKeyword_3_1_0()); 
             }
-            match(input,8,FOLLOW_8_in_rule__CallOperator__Group_3_1__0__Impl5064); if (state.failed) return ;
+            match(input,8,FOLLOW_8_in_rule__CallOperator__Group_3_1__0__Impl5159); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCallOperatorAccess().getCommaKeyword_3_1_0()); 
             }
@@ -7408,16 +7513,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3_1__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2432:1: rule__CallOperator__Group_3_1__1 : rule__CallOperator__Group_3_1__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2484:1: rule__CallOperator__Group_3_1__1 : rule__CallOperator__Group_3_1__1__Impl ;
     public final void rule__CallOperator__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2436:1: ( rule__CallOperator__Group_3_1__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2437:2: rule__CallOperator__Group_3_1__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2488:1: ( rule__CallOperator__Group_3_1__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2489:2: rule__CallOperator__Group_3_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__1__Impl_in_rule__CallOperator__Group_3_1__15095);
+            pushFollow(FOLLOW_rule__CallOperator__Group_3_1__1__Impl_in_rule__CallOperator__Group_3_1__15190);
             rule__CallOperator__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -7441,22 +7546,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallOperator__Group_3_1__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2443:1: rule__CallOperator__Group_3_1__1__Impl : ( rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2495:1: rule__CallOperator__Group_3_1__1__Impl : ( rulePrimaryExpr ) ;
     public final void rule__CallOperator__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2447:1: ( ( rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2448:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2499:1: ( ( rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2500:1: ( rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2448:1: ( rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2449:1: rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2500:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2501:1: rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallOperatorAccess().getPrimaryExprParserRuleCall_3_1_1()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3_1__1__Impl5122);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3_1__1__Impl5217);
             rulePrimaryExpr();
 
             state._fsp--;
@@ -7486,21 +7591,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2464:1: rule__Predicate__Group__0 : rule__Predicate__Group__0__Impl rule__Predicate__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2516:1: rule__Predicate__Group__0 : rule__Predicate__Group__0__Impl rule__Predicate__Group__1 ;
     public final void rule__Predicate__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2468:1: ( rule__Predicate__Group__0__Impl rule__Predicate__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2469:2: rule__Predicate__Group__0__Impl rule__Predicate__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2520:1: ( rule__Predicate__Group__0__Impl rule__Predicate__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2521:2: rule__Predicate__Group__0__Impl rule__Predicate__Group__1
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__05155);
+            pushFollow(FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__05250);
             rule__Predicate__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__05158);
+            pushFollow(FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__05253);
             rule__Predicate__Group__1();
 
             state._fsp--;
@@ -7524,22 +7629,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2476:1: rule__Predicate__Group__0__Impl : ( rulePredTbl ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2528:1: rule__Predicate__Group__0__Impl : ( rulePredTbl ) ;
     public final void rule__Predicate__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2480:1: ( ( rulePredTbl ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2481:1: ( rulePredTbl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2532:1: ( ( rulePredTbl ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2533:1: ( rulePredTbl )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2481:1: ( rulePredTbl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2482:1: rulePredTbl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2533:1: ( rulePredTbl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2534:1: rulePredTbl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getPredTblParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePredTbl_in_rule__Predicate__Group__0__Impl5185);
+            pushFollow(FOLLOW_rulePredTbl_in_rule__Predicate__Group__0__Impl5280);
             rulePredTbl();
 
             state._fsp--;
@@ -7569,21 +7674,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2493:1: rule__Predicate__Group__1 : rule__Predicate__Group__1__Impl rule__Predicate__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2545:1: rule__Predicate__Group__1 : rule__Predicate__Group__1__Impl rule__Predicate__Group__2 ;
     public final void rule__Predicate__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2497:1: ( rule__Predicate__Group__1__Impl rule__Predicate__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2498:2: rule__Predicate__Group__1__Impl rule__Predicate__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2549:1: ( rule__Predicate__Group__1__Impl rule__Predicate__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2550:2: rule__Predicate__Group__1__Impl rule__Predicate__Group__2
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__15214);
+            pushFollow(FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__15309);
             rule__Predicate__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__15217);
+            pushFollow(FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__15312);
             rule__Predicate__Group__2();
 
             state._fsp--;
@@ -7607,43 +7712,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2505:1: rule__Predicate__Group__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2557:1: rule__Predicate__Group__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Predicate__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2509:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2510:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2561:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2562:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2510:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2511:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2562:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2563:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getWSPTerminalRuleCall_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2512:1: ( RULE_WSP )*
-            loop29:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2564:1: ( RULE_WSP )*
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==RULE_WSP) ) {
-                    alt29=1;
+                if ( (LA30_0==RULE_WSP) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2512:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2564:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Predicate__Group__1__Impl5245); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Predicate__Group__1__Impl5340); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -7672,21 +7777,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2522:1: rule__Predicate__Group__2 : rule__Predicate__Group__2__Impl rule__Predicate__Group__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2574:1: rule__Predicate__Group__2 : rule__Predicate__Group__2__Impl rule__Predicate__Group__3 ;
     public final void rule__Predicate__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2526:1: ( rule__Predicate__Group__2__Impl rule__Predicate__Group__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2527:2: rule__Predicate__Group__2__Impl rule__Predicate__Group__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2578:1: ( rule__Predicate__Group__2__Impl rule__Predicate__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2579:2: rule__Predicate__Group__2__Impl rule__Predicate__Group__3
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__25276);
+            pushFollow(FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__25371);
             rule__Predicate__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__25279);
+            pushFollow(FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__25374);
             rule__Predicate__Group__3();
 
             state._fsp--;
@@ -7710,22 +7815,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2534:1: rule__Predicate__Group__2__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2586:1: rule__Predicate__Group__2__Impl : ( '(' ) ;
     public final void rule__Predicate__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2538:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2539:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2590:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2591:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2539:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2540:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2591:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2592:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_2()); 
             }
-            match(input,58,FOLLOW_58_in_rule__Predicate__Group__2__Impl5307); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__Predicate__Group__2__Impl5402); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_2()); 
             }
@@ -7751,21 +7856,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2553:1: rule__Predicate__Group__3 : rule__Predicate__Group__3__Impl rule__Predicate__Group__4 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2605:1: rule__Predicate__Group__3 : rule__Predicate__Group__3__Impl rule__Predicate__Group__4 ;
     public final void rule__Predicate__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2557:1: ( rule__Predicate__Group__3__Impl rule__Predicate__Group__4 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2558:2: rule__Predicate__Group__3__Impl rule__Predicate__Group__4
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2609:1: ( rule__Predicate__Group__3__Impl rule__Predicate__Group__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2610:2: rule__Predicate__Group__3__Impl rule__Predicate__Group__4
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__35338);
+            pushFollow(FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__35433);
             rule__Predicate__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__35341);
+            pushFollow(FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__35436);
             rule__Predicate__Group__4();
 
             state._fsp--;
@@ -7789,33 +7894,33 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2565:1: rule__Predicate__Group__3__Impl : ( ( rule__Predicate__Group_3__0 )? ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2617:1: rule__Predicate__Group__3__Impl : ( ( rule__Predicate__Group_3__0 )? ) ;
     public final void rule__Predicate__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2569:1: ( ( ( rule__Predicate__Group_3__0 )? ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2570:1: ( ( rule__Predicate__Group_3__0 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2621:1: ( ( ( rule__Predicate__Group_3__0 )? ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2622:1: ( ( rule__Predicate__Group_3__0 )? )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2570:1: ( ( rule__Predicate__Group_3__0 )? )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2571:1: ( rule__Predicate__Group_3__0 )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2622:1: ( ( rule__Predicate__Group_3__0 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2623:1: ( rule__Predicate__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getGroup_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2572:1: ( rule__Predicate__Group_3__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2624:1: ( rule__Predicate__Group_3__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( ((LA30_0>=RULE_ALPHA && LA30_0<=RULE_WSP)||(LA30_0>=40 && LA30_0<=54)||LA30_0==58||LA30_0==60) ) {
-                alt30=1;
+            if ( ((LA31_0>=RULE_ALPHA && LA31_0<=RULE_WSP)||(LA31_0>=40 && LA31_0<=54)||LA31_0==60||LA31_0==62) ) {
+                alt31=1;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2572:2: rule__Predicate__Group_3__0
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2624:2: rule__Predicate__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl5368);
+                    pushFollow(FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl5463);
                     rule__Predicate__Group_3__0();
 
                     state._fsp--;
@@ -7851,16 +7956,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__4"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2582:1: rule__Predicate__Group__4 : rule__Predicate__Group__4__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2634:1: rule__Predicate__Group__4 : rule__Predicate__Group__4__Impl ;
     public final void rule__Predicate__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2586:1: ( rule__Predicate__Group__4__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2587:2: rule__Predicate__Group__4__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2638:1: ( rule__Predicate__Group__4__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2639:2: rule__Predicate__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__45399);
+            pushFollow(FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__45494);
             rule__Predicate__Group__4__Impl();
 
             state._fsp--;
@@ -7884,22 +7989,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group__4__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2593:1: rule__Predicate__Group__4__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2645:1: rule__Predicate__Group__4__Impl : ( ')' ) ;
     public final void rule__Predicate__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2597:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2598:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2649:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2650:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2598:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2599:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2650:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2651:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,59,FOLLOW_59_in_rule__Predicate__Group__4__Impl5427); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__Predicate__Group__4__Impl5522); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4()); 
             }
@@ -7925,21 +8030,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2622:1: rule__Predicate__Group_3__0 : rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2674:1: rule__Predicate__Group_3__0 : rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1 ;
     public final void rule__Predicate__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2626:1: ( rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2627:2: rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2678:1: ( rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2679:2: rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__05468);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__05563);
             rule__Predicate__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__05471);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__05566);
             rule__Predicate__Group_3__1();
 
             state._fsp--;
@@ -7963,22 +8068,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2634:1: rule__Predicate__Group_3__0__Impl : ( rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2686:1: rule__Predicate__Group_3__0__Impl : ( rulePrimaryExpr ) ;
     public final void rule__Predicate__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2638:1: ( ( rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2639:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2690:1: ( ( rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2691:1: ( rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2639:1: ( rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2640:1: rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2691:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2692:1: rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getPrimaryExprParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3__0__Impl5498);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3__0__Impl5593);
             rulePrimaryExpr();
 
             state._fsp--;
@@ -8008,16 +8113,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2651:1: rule__Predicate__Group_3__1 : rule__Predicate__Group_3__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2703:1: rule__Predicate__Group_3__1 : rule__Predicate__Group_3__1__Impl ;
     public final void rule__Predicate__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2655:1: ( rule__Predicate__Group_3__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2656:2: rule__Predicate__Group_3__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2707:1: ( rule__Predicate__Group_3__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2708:2: rule__Predicate__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__15527);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__15622);
             rule__Predicate__Group_3__1__Impl();
 
             state._fsp--;
@@ -8041,37 +8146,37 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2662:1: rule__Predicate__Group_3__1__Impl : ( ( rule__Predicate__Group_3_1__0 )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2714:1: rule__Predicate__Group_3__1__Impl : ( ( rule__Predicate__Group_3_1__0 )* ) ;
     public final void rule__Predicate__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2666:1: ( ( ( rule__Predicate__Group_3_1__0 )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2667:1: ( ( rule__Predicate__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2718:1: ( ( ( rule__Predicate__Group_3_1__0 )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2719:1: ( ( rule__Predicate__Group_3_1__0 )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2667:1: ( ( rule__Predicate__Group_3_1__0 )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2668:1: ( rule__Predicate__Group_3_1__0 )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2719:1: ( ( rule__Predicate__Group_3_1__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2720:1: ( rule__Predicate__Group_3_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getGroup_3_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2669:1: ( rule__Predicate__Group_3_1__0 )*
-            loop31:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2721:1: ( rule__Predicate__Group_3_1__0 )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA31_0==8) ) {
-                    alt31=1;
+                if ( (LA32_0==8) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2669:2: rule__Predicate__Group_3_1__0
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2721:2: rule__Predicate__Group_3_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Predicate__Group_3_1__0_in_rule__Predicate__Group_3__1__Impl5554);
+            	    pushFollow(FOLLOW_rule__Predicate__Group_3_1__0_in_rule__Predicate__Group_3__1__Impl5649);
             	    rule__Predicate__Group_3_1__0();
 
             	    state._fsp--;
@@ -8081,7 +8186,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -8110,21 +8215,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3_1__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2683:1: rule__Predicate__Group_3_1__0 : rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2735:1: rule__Predicate__Group_3_1__0 : rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1 ;
     public final void rule__Predicate__Group_3_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2687:1: ( rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2688:2: rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2739:1: ( rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2740:2: rule__Predicate__Group_3_1__0__Impl rule__Predicate__Group_3_1__1
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3_1__0__Impl_in_rule__Predicate__Group_3_1__05589);
+            pushFollow(FOLLOW_rule__Predicate__Group_3_1__0__Impl_in_rule__Predicate__Group_3_1__05684);
             rule__Predicate__Group_3_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Predicate__Group_3_1__1_in_rule__Predicate__Group_3_1__05592);
+            pushFollow(FOLLOW_rule__Predicate__Group_3_1__1_in_rule__Predicate__Group_3_1__05687);
             rule__Predicate__Group_3_1__1();
 
             state._fsp--;
@@ -8148,22 +8253,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3_1__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2695:1: rule__Predicate__Group_3_1__0__Impl : ( ',' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2747:1: rule__Predicate__Group_3_1__0__Impl : ( ',' ) ;
     public final void rule__Predicate__Group_3_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2699:1: ( ( ',' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2700:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2751:1: ( ( ',' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2752:1: ( ',' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2700:1: ( ',' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2701:1: ','
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2752:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2753:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getCommaKeyword_3_1_0()); 
             }
-            match(input,8,FOLLOW_8_in_rule__Predicate__Group_3_1__0__Impl5620); if (state.failed) return ;
+            match(input,8,FOLLOW_8_in_rule__Predicate__Group_3_1__0__Impl5715); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAccess().getCommaKeyword_3_1_0()); 
             }
@@ -8189,16 +8294,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3_1__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2714:1: rule__Predicate__Group_3_1__1 : rule__Predicate__Group_3_1__1__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2766:1: rule__Predicate__Group_3_1__1 : rule__Predicate__Group_3_1__1__Impl ;
     public final void rule__Predicate__Group_3_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2718:1: ( rule__Predicate__Group_3_1__1__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2719:2: rule__Predicate__Group_3_1__1__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2770:1: ( rule__Predicate__Group_3_1__1__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2771:2: rule__Predicate__Group_3_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3_1__1__Impl_in_rule__Predicate__Group_3_1__15651);
+            pushFollow(FOLLOW_rule__Predicate__Group_3_1__1__Impl_in_rule__Predicate__Group_3_1__15746);
             rule__Predicate__Group_3_1__1__Impl();
 
             state._fsp--;
@@ -8222,22 +8327,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Predicate__Group_3_1__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2725:1: rule__Predicate__Group_3_1__1__Impl : ( rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2777:1: rule__Predicate__Group_3_1__1__Impl : ( rulePrimaryExpr ) ;
     public final void rule__Predicate__Group_3_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2729:1: ( ( rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2730:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2781:1: ( ( rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2782:1: ( rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2730:1: ( rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2731:1: rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2782:1: ( rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2783:1: rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAccess().getPrimaryExprParserRuleCall_3_1_1()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3_1__1__Impl5678);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3_1__1__Impl5773);
             rulePrimaryExpr();
 
             state._fsp--;
@@ -8267,21 +8372,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2746:1: rule__PrimaryExpr__Group__0 : rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2798:1: rule__PrimaryExpr__Group__0 : rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1 ;
     public final void rule__PrimaryExpr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2750:1: ( rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2751:2: rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2802:1: ( rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2803:2: rule__PrimaryExpr__Group__0__Impl rule__PrimaryExpr__Group__1
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group__0__Impl_in_rule__PrimaryExpr__Group__05711);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group__0__Impl_in_rule__PrimaryExpr__Group__05806);
             rule__PrimaryExpr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group__1_in_rule__PrimaryExpr__Group__05714);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group__1_in_rule__PrimaryExpr__Group__05809);
             rule__PrimaryExpr__Group__1();
 
             state._fsp--;
@@ -8305,43 +8410,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2758:1: rule__PrimaryExpr__Group__0__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2810:1: rule__PrimaryExpr__Group__0__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__PrimaryExpr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2762:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2763:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2814:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2815:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2763:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2764:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2815:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2816:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getWSPTerminalRuleCall_0()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2765:1: ( RULE_WSP )*
-            loop32:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2817:1: ( RULE_WSP )*
+            loop33:
             do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA32_0==RULE_WSP) ) {
-                    alt32=1;
+                if ( (LA33_0==RULE_WSP) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt33) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2765:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2817:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__0__Impl5742); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__0__Impl5837); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop33;
                 }
             } while (true);
 
@@ -8370,21 +8475,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2775:1: rule__PrimaryExpr__Group__1 : rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2827:1: rule__PrimaryExpr__Group__1 : rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2 ;
     public final void rule__PrimaryExpr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2779:1: ( rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2780:2: rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2831:1: ( rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2832:2: rule__PrimaryExpr__Group__1__Impl rule__PrimaryExpr__Group__2
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group__1__Impl_in_rule__PrimaryExpr__Group__15773);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group__1__Impl_in_rule__PrimaryExpr__Group__15868);
             rule__PrimaryExpr__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group__2_in_rule__PrimaryExpr__Group__15776);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group__2_in_rule__PrimaryExpr__Group__15871);
             rule__PrimaryExpr__Group__2();
 
             state._fsp--;
@@ -8408,25 +8513,25 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2787:1: rule__PrimaryExpr__Group__1__Impl : ( ( rule__PrimaryExpr__Alternatives_1 ) ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2839:1: rule__PrimaryExpr__Group__1__Impl : ( ( rule__PrimaryExpr__Alternatives_1 ) ) ;
     public final void rule__PrimaryExpr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2791:1: ( ( ( rule__PrimaryExpr__Alternatives_1 ) ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2792:1: ( ( rule__PrimaryExpr__Alternatives_1 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2843:1: ( ( ( rule__PrimaryExpr__Alternatives_1 ) ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2844:1: ( ( rule__PrimaryExpr__Alternatives_1 ) )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2792:1: ( ( rule__PrimaryExpr__Alternatives_1 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2793:1: ( rule__PrimaryExpr__Alternatives_1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2844:1: ( ( rule__PrimaryExpr__Alternatives_1 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2845:1: ( rule__PrimaryExpr__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getAlternatives_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2794:1: ( rule__PrimaryExpr__Alternatives_1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2794:2: rule__PrimaryExpr__Alternatives_1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2846:1: ( rule__PrimaryExpr__Alternatives_1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2846:2: rule__PrimaryExpr__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Alternatives_1_in_rule__PrimaryExpr__Group__1__Impl5803);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Alternatives_1_in_rule__PrimaryExpr__Group__1__Impl5898);
             rule__PrimaryExpr__Alternatives_1();
 
             state._fsp--;
@@ -8459,16 +8564,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2804:1: rule__PrimaryExpr__Group__2 : rule__PrimaryExpr__Group__2__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2856:1: rule__PrimaryExpr__Group__2 : rule__PrimaryExpr__Group__2__Impl ;
     public final void rule__PrimaryExpr__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2808:1: ( rule__PrimaryExpr__Group__2__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2809:2: rule__PrimaryExpr__Group__2__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2860:1: ( rule__PrimaryExpr__Group__2__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2861:2: rule__PrimaryExpr__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group__2__Impl_in_rule__PrimaryExpr__Group__25833);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group__2__Impl_in_rule__PrimaryExpr__Group__25928);
             rule__PrimaryExpr__Group__2__Impl();
 
             state._fsp--;
@@ -8492,49 +8597,49 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2815:1: rule__PrimaryExpr__Group__2__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2867:1: rule__PrimaryExpr__Group__2__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__PrimaryExpr__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2819:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2820:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2871:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2872:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2820:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2821:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2872:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2873:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getWSPTerminalRuleCall_2()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2822:1: ( RULE_WSP )*
-            loop33:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2874:1: ( RULE_WSP )*
+            loop34:
             do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA33_0==RULE_WSP) ) {
-                    int LA33_2 = input.LA(2);
+                if ( (LA34_0==RULE_WSP) ) {
+                    int LA34_2 = input.LA(2);
 
-                    if ( (synpred69_InternalRQL()) ) {
-                        alt33=1;
+                    if ( (synpred70_InternalRQL()) ) {
+                        alt34=1;
                     }
 
 
                 }
 
 
-                switch (alt33) {
+                switch (alt34) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2822:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2874:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__2__Impl5861); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__2__Impl5956); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop33;
+            	    break loop34;
                 }
             } while (true);
 
@@ -8563,21 +8668,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2838:1: rule__PrimaryExpr__Group_1_0__0 : rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2890:1: rule__PrimaryExpr__Group_1_0__0 : rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1 ;
     public final void rule__PrimaryExpr__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2842:1: ( rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2843:2: rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2894:1: ( rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2895:2: rule__PrimaryExpr__Group_1_0__0__Impl rule__PrimaryExpr__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__0__Impl_in_rule__PrimaryExpr__Group_1_0__05898);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__0__Impl_in_rule__PrimaryExpr__Group_1_0__05993);
             rule__PrimaryExpr__Group_1_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__1_in_rule__PrimaryExpr__Group_1_0__05901);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__1_in_rule__PrimaryExpr__Group_1_0__05996);
             rule__PrimaryExpr__Group_1_0__1();
 
             state._fsp--;
@@ -8601,22 +8706,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2850:1: rule__PrimaryExpr__Group_1_0__0__Impl : ( ruleConstFuncTbl ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2902:1: rule__PrimaryExpr__Group_1_0__0__Impl : ( ruleConstFuncTbl ) ;
     public final void rule__PrimaryExpr__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2854:1: ( ( ruleConstFuncTbl ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2855:1: ( ruleConstFuncTbl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2906:1: ( ( ruleConstFuncTbl ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2907:1: ( ruleConstFuncTbl )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2855:1: ( ruleConstFuncTbl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2856:1: ruleConstFuncTbl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2907:1: ( ruleConstFuncTbl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2908:1: ruleConstFuncTbl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getConstFuncTblParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleConstFuncTbl_in_rule__PrimaryExpr__Group_1_0__0__Impl5928);
+            pushFollow(FOLLOW_ruleConstFuncTbl_in_rule__PrimaryExpr__Group_1_0__0__Impl6023);
             ruleConstFuncTbl();
 
             state._fsp--;
@@ -8646,21 +8751,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2867:1: rule__PrimaryExpr__Group_1_0__1 : rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2919:1: rule__PrimaryExpr__Group_1_0__1 : rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2 ;
     public final void rule__PrimaryExpr__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2871:1: ( rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2872:2: rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2923:1: ( rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2924:2: rule__PrimaryExpr__Group_1_0__1__Impl rule__PrimaryExpr__Group_1_0__2
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__1__Impl_in_rule__PrimaryExpr__Group_1_0__15957);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__1__Impl_in_rule__PrimaryExpr__Group_1_0__16052);
             rule__PrimaryExpr__Group_1_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__2_in_rule__PrimaryExpr__Group_1_0__15960);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__2_in_rule__PrimaryExpr__Group_1_0__16055);
             rule__PrimaryExpr__Group_1_0__2();
 
             state._fsp--;
@@ -8684,43 +8789,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2879:1: rule__PrimaryExpr__Group_1_0__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2931:1: rule__PrimaryExpr__Group_1_0__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__PrimaryExpr__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2883:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2884:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2935:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2936:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2884:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2885:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2936:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2937:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getWSPTerminalRuleCall_1_0_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2886:1: ( RULE_WSP )*
-            loop34:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2938:1: ( RULE_WSP )*
+            loop35:
             do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( (LA34_0==RULE_WSP) ) {
-                    alt34=1;
+                if ( (LA35_0==RULE_WSP) ) {
+                    alt35=1;
                 }
 
 
-                switch (alt34) {
+                switch (alt35) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2886:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2938:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__1__Impl5988); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__1__Impl6083); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop35;
                 }
             } while (true);
 
@@ -8749,21 +8854,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2896:1: rule__PrimaryExpr__Group_1_0__2 : rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2948:1: rule__PrimaryExpr__Group_1_0__2 : rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3 ;
     public final void rule__PrimaryExpr__Group_1_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2900:1: ( rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2901:2: rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2952:1: ( rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2953:2: rule__PrimaryExpr__Group_1_0__2__Impl rule__PrimaryExpr__Group_1_0__3
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__2__Impl_in_rule__PrimaryExpr__Group_1_0__26019);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__2__Impl_in_rule__PrimaryExpr__Group_1_0__26114);
             rule__PrimaryExpr__Group_1_0__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__3_in_rule__PrimaryExpr__Group_1_0__26022);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__3_in_rule__PrimaryExpr__Group_1_0__26117);
             rule__PrimaryExpr__Group_1_0__3();
 
             state._fsp--;
@@ -8787,22 +8892,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2908:1: rule__PrimaryExpr__Group_1_0__2__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2960:1: rule__PrimaryExpr__Group_1_0__2__Impl : ( '(' ) ;
     public final void rule__PrimaryExpr__Group_1_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2912:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2913:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2964:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2965:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2913:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2914:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2965:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2966:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getLeftParenthesisKeyword_1_0_2()); 
             }
-            match(input,58,FOLLOW_58_in_rule__PrimaryExpr__Group_1_0__2__Impl6050); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__PrimaryExpr__Group_1_0__2__Impl6145); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExprAccess().getLeftParenthesisKeyword_1_0_2()); 
             }
@@ -8828,21 +8933,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2927:1: rule__PrimaryExpr__Group_1_0__3 : rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2979:1: rule__PrimaryExpr__Group_1_0__3 : rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4 ;
     public final void rule__PrimaryExpr__Group_1_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2931:1: ( rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2932:2: rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2983:1: ( rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2984:2: rule__PrimaryExpr__Group_1_0__3__Impl rule__PrimaryExpr__Group_1_0__4
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__3__Impl_in_rule__PrimaryExpr__Group_1_0__36081);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__3__Impl_in_rule__PrimaryExpr__Group_1_0__36176);
             rule__PrimaryExpr__Group_1_0__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__4_in_rule__PrimaryExpr__Group_1_0__36084);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__4_in_rule__PrimaryExpr__Group_1_0__36179);
             rule__PrimaryExpr__Group_1_0__4();
 
             state._fsp--;
@@ -8866,43 +8971,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2939:1: rule__PrimaryExpr__Group_1_0__3__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2991:1: rule__PrimaryExpr__Group_1_0__3__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__PrimaryExpr__Group_1_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2943:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2944:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2995:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2996:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2944:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2945:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2996:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2997:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getWSPTerminalRuleCall_1_0_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2946:1: ( RULE_WSP )*
-            loop35:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2998:1: ( RULE_WSP )*
+            loop36:
             do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA35_0==RULE_WSP) ) {
-                    alt35=1;
+                if ( (LA36_0==RULE_WSP) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt35) {
+                switch (alt36) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2946:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2998:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__3__Impl6112); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__3__Impl6207); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop35;
+            	    break loop36;
                 }
             } while (true);
 
@@ -8931,16 +9036,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__4"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2956:1: rule__PrimaryExpr__Group_1_0__4 : rule__PrimaryExpr__Group_1_0__4__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3008:1: rule__PrimaryExpr__Group_1_0__4 : rule__PrimaryExpr__Group_1_0__4__Impl ;
     public final void rule__PrimaryExpr__Group_1_0__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2960:1: ( rule__PrimaryExpr__Group_1_0__4__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2961:2: rule__PrimaryExpr__Group_1_0__4__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3012:1: ( rule__PrimaryExpr__Group_1_0__4__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3013:2: rule__PrimaryExpr__Group_1_0__4__Impl
             {
-            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__4__Impl_in_rule__PrimaryExpr__Group_1_0__46143);
+            pushFollow(FOLLOW_rule__PrimaryExpr__Group_1_0__4__Impl_in_rule__PrimaryExpr__Group_1_0__46238);
             rule__PrimaryExpr__Group_1_0__4__Impl();
 
             state._fsp--;
@@ -8964,22 +9069,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpr__Group_1_0__4__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2967:1: rule__PrimaryExpr__Group_1_0__4__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3019:1: rule__PrimaryExpr__Group_1_0__4__Impl : ( ')' ) ;
     public final void rule__PrimaryExpr__Group_1_0__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2971:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2972:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3023:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3024:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2972:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2973:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3024:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3025:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExprAccess().getRightParenthesisKeyword_1_0_4()); 
             }
-            match(input,59,FOLLOW_59_in_rule__PrimaryExpr__Group_1_0__4__Impl6171); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__PrimaryExpr__Group_1_0__4__Impl6266); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExprAccess().getRightParenthesisKeyword_1_0_4()); 
             }
@@ -9005,21 +9110,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2996:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3048:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
     public final void rule__Array__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3000:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3001:2: rule__Array__Group__0__Impl rule__Array__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3052:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3053:2: rule__Array__Group__0__Impl rule__Array__Group__1
             {
-            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__06212);
+            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__06307);
             rule__Array__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__06215);
+            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__06310);
             rule__Array__Group__1();
 
             state._fsp--;
@@ -9043,22 +9148,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3008:1: rule__Array__Group__0__Impl : ( '(' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3060:1: rule__Array__Group__0__Impl : ( '(' ) ;
     public final void rule__Array__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3012:1: ( ( '(' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3013:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3064:1: ( ( '(' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3065:1: ( '(' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3013:1: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3014:1: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3065:1: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3066:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,58,FOLLOW_58_in_rule__Array__Group__0__Impl6243); if (state.failed) return ;
+            match(input,60,FOLLOW_60_in_rule__Array__Group__0__Impl6338); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -9084,21 +9189,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3027:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3079:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
     public final void rule__Array__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3031:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3032:2: rule__Array__Group__1__Impl rule__Array__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3083:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3084:2: rule__Array__Group__1__Impl rule__Array__Group__2
             {
-            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__16274);
+            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__16369);
             rule__Array__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__16277);
+            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__16372);
             rule__Array__Group__2();
 
             state._fsp--;
@@ -9122,43 +9227,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3039:1: rule__Array__Group__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3091:1: rule__Array__Group__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Array__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3043:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3044:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3095:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3096:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3044:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3045:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3096:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3097:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getWSPTerminalRuleCall_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3046:1: ( RULE_WSP )*
-            loop36:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3098:1: ( RULE_WSP )*
+            loop37:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA36_0==RULE_WSP) ) {
-                    alt36=1;
+                if ( (LA37_0==RULE_WSP) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt37) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3046:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3098:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group__1__Impl6305); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group__1__Impl6400); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
@@ -9187,21 +9292,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3056:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3108:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
     public final void rule__Array__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3060:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3061:2: rule__Array__Group__2__Impl rule__Array__Group__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3112:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3113:2: rule__Array__Group__2__Impl rule__Array__Group__3
             {
-            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__26336);
+            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__26431);
             rule__Array__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__26339);
+            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__26434);
             rule__Array__Group__3();
 
             state._fsp--;
@@ -9225,22 +9330,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3068:1: rule__Array__Group__2__Impl : ( ruleStrval ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3120:1: rule__Array__Group__2__Impl : ( ruleStrval ) ;
     public final void rule__Array__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3072:1: ( ( ruleStrval ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3073:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3124:1: ( ( ruleStrval ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3125:1: ( ruleStrval )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3073:1: ( ruleStrval )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3074:1: ruleStrval
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3125:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3126:1: ruleStrval
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getStrvalParserRuleCall_2()); 
             }
-            pushFollow(FOLLOW_ruleStrval_in_rule__Array__Group__2__Impl6366);
+            pushFollow(FOLLOW_ruleStrval_in_rule__Array__Group__2__Impl6461);
             ruleStrval();
 
             state._fsp--;
@@ -9270,21 +9375,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3085:1: rule__Array__Group__3 : rule__Array__Group__3__Impl rule__Array__Group__4 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3137:1: rule__Array__Group__3 : rule__Array__Group__3__Impl rule__Array__Group__4 ;
     public final void rule__Array__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3089:1: ( rule__Array__Group__3__Impl rule__Array__Group__4 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3090:2: rule__Array__Group__3__Impl rule__Array__Group__4
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3141:1: ( rule__Array__Group__3__Impl rule__Array__Group__4 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3142:2: rule__Array__Group__3__Impl rule__Array__Group__4
             {
-            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__36395);
+            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__36490);
             rule__Array__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__4_in_rule__Array__Group__36398);
+            pushFollow(FOLLOW_rule__Array__Group__4_in_rule__Array__Group__36493);
             rule__Array__Group__4();
 
             state._fsp--;
@@ -9308,43 +9413,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3097:1: rule__Array__Group__3__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3149:1: rule__Array__Group__3__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Array__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3101:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3102:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3153:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3154:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3102:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3103:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3154:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3155:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getWSPTerminalRuleCall_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3104:1: ( RULE_WSP )*
-            loop37:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3156:1: ( RULE_WSP )*
+            loop38:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA37_0==RULE_WSP) ) {
-                    alt37=1;
+                if ( (LA38_0==RULE_WSP) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt38) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3104:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3156:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group__3__Impl6426); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group__3__Impl6521); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop38;
                 }
             } while (true);
 
@@ -9373,21 +9478,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__4"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3114:1: rule__Array__Group__4 : rule__Array__Group__4__Impl rule__Array__Group__5 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3166:1: rule__Array__Group__4 : rule__Array__Group__4__Impl rule__Array__Group__5 ;
     public final void rule__Array__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3118:1: ( rule__Array__Group__4__Impl rule__Array__Group__5 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3119:2: rule__Array__Group__4__Impl rule__Array__Group__5
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3170:1: ( rule__Array__Group__4__Impl rule__Array__Group__5 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3171:2: rule__Array__Group__4__Impl rule__Array__Group__5
             {
-            pushFollow(FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__46457);
+            pushFollow(FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__46552);
             rule__Array__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group__5_in_rule__Array__Group__46460);
+            pushFollow(FOLLOW_rule__Array__Group__5_in_rule__Array__Group__46555);
             rule__Array__Group__5();
 
             state._fsp--;
@@ -9411,37 +9516,37 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__4__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3126:1: rule__Array__Group__4__Impl : ( ( rule__Array__Group_4__0 )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3178:1: rule__Array__Group__4__Impl : ( ( rule__Array__Group_4__0 )* ) ;
     public final void rule__Array__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3130:1: ( ( ( rule__Array__Group_4__0 )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3131:1: ( ( rule__Array__Group_4__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3182:1: ( ( ( rule__Array__Group_4__0 )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3183:1: ( ( rule__Array__Group_4__0 )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3131:1: ( ( rule__Array__Group_4__0 )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3132:1: ( rule__Array__Group_4__0 )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3183:1: ( ( rule__Array__Group_4__0 )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3184:1: ( rule__Array__Group_4__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getGroup_4()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3133:1: ( rule__Array__Group_4__0 )*
-            loop38:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3185:1: ( rule__Array__Group_4__0 )*
+            loop39:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA38_0==8) ) {
-                    alt38=1;
+                if ( (LA39_0==8) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3133:2: rule__Array__Group_4__0
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3185:2: rule__Array__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__Array__Group_4__0_in_rule__Array__Group__4__Impl6487);
+            	    pushFollow(FOLLOW_rule__Array__Group_4__0_in_rule__Array__Group__4__Impl6582);
             	    rule__Array__Group_4__0();
 
             	    state._fsp--;
@@ -9451,7 +9556,7 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -9480,16 +9585,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__5"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3143:1: rule__Array__Group__5 : rule__Array__Group__5__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3195:1: rule__Array__Group__5 : rule__Array__Group__5__Impl ;
     public final void rule__Array__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3147:1: ( rule__Array__Group__5__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3148:2: rule__Array__Group__5__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3199:1: ( rule__Array__Group__5__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3200:2: rule__Array__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group__5__Impl_in_rule__Array__Group__56518);
+            pushFollow(FOLLOW_rule__Array__Group__5__Impl_in_rule__Array__Group__56613);
             rule__Array__Group__5__Impl();
 
             state._fsp--;
@@ -9513,22 +9618,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__5__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3154:1: rule__Array__Group__5__Impl : ( ')' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3206:1: rule__Array__Group__5__Impl : ( ')' ) ;
     public final void rule__Array__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3158:1: ( ( ')' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3159:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3210:1: ( ( ')' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3211:1: ( ')' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3159:1: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3160:1: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3211:1: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3212:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getRightParenthesisKeyword_5()); 
             }
-            match(input,59,FOLLOW_59_in_rule__Array__Group__5__Impl6546); if (state.failed) return ;
+            match(input,61,FOLLOW_61_in_rule__Array__Group__5__Impl6641); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getRightParenthesisKeyword_5()); 
             }
@@ -9554,21 +9659,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3185:1: rule__Array__Group_4__0 : rule__Array__Group_4__0__Impl rule__Array__Group_4__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3237:1: rule__Array__Group_4__0 : rule__Array__Group_4__0__Impl rule__Array__Group_4__1 ;
     public final void rule__Array__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3189:1: ( rule__Array__Group_4__0__Impl rule__Array__Group_4__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3190:2: rule__Array__Group_4__0__Impl rule__Array__Group_4__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3241:1: ( rule__Array__Group_4__0__Impl rule__Array__Group_4__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3242:2: rule__Array__Group_4__0__Impl rule__Array__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Array__Group_4__0__Impl_in_rule__Array__Group_4__06589);
+            pushFollow(FOLLOW_rule__Array__Group_4__0__Impl_in_rule__Array__Group_4__06684);
             rule__Array__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group_4__1_in_rule__Array__Group_4__06592);
+            pushFollow(FOLLOW_rule__Array__Group_4__1_in_rule__Array__Group_4__06687);
             rule__Array__Group_4__1();
 
             state._fsp--;
@@ -9592,22 +9697,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3197:1: rule__Array__Group_4__0__Impl : ( ',' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3249:1: rule__Array__Group_4__0__Impl : ( ',' ) ;
     public final void rule__Array__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3201:1: ( ( ',' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3202:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3253:1: ( ( ',' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3254:1: ( ',' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3202:1: ( ',' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3203:1: ','
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3254:1: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3255:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getCommaKeyword_4_0()); 
             }
-            match(input,8,FOLLOW_8_in_rule__Array__Group_4__0__Impl6620); if (state.failed) return ;
+            match(input,8,FOLLOW_8_in_rule__Array__Group_4__0__Impl6715); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArrayAccess().getCommaKeyword_4_0()); 
             }
@@ -9633,21 +9738,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3216:1: rule__Array__Group_4__1 : rule__Array__Group_4__1__Impl rule__Array__Group_4__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3268:1: rule__Array__Group_4__1 : rule__Array__Group_4__1__Impl rule__Array__Group_4__2 ;
     public final void rule__Array__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3220:1: ( rule__Array__Group_4__1__Impl rule__Array__Group_4__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3221:2: rule__Array__Group_4__1__Impl rule__Array__Group_4__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3272:1: ( rule__Array__Group_4__1__Impl rule__Array__Group_4__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3273:2: rule__Array__Group_4__1__Impl rule__Array__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Array__Group_4__1__Impl_in_rule__Array__Group_4__16651);
+            pushFollow(FOLLOW_rule__Array__Group_4__1__Impl_in_rule__Array__Group_4__16746);
             rule__Array__Group_4__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group_4__2_in_rule__Array__Group_4__16654);
+            pushFollow(FOLLOW_rule__Array__Group_4__2_in_rule__Array__Group_4__16749);
             rule__Array__Group_4__2();
 
             state._fsp--;
@@ -9671,43 +9776,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3228:1: rule__Array__Group_4__1__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3280:1: rule__Array__Group_4__1__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Array__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3232:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3233:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3284:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3285:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3233:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3234:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3285:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3286:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getWSPTerminalRuleCall_4_1()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3235:1: ( RULE_WSP )*
-            loop39:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3287:1: ( RULE_WSP )*
+            loop40:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA39_0==RULE_WSP) ) {
-                    alt39=1;
+                if ( (LA40_0==RULE_WSP) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt40) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3235:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3287:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group_4__1__Impl6682); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group_4__1__Impl6777); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop40;
                 }
             } while (true);
 
@@ -9736,21 +9841,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3245:1: rule__Array__Group_4__2 : rule__Array__Group_4__2__Impl rule__Array__Group_4__3 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3297:1: rule__Array__Group_4__2 : rule__Array__Group_4__2__Impl rule__Array__Group_4__3 ;
     public final void rule__Array__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3249:1: ( rule__Array__Group_4__2__Impl rule__Array__Group_4__3 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3250:2: rule__Array__Group_4__2__Impl rule__Array__Group_4__3
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3301:1: ( rule__Array__Group_4__2__Impl rule__Array__Group_4__3 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3302:2: rule__Array__Group_4__2__Impl rule__Array__Group_4__3
             {
-            pushFollow(FOLLOW_rule__Array__Group_4__2__Impl_in_rule__Array__Group_4__26713);
+            pushFollow(FOLLOW_rule__Array__Group_4__2__Impl_in_rule__Array__Group_4__26808);
             rule__Array__Group_4__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Array__Group_4__3_in_rule__Array__Group_4__26716);
+            pushFollow(FOLLOW_rule__Array__Group_4__3_in_rule__Array__Group_4__26811);
             rule__Array__Group_4__3();
 
             state._fsp--;
@@ -9774,22 +9879,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3257:1: rule__Array__Group_4__2__Impl : ( ruleStrval ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3309:1: rule__Array__Group_4__2__Impl : ( ruleStrval ) ;
     public final void rule__Array__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3261:1: ( ( ruleStrval ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3262:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3313:1: ( ( ruleStrval ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3314:1: ( ruleStrval )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3262:1: ( ruleStrval )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3263:1: ruleStrval
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3314:1: ( ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3315:1: ruleStrval
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getStrvalParserRuleCall_4_2()); 
             }
-            pushFollow(FOLLOW_ruleStrval_in_rule__Array__Group_4__2__Impl6743);
+            pushFollow(FOLLOW_ruleStrval_in_rule__Array__Group_4__2__Impl6838);
             ruleStrval();
 
             state._fsp--;
@@ -9819,16 +9924,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__3"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3274:1: rule__Array__Group_4__3 : rule__Array__Group_4__3__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3326:1: rule__Array__Group_4__3 : rule__Array__Group_4__3__Impl ;
     public final void rule__Array__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3278:1: ( rule__Array__Group_4__3__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3279:2: rule__Array__Group_4__3__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3330:1: ( rule__Array__Group_4__3__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3331:2: rule__Array__Group_4__3__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group_4__3__Impl_in_rule__Array__Group_4__36772);
+            pushFollow(FOLLOW_rule__Array__Group_4__3__Impl_in_rule__Array__Group_4__36867);
             rule__Array__Group_4__3__Impl();
 
             state._fsp--;
@@ -9852,43 +9957,43 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_4__3__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3285:1: rule__Array__Group_4__3__Impl : ( ( RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3337:1: rule__Array__Group_4__3__Impl : ( ( RULE_WSP )* ) ;
     public final void rule__Array__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3289:1: ( ( ( RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3290:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3341:1: ( ( ( RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3342:1: ( ( RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3290:1: ( ( RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3291:1: ( RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3342:1: ( ( RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3343:1: ( RULE_WSP )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArrayAccess().getWSPTerminalRuleCall_4_3()); 
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3292:1: ( RULE_WSP )*
-            loop40:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3344:1: ( RULE_WSP )*
+            loop41:
             do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( (LA40_0==RULE_WSP) ) {
-                    alt40=1;
+                if ( (LA41_0==RULE_WSP) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt40) {
+                switch (alt41) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3292:3: RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3344:3: RULE_WSP
             	    {
-            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group_4__3__Impl6800); if (state.failed) return ;
+            	    match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rule__Array__Group_4__3__Impl6895); if (state.failed) return ;
 
             	    }
             	    break;
 
             	default :
-            	    break loop40;
+            	    break loop41;
                 }
             } while (true);
 
@@ -9917,21 +10022,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3310:1: rule__Pct_encoded__Group__0 : rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3362:1: rule__Pct_encoded__Group__0 : rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1 ;
     public final void rule__Pct_encoded__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3314:1: ( rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3315:2: rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3366:1: ( rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3367:2: rule__Pct_encoded__Group__0__Impl rule__Pct_encoded__Group__1
             {
-            pushFollow(FOLLOW_rule__Pct_encoded__Group__0__Impl_in_rule__Pct_encoded__Group__06839);
+            pushFollow(FOLLOW_rule__Pct_encoded__Group__0__Impl_in_rule__Pct_encoded__Group__06934);
             rule__Pct_encoded__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Pct_encoded__Group__1_in_rule__Pct_encoded__Group__06842);
+            pushFollow(FOLLOW_rule__Pct_encoded__Group__1_in_rule__Pct_encoded__Group__06937);
             rule__Pct_encoded__Group__1();
 
             state._fsp--;
@@ -9955,22 +10060,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__0__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3322:1: rule__Pct_encoded__Group__0__Impl : ( '%' ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3374:1: rule__Pct_encoded__Group__0__Impl : ( '%' ) ;
     public final void rule__Pct_encoded__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3326:1: ( ( '%' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3327:1: ( '%' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3378:1: ( ( '%' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3379:1: ( '%' )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3327:1: ( '%' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3328:1: '%'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3379:1: ( '%' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3380:1: '%'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPct_encodedAccess().getPercentSignKeyword_0()); 
             }
-            match(input,60,FOLLOW_60_in_rule__Pct_encoded__Group__0__Impl6870); if (state.failed) return ;
+            match(input,62,FOLLOW_62_in_rule__Pct_encoded__Group__0__Impl6965); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPct_encodedAccess().getPercentSignKeyword_0()); 
             }
@@ -9996,21 +10101,21 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__1"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3341:1: rule__Pct_encoded__Group__1 : rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2 ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3393:1: rule__Pct_encoded__Group__1 : rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2 ;
     public final void rule__Pct_encoded__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3345:1: ( rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3346:2: rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3397:1: ( rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3398:2: rule__Pct_encoded__Group__1__Impl rule__Pct_encoded__Group__2
             {
-            pushFollow(FOLLOW_rule__Pct_encoded__Group__1__Impl_in_rule__Pct_encoded__Group__16901);
+            pushFollow(FOLLOW_rule__Pct_encoded__Group__1__Impl_in_rule__Pct_encoded__Group__16996);
             rule__Pct_encoded__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Pct_encoded__Group__2_in_rule__Pct_encoded__Group__16904);
+            pushFollow(FOLLOW_rule__Pct_encoded__Group__2_in_rule__Pct_encoded__Group__16999);
             rule__Pct_encoded__Group__2();
 
             state._fsp--;
@@ -10034,22 +10139,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__1__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3353:1: rule__Pct_encoded__Group__1__Impl : ( RULE_XDIGIT ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3405:1: rule__Pct_encoded__Group__1__Impl : ( RULE_XDIGIT ) ;
     public final void rule__Pct_encoded__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3357:1: ( ( RULE_XDIGIT ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3358:1: ( RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3409:1: ( ( RULE_XDIGIT ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3410:1: ( RULE_XDIGIT )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3358:1: ( RULE_XDIGIT )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3359:1: RULE_XDIGIT
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3410:1: ( RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3411:1: RULE_XDIGIT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPct_encodedAccess().getXDIGITTerminalRuleCall_1()); 
             }
-            match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__1__Impl6931); if (state.failed) return ;
+            match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__1__Impl7026); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPct_encodedAccess().getXDIGITTerminalRuleCall_1()); 
             }
@@ -10075,16 +10180,16 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__2"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3370:1: rule__Pct_encoded__Group__2 : rule__Pct_encoded__Group__2__Impl ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3422:1: rule__Pct_encoded__Group__2 : rule__Pct_encoded__Group__2__Impl ;
     public final void rule__Pct_encoded__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3374:1: ( rule__Pct_encoded__Group__2__Impl )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3375:2: rule__Pct_encoded__Group__2__Impl
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3426:1: ( rule__Pct_encoded__Group__2__Impl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3427:2: rule__Pct_encoded__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Pct_encoded__Group__2__Impl_in_rule__Pct_encoded__Group__26960);
+            pushFollow(FOLLOW_rule__Pct_encoded__Group__2__Impl_in_rule__Pct_encoded__Group__27055);
             rule__Pct_encoded__Group__2__Impl();
 
             state._fsp--;
@@ -10108,22 +10213,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pct_encoded__Group__2__Impl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3381:1: rule__Pct_encoded__Group__2__Impl : ( RULE_XDIGIT ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3433:1: rule__Pct_encoded__Group__2__Impl : ( RULE_XDIGIT ) ;
     public final void rule__Pct_encoded__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3385:1: ( ( RULE_XDIGIT ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3386:1: ( RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3437:1: ( ( RULE_XDIGIT ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3438:1: ( RULE_XDIGIT )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3386:1: ( RULE_XDIGIT )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3387:1: RULE_XDIGIT
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3438:1: ( RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3439:1: RULE_XDIGIT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPct_encodedAccess().getXDIGITTerminalRuleCall_2()); 
             }
-            match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__2__Impl6987); if (state.failed) return ;
+            match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__2__Impl7082); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPct_encodedAccess().getXDIGITTerminalRuleCall_2()); 
             }
@@ -10149,22 +10254,22 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__OperandsAssignment_0"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3405:1: rule__Model__OperandsAssignment_0 : ( ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3457:1: rule__Model__OperandsAssignment_0 : ( ruleHoOperand ) ;
     public final void rule__Model__OperandsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3409:1: ( ( ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3410:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3461:1: ( ( ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3462:1: ( ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3410:1: ( ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3411:1: ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3462:1: ( ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3463:1: ruleHoOperand
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getOperandsHoOperandParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_rule__Model__OperandsAssignment_07027);
+            pushFollow(FOLLOW_ruleHoOperand_in_rule__Model__OperandsAssignment_07122);
             ruleHoOperand();
 
             state._fsp--;
@@ -10192,24 +10297,49 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__Model__OperandsAssignment_0"
 
-    // $ANTLR start synpred69_InternalRQL
-    public final void synpred69_InternalRQL_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2822:3: ( RULE_WSP )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2822:3: RULE_WSP
+    // $ANTLR start synpred55_InternalRQL
+    public final void synpred55_InternalRQL_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1563:3: ( RULE_WSP )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:1563:3: RULE_WSP
         {
-        match(input,RULE_WSP,FOLLOW_RULE_WSP_in_synpred69_InternalRQL5861); if (state.failed) return ;
+        match(input,RULE_WSP,FOLLOW_RULE_WSP_in_synpred55_InternalRQL3354); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred69_InternalRQL
+    // $ANTLR end synpred55_InternalRQL
+
+    // $ANTLR start synpred70_InternalRQL
+    public final void synpred70_InternalRQL_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2874:3: ( RULE_WSP )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:2874:3: RULE_WSP
+        {
+        match(input,RULE_WSP,FOLLOW_RULE_WSP_in_synpred70_InternalRQL5956); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred70_InternalRQL
 
     // Delegated rules
 
-    public final boolean synpred69_InternalRQL() {
+    public final boolean synpred55_InternalRQL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred69_InternalRQL_fragment(); // can never throw exception
+            synpred55_InternalRQL_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred70_InternalRQL() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred70_InternalRQL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -10279,8 +10409,8 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Pct_encoded__Group__0_in_rulePct_encoded1120 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStrval_in_entryRuleStrval1147 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStrval1154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Strval__Alternatives_in_ruleStrval1182 = new BitSet(new long[]{0x107FF00000000032L});
-    public static final BitSet FOLLOW_rule__Strval__Alternatives_in_ruleStrval1194 = new BitSet(new long[]{0x107FF00000000032L});
+    public static final BitSet FOLLOW_rule__Strval__Alternatives_in_ruleStrval1182 = new BitSet(new long[]{0x407FF00000000032L});
+    public static final BitSet FOLLOW_rule__Strval__Alternatives_in_ruleStrval1194 = new BitSet(new long[]{0x407FF00000000032L});
     public static final BitSet FOLLOW_ruleLogicalOpAliases_in_entryRuleLogicalOpAliases1224 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLogicalOpAliases1231 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__LogicalOpAliases__Alternatives_in_ruleLogicalOpAliases1257 = new BitSet(new long[]{0x0000000000000002L});
@@ -10293,248 +10423,253 @@ public class InternalRQLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rulePredicate_in_rule__HoOperand__Alternatives_11437 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComparison_in_rule__HoOperand__Alternatives_11454 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__0_in_rule__HoOperand__Alternatives_11471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21507 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21520 = new BitSet(new long[]{0x0000000000000202L});
-    public static final BitSet FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21544 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21557 = new BitSet(new long[]{0x0000000000000C02L});
-    public static final BitSet FOLLOW_12_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__BinaryOpAliases__Alternatives1749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__BinaryOpAliases__Alternatives1769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__BinaryOpAliases__Alternatives1789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__BinaryOpAliases__Alternatives1809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__BinaryOpAliases__Alternatives1829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__BinaryOpAliases__Alternatives1849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__BinaryOpAliases__Alternatives1869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__CompOps__Alternatives1904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__CompOps__Alternatives1924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__CompOps__Alternatives1944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__CompOps__Alternatives1964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__CompOps__Alternatives1984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__CompOps__Alternatives2004 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_rule__Comparison__Alternatives_22038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompOps_in_rule__Comparison__Alternatives_22055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_rule__CallOperator__Alternatives_02087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionsTbl_in_rule__CallOperator__Alternatives_02104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__PredTbl__Alternatives2137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__PredTbl__Alternatives2157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__PredTbl__Alternatives2177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__PredTbl__Alternatives2197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__PredTbl__Alternatives2217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__0_in_rule__PrimaryExpr__Alternatives_12251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_rule__PrimaryExpr__Alternatives_12269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_rule__PrimaryExpr__Alternatives_12286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__FunctionsTbl__Alternatives2319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__FunctionsTbl__Alternatives2339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__FunctionsTbl__Alternatives2359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__ConstFuncTbl__Alternatives2394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__ConstFuncTbl__Alternatives2414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__ConstFuncTbl__Alternatives2434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__ConstFuncTbl__Alternatives2454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ALPHA_in_rule__Nchar__Alternatives2488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_rule__Nchar__Alternatives2505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Nchar__Alternatives2523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Nchar__Alternatives2543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Nchar__Alternatives2563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Nchar__Alternatives2583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__Nchar__Alternatives2603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__Nchar__Alternatives2623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rule__Nchar__Alternatives2643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__Nchar__Alternatives2663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Nchar__Alternatives2683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Nchar__Alternatives2703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__Nchar__Alternatives2723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNchar_in_rule__Strval__Alternatives2757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePct_encoded_in_rule__Strval__Alternatives2774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__LogicalOpAliases__Alternatives2807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__LogicalOpAliases__Alternatives2827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__LogicalOpAliases__Alternatives2847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02879 = new BitSet(new long[]{0x0000000000000300L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__02882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__OperandsAssignment_0_in_rule__Model__Group__0__Impl2909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2966 = new BitSet(new long[]{0x0000000000000302L});
-    public static final BitSet FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__03001 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__03004 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Alternatives_1_0_in_rule__Model__Group_1__0__Impl3031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__13061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Model__Group_1__1__Impl3088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group__0__Impl_in_rule__And__Group__03121 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__And__Group__1_in_rule__And__Group__03124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_9_in_rule__And__Group__0__Impl3152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__And__Group__1__Impl_in_rule__And__Group__13183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__And__Group__1__Impl3210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03243 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Alternatives_0_in_rule__Or__Group__0__Impl3273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Or__Group__1__Impl3330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group__0__Impl_in_rule__HoOperand__Group__03363 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group__1_in_rule__HoOperand__Group__03366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__HoOperand__Group__0__Impl3394 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group__1__Impl_in_rule__HoOperand__Group__13425 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group__2_in_rule__HoOperand__Group__13428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Alternatives_1_in_rule__HoOperand__Group__1__Impl3455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group__2__Impl_in_rule__HoOperand__Group__23485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__HoOperand__Group__2__Impl3513 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__0__Impl_in_rule__HoOperand__Group_1_4__03550 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__1_in_rule__HoOperand__Group_1_4__03553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__HoOperand__Group_1_4__0__Impl3581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__1__Impl_in_rule__HoOperand__Group_1_4__13612 = new BitSet(new long[]{0x0000000000000E00L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__2_in_rule__HoOperand__Group_1_4__13615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HoOperand__Group_1_4__1__Impl3642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__2__Impl_in_rule__HoOperand__Group_1_4__23671 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__3_in_rule__HoOperand__Group_1_4__23674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Alternatives_1_4_2_in_rule__HoOperand__Group_1_4__2__Impl3701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__3__Impl_in_rule__HoOperand__Group_1_4__33731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__HoOperand__Group_1_4__3__Impl3759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__0__Impl_in_rule__HigherOrderCall__Group__03798 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__1_in_rule__HigherOrderCall__Group__03801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_rule__HigherOrderCall__Group__0__Impl3828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__1__Impl_in_rule__HigherOrderCall__Group__13857 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__2_in_rule__HigherOrderCall__Group__13860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__HigherOrderCall__Group__1__Impl3888 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__2__Impl_in_rule__HigherOrderCall__Group__23919 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__3_in_rule__HigherOrderCall__Group__23922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__HigherOrderCall__Group__2__Impl3950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__3__Impl_in_rule__HigherOrderCall__Group__33981 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__4_in_rule__HigherOrderCall__Group__33984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__0_in_rule__HigherOrderCall__Group__3__Impl4011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__4__Impl_in_rule__HigherOrderCall__Group__44041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__HigherOrderCall__Group__4__Impl4069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__0__Impl_in_rule__HigherOrderCall__Group_3__04110 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__1_in_rule__HigherOrderCall__Group_3__04113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3__0__Impl4140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__1__Impl_in_rule__HigherOrderCall__Group_3__14169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__0_in_rule__HigherOrderCall__Group_3__1__Impl4196 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__0__Impl_in_rule__HigherOrderCall__Group_3_1__04231 = new BitSet(new long[]{0x17FFF0FF03F80070L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__1_in_rule__HigherOrderCall__Group_3_1__04234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_rule__HigherOrderCall__Group_3_1__0__Impl4262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__1__Impl_in_rule__HigherOrderCall__Group_3_1__14293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3_1__1__Impl4320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__04353 = new BitSet(new long[]{0x00000000FC07F040L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__04356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_rule__Comparison__Group__0__Impl4383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__14412 = new BitSet(new long[]{0x00000000FC07F040L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__2_in_rule__Comparison__Group__14415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Comparison__Group__1__Impl4443 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__2__Impl_in_rule__Comparison__Group__24474 = new BitSet(new long[]{0x147FFF0000000070L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__3_in_rule__Comparison__Group__24477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Alternatives_2_in_rule__Comparison__Group__2__Impl4504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Comparison__Group__3__Impl_in_rule__Comparison__Group__34534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Comparison__Group__3__Impl4561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__0__Impl_in_rule__CallOperator__Group__04598 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__1_in_rule__CallOperator__Group__04601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Alternatives_0_in_rule__CallOperator__Group__0__Impl4628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__1__Impl_in_rule__CallOperator__Group__14658 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__2_in_rule__CallOperator__Group__14661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__CallOperator__Group__1__Impl4689 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__2__Impl_in_rule__CallOperator__Group__24720 = new BitSet(new long[]{0x1C7FFF0000000070L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__3_in_rule__CallOperator__Group__24723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__CallOperator__Group__2__Impl4751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__3__Impl_in_rule__CallOperator__Group__34782 = new BitSet(new long[]{0x1C7FFF0000000070L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__4_in_rule__CallOperator__Group__34785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3__0_in_rule__CallOperator__Group__3__Impl4812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group__4__Impl_in_rule__CallOperator__Group__44843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__CallOperator__Group__4__Impl4871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3__0__Impl_in_rule__CallOperator__Group_3__04912 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3__1_in_rule__CallOperator__Group_3__04915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3__0__Impl4942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3__1__Impl_in_rule__CallOperator__Group_3__14971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__0_in_rule__CallOperator__Group_3__1__Impl4998 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__0__Impl_in_rule__CallOperator__Group_3_1__05033 = new BitSet(new long[]{0x147FFF0000000070L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__1_in_rule__CallOperator__Group_3_1__05036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_rule__CallOperator__Group_3_1__0__Impl5064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__1__Impl_in_rule__CallOperator__Group_3_1__15095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3_1__1__Impl5122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__05155 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__05158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredTbl_in_rule__Predicate__Group__0__Impl5185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__15214 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__15217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Predicate__Group__1__Impl5245 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__25276 = new BitSet(new long[]{0x1C7FFF0000000070L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__25279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__Predicate__Group__2__Impl5307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__35338 = new BitSet(new long[]{0x1C7FFF0000000070L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__35341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl5368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__45399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Predicate__Group__4__Impl5427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__05468 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__05471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3__0__Impl5498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__15527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__0_in_rule__Predicate__Group_3__1__Impl5554 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__0__Impl_in_rule__Predicate__Group_3_1__05589 = new BitSet(new long[]{0x147FFF0000000070L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__1_in_rule__Predicate__Group_3_1__05592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_rule__Predicate__Group_3_1__0__Impl5620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__1__Impl_in_rule__Predicate__Group_3_1__15651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3_1__1__Impl5678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__0__Impl_in_rule__PrimaryExpr__Group__05711 = new BitSet(new long[]{0x147FFF0000000070L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__1_in_rule__PrimaryExpr__Group__05714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__0__Impl5742 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__1__Impl_in_rule__PrimaryExpr__Group__15773 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__2_in_rule__PrimaryExpr__Group__15776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Alternatives_1_in_rule__PrimaryExpr__Group__1__Impl5803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__2__Impl_in_rule__PrimaryExpr__Group__25833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__2__Impl5861 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__0__Impl_in_rule__PrimaryExpr__Group_1_0__05898 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__1_in_rule__PrimaryExpr__Group_1_0__05901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstFuncTbl_in_rule__PrimaryExpr__Group_1_0__0__Impl5928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__1__Impl_in_rule__PrimaryExpr__Group_1_0__15957 = new BitSet(new long[]{0x0400000000000040L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__2_in_rule__PrimaryExpr__Group_1_0__15960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__1__Impl5988 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__2__Impl_in_rule__PrimaryExpr__Group_1_0__26019 = new BitSet(new long[]{0x0800000000000040L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__3_in_rule__PrimaryExpr__Group_1_0__26022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__PrimaryExpr__Group_1_0__2__Impl6050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__3__Impl_in_rule__PrimaryExpr__Group_1_0__36081 = new BitSet(new long[]{0x0800000000000040L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__4_in_rule__PrimaryExpr__Group_1_0__36084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__3__Impl6112 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__4__Impl_in_rule__PrimaryExpr__Group_1_0__46143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__PrimaryExpr__Group_1_0__4__Impl6171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__06212 = new BitSet(new long[]{0x107FF00000000070L});
-    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__06215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__Array__Group__0__Impl6243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__16274 = new BitSet(new long[]{0x107FF00000000070L});
-    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__16277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group__1__Impl6305 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__26336 = new BitSet(new long[]{0x0800000000000140L});
-    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__26339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_rule__Array__Group__2__Impl6366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__36395 = new BitSet(new long[]{0x0800000000000140L});
-    public static final BitSet FOLLOW_rule__Array__Group__4_in_rule__Array__Group__36398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group__3__Impl6426 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__46457 = new BitSet(new long[]{0x0800000000000140L});
-    public static final BitSet FOLLOW_rule__Array__Group__5_in_rule__Array__Group__46460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__0_in_rule__Array__Group__4__Impl6487 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_rule__Array__Group__5__Impl_in_rule__Array__Group__56518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Array__Group__5__Impl6546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__0__Impl_in_rule__Array__Group_4__06589 = new BitSet(new long[]{0x107FF00000000070L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__1_in_rule__Array__Group_4__06592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_rule__Array__Group_4__0__Impl6620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__1__Impl_in_rule__Array__Group_4__16651 = new BitSet(new long[]{0x107FF00000000070L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__2_in_rule__Array__Group_4__16654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group_4__1__Impl6682 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__2__Impl_in_rule__Array__Group_4__26713 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__3_in_rule__Array__Group_4__26716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_rule__Array__Group_4__2__Impl6743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_4__3__Impl_in_rule__Array__Group_4__36772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group_4__3__Impl6800 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Pct_encoded__Group__0__Impl_in_rule__Pct_encoded__Group__06839 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Pct_encoded__Group__1_in_rule__Pct_encoded__Group__06842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__Pct_encoded__Group__0__Impl6870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pct_encoded__Group__1__Impl_in_rule__Pct_encoded__Group__16901 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Pct_encoded__Group__2_in_rule__Pct_encoded__Group__16904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__1__Impl6931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pct_encoded__Group__2__Impl_in_rule__Pct_encoded__Group__26960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__2__Impl6987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Model__OperandsAssignment_07027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_synpred69_InternalRQL5861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnd_in_rule__HoOperand__Alternatives_1_4_21504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOr_in_rule__HoOperand__Alternatives_1_4_21521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__BinaryOpAliasesWithEqualsSign__Alternatives1674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__BinaryOpAliases__Alternatives1709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__BinaryOpAliases__Alternatives1729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__BinaryOpAliases__Alternatives1749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__BinaryOpAliases__Alternatives1769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__BinaryOpAliases__Alternatives1789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__BinaryOpAliases__Alternatives1809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__BinaryOpAliases__Alternatives1829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__CompOps__Alternatives1864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__CompOps__Alternatives1884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__CompOps__Alternatives1904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__CompOps__Alternatives1924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__CompOps__Alternatives1944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__CompOps__Alternatives1964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_rule__Comparison__Alternatives_21998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompOps_in_rule__Comparison__Alternatives_22015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_rule__CallOperator__Alternatives_02047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionsTbl_in_rule__CallOperator__Alternatives_02064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__PredTbl__Alternatives2097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__PredTbl__Alternatives2117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__PredTbl__Alternatives2137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__PredTbl__Alternatives2157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__PredTbl__Alternatives2177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__0_in_rule__PrimaryExpr__Alternatives_12211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_rule__PrimaryExpr__Alternatives_12229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_rule__PrimaryExpr__Alternatives_12246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__FunctionsTbl__Alternatives2279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__FunctionsTbl__Alternatives2299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__FunctionsTbl__Alternatives2319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__ConstFuncTbl__Alternatives2354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__ConstFuncTbl__Alternatives2374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__ConstFuncTbl__Alternatives2394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__ConstFuncTbl__Alternatives2414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ALPHA_in_rule__Nchar__Alternatives2448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DIGIT_in_rule__Nchar__Alternatives2465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Nchar__Alternatives2483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Nchar__Alternatives2503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Nchar__Alternatives2523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Nchar__Alternatives2543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Nchar__Alternatives2563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__Nchar__Alternatives2583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rule__Nchar__Alternatives2603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__Nchar__Alternatives2623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__Nchar__Alternatives2643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rule__Nchar__Alternatives2663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__Nchar__Alternatives2683 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNchar_in_rule__Strval__Alternatives2717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePct_encoded_in_rule__Strval__Alternatives2734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__LogicalOpAliases__Alternatives2767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rule__LogicalOpAliases__Alternatives2787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__LogicalOpAliases__Alternatives2807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__02839 = new BitSet(new long[]{0x0000000000000300L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__02842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__OperandsAssignment_0_in_rule__Model__Group__0__Impl2869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_1__0_in_rule__Model__Group__1__Impl2926 = new BitSet(new long[]{0x0000000000000302L});
+    public static final BitSet FOLLOW_rule__Model__Group_1__0__Impl_in_rule__Model__Group_1__02961 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__Model__Group_1__1_in_rule__Model__Group_1__02964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Alternatives_1_0_in_rule__Model__Group_1__0__Impl2991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_1__1__Impl_in_rule__Model__Group_1__13021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Model__Group_1__1__Impl3048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group__0__Impl_in_rule__And__Group__03081 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__And__Group__1_in_rule__And__Group__03084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_9_in_rule__And__Group__0__Impl3112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__And__Group__1__Impl_in_rule__And__Group__13143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__And__Group__1__Impl3170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__0__Impl_in_rule__Or__Group__03203 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__Or__Group__1_in_rule__Or__Group__03206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Alternatives_0_in_rule__Or__Group__0__Impl3233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Or__Group__1__Impl_in_rule__Or__Group__13263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Or__Group__1__Impl3290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__0__Impl_in_rule__HoOperand__Group__03323 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__1_in_rule__HoOperand__Group__03326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__HoOperand__Group__0__Impl3354 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__1__Impl_in_rule__HoOperand__Group__13385 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__2_in_rule__HoOperand__Group__13388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Alternatives_1_in_rule__HoOperand__Group__1__Impl3415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__2__Impl_in_rule__HoOperand__Group__23446 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__3_in_rule__HoOperand__Group__23449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__HoOperand__Group__2__Impl3477 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__3__Impl_in_rule__HoOperand__Group__33508 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__4_in_rule__HoOperand__Group__33511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__HoOperand__Group__3__Impl3540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group__4__Impl_in_rule__HoOperand__Group__43573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__HoOperand__Group__4__Impl3602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__0__Impl_in_rule__HoOperand__Group_1_4__03645 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__1_in_rule__HoOperand__Group_1_4__03648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__HoOperand__Group_1_4__0__Impl3676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__1__Impl_in_rule__HoOperand__Group_1_4__13707 = new BitSet(new long[]{0x0000000000000E00L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__2_in_rule__HoOperand__Group_1_4__13710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HoOperand__Group_1_4__1__Impl3737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__2__Impl_in_rule__HoOperand__Group_1_4__23766 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__3_in_rule__HoOperand__Group_1_4__23769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Alternatives_1_4_2_in_rule__HoOperand__Group_1_4__2__Impl3796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HoOperand__Group_1_4__3__Impl_in_rule__HoOperand__Group_1_4__33826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__HoOperand__Group_1_4__3__Impl3854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__0__Impl_in_rule__HigherOrderCall__Group__03893 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__1_in_rule__HigherOrderCall__Group__03896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_rule__HigherOrderCall__Group__0__Impl3923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__1__Impl_in_rule__HigherOrderCall__Group__13952 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__2_in_rule__HigherOrderCall__Group__13955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__HigherOrderCall__Group__1__Impl3983 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__2__Impl_in_rule__HigherOrderCall__Group__24014 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__3_in_rule__HigherOrderCall__Group__24017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__HigherOrderCall__Group__2__Impl4045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__3__Impl_in_rule__HigherOrderCall__Group__34076 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__4_in_rule__HigherOrderCall__Group__34079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__0_in_rule__HigherOrderCall__Group__3__Impl4106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group__4__Impl_in_rule__HigherOrderCall__Group__44136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__HigherOrderCall__Group__4__Impl4164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__0__Impl_in_rule__HigherOrderCall__Group_3__04205 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__1_in_rule__HigherOrderCall__Group_3__04208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3__0__Impl4235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3__1__Impl_in_rule__HigherOrderCall__Group_3__14264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__0_in_rule__HigherOrderCall__Group_3__1__Impl4291 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__0__Impl_in_rule__HigherOrderCall__Group_3_1__04326 = new BitSet(new long[]{0x5FFFF0FF03F80070L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__1_in_rule__HigherOrderCall__Group_3_1__04329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_rule__HigherOrderCall__Group_3_1__0__Impl4357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HigherOrderCall__Group_3_1__1__Impl_in_rule__HigherOrderCall__Group_3_1__14388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__HigherOrderCall__Group_3_1__1__Impl4415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__0__Impl_in_rule__Comparison__Group__04448 = new BitSet(new long[]{0x00000000FC07F040L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__1_in_rule__Comparison__Group__04451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_rule__Comparison__Group__0__Impl4478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__1__Impl_in_rule__Comparison__Group__14507 = new BitSet(new long[]{0x00000000FC07F040L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__2_in_rule__Comparison__Group__14510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Comparison__Group__1__Impl4538 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__2__Impl_in_rule__Comparison__Group__24569 = new BitSet(new long[]{0x507FFF0000000070L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__3_in_rule__Comparison__Group__24572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Alternatives_2_in_rule__Comparison__Group__2__Impl4599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Comparison__Group__3__Impl_in_rule__Comparison__Group__34629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Comparison__Group__3__Impl4656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__0__Impl_in_rule__CallOperator__Group__04693 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__1_in_rule__CallOperator__Group__04696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Alternatives_0_in_rule__CallOperator__Group__0__Impl4723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__1__Impl_in_rule__CallOperator__Group__14753 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__2_in_rule__CallOperator__Group__14756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__CallOperator__Group__1__Impl4784 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__2__Impl_in_rule__CallOperator__Group__24815 = new BitSet(new long[]{0x707FFF0000000070L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__3_in_rule__CallOperator__Group__24818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__CallOperator__Group__2__Impl4846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__3__Impl_in_rule__CallOperator__Group__34877 = new BitSet(new long[]{0x707FFF0000000070L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__4_in_rule__CallOperator__Group__34880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3__0_in_rule__CallOperator__Group__3__Impl4907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group__4__Impl_in_rule__CallOperator__Group__44938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__CallOperator__Group__4__Impl4966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3__0__Impl_in_rule__CallOperator__Group_3__05007 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3__1_in_rule__CallOperator__Group_3__05010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3__0__Impl5037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3__1__Impl_in_rule__CallOperator__Group_3__15066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__0_in_rule__CallOperator__Group_3__1__Impl5093 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__0__Impl_in_rule__CallOperator__Group_3_1__05128 = new BitSet(new long[]{0x507FFF0000000070L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__1_in_rule__CallOperator__Group_3_1__05131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_rule__CallOperator__Group_3_1__0__Impl5159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CallOperator__Group_3_1__1__Impl_in_rule__CallOperator__Group_3_1__15190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__CallOperator__Group_3_1__1__Impl5217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__05250 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__05253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredTbl_in_rule__Predicate__Group__0__Impl5280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__15309 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__15312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Predicate__Group__1__Impl5340 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__25371 = new BitSet(new long[]{0x707FFF0000000070L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__25374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Predicate__Group__2__Impl5402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__35433 = new BitSet(new long[]{0x707FFF0000000070L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__35436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl5463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__45494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__Predicate__Group__4__Impl5522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__05563 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__05566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3__0__Impl5593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__15622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__0_in_rule__Predicate__Group_3__1__Impl5649 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__0__Impl_in_rule__Predicate__Group_3_1__05684 = new BitSet(new long[]{0x507FFF0000000070L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__1_in_rule__Predicate__Group_3_1__05687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_rule__Predicate__Group_3_1__0__Impl5715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3_1__1__Impl_in_rule__Predicate__Group_3_1__15746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rule__Predicate__Group_3_1__1__Impl5773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__0__Impl_in_rule__PrimaryExpr__Group__05806 = new BitSet(new long[]{0x507FFF0000000070L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__1_in_rule__PrimaryExpr__Group__05809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__0__Impl5837 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__1__Impl_in_rule__PrimaryExpr__Group__15868 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__2_in_rule__PrimaryExpr__Group__15871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Alternatives_1_in_rule__PrimaryExpr__Group__1__Impl5898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group__2__Impl_in_rule__PrimaryExpr__Group__25928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group__2__Impl5956 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__0__Impl_in_rule__PrimaryExpr__Group_1_0__05993 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__1_in_rule__PrimaryExpr__Group_1_0__05996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstFuncTbl_in_rule__PrimaryExpr__Group_1_0__0__Impl6023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__1__Impl_in_rule__PrimaryExpr__Group_1_0__16052 = new BitSet(new long[]{0x1000000000000040L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__2_in_rule__PrimaryExpr__Group_1_0__16055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__1__Impl6083 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__2__Impl_in_rule__PrimaryExpr__Group_1_0__26114 = new BitSet(new long[]{0x2000000000000040L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__3_in_rule__PrimaryExpr__Group_1_0__26117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__PrimaryExpr__Group_1_0__2__Impl6145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__3__Impl_in_rule__PrimaryExpr__Group_1_0__36176 = new BitSet(new long[]{0x2000000000000040L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__4_in_rule__PrimaryExpr__Group_1_0__36179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__PrimaryExpr__Group_1_0__3__Impl6207 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__PrimaryExpr__Group_1_0__4__Impl_in_rule__PrimaryExpr__Group_1_0__46238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__PrimaryExpr__Group_1_0__4__Impl6266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__06307 = new BitSet(new long[]{0x407FF00000000070L});
+    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__06310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Array__Group__0__Impl6338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__16369 = new BitSet(new long[]{0x407FF00000000070L});
+    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__16372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group__1__Impl6400 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__26431 = new BitSet(new long[]{0x2000000000000140L});
+    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__26434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_rule__Array__Group__2__Impl6461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__36490 = new BitSet(new long[]{0x2000000000000140L});
+    public static final BitSet FOLLOW_rule__Array__Group__4_in_rule__Array__Group__36493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group__3__Impl6521 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__46552 = new BitSet(new long[]{0x2000000000000140L});
+    public static final BitSet FOLLOW_rule__Array__Group__5_in_rule__Array__Group__46555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__0_in_rule__Array__Group__4__Impl6582 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__Array__Group__5__Impl_in_rule__Array__Group__56613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__Array__Group__5__Impl6641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__0__Impl_in_rule__Array__Group_4__06684 = new BitSet(new long[]{0x407FF00000000070L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__1_in_rule__Array__Group_4__06687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_rule__Array__Group_4__0__Impl6715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__1__Impl_in_rule__Array__Group_4__16746 = new BitSet(new long[]{0x407FF00000000070L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__2_in_rule__Array__Group_4__16749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group_4__1__Impl6777 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__2__Impl_in_rule__Array__Group_4__26808 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__3_in_rule__Array__Group_4__26811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_rule__Array__Group_4__2__Impl6838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_4__3__Impl_in_rule__Array__Group_4__36867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rule__Array__Group_4__3__Impl6895 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Pct_encoded__Group__0__Impl_in_rule__Pct_encoded__Group__06934 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Pct_encoded__Group__1_in_rule__Pct_encoded__Group__06937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rule__Pct_encoded__Group__0__Impl6965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pct_encoded__Group__1__Impl_in_rule__Pct_encoded__Group__16996 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Pct_encoded__Group__2_in_rule__Pct_encoded__Group__16999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__1__Impl7026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pct_encoded__Group__2__Impl_in_rule__Pct_encoded__Group__27055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_XDIGIT_in_rule__Pct_encoded__Group__2__Impl7082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_rule__Model__OperandsAssignment_07122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_synpred55_InternalRQL3354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_synpred70_InternalRQL5956 = new BitSet(new long[]{0x0000000000000002L});
 
 }

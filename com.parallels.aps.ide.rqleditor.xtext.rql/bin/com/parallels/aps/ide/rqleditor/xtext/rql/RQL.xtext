@@ -12,7 +12,7 @@ And: '&' HoOperand;
 Or: (';'|'|') HoOperand;
 
 HoOperand:
-	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And+ | Or+) ')' ) ) WSP*
+	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And | Or) ')' ))? WSP* '\r'? '\n'?
 ;
 	
 HigherOrderCall:

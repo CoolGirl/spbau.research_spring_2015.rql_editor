@@ -122,18 +122,20 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOrParserRuleCall_1_4_2_1 = (RuleCall)cAlternatives_1_4_2.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_1_4_3 = (Keyword)cGroup_1_4.eContents().get(3);
 		private final RuleCall cWSPTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cControl000dKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cControl000aKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//HoOperand:
-		//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And+ | Or+) ")") WSP*;
+		//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?;
 		public ParserRule getRule() { return rule; }
 
-		//WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And+ | Or+) ")") WSP*
+		//WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?
 		public Group getGroup() { return cGroup; }
 
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_0() { return cWSPTerminalRuleCall_0; }
 
-		//HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And+ | Or+) ")"
+		//(HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")?
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//HigherOrderCall
@@ -148,7 +150,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		//Comparison
 		public RuleCall getComparisonParserRuleCall_1_3() { return cComparisonParserRuleCall_1_3; }
 
-		//"(" HoOperand (And+ | Or+) ")"
+		//"(" HoOperand (And | Or) ")"
 		public Group getGroup_1_4() { return cGroup_1_4; }
 
 		//"("
@@ -157,13 +159,13 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		//HoOperand
 		public RuleCall getHoOperandParserRuleCall_1_4_1() { return cHoOperandParserRuleCall_1_4_1; }
 
-		//And+ | Or+
+		//And | Or
 		public Alternatives getAlternatives_1_4_2() { return cAlternatives_1_4_2; }
 
-		//And+
+		//And
 		public RuleCall getAndParserRuleCall_1_4_2_0() { return cAndParserRuleCall_1_4_2_0; }
 
-		//Or+
+		//Or
 		public RuleCall getOrParserRuleCall_1_4_2_1() { return cOrParserRuleCall_1_4_2_1; }
 
 		//")"
@@ -171,6 +173,12 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_2() { return cWSPTerminalRuleCall_2; }
+
+		//"\r"?
+		public Keyword getControl000dKeyword_3() { return cControl000dKeyword_3; }
+
+		//"\n"?
+		public Keyword getControl000aKeyword_4() { return cControl000aKeyword_4; }
 	}
 
 	public class HigherOrderCallElements extends AbstractParserRuleElementFinder {
@@ -888,7 +896,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HoOperand:
-	//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And+ | Or+) ")") WSP*;
+	//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?;
 	public HoOperandElements getHoOperandAccess() {
 		return (pHoOperand != null) ? pHoOperand : (pHoOperand = new HoOperandElements());
 	}

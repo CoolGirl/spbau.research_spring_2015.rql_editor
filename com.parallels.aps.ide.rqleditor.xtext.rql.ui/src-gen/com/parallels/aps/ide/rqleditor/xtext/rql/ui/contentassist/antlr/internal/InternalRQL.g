@@ -723,29 +723,15 @@ rule__HoOperand__Alternatives_1_4_2
     }
 :
 (
-(
 { before(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); }
-(	ruleAnd)
+	ruleAnd
 { after(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); }
-)
-(
-{ before(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); }
-(	ruleAnd)*
-{ after(grammarAccess.getHoOperandAccess().getAndParserRuleCall_1_4_2_0()); }
-)
 )
 
     |(
-(
 { before(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); }
-(	ruleOr)
+	ruleOr
 { after(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); }
-)
-(
-{ before(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); }
-(	ruleOr)*
-{ after(grammarAccess.getHoOperandAccess().getOrParserRuleCall_1_4_2_1()); }
-)
 )
 
 ;
@@ -1603,7 +1589,7 @@ rule__HoOperand__Group__1__Impl
 :
 (
 { before(grammarAccess.getHoOperandAccess().getAlternatives_1()); }
-(rule__HoOperand__Alternatives_1)
+(rule__HoOperand__Alternatives_1)?
 { after(grammarAccess.getHoOperandAccess().getAlternatives_1()); }
 )
 
@@ -1619,6 +1605,7 @@ rule__HoOperand__Group__2
     }
 :
 	rule__HoOperand__Group__2__Impl
+	rule__HoOperand__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1639,6 +1626,71 @@ rule__HoOperand__Group__2__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__HoOperand__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__HoOperand__Group__3__Impl
+	rule__HoOperand__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__HoOperand__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getHoOperandAccess().getControl000dKeyword_3()); }
+(
+	'\r' 
+)?
+{ after(grammarAccess.getHoOperandAccess().getControl000dKeyword_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__HoOperand__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__HoOperand__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__HoOperand__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getHoOperandAccess().getControl000aKeyword_4()); }
+(
+	'\n' 
+)?
+{ after(grammarAccess.getHoOperandAccess().getControl000aKeyword_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
 
 
 
