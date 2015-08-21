@@ -171,10 +171,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:15:7: ( '=ne=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:15:9: '=ne='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:15:7: ( 'ne' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:15:9: 'ne'
             {
-            match("=ne="); 
+            match("ne"); 
 
 
             }
@@ -192,10 +192,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:16:7: ( '=eq=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:16:9: '=eq='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:16:7: ( 'eq' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:16:9: 'eq'
             {
-            match("=eq="); 
+            match("eq"); 
 
 
             }
@@ -213,10 +213,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:17:7: ( '=lt=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:17:9: '=lt='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:17:7: ( 'lt' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:17:9: 'lt'
             {
-            match("=lt="); 
+            match("lt"); 
 
 
             }
@@ -234,10 +234,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:18:7: ( '=le=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:18:9: '=le='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:18:7: ( 'le' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:18:9: 'le'
             {
-            match("=le="); 
+            match("le"); 
 
 
             }
@@ -255,10 +255,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:19:7: ( '=gt=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:19:9: '=gt='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:19:7: ( 'gt' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:19:9: 'gt'
             {
-            match("=gt="); 
+            match("gt"); 
 
 
             }
@@ -276,10 +276,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:20:7: ( '=ge=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:20:9: '=ge='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:20:7: ( 'ge' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:20:9: 'ge'
             {
-            match("=ge="); 
+            match("ge"); 
 
 
             }
@@ -297,10 +297,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:21:7: ( '=like=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:21:9: '=like='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:21:7: ( 'like' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:21:9: 'like'
             {
-            match("=like="); 
+            match("like"); 
 
 
             }
@@ -318,10 +318,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:22:7: ( 'ne' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:22:9: 'ne'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:22:7: ( '!=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:22:9: '!='
             {
-            match("ne"); 
+            match("!="); 
 
 
             }
@@ -339,11 +339,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:23:7: ( 'eq' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:23:9: 'eq'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:23:7: ( '=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:23:9: '='
             {
-            match("eq"); 
-
+            match('='); 
 
             }
 
@@ -360,11 +359,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:24:7: ( 'lt' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:24:9: 'lt'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:24:7: ( '<' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:24:9: '<'
             {
-            match("lt"); 
-
+            match('<'); 
 
             }
 
@@ -381,10 +379,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:25:7: ( 'le' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:25:9: 'le'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:25:7: ( '<=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:25:9: '<='
             {
-            match("le"); 
+            match("<="); 
 
 
             }
@@ -402,11 +400,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:26:7: ( 'gt' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:26:9: 'gt'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:26:7: ( '>' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:26:9: '>'
             {
-            match("gt"); 
-
+            match('>'); 
 
             }
 
@@ -423,10 +420,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:27:7: ( 'ge' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:27:9: 'ge'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:27:7: ( '>=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:27:9: '>='
             {
-            match("ge"); 
+            match(">="); 
 
 
             }
@@ -444,10 +441,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:28:7: ( 'like' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:28:9: 'like'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:28:7: ( '=ne=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:28:9: '=ne='
             {
-            match("like"); 
+            match("=ne="); 
 
 
             }
@@ -465,10 +462,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:29:7: ( '!=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:29:9: '!='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:29:7: ( '=eq=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:29:9: '=eq='
             {
-            match("!="); 
+            match("=eq="); 
 
 
             }
@@ -486,10 +483,11 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:30:7: ( '=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:30:9: '='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:30:7: ( '=lt=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:30:9: '=lt='
             {
-            match('='); 
+            match("=lt="); 
+
 
             }
 
@@ -506,10 +504,11 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:31:7: ( '<' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:31:9: '<'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:31:7: ( '=le=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:31:9: '=le='
             {
-            match('<'); 
+            match("=le="); 
+
 
             }
 
@@ -526,10 +525,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:32:7: ( '<=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:32:9: '<='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:32:7: ( '=gt=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:32:9: '=gt='
             {
-            match("<="); 
+            match("=gt="); 
 
 
             }
@@ -547,10 +546,11 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:33:7: ( '>' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:33:9: '>'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:33:7: ( '=ge=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:33:9: '=ge='
             {
-            match('>'); 
+            match("=ge="); 
+
 
             }
 
@@ -567,10 +567,10 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:34:7: ( '>=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:34:9: '>='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:34:7: ( '=like=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:34:9: '=like='
             {
-            match(">="); 
+            match("=like="); 
 
 
             }
@@ -1223,8 +1223,8 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = RULE_DIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3473:12: ( '0' .. '9' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3473:14: '0' .. '9'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3413:12: ( '0' .. '9' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3413:14: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1243,8 +1243,8 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = RULE_XDIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3475:13: ( ( RULE_DIGIT | 'A' .. 'F' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3475:15: ( RULE_DIGIT | 'A' .. 'F' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3415:13: ( ( RULE_DIGIT | 'A' .. 'F' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3415:15: ( RULE_DIGIT | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F') ) {
                 input.consume();
@@ -1271,8 +1271,8 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = RULE_ALPHA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3477:12: ( ( 'A' .. 'Z' | 'a' .. 'z' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3477:14: ( 'A' .. 'Z' | 'a' .. 'z' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3417:12: ( ( 'A' .. 'Z' | 'a' .. 'z' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3417:14: ( 'A' .. 'Z' | 'a' .. 'z' )
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1299,8 +1299,8 @@ public class InternalRQLLexer extends Lexer {
         try {
             int _type = RULE_WSP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3479:10: ( ( ' ' | '\\t' ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3479:12: ( ' ' | '\\t' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3419:10: ( ( ' ' | '\\t' ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql.ui/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/ui/contentassist/antlr/internal/InternalRQL.g:3419:12: ( ' ' | '\\t' )
             {
             if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1748,41 +1748,42 @@ public class InternalRQLLexer extends Lexer {
 
     protected DFA1 dfa1 = new DFA1(this);
     static final String DFA1_eotS =
-        "\5\uffff\1\54\4\46\1\uffff\1\70\1\72\6\46\13\uffff\1\46\60\uffff";
+        "\5\uffff\4\46\1\uffff\1\66\1\70\1\72\6\46\13\uffff\1\46\60\uffff";
     static final String DFA1_eofS =
         "\117\uffff";
     static final String DFA1_minS =
-        "\1\11\4\uffff\2\145\1\155\2\145\1\uffff\2\75\1\145\1\155\1\157"+
-        "\2\162\1\141\13\uffff\1\156\13\uffff\2\145\10\uffff\1\153\32\uffff";
+        "\1\11\4\uffff\1\145\1\155\2\145\1\uffff\1\145\2\75\1\145\1\155"+
+        "\1\157\2\162\1\141\13\uffff\1\156\20\uffff\1\153\4\uffff\2\145\31"+
+        "\uffff";
     static final String DFA1_maxS =
-        "\1\176\4\uffff\1\156\1\165\1\161\2\164\1\uffff\2\75\1\157\1\163"+
-        "\1\157\1\165\1\162\1\141\13\uffff\1\156\13\uffff\2\164\10\uffff"+
-        "\1\155\32\uffff";
+        "\1\176\4\uffff\1\165\1\161\2\164\1\uffff\1\156\2\75\1\157\1\163"+
+        "\1\157\1\165\1\162\1\141\13\uffff\1\156\20\uffff\1\155\4\uffff\2"+
+        "\164\31\uffff";
     static final String DFA1_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\5\uffff\1\23\10\uffff\1\45\1\46\1\47\1"+
+        "\1\uffff\1\1\1\2\1\3\1\4\4\uffff\1\14\11\uffff\1\45\1\46\1\47\1"+
         "\50\1\51\1\52\1\53\1\54\1\55\1\56\1\57\1\uffff\1\63\1\64\1\65\1"+
-        "\66\1\67\1\70\1\71\1\72\1\73\1\5\1\6\2\uffff\1\24\1\14\1\44\1\62"+
-        "\1\15\1\43\1\16\1\17\1\uffff\1\20\1\21\1\26\1\25\1\30\1\27\1\31"+
-        "\1\32\1\34\1\36\1\37\1\35\1\40\1\60\1\41\1\42\1\61\1\70\1\71\1\7"+
-        "\1\10\1\13\1\11\1\12\1\22\1\33";
+        "\66\1\67\1\70\1\71\1\72\1\73\1\5\1\44\1\62\1\6\1\43\1\7\1\10\1\uffff"+
+        "\1\11\1\12\1\22\1\23\2\uffff\1\15\1\17\1\16\1\21\1\20\1\31\1\32"+
+        "\1\34\1\36\1\37\1\35\1\40\1\60\1\41\1\42\1\61\1\70\1\71\1\13\1\33"+
+        "\1\24\1\25\1\30\1\26\1\27";
     static final String DFA1_specialS =
         "\117\uffff}>";
     static final String[] DFA1_transitionS = {
-            "\1\47\1\40\2\uffff\1\37\22\uffff\1\47\1\12\2\uffff\1\27\1\43"+
+            "\1\47\1\40\2\uffff\1\37\22\uffff\1\47\1\11\2\uffff\1\27\1\43"+
             "\1\2\1\uffff\1\41\1\42\1\31\1\32\1\1\1\23\1\24\1\34\12\44\1"+
-            "\30\1\3\1\13\1\5\1\14\1\33\1\35\6\45\24\46\4\uffff\1\25\1\uffff"+
-            "\1\36\1\46\1\17\1\46\1\7\1\22\1\11\1\46\1\16\2\46\1\10\1\46"+
-            "\1\6\1\20\3\46\1\15\1\21\6\46\1\uffff\1\4\1\uffff\1\26",
+            "\30\1\3\1\13\1\12\1\14\1\33\1\35\6\45\24\46\4\uffff\1\25\1\uffff"+
+            "\1\36\1\46\1\17\1\46\1\6\1\22\1\10\1\46\1\16\2\46\1\7\1\46\1"+
+            "\5\1\20\3\46\1\15\1\21\6\46\1\uffff\1\4\1\uffff\1\26",
             "",
             "",
             "",
             "",
-            "\1\51\1\uffff\1\53\4\uffff\1\52\1\uffff\1\50",
-            "\1\55\11\uffff\1\57\5\uffff\1\56",
-            "\1\61\3\uffff\1\60",
-            "\1\63\3\uffff\1\64\12\uffff\1\62",
-            "\1\66\16\uffff\1\65",
+            "\1\50\11\uffff\1\52\5\uffff\1\51",
+            "\1\54\3\uffff\1\53",
+            "\1\56\3\uffff\1\57\12\uffff\1\55",
+            "\1\61\16\uffff\1\60",
             "",
+            "\1\63\1\uffff\1\65\4\uffff\1\64\1\uffff\1\62",
             "\1\67",
             "\1\71",
             "\1\73\11\uffff\1\74",
@@ -1814,18 +1815,18 @@ public class InternalRQLLexer extends Lexer {
             "",
             "",
             "",
-            "\1\111\3\uffff\1\112\12\uffff\1\110",
-            "\1\114\16\uffff\1\113",
             "",
             "",
             "",
             "",
             "",
+            "\1\110\1\uffff\1\111",
             "",
             "",
             "",
-            "\1\115\1\uffff\1\116",
             "",
+            "\1\113\3\uffff\1\114\12\uffff\1\112",
+            "\1\116\16\uffff\1\115",
             "",
             "",
             "",

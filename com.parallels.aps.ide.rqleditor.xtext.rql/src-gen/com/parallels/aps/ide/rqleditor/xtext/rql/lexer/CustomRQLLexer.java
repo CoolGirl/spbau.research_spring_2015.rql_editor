@@ -13,64 +13,64 @@ import java.util.Map;
 import java.util.HashMap;
 @SuppressWarnings("all")
 public class CustomRQLLexer extends Lexer {
-    public static final int KEYWORD_3=38;
-    public static final int KEYWORD_2=37;
-    public static final int KEYWORD_5=40;
-    public static final int KEYWORD_4=39;
-    public static final int KEYWORD_1=36;
+    public static final int KEYWORD_3=36;
+    public static final int KEYWORD_5=38;
+    public static final int KEYWORD_4=37;
     public static final int RULE_WSP=60;
-    public static final int KEYWORD_29=32;
-    public static final int KEYWORD_28=30;
-    public static final int KEYWORD_27=29;
-    public static final int KEYWORD_26=28;
-    public static final int KEYWORD_25=27;
-    public static final int KEYWORD_24=26;
-    public static final int KEYWORD_23=25;
-    public static final int KEYWORD_22=24;
-    public static final int KEYWORD_21=56;
-    public static final int KEYWORD_20=55;
+    public static final int KEYWORD_29=29;
+    public static final int KEYWORD_28=28;
+    public static final int KEYWORD_27=27;
+    public static final int KEYWORD_26=26;
+    public static final int KEYWORD_25=25;
+    public static final int KEYWORD_24=24;
+    public static final int KEYWORD_23=56;
+    public static final int KEYWORD_22=55;
+    public static final int KEYWORD_21=54;
+    public static final int KEYWORD_20=53;
     public static final int RULE_DIGIT=57;
-    public static final int KEYWORD_19=54;
-    public static final int KEYWORD_18=53;
-    public static final int KEYWORD_17=52;
-    public static final int KEYWORD_16=51;
-    public static final int KEYWORD_15=50;
-    public static final int KEYWORD_14=49;
-    public static final int KEYWORD_13=48;
-    public static final int KEYWORD_12=47;
-    public static final int KEYWORD_11=46;
-    public static final int KEYWORD_10=45;
-    public static final int KEYWORD_53=4;
-    public static final int KEYWORD_52=5;
-    public static final int KEYWORD_51=7;
-    public static final int KEYWORD_50=6;
+    public static final int KEYWORD_19=52;
+    public static final int KEYWORD_18=51;
+    public static final int KEYWORD_17=50;
+    public static final int KEYWORD_16=49;
+    public static final int KEYWORD_15=48;
+    public static final int KEYWORD_14=47;
+    public static final int KEYWORD_13=46;
+    public static final int KEYWORD_12=45;
+    public static final int KEYWORD_55=4;
+    public static final int KEYWORD_11=44;
+    public static final int KEYWORD_54=5;
+    public static final int KEYWORD_10=43;
+    public static final int KEYWORD_53=7;
+    public static final int KEYWORD_52=6;
+    public static final int KEYWORD_51=13;
+    public static final int KEYWORD_50=10;
     public static final int RULE_ALPHA=59;
-    public static final int KEYWORD_49=31;
-    public static final int KEYWORD_48=10;
-    public static final int KEYWORD_47=9;
-    public static final int KEYWORD_46=8;
-    public static final int KEYWORD_45=20;
-    public static final int KEYWORD_44=19;
-    public static final int KEYWORD_43=18;
-    public static final int KEYWORD_42=17;
-    public static final int KEYWORD_41=16;
+    public static final int KEYWORD_49=9;
+    public static final int KEYWORD_48=8;
+    public static final int KEYWORD_47=20;
+    public static final int KEYWORD_46=19;
+    public static final int KEYWORD_45=18;
+    public static final int KEYWORD_44=31;
+    public static final int KEYWORD_43=17;
+    public static final int KEYWORD_42=12;
+    public static final int KEYWORD_41=11;
     public static final int EOF=-1;
     public static final int KEYWORD_40=15;
     public static final int KEYWORD_39=14;
-    public static final int KEYWORD_38=13;
-    public static final int KEYWORD_37=12;
-    public static final int KEYWORD_36=11;
-    public static final int KEYWORD_35=23;
-    public static final int KEYWORD_34=22;
+    public static final int KEYWORD_38=16;
+    public static final int KEYWORD_37=23;
+    public static final int KEYWORD_36=22;
+    public static final int KEYWORD_35=21;
+    public static final int KEYWORD_34=35;
     public static final int RULE_XDIGIT=58;
-    public static final int KEYWORD_33=21;
-    public static final int KEYWORD_32=35;
-    public static final int KEYWORD_31=34;
-    public static final int KEYWORD_30=33;
-    public static final int KEYWORD_7=42;
-    public static final int KEYWORD_6=41;
-    public static final int KEYWORD_9=44;
-    public static final int KEYWORD_8=43;
+    public static final int KEYWORD_33=34;
+    public static final int KEYWORD_32=33;
+    public static final int KEYWORD_31=32;
+    public static final int KEYWORD_30=30;
+    public static final int KEYWORD_7=40;
+    public static final int KEYWORD_6=39;
+    public static final int KEYWORD_9=42;
+    public static final int KEYWORD_8=41;
 
     // delegates
     // delegators
@@ -85,10 +85,10 @@ public class CustomRQLLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g"; }
 
-    // $ANTLR start "KEYWORD_53"
-    public final void mKEYWORD_53() throws RecognitionException {
+    // $ANTLR start "KEYWORD_55"
+    public final void mKEYWORD_55() throws RecognitionException {
         try {
-            int _type = KEYWORD_53;
+            int _type = KEYWORD_55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:19:12: ( ( 'implementing(' )=> 'implementing' | ( 'i' )=> 'i' )
             int alt1=2;
@@ -137,12 +137,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_53"
+    // $ANTLR end "KEYWORD_55"
 
-    // $ANTLR start "KEYWORD_52"
-    public final void mKEYWORD_52() throws RecognitionException {
+    // $ANTLR start "KEYWORD_54"
+    public final void mKEYWORD_54() throws RecognitionException {
         try {
-            int _type = KEYWORD_52;
+            int _type = KEYWORD_54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:21:12: ( ( 'composing(' )=> 'composing' | ( 'c' )=> 'c' )
             int alt2=2;
@@ -191,12 +191,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_52"
+    // $ANTLR end "KEYWORD_54"
 
-    // $ANTLR start "KEYWORD_50"
-    public final void mKEYWORD_50() throws RecognitionException {
+    // $ANTLR start "KEYWORD_52"
+    public final void mKEYWORD_52() throws RecognitionException {
         try {
-            int _type = KEYWORD_50;
+            int _type = KEYWORD_52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:23:12: ( ( 'isnull(' )=> 'isnull' | ( 'i' )=> 'i' )
             int alt3=2;
@@ -245,12 +245,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_50"
+    // $ANTLR end "KEYWORD_52"
 
-    // $ANTLR start "KEYWORD_51"
-    public final void mKEYWORD_51() throws RecognitionException {
+    // $ANTLR start "KEYWORD_53"
+    public final void mKEYWORD_53() throws RecognitionException {
         try {
-            int _type = KEYWORD_51;
+            int _type = KEYWORD_53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:25:12: ( ( 'select(' )=> 'select' | ( 's' )=> 's' )
             int alt4=2;
@@ -299,12 +299,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_51"
+    // $ANTLR end "KEYWORD_53"
 
-    // $ANTLR start "KEYWORD_46"
-    public final void mKEYWORD_46() throws RecognitionException {
+    // $ANTLR start "KEYWORD_48"
+    public final void mKEYWORD_48() throws RecognitionException {
         try {
-            int _type = KEYWORD_46;
+            int _type = KEYWORD_48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:27:12: ( ( 'empty(' )=> 'empty' | ( 'e' )=> 'e' )
             int alt5=2;
@@ -353,12 +353,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_46"
+    // $ANTLR end "KEYWORD_48"
 
-    // $ANTLR start "KEYWORD_47"
-    public final void mKEYWORD_47() throws RecognitionException {
+    // $ANTLR start "KEYWORD_49"
+    public final void mKEYWORD_49() throws RecognitionException {
         try {
-            int _type = KEYWORD_47;
+            int _type = KEYWORD_49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:29:12: ( ( 'false(' )=> 'false' | ( 'f' )=> 'f' )
             int alt6=2;
@@ -407,12 +407,12 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_47"
+    // $ANTLR end "KEYWORD_49"
 
-    // $ANTLR start "KEYWORD_48"
-    public final void mKEYWORD_48() throws RecognitionException {
+    // $ANTLR start "KEYWORD_50"
+    public final void mKEYWORD_50() throws RecognitionException {
         try {
-            int _type = KEYWORD_48;
+            int _type = KEYWORD_50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:31:12: ( ( 'limit(' )=> 'limit' | ( 'l' )=> 'l' )
             int alt7=2;
@@ -461,100 +461,23 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_48"
+    // $ANTLR end "KEYWORD_50"
 
-    // $ANTLR start "KEYWORD_36"
-    public final void mKEYWORD_36() throws RecognitionException {
+    // $ANTLR start "KEYWORD_41"
+    public final void mKEYWORD_41() throws RecognitionException {
         try {
-            int _type = KEYWORD_36;
+            int _type = KEYWORD_41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:12: ( '=eq=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:14: '=eq='
-            {
-            match("=eq="); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_36"
-
-    // $ANTLR start "KEYWORD_37"
-    public final void mKEYWORD_37() throws RecognitionException {
-        try {
-            int _type = KEYWORD_37;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:35:12: ( '=ge=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:35:14: '=ge='
-            {
-            match("=ge="); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_37"
-
-    // $ANTLR start "KEYWORD_38"
-    public final void mKEYWORD_38() throws RecognitionException {
-        try {
-            int _type = KEYWORD_38;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:37:12: ( '=gt=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:37:14: '=gt='
-            {
-            match("=gt="); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_38"
-
-    // $ANTLR start "KEYWORD_39"
-    public final void mKEYWORD_39() throws RecognitionException {
-        try {
-            int _type = KEYWORD_39;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:12: ( '=' ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' )? )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:14: '=' ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:12: ( '=' ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' | ( 'gt=' )=> 'gt=' | ( 'ge=' )=> 'ge=' | ( 'eq=' )=> 'eq=' | ( 'ne=' )=> 'ne=' )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:14: '=' ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' | ( 'gt=' )=> 'gt=' | ( 'ge=' )=> 'ge=' | ( 'eq=' )=> 'eq=' | ( 'ne=' )=> 'ne=' )?
             {
             match('='); if (state.failed) return ;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:18: ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' )?
-            int alt8=4;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0=='l') ) {
-                int LA8_1 = input.LA(2);
-
-                if ( (LA8_1=='e') && (synpred15_CustomRQLLexer())) {
-                    alt8=1;
-                }
-                else if ( (LA8_1=='i') && (synpred16_CustomRQLLexer())) {
-                    alt8=2;
-                }
-                else if ( (LA8_1=='t') && (synpred17_CustomRQLLexer())) {
-                    alt8=3;
-                }
-            }
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:18: ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' | ( 'gt=' )=> 'gt=' | ( 'ge=' )=> 'ge=' | ( 'eq=' )=> 'eq=' | ( 'ne=' )=> 'ne=' )?
+            int alt8=8;
+            alt8 = dfa8.predict(input);
             switch (alt8) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:19: ( 'le=' )=> 'le='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:19: ( 'le=' )=> 'le='
                     {
                     match("le="); if (state.failed) return ;
 
@@ -562,9 +485,20 @@ public class CustomRQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:37: ( 'like=' )=> 'like='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:37: ( 'like=' )=> 'like='
                     {
                     match("like="); if (state.failed) return ;
+
+                    if ( state.backtracking==0 ) {
+                      _type = KEYWORD_51;
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:82: ( 'lt=' )=> 'lt='
+                    {
+                    match("lt="); if (state.failed) return ;
 
                     if ( state.backtracking==0 ) {
                       _type = KEYWORD_42;
@@ -572,10 +506,10 @@ public class CustomRQLLexer extends Lexer {
 
                     }
                     break;
-                case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:82: ( 'lt=' )=> 'lt='
+                case 4 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:1: ( 'gt=' )=> 'gt='
                     {
-                    match("lt="); if (state.failed) return ;
+                    match("gt="); if (state.failed) return ;
 
                     if ( state.backtracking==0 ) {
                       _type = KEYWORD_40;
@@ -583,77 +517,41 @@ public class CustomRQLLexer extends Lexer {
 
                     }
                     break;
-
-            }
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_39"
-
-    // $ANTLR start "KEYWORD_40"
-    public final void mKEYWORD_40() throws RecognitionException {
-        try {
-            int _type = KEYWORD_40;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:41:12: ( '=lt=' | '\\u0328' )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0=='=') ) {
-                alt9=1;
-            }
-            else if ( (LA9_0=='\u0328') ) {
-                alt9=2;
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return ;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
-
-                throw nvae;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:41:14: '=lt='
+                case 5 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:41: ( 'ge=' )=> 'ge='
                     {
-                    match("=lt="); if (state.failed) return ;
+                    match("ge="); if (state.failed) return ;
 
+                    if ( state.backtracking==0 ) {
+                      _type = KEYWORD_39;
+                    }
 
                     }
                     break;
-                case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:41:23: '\\u0328'
+                case 6 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:81: ( 'eq=' )=> 'eq='
                     {
-                    match('\u0328'); if (state.failed) return ;
+                    match("eq="); if (state.failed) return ;
+
+                    if ( state.backtracking==0 ) {
+                      _type = KEYWORD_38;
+                    }
+
+                    }
+                    break;
+                case 7 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:121: ( 'ne=' )=> 'ne='
+                    {
+                    match("ne="); if (state.failed) return ;
+
+                    if ( state.backtracking==0 ) {
+                      _type = KEYWORD_43;
+                    }
 
                     }
                     break;
 
             }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_40"
-
-    // $ANTLR start "KEYWORD_41"
-    public final void mKEYWORD_41() throws RecognitionException {
-        try {
-            int _type = KEYWORD_41;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:43:12: ( '=ne=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:43:14: '=ne='
-            {
-            match("=ne="); if (state.failed) return ;
 
 
             }
@@ -671,11 +569,59 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:45:12: ( '=like=' | '\\uA733' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:36:12: ( 'lt=' | '\\u0328' )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0=='l') ) {
+                alt9=1;
+            }
+            else if ( (LA9_0=='\u0328') ) {
+                alt9=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 9, 0, input);
+
+                throw nvae;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:36:14: 'lt='
+                    {
+                    match("lt="); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:36:22: '\\u0328'
+                    {
+                    match('\u0328'); if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_42"
+
+    // $ANTLR start "KEYWORD_51"
+    public final void mKEYWORD_51() throws RecognitionException {
+        try {
+            int _type = KEYWORD_51;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:38:12: ( 'like=' | '\\uA733' )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0=='=') ) {
+            if ( (LA10_0=='l') ) {
                 alt10=1;
             }
             else if ( (LA10_0=='\uA733') ) {
@@ -690,15 +636,15 @@ public class CustomRQLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:45:14: '=like='
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:38:14: 'like='
                     {
-                    match("=like="); if (state.failed) return ;
+                    match("like="); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:45:25: '\\uA733'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:38:24: '\\uA733'
                     {
                     match('\uA733'); if (state.failed) return ;
 
@@ -712,25 +658,22 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_42"
+    // $ANTLR end "KEYWORD_51"
 
-    // $ANTLR start "KEYWORD_43"
-    public final void mKEYWORD_43() throws RecognitionException {
+    // $ANTLR start "KEYWORD_39"
+    public final void mKEYWORD_39() throws RecognitionException {
         try {
-            int _type = KEYWORD_43;
+            int _type = KEYWORD_39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:12: ( ( 'null(' )=> 'null' | ( 'n' )=> 'n' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:40:12: ( 'ge=' | '\\uA734' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0=='n') ) {
-                int LA11_1 = input.LA(2);
-
-                if ( (LA11_1=='u') && (synpred18_CustomRQLLexer())) {
-                    alt11=1;
-                }
-                else {
-                    alt11=2;}
+            if ( (LA11_0=='g') ) {
+                alt11=1;
+            }
+            else if ( (LA11_0=='\uA734') ) {
+                alt11=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -741,20 +684,161 @@ public class CustomRQLLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:15: ( 'null(' )=> 'null'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:40:14: 'ge='
                     {
-                    match("null"); if (state.failed) return ;
+                    match("ge="); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:35: ( 'n' )=> 'n'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:40:22: '\\uA734'
                     {
-                    match('n'); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                      _type = RULE_ALPHA;
+                    match('\uA734'); if (state.failed) return ;
+
                     }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_39"
+
+    // $ANTLR start "KEYWORD_40"
+    public final void mKEYWORD_40() throws RecognitionException {
+        try {
+            int _type = KEYWORD_40;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:42:12: ( 'gt=' | '\\uA735' )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0=='g') ) {
+                alt12=1;
+            }
+            else if ( (LA12_0=='\uA735') ) {
+                alt12=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 12, 0, input);
+
+                throw nvae;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:42:14: 'gt='
+                    {
+                    match("gt="); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:42:22: '\\uA735'
+                    {
+                    match('\uA735'); if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_40"
+
+    // $ANTLR start "KEYWORD_38"
+    public final void mKEYWORD_38() throws RecognitionException {
+        try {
+            int _type = KEYWORD_38;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:44:12: ( 'eq=' | '\\uA736' )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
+
+            if ( (LA13_0=='e') ) {
+                alt13=1;
+            }
+            else if ( (LA13_0=='\uA736') ) {
+                alt13=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 13, 0, input);
+
+                throw nvae;
+            }
+            switch (alt13) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:44:14: 'eq='
+                    {
+                    match("eq="); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:44:22: '\\uA736'
+                    {
+                    match('\uA736'); if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_38"
+
+    // $ANTLR start "KEYWORD_43"
+    public final void mKEYWORD_43() throws RecognitionException {
+        try {
+            int _type = KEYWORD_43;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:46:12: ( 'ne=' | '\\uA737' )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0=='n') ) {
+                alt14=1;
+            }
+            else if ( (LA14_0=='\uA737') ) {
+                alt14=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 14, 0, input);
+
+                throw nvae;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:46:14: 'ne='
+                    {
+                    match("ne="); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:46:22: '\\uA737'
+                    {
+                    match('\uA737'); if (state.failed) return ;
 
                     }
                     break;
@@ -768,98 +852,44 @@ public class CustomRQLLexer extends Lexer {
     }
     // $ANTLR end "KEYWORD_43"
 
-    // $ANTLR start "KEYWORD_44"
-    public final void mKEYWORD_44() throws RecognitionException {
-        try {
-            int _type = KEYWORD_44;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:12: ( ( 'sort(' )=> 'sort' | ( 's' )=> 's' )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0=='s') ) {
-                int LA12_1 = input.LA(2);
-
-                if ( (LA12_1=='o') && (synpred20_CustomRQLLexer())) {
-                    alt12=1;
-                }
-                else {
-                    alt12=2;}
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return ;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
-
-                throw nvae;
-            }
-            switch (alt12) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:15: ( 'sort(' )=> 'sort'
-                    {
-                    match("sort"); if (state.failed) return ;
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:35: ( 's' )=> 's'
-                    {
-                    match('s'); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                      _type = RULE_ALPHA;
-                    }
-
-                    }
-                    break;
-
-            }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_44"
-
     // $ANTLR start "KEYWORD_45"
     public final void mKEYWORD_45() throws RecognitionException {
         try {
             int _type = KEYWORD_45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:12: ( ( 'true(' )=> 'true' | ( 't' )=> 't' )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:12: ( ( 'null(' )=> 'null' | ( 'n' )=> 'n' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA13_0=='t') ) {
-                int LA13_1 = input.LA(2);
+            if ( (LA15_0=='n') ) {
+                int LA15_1 = input.LA(2);
 
-                if ( (LA13_1=='r') && (synpred22_CustomRQLLexer())) {
-                    alt13=1;
+                if ( (LA15_1=='u') && (synpred22_CustomRQLLexer())) {
+                    alt15=1;
                 }
                 else {
-                    alt13=2;}
+                    alt15=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:15: ( 'true(' )=> 'true'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:15: ( 'null(' )=> 'null'
                     {
-                    match("true"); if (state.failed) return ;
+                    match("null"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:35: ( 't' )=> 't'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:35: ( 'n' )=> 'n'
                     {
-                    match('t'); if (state.failed) return ;
+                    match('n'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -876,34 +906,142 @@ public class CustomRQLLexer extends Lexer {
     }
     // $ANTLR end "KEYWORD_45"
 
-    // $ANTLR start "KEYWORD_33"
-    public final void mKEYWORD_33() throws RecognitionException {
+    // $ANTLR start "KEYWORD_46"
+    public final void mKEYWORD_46() throws RecognitionException {
         try {
-            int _type = KEYWORD_33;
+            int _type = KEYWORD_46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:12: ( ( 'and(' )=> 'and' | ( 'a' )=> 'a' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:12: ( ( 'sort(' )=> 'sort' | ( 's' )=> 's' )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0=='a') ) {
-                int LA14_1 = input.LA(2);
+            if ( (LA16_0=='s') ) {
+                int LA16_1 = input.LA(2);
 
-                if ( (LA14_1=='n') && (synpred24_CustomRQLLexer())) {
-                    alt14=1;
+                if ( (LA16_1=='o') && (synpred24_CustomRQLLexer())) {
+                    alt16=1;
                 }
                 else {
-                    alt14=2;}
+                    alt16=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:14: ( 'and(' )=> 'and'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:15: ( 'sort(' )=> 'sort'
+                    {
+                    match("sort"); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:35: ( 's' )=> 's'
+                    {
+                    match('s'); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                      _type = RULE_ALPHA;
+                    }
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_46"
+
+    // $ANTLR start "KEYWORD_47"
+    public final void mKEYWORD_47() throws RecognitionException {
+        try {
+            int _type = KEYWORD_47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:12: ( ( 'true(' )=> 'true' | ( 't' )=> 't' )
+            int alt17=2;
+            int LA17_0 = input.LA(1);
+
+            if ( (LA17_0=='t') ) {
+                int LA17_1 = input.LA(2);
+
+                if ( (LA17_1=='r') && (synpred26_CustomRQLLexer())) {
+                    alt17=1;
+                }
+                else {
+                    alt17=2;}
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 17, 0, input);
+
+                throw nvae;
+            }
+            switch (alt17) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:15: ( 'true(' )=> 'true'
+                    {
+                    match("true"); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:35: ( 't' )=> 't'
+                    {
+                    match('t'); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                      _type = RULE_ALPHA;
+                    }
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_47"
+
+    // $ANTLR start "KEYWORD_35"
+    public final void mKEYWORD_35() throws RecognitionException {
+        try {
+            int _type = KEYWORD_35;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:12: ( ( 'and(' )=> 'and' | ( 'a' )=> 'a' )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
+
+            if ( (LA18_0=='a') ) {
+                int LA18_1 = input.LA(2);
+
+                if ( (LA18_1=='n') && (synpred28_CustomRQLLexer())) {
+                    alt18=1;
+                }
+                else {
+                    alt18=2;}
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 18, 0, input);
+
+                throw nvae;
+            }
+            switch (alt18) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:14: ( 'and(' )=> 'and'
                     {
                     match("and"); if (state.failed) return ;
 
@@ -911,7 +1049,7 @@ public class CustomRQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:32: ( 'a' )=> 'a'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:32: ( 'a' )=> 'a'
                     {
                     match('a'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
@@ -928,36 +1066,36 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_33"
+    // $ANTLR end "KEYWORD_35"
 
-    // $ANTLR start "KEYWORD_34"
-    public final void mKEYWORD_34() throws RecognitionException {
+    // $ANTLR start "KEYWORD_36"
+    public final void mKEYWORD_36() throws RecognitionException {
         try {
-            int _type = KEYWORD_34;
+            int _type = KEYWORD_36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:12: ( ( 'not(' )=> 'not' | ( 'n' )=> 'n' )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:12: ( ( 'not(' )=> 'not' | ( 'n' )=> 'n' )
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA15_0=='n') ) {
-                int LA15_1 = input.LA(2);
+            if ( (LA19_0=='n') ) {
+                int LA19_1 = input.LA(2);
 
-                if ( (LA15_1=='o') && (synpred26_CustomRQLLexer())) {
-                    alt15=1;
+                if ( (LA19_1=='o') && (synpred30_CustomRQLLexer())) {
+                    alt19=1;
                 }
                 else {
-                    alt15=2;}
+                    alt19=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
-            switch (alt15) {
+            switch (alt19) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:14: ( 'not(' )=> 'not'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:14: ( 'not(' )=> 'not'
                     {
                     match("not"); if (state.failed) return ;
 
@@ -965,7 +1103,7 @@ public class CustomRQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:32: ( 'n' )=> 'n'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:32: ( 'n' )=> 'n'
                     {
                     match('n'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
@@ -982,36 +1120,36 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_34"
+    // $ANTLR end "KEYWORD_36"
 
-    // $ANTLR start "KEYWORD_35"
-    public final void mKEYWORD_35() throws RecognitionException {
+    // $ANTLR start "KEYWORD_37"
+    public final void mKEYWORD_37() throws RecognitionException {
         try {
-            int _type = KEYWORD_35;
+            int _type = KEYWORD_37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:12: ( ( 'out(' )=> 'out' | ( 'o' )=> 'o' )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:12: ( ( 'out(' )=> 'out' | ( 'o' )=> 'o' )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA16_0=='o') ) {
-                int LA16_1 = input.LA(2);
+            if ( (LA20_0=='o') ) {
+                int LA20_1 = input.LA(2);
 
-                if ( (LA16_1=='u') && (synpred28_CustomRQLLexer())) {
-                    alt16=1;
+                if ( (LA20_1=='u') && (synpred32_CustomRQLLexer())) {
+                    alt20=1;
                 }
                 else {
-                    alt16=2;}
+                    alt20=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt20) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:15: ( 'out(' )=> 'out'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:15: ( 'out(' )=> 'out'
                     {
                     match("out"); if (state.failed) return ;
 
@@ -1019,7 +1157,7 @@ public class CustomRQLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:33: ( 'o' )=> 'o'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:33: ( 'o' )=> 'o'
                     {
                     match('o'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
@@ -1036,59 +1174,17 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_35"
-
-    // $ANTLR start "KEYWORD_22"
-    public final void mKEYWORD_22() throws RecognitionException {
-        try {
-            int _type = KEYWORD_22;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:59:12: ( '!=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:59:14: '!='
-            {
-            match("!="); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_22"
-
-    // $ANTLR start "KEYWORD_23"
-    public final void mKEYWORD_23() throws RecognitionException {
-        try {
-            int _type = KEYWORD_23;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:61:12: ( '<=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:61:14: '<='
-            {
-            match("<="); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_23"
+    // $ANTLR end "KEYWORD_37"
 
     // $ANTLR start "KEYWORD_24"
     public final void mKEYWORD_24() throws RecognitionException {
         try {
             int _type = KEYWORD_24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:63:12: ( '>=' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:63:14: '>='
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:60:12: ( '!=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:60:14: '!='
             {
-            match(">="); if (state.failed) return ;
+            match("!="); if (state.failed) return ;
 
 
             }
@@ -1106,47 +1202,14 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:12: ( ( 'eq(' )=> 'eq' | ( 'e' )=> 'e' )
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:62:12: ( '<=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:62:14: '<='
+            {
+            match("<="); if (state.failed) return ;
 
-            if ( (LA17_0=='e') ) {
-                int LA17_1 = input.LA(2);
-
-                if ( (LA17_1=='q') && (synpred30_CustomRQLLexer())) {
-                    alt17=1;
-                }
-                else {
-                    alt17=2;}
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return ;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
-
-                throw nvae;
-            }
-            switch (alt17) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:15: ( 'eq(' )=> 'eq'
-                    {
-                    match("eq"); if (state.failed) return ;
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:31: ( 'e' )=> 'e'
-                    {
-                    match('e'); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                      _type = RULE_ALPHA;
-                    }
-
-                    }
-                    break;
 
             }
+
             state.type = _type;
             state.channel = _channel;
         }
@@ -1160,47 +1223,14 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:12: ( ( 'ge(' )=> 'ge' | ( 'g' )=> 'g' )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:64:12: ( '>=' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:64:14: '>='
+            {
+            match(">="); if (state.failed) return ;
 
-            if ( (LA18_0=='g') ) {
-                int LA18_1 = input.LA(2);
-
-                if ( (LA18_1=='e') && (synpred32_CustomRQLLexer())) {
-                    alt18=1;
-                }
-                else {
-                    alt18=2;}
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return ;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
-
-                throw nvae;
-            }
-            switch (alt18) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:15: ( 'ge(' )=> 'ge'
-                    {
-                    match("ge"); if (state.failed) return ;
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:31: ( 'g' )=> 'g'
-                    {
-                    match('g'); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                      _type = RULE_ALPHA;
-                    }
-
-                    }
-                    break;
 
             }
+
             state.type = _type;
             state.channel = _channel;
         }
@@ -1214,39 +1244,39 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:12: ( ( 'gt(' )=> 'gt' | ( 'g' )=> 'g' )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:12: ( ( 'eq(' )=> 'eq' | ( 'e' )=> 'e' )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA19_0=='g') ) {
-                int LA19_1 = input.LA(2);
+            if ( (LA21_0=='e') ) {
+                int LA21_1 = input.LA(2);
 
-                if ( (LA19_1=='t') && (synpred34_CustomRQLLexer())) {
-                    alt19=1;
+                if ( (LA21_1=='q') && (synpred34_CustomRQLLexer())) {
+                    alt21=1;
                 }
                 else {
-                    alt19=2;}
+                    alt21=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt21) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:15: ( 'gt(' )=> 'gt'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:15: ( 'eq(' )=> 'eq'
                     {
-                    match("gt"); if (state.failed) return ;
+                    match("eq"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:31: ( 'g' )=> 'g'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:31: ( 'e' )=> 'e'
                     {
-                    match('g'); if (state.failed) return ;
+                    match('e'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1268,39 +1298,39 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:12: ( ( 'in(' )=> 'in' | ( 'i' )=> 'i' )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:12: ( ( 'ge(' )=> 'ge' | ( 'g' )=> 'g' )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA20_0=='i') ) {
-                int LA20_1 = input.LA(2);
+            if ( (LA22_0=='g') ) {
+                int LA22_1 = input.LA(2);
 
-                if ( (LA20_1=='n') && (synpred36_CustomRQLLexer())) {
-                    alt20=1;
+                if ( (LA22_1=='e') && (synpred36_CustomRQLLexer())) {
+                    alt22=1;
                 }
                 else {
-                    alt20=2;}
+                    alt22=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt22) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:15: ( 'in(' )=> 'in'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:15: ( 'ge(' )=> 'ge'
                     {
-                    match("in"); if (state.failed) return ;
+                    match("ge"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:31: ( 'i' )=> 'i'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:31: ( 'g' )=> 'g'
                     {
-                    match('i'); if (state.failed) return ;
+                    match('g'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1317,98 +1347,44 @@ public class CustomRQLLexer extends Lexer {
     }
     // $ANTLR end "KEYWORD_28"
 
-    // $ANTLR start "KEYWORD_49"
-    public final void mKEYWORD_49() throws RecognitionException {
-        try {
-            int _type = KEYWORD_49;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:12: ( ( 'like(' )=> 'like' | ( 'l' )=> 'l' )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
-
-            if ( (LA21_0=='l') ) {
-                int LA21_1 = input.LA(2);
-
-                if ( (LA21_1=='i') && (synpred38_CustomRQLLexer())) {
-                    alt21=1;
-                }
-                else {
-                    alt21=2;}
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return ;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
-
-                throw nvae;
-            }
-            switch (alt21) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:14: ( 'like(' )=> 'like'
-                    {
-                    match("like"); if (state.failed) return ;
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:34: ( 'l' )=> 'l'
-                    {
-                    match('l'); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                      _type = RULE_ALPHA;
-                    }
-
-                    }
-                    break;
-
-            }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_49"
-
     // $ANTLR start "KEYWORD_29"
     public final void mKEYWORD_29() throws RecognitionException {
         try {
             int _type = KEYWORD_29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:12: ( ( 'le(' )=> 'le' | ( 'l' )=> 'l' )
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:12: ( ( 'gt(' )=> 'gt' | ( 'g' )=> 'g' )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0=='l') ) {
-                int LA22_1 = input.LA(2);
+            if ( (LA23_0=='g') ) {
+                int LA23_1 = input.LA(2);
 
-                if ( (LA22_1=='e') && (synpred40_CustomRQLLexer())) {
-                    alt22=1;
+                if ( (LA23_1=='t') && (synpred38_CustomRQLLexer())) {
+                    alt23=1;
                 }
                 else {
-                    alt22=2;}
+                    alt23=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:15: ( 'le(' )=> 'le'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:15: ( 'gt(' )=> 'gt'
                     {
-                    match("le"); if (state.failed) return ;
+                    match("gt"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:31: ( 'l' )=> 'l'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:31: ( 'g' )=> 'g'
                     {
-                    match('l'); if (state.failed) return ;
+                    match('g'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1430,39 +1406,39 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:12: ( ( 'lt(' )=> 'lt' | ( 'l' )=> 'l' )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:12: ( ( 'in(' )=> 'in' | ( 'i' )=> 'i' )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA23_0=='l') ) {
-                int LA23_1 = input.LA(2);
+            if ( (LA24_0=='i') ) {
+                int LA24_1 = input.LA(2);
 
-                if ( (LA23_1=='t') && (synpred42_CustomRQLLexer())) {
-                    alt23=1;
+                if ( (LA24_1=='n') && (synpred40_CustomRQLLexer())) {
+                    alt24=1;
                 }
                 else {
-                    alt23=2;}
+                    alt24=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:15: ( 'lt(' )=> 'lt'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:15: ( 'in(' )=> 'in'
                     {
-                    match("lt"); if (state.failed) return ;
+                    match("in"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:31: ( 'l' )=> 'l'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:31: ( 'i' )=> 'i'
                     {
-                    match('l'); if (state.failed) return ;
+                    match('i'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1479,44 +1455,98 @@ public class CustomRQLLexer extends Lexer {
     }
     // $ANTLR end "KEYWORD_30"
 
-    // $ANTLR start "KEYWORD_31"
-    public final void mKEYWORD_31() throws RecognitionException {
+    // $ANTLR start "KEYWORD_44"
+    public final void mKEYWORD_44() throws RecognitionException {
         try {
-            int _type = KEYWORD_31;
+            int _type = KEYWORD_44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:12: ( ( 'ne(' )=> 'ne' | ( 'n' )=> 'n' )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:12: ( ( 'like(' )=> 'like' | ( 'l' )=> 'l' )
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0=='n') ) {
-                int LA24_1 = input.LA(2);
+            if ( (LA25_0=='l') ) {
+                int LA25_1 = input.LA(2);
 
-                if ( (LA24_1=='e') && (synpred44_CustomRQLLexer())) {
-                    alt24=1;
+                if ( (LA25_1=='i') && (synpred42_CustomRQLLexer())) {
+                    alt25=1;
                 }
                 else {
-                    alt24=2;}
+                    alt25=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:15: ( 'ne(' )=> 'ne'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:14: ( 'like(' )=> 'like'
                     {
-                    match("ne"); if (state.failed) return ;
+                    match("like"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:31: ( 'n' )=> 'n'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:34: ( 'l' )=> 'l'
                     {
-                    match('n'); if (state.failed) return ;
+                    match('l'); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                      _type = RULE_ALPHA;
+                    }
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_44"
+
+    // $ANTLR start "KEYWORD_31"
+    public final void mKEYWORD_31() throws RecognitionException {
+        try {
+            int _type = KEYWORD_31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:12: ( ( 'le(' )=> 'le' | ( 'l' )=> 'l' )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
+
+            if ( (LA26_0=='l') ) {
+                int LA26_1 = input.LA(2);
+
+                if ( (LA26_1=='e') && (synpred44_CustomRQLLexer())) {
+                    alt26=1;
+                }
+                else {
+                    alt26=2;}
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 26, 0, input);
+
+                throw nvae;
+            }
+            switch (alt26) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:15: ( 'le(' )=> 'le'
+                    {
+                    match("le"); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:31: ( 'l' )=> 'l'
+                    {
+                    match('l'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1538,39 +1568,39 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:12: ( ( 'or(' )=> 'or' | ( 'o' )=> 'o' )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:12: ( ( 'lt(' )=> 'lt' | ( 'l' )=> 'l' )
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA25_0=='o') ) {
-                int LA25_1 = input.LA(2);
+            if ( (LA27_0=='l') ) {
+                int LA27_1 = input.LA(2);
 
-                if ( (LA25_1=='r') && (synpred46_CustomRQLLexer())) {
-                    alt25=1;
+                if ( (LA27_1=='t') && (synpred46_CustomRQLLexer())) {
+                    alt27=1;
                 }
                 else {
-                    alt25=2;}
+                    alt27=2;}
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt25) {
+            switch (alt27) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:14: ( 'or(' )=> 'or'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:15: ( 'lt(' )=> 'lt'
                     {
-                    match("or"); if (state.failed) return ;
+                    match("lt"); if (state.failed) return ;
 
 
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:30: ( 'o' )=> 'o'
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:31: ( 'l' )=> 'l'
                     {
-                    match('o'); if (state.failed) return ;
+                    match('l'); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                       _type = RULE_ALPHA;
                     }
@@ -1587,55 +1617,123 @@ public class CustomRQLLexer extends Lexer {
     }
     // $ANTLR end "KEYWORD_32"
 
-    // $ANTLR start "KEYWORD_1"
-    public final void mKEYWORD_1() throws RecognitionException {
+    // $ANTLR start "KEYWORD_33"
+    public final void mKEYWORD_33() throws RecognitionException {
         try {
-            int _type = KEYWORD_1;
+            int _type = KEYWORD_33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:83:11: ( '$' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:83:13: '$'
-            {
-            match('$'); if (state.failed) return ;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:12: ( ( 'ne(' )=> 'ne' | ( 'n' )=> 'n' )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
+
+            if ( (LA28_0=='n') ) {
+                int LA28_1 = input.LA(2);
+
+                if ( (LA28_1=='e') && (synpred48_CustomRQLLexer())) {
+                    alt28=1;
+                }
+                else {
+                    alt28=2;}
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 28, 0, input);
+
+                throw nvae;
+            }
+            switch (alt28) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:15: ( 'ne(' )=> 'ne'
+                    {
+                    match("ne"); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:31: ( 'n' )=> 'n'
+                    {
+                    match('n'); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                      _type = RULE_ALPHA;
+                    }
+
+                    }
+                    break;
 
             }
-
             state.type = _type;
             state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_1"
+    // $ANTLR end "KEYWORD_33"
 
-    // $ANTLR start "KEYWORD_2"
-    public final void mKEYWORD_2() throws RecognitionException {
+    // $ANTLR start "KEYWORD_34"
+    public final void mKEYWORD_34() throws RecognitionException {
         try {
-            int _type = KEYWORD_2;
+            int _type = KEYWORD_34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:85:11: ( '%' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:85:13: '%'
-            {
-            match('%'); if (state.failed) return ;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:12: ( ( 'or(' )=> 'or' | ( 'o' )=> 'o' )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
+
+            if ( (LA29_0=='o') ) {
+                int LA29_1 = input.LA(2);
+
+                if ( (LA29_1=='r') && (synpred50_CustomRQLLexer())) {
+                    alt29=1;
+                }
+                else {
+                    alt29=2;}
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return ;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 29, 0, input);
+
+                throw nvae;
+            }
+            switch (alt29) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:14: ( 'or(' )=> 'or'
+                    {
+                    match("or"); if (state.failed) return ;
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:30: ( 'o' )=> 'o'
+                    {
+                    match('o'); if (state.failed) return ;
+                    if ( state.backtracking==0 ) {
+                      _type = RULE_ALPHA;
+                    }
+
+                    }
+                    break;
 
             }
-
             state.type = _type;
             state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_2"
+    // $ANTLR end "KEYWORD_34"
 
     // $ANTLR start "KEYWORD_3"
     public final void mKEYWORD_3() throws RecognitionException {
         try {
             int _type = KEYWORD_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:87:11: ( '&' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:87:13: '&'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:84:11: ( '$' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:84:13: '$'
             {
-            match('&'); if (state.failed) return ;
+            match('$'); if (state.failed) return ;
 
             }
 
@@ -1652,10 +1750,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:89:11: ( '(' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:89:13: '('
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:86:11: ( '%' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:86:13: '%'
             {
-            match('('); if (state.failed) return ;
+            match('%'); if (state.failed) return ;
 
             }
 
@@ -1672,10 +1770,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_5;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:91:11: ( ')' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:91:13: ')'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:88:11: ( '&' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:88:13: '&'
             {
-            match(')'); if (state.failed) return ;
+            match('&'); if (state.failed) return ;
 
             }
 
@@ -1692,10 +1790,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_6;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:93:11: ( '*' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:93:13: '*'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:90:11: ( '(' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:90:13: '('
             {
-            match('*'); if (state.failed) return ;
+            match('('); if (state.failed) return ;
 
             }
 
@@ -1712,10 +1810,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_7;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:95:11: ( '+' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:95:13: '+'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:92:11: ( ')' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:92:13: ')'
             {
-            match('+'); if (state.failed) return ;
+            match(')'); if (state.failed) return ;
 
             }
 
@@ -1732,10 +1830,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_8;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:97:11: ( ',' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:97:13: ','
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:94:11: ( '*' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:94:13: '*'
             {
-            match(','); if (state.failed) return ;
+            match('*'); if (state.failed) return ;
 
             }
 
@@ -1752,10 +1850,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:99:11: ( '-' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:99:13: '-'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:96:11: ( '+' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:96:13: '+'
             {
-            match('-'); if (state.failed) return ;
+            match('+'); if (state.failed) return ;
 
             }
 
@@ -1772,10 +1870,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:101:12: ( '.' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:101:14: '.'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:98:12: ( ',' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:98:14: ','
             {
-            match('.'); if (state.failed) return ;
+            match(','); if (state.failed) return ;
 
             }
 
@@ -1792,10 +1890,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:103:12: ( '/' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:103:14: '/'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:100:12: ( '-' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:100:14: '-'
             {
-            match('/'); if (state.failed) return ;
+            match('-'); if (state.failed) return ;
 
             }
 
@@ -1812,10 +1910,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:105:12: ( ':' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:105:14: ':'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:102:12: ( '.' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:102:14: '.'
             {
-            match(':'); if (state.failed) return ;
+            match('.'); if (state.failed) return ;
 
             }
 
@@ -1832,10 +1930,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:107:12: ( ';' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:107:14: ';'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:104:12: ( '/' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:104:14: '/'
             {
-            match(';'); if (state.failed) return ;
+            match('/'); if (state.failed) return ;
 
             }
 
@@ -1852,10 +1950,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:109:12: ( '<' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:109:14: '<'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:106:12: ( ':' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:106:14: ':'
             {
-            match('<'); if (state.failed) return ;
+            match(':'); if (state.failed) return ;
 
             }
 
@@ -1872,10 +1970,50 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:111:12: ( '=' | '\\u5467' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:108:12: ( ';' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:108:14: ';'
+            {
+            match(';'); if (state.failed) return ;
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_15"
+
+    // $ANTLR start "KEYWORD_16"
+    public final void mKEYWORD_16() throws RecognitionException {
+        try {
+            int _type = KEYWORD_16;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:110:12: ( '<' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:110:14: '<'
+            {
+            match('<'); if (state.failed) return ;
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_16"
+
+    // $ANTLR start "KEYWORD_17"
+    public final void mKEYWORD_17() throws RecognitionException {
+        try {
+            int _type = KEYWORD_17;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:112:12: ( '=' | '\\u1234' )
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:
             {
-            if ( input.LA(1)=='='||input.LA(1)=='\u5467' ) {
+            if ( input.LA(1)=='='||input.LA(1)=='\u1234' ) {
                 input.consume();
             state.failed=false;
             }
@@ -1894,46 +2032,6 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_15"
-
-    // $ANTLR start "KEYWORD_16"
-    public final void mKEYWORD_16() throws RecognitionException {
-        try {
-            int _type = KEYWORD_16;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:113:12: ( '>' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:113:14: '>'
-            {
-            match('>'); if (state.failed) return ;
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "KEYWORD_16"
-
-    // $ANTLR start "KEYWORD_17"
-    public final void mKEYWORD_17() throws RecognitionException {
-        try {
-            int _type = KEYWORD_17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:115:12: ( '?' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:115:14: '?'
-            {
-            match('?'); if (state.failed) return ;
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
     // $ANTLR end "KEYWORD_17"
 
     // $ANTLR start "KEYWORD_18"
@@ -1941,10 +2039,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:117:12: ( '@' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:117:14: '@'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:114:12: ( '>' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:114:14: '>'
             {
-            match('@'); if (state.failed) return ;
+            match('>'); if (state.failed) return ;
 
             }
 
@@ -1961,10 +2059,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:119:12: ( '_' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:119:14: '_'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:116:12: ( '?' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:116:14: '?'
             {
-            match('_'); if (state.failed) return ;
+            match('?'); if (state.failed) return ;
 
             }
 
@@ -1981,10 +2079,10 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:121:12: ( '|' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:121:14: '|'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:118:12: ( '@' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:118:14: '@'
             {
-            match('|'); if (state.failed) return ;
+            match('@'); if (state.failed) return ;
 
             }
 
@@ -2001,8 +2099,48 @@ public class CustomRQLLexer extends Lexer {
         try {
             int _type = KEYWORD_21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:123:12: ( '~' )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:123:14: '~'
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:120:12: ( '_' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:120:14: '_'
+            {
+            match('_'); if (state.failed) return ;
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_21"
+
+    // $ANTLR start "KEYWORD_22"
+    public final void mKEYWORD_22() throws RecognitionException {
+        try {
+            int _type = KEYWORD_22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:122:12: ( '|' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:122:14: '|'
+            {
+            match('|'); if (state.failed) return ;
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "KEYWORD_22"
+
+    // $ANTLR start "KEYWORD_23"
+    public final void mKEYWORD_23() throws RecognitionException {
+        try {
+            int _type = KEYWORD_23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:124:12: ( '~' )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:124:14: '~'
             {
             match('~'); if (state.failed) return ;
 
@@ -2014,7 +2152,7 @@ public class CustomRQLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "KEYWORD_21"
+    // $ANTLR end "KEYWORD_23"
 
     // $ANTLR start "RULE_DIGIT"
     public final void mRULE_DIGIT() throws RecognitionException {
@@ -2124,77 +2262,77 @@ public class CustomRQLLexer extends Lexer {
     // $ANTLR end "RULE_WSP"
 
     public void mTokens() throws RecognitionException {
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:8: ( KEYWORD_53 | KEYWORD_52 | KEYWORD_50 | KEYWORD_51 | KEYWORD_46 | KEYWORD_47 | KEYWORD_48 | KEYWORD_36 | KEYWORD_37 | KEYWORD_38 | KEYWORD_39 | KEYWORD_40 | KEYWORD_41 | KEYWORD_42 | KEYWORD_43 | KEYWORD_44 | KEYWORD_45 | KEYWORD_33 | KEYWORD_34 | KEYWORD_35 | KEYWORD_22 | KEYWORD_23 | KEYWORD_24 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_49 | KEYWORD_29 | KEYWORD_30 | KEYWORD_31 | KEYWORD_32 | KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP )
-        int alt26=57;
-        alt26 = dfa26.predict(input);
-        switch (alt26) {
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:8: ( KEYWORD_55 | KEYWORD_54 | KEYWORD_52 | KEYWORD_53 | KEYWORD_48 | KEYWORD_49 | KEYWORD_50 | KEYWORD_41 | KEYWORD_42 | KEYWORD_51 | KEYWORD_39 | KEYWORD_40 | KEYWORD_38 | KEYWORD_43 | KEYWORD_45 | KEYWORD_46 | KEYWORD_47 | KEYWORD_35 | KEYWORD_36 | KEYWORD_37 | KEYWORD_24 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_29 | KEYWORD_30 | KEYWORD_44 | KEYWORD_31 | KEYWORD_32 | KEYWORD_33 | KEYWORD_34 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | KEYWORD_22 | KEYWORD_23 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP )
+        int alt30=57;
+        alt30 = dfa30.predict(input);
+        switch (alt30) {
             case 1 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:10: KEYWORD_53
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:10: KEYWORD_55
                 {
-                mKEYWORD_53(); if (state.failed) return ;
+                mKEYWORD_55(); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:21: KEYWORD_52
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:21: KEYWORD_54
+                {
+                mKEYWORD_54(); if (state.failed) return ;
+
+                }
+                break;
+            case 3 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:32: KEYWORD_52
                 {
                 mKEYWORD_52(); if (state.failed) return ;
 
                 }
                 break;
-            case 3 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:32: KEYWORD_50
-                {
-                mKEYWORD_50(); if (state.failed) return ;
-
-                }
-                break;
             case 4 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:43: KEYWORD_51
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:43: KEYWORD_53
                 {
-                mKEYWORD_51(); if (state.failed) return ;
+                mKEYWORD_53(); if (state.failed) return ;
 
                 }
                 break;
             case 5 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:54: KEYWORD_46
-                {
-                mKEYWORD_46(); if (state.failed) return ;
-
-                }
-                break;
-            case 6 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:65: KEYWORD_47
-                {
-                mKEYWORD_47(); if (state.failed) return ;
-
-                }
-                break;
-            case 7 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:76: KEYWORD_48
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:54: KEYWORD_48
                 {
                 mKEYWORD_48(); if (state.failed) return ;
 
                 }
                 break;
-            case 8 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:87: KEYWORD_36
+            case 6 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:65: KEYWORD_49
                 {
-                mKEYWORD_36(); if (state.failed) return ;
+                mKEYWORD_49(); if (state.failed) return ;
+
+                }
+                break;
+            case 7 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:76: KEYWORD_50
+                {
+                mKEYWORD_50(); if (state.failed) return ;
+
+                }
+                break;
+            case 8 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:87: KEYWORD_41
+                {
+                mKEYWORD_41(); if (state.failed) return ;
 
                 }
                 break;
             case 9 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:98: KEYWORD_37
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:98: KEYWORD_42
                 {
-                mKEYWORD_37(); if (state.failed) return ;
+                mKEYWORD_42(); if (state.failed) return ;
 
                 }
                 break;
             case 10 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:109: KEYWORD_38
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:109: KEYWORD_51
                 {
-                mKEYWORD_38(); if (state.failed) return ;
+                mKEYWORD_51(); if (state.failed) return ;
 
                 }
                 break;
@@ -2213,315 +2351,315 @@ public class CustomRQLLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:142: KEYWORD_41
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:142: KEYWORD_38
                 {
-                mKEYWORD_41(); if (state.failed) return ;
+                mKEYWORD_38(); if (state.failed) return ;
 
                 }
                 break;
             case 14 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:153: KEYWORD_42
-                {
-                mKEYWORD_42(); if (state.failed) return ;
-
-                }
-                break;
-            case 15 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:164: KEYWORD_43
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:153: KEYWORD_43
                 {
                 mKEYWORD_43(); if (state.failed) return ;
 
                 }
                 break;
-            case 16 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:175: KEYWORD_44
-                {
-                mKEYWORD_44(); if (state.failed) return ;
-
-                }
-                break;
-            case 17 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:186: KEYWORD_45
+            case 15 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:164: KEYWORD_45
                 {
                 mKEYWORD_45(); if (state.failed) return ;
 
                 }
                 break;
+            case 16 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:175: KEYWORD_46
+                {
+                mKEYWORD_46(); if (state.failed) return ;
+
+                }
+                break;
+            case 17 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:186: KEYWORD_47
+                {
+                mKEYWORD_47(); if (state.failed) return ;
+
+                }
+                break;
             case 18 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:197: KEYWORD_33
-                {
-                mKEYWORD_33(); if (state.failed) return ;
-
-                }
-                break;
-            case 19 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:208: KEYWORD_34
-                {
-                mKEYWORD_34(); if (state.failed) return ;
-
-                }
-                break;
-            case 20 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:219: KEYWORD_35
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:197: KEYWORD_35
                 {
                 mKEYWORD_35(); if (state.failed) return ;
 
                 }
                 break;
+            case 19 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:208: KEYWORD_36
+                {
+                mKEYWORD_36(); if (state.failed) return ;
+
+                }
+                break;
+            case 20 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:219: KEYWORD_37
+                {
+                mKEYWORD_37(); if (state.failed) return ;
+
+                }
+                break;
             case 21 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:230: KEYWORD_22
-                {
-                mKEYWORD_22(); if (state.failed) return ;
-
-                }
-                break;
-            case 22 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:241: KEYWORD_23
-                {
-                mKEYWORD_23(); if (state.failed) return ;
-
-                }
-                break;
-            case 23 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:252: KEYWORD_24
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:230: KEYWORD_24
                 {
                 mKEYWORD_24(); if (state.failed) return ;
 
                 }
                 break;
-            case 24 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:263: KEYWORD_25
+            case 22 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:241: KEYWORD_25
                 {
                 mKEYWORD_25(); if (state.failed) return ;
 
                 }
                 break;
-            case 25 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:274: KEYWORD_26
+            case 23 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:252: KEYWORD_26
                 {
                 mKEYWORD_26(); if (state.failed) return ;
 
                 }
                 break;
-            case 26 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:285: KEYWORD_27
+            case 24 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:263: KEYWORD_27
                 {
                 mKEYWORD_27(); if (state.failed) return ;
 
                 }
                 break;
-            case 27 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:296: KEYWORD_28
+            case 25 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:274: KEYWORD_28
                 {
                 mKEYWORD_28(); if (state.failed) return ;
 
                 }
                 break;
-            case 28 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:307: KEYWORD_49
-                {
-                mKEYWORD_49(); if (state.failed) return ;
-
-                }
-                break;
-            case 29 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:318: KEYWORD_29
+            case 26 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:285: KEYWORD_29
                 {
                 mKEYWORD_29(); if (state.failed) return ;
 
                 }
                 break;
-            case 30 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:329: KEYWORD_30
+            case 27 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:296: KEYWORD_30
                 {
                 mKEYWORD_30(); if (state.failed) return ;
 
                 }
                 break;
-            case 31 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:340: KEYWORD_31
+            case 28 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:307: KEYWORD_44
+                {
+                mKEYWORD_44(); if (state.failed) return ;
+
+                }
+                break;
+            case 29 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:318: KEYWORD_31
                 {
                 mKEYWORD_31(); if (state.failed) return ;
 
                 }
                 break;
-            case 32 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:351: KEYWORD_32
+            case 30 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:329: KEYWORD_32
                 {
                 mKEYWORD_32(); if (state.failed) return ;
 
                 }
                 break;
+            case 31 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:340: KEYWORD_33
+                {
+                mKEYWORD_33(); if (state.failed) return ;
+
+                }
+                break;
+            case 32 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:351: KEYWORD_34
+                {
+                mKEYWORD_34(); if (state.failed) return ;
+
+                }
+                break;
             case 33 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:362: KEYWORD_1
-                {
-                mKEYWORD_1(); if (state.failed) return ;
-
-                }
-                break;
-            case 34 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:372: KEYWORD_2
-                {
-                mKEYWORD_2(); if (state.failed) return ;
-
-                }
-                break;
-            case 35 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:382: KEYWORD_3
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:362: KEYWORD_3
                 {
                 mKEYWORD_3(); if (state.failed) return ;
 
                 }
                 break;
-            case 36 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:392: KEYWORD_4
+            case 34 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:372: KEYWORD_4
                 {
                 mKEYWORD_4(); if (state.failed) return ;
 
                 }
                 break;
-            case 37 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:402: KEYWORD_5
+            case 35 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:382: KEYWORD_5
                 {
                 mKEYWORD_5(); if (state.failed) return ;
 
                 }
                 break;
-            case 38 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:412: KEYWORD_6
+            case 36 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:392: KEYWORD_6
                 {
                 mKEYWORD_6(); if (state.failed) return ;
 
                 }
                 break;
-            case 39 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:422: KEYWORD_7
+            case 37 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:402: KEYWORD_7
                 {
                 mKEYWORD_7(); if (state.failed) return ;
 
                 }
                 break;
-            case 40 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:432: KEYWORD_8
+            case 38 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:412: KEYWORD_8
                 {
                 mKEYWORD_8(); if (state.failed) return ;
 
                 }
                 break;
-            case 41 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:442: KEYWORD_9
+            case 39 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:422: KEYWORD_9
                 {
                 mKEYWORD_9(); if (state.failed) return ;
 
                 }
                 break;
-            case 42 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:452: KEYWORD_10
+            case 40 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:432: KEYWORD_10
                 {
                 mKEYWORD_10(); if (state.failed) return ;
 
                 }
                 break;
-            case 43 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:463: KEYWORD_11
+            case 41 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:443: KEYWORD_11
                 {
                 mKEYWORD_11(); if (state.failed) return ;
 
                 }
                 break;
-            case 44 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:474: KEYWORD_12
+            case 42 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:454: KEYWORD_12
                 {
                 mKEYWORD_12(); if (state.failed) return ;
 
                 }
                 break;
-            case 45 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:485: KEYWORD_13
+            case 43 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:465: KEYWORD_13
                 {
                 mKEYWORD_13(); if (state.failed) return ;
 
                 }
                 break;
-            case 46 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:496: KEYWORD_14
+            case 44 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:476: KEYWORD_14
                 {
                 mKEYWORD_14(); if (state.failed) return ;
 
                 }
                 break;
-            case 47 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:507: KEYWORD_15
+            case 45 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:487: KEYWORD_15
                 {
                 mKEYWORD_15(); if (state.failed) return ;
 
                 }
                 break;
-            case 48 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:518: KEYWORD_16
+            case 46 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:498: KEYWORD_16
                 {
                 mKEYWORD_16(); if (state.failed) return ;
 
                 }
                 break;
-            case 49 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:529: KEYWORD_17
+            case 47 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:509: KEYWORD_17
                 {
                 mKEYWORD_17(); if (state.failed) return ;
 
                 }
                 break;
-            case 50 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:540: KEYWORD_18
+            case 48 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:520: KEYWORD_18
                 {
                 mKEYWORD_18(); if (state.failed) return ;
 
                 }
                 break;
-            case 51 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:551: KEYWORD_19
+            case 49 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:531: KEYWORD_19
                 {
                 mKEYWORD_19(); if (state.failed) return ;
 
                 }
                 break;
-            case 52 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:562: KEYWORD_20
+            case 50 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:542: KEYWORD_20
                 {
                 mKEYWORD_20(); if (state.failed) return ;
 
                 }
                 break;
-            case 53 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:573: KEYWORD_21
+            case 51 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:553: KEYWORD_21
                 {
                 mKEYWORD_21(); if (state.failed) return ;
 
                 }
                 break;
+            case 52 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:564: KEYWORD_22
+                {
+                mKEYWORD_22(); if (state.failed) return ;
+
+                }
+                break;
+            case 53 :
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:575: KEYWORD_23
+                {
+                mKEYWORD_23(); if (state.failed) return ;
+
+                }
+                break;
             case 54 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:584: RULE_DIGIT
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:586: RULE_DIGIT
                 {
                 mRULE_DIGIT(); if (state.failed) return ;
 
                 }
                 break;
             case 55 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:595: RULE_XDIGIT
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:597: RULE_XDIGIT
                 {
                 mRULE_XDIGIT(); if (state.failed) return ;
 
                 }
                 break;
             case 56 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:607: RULE_ALPHA
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:609: RULE_ALPHA
                 {
                 mRULE_ALPHA(); if (state.failed) return ;
 
                 }
                 break;
             case 57 :
-                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:618: RULE_WSP
+                // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:1:620: RULE_WSP
                 {
                 mRULE_WSP(); if (state.failed) return ;
 
@@ -2695,8 +2833,8 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred15_CustomRQLLexer
     public final void synpred15_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:19: ( 'le=' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:20: 'le='
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:19: ( 'le=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:20: 'le='
         {
         match("le="); if (state.failed) return ;
 
@@ -2707,8 +2845,8 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred16_CustomRQLLexer
     public final void synpred16_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:37: ( 'like=' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:38: 'like='
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:37: ( 'like=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:38: 'like='
         {
         match("like="); if (state.failed) return ;
 
@@ -2719,8 +2857,8 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred17_CustomRQLLexer
     public final void synpred17_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:82: ( 'lt=' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:39:83: 'lt='
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:82: ( 'lt=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:33:83: 'lt='
         {
         match("lt="); if (state.failed) return ;
 
@@ -2731,10 +2869,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred18_CustomRQLLexer
     public final void synpred18_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:15: ( 'null(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:16: 'null('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:1: ( 'gt=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:2: 'gt='
         {
-        match("null("); if (state.failed) return ;
+        match("gt="); if (state.failed) return ;
 
 
         }
@@ -2743,10 +2881,11 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred19_CustomRQLLexer
     public final void synpred19_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:35: ( 'n' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:47:36: 'n'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:41: ( 'ge=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:42: 'ge='
         {
-        match('n'); if (state.failed) return ;
+        match("ge="); if (state.failed) return ;
+
 
         }
     }
@@ -2754,10 +2893,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred20_CustomRQLLexer
     public final void synpred20_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:15: ( 'sort(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:16: 'sort('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:81: ( 'eq=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:82: 'eq='
         {
-        match("sort("); if (state.failed) return ;
+        match("eq="); if (state.failed) return ;
 
 
         }
@@ -2766,10 +2905,11 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred21_CustomRQLLexer
     public final void synpred21_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:35: ( 's' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:49:36: 's'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:121: ( 'ne=' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:34:122: 'ne='
         {
-        match('s'); if (state.failed) return ;
+        match("ne="); if (state.failed) return ;
+
 
         }
     }
@@ -2777,10 +2917,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred22_CustomRQLLexer
     public final void synpred22_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:15: ( 'true(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:16: 'true('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:15: ( 'null(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:16: 'null('
         {
-        match("true("); if (state.failed) return ;
+        match("null("); if (state.failed) return ;
 
 
         }
@@ -2789,10 +2929,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred23_CustomRQLLexer
     public final void synpred23_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:35: ( 't' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:51:36: 't'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:35: ( 'n' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:48:36: 'n'
         {
-        match('t'); if (state.failed) return ;
+        match('n'); if (state.failed) return ;
 
         }
     }
@@ -2800,10 +2940,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred24_CustomRQLLexer
     public final void synpred24_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:14: ( 'and(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:15: 'and('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:15: ( 'sort(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:16: 'sort('
         {
-        match("and("); if (state.failed) return ;
+        match("sort("); if (state.failed) return ;
 
 
         }
@@ -2812,10 +2952,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred25_CustomRQLLexer
     public final void synpred25_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:32: ( 'a' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:53:33: 'a'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:35: ( 's' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:50:36: 's'
         {
-        match('a'); if (state.failed) return ;
+        match('s'); if (state.failed) return ;
 
         }
     }
@@ -2823,10 +2963,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred26_CustomRQLLexer
     public final void synpred26_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:14: ( 'not(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:15: 'not('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:15: ( 'true(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:16: 'true('
         {
-        match("not("); if (state.failed) return ;
+        match("true("); if (state.failed) return ;
 
 
         }
@@ -2835,10 +2975,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred27_CustomRQLLexer
     public final void synpred27_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:32: ( 'n' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:55:33: 'n'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:35: ( 't' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:52:36: 't'
         {
-        match('n'); if (state.failed) return ;
+        match('t'); if (state.failed) return ;
 
         }
     }
@@ -2846,10 +2986,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred28_CustomRQLLexer
     public final void synpred28_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:15: ( 'out(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:16: 'out('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:14: ( 'and(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:15: 'and('
         {
-        match("out("); if (state.failed) return ;
+        match("and("); if (state.failed) return ;
 
 
         }
@@ -2858,10 +2998,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred29_CustomRQLLexer
     public final void synpred29_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:33: ( 'o' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:57:34: 'o'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:32: ( 'a' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:54:33: 'a'
         {
-        match('o'); if (state.failed) return ;
+        match('a'); if (state.failed) return ;
 
         }
     }
@@ -2869,10 +3009,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred30_CustomRQLLexer
     public final void synpred30_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:15: ( 'eq(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:16: 'eq('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:14: ( 'not(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:15: 'not('
         {
-        match("eq("); if (state.failed) return ;
+        match("not("); if (state.failed) return ;
 
 
         }
@@ -2881,10 +3021,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred31_CustomRQLLexer
     public final void synpred31_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:31: ( 'e' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:65:32: 'e'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:32: ( 'n' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:56:33: 'n'
         {
-        match('e'); if (state.failed) return ;
+        match('n'); if (state.failed) return ;
 
         }
     }
@@ -2892,10 +3032,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred32_CustomRQLLexer
     public final void synpred32_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:15: ( 'ge(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:16: 'ge('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:15: ( 'out(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:16: 'out('
         {
-        match("ge("); if (state.failed) return ;
+        match("out("); if (state.failed) return ;
 
 
         }
@@ -2904,10 +3044,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred33_CustomRQLLexer
     public final void synpred33_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:31: ( 'g' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:67:32: 'g'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:33: ( 'o' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:58:34: 'o'
         {
-        match('g'); if (state.failed) return ;
+        match('o'); if (state.failed) return ;
 
         }
     }
@@ -2915,10 +3055,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred34_CustomRQLLexer
     public final void synpred34_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:15: ( 'gt(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:16: 'gt('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:15: ( 'eq(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:16: 'eq('
         {
-        match("gt("); if (state.failed) return ;
+        match("eq("); if (state.failed) return ;
 
 
         }
@@ -2927,10 +3067,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred35_CustomRQLLexer
     public final void synpred35_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:31: ( 'g' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:69:32: 'g'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:31: ( 'e' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:66:32: 'e'
         {
-        match('g'); if (state.failed) return ;
+        match('e'); if (state.failed) return ;
 
         }
     }
@@ -2938,10 +3078,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred36_CustomRQLLexer
     public final void synpred36_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:15: ( 'in(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:16: 'in('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:15: ( 'ge(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:16: 'ge('
         {
-        match("in("); if (state.failed) return ;
+        match("ge("); if (state.failed) return ;
 
 
         }
@@ -2950,10 +3090,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred37_CustomRQLLexer
     public final void synpred37_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:31: ( 'i' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:71:32: 'i'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:31: ( 'g' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:68:32: 'g'
         {
-        match('i'); if (state.failed) return ;
+        match('g'); if (state.failed) return ;
 
         }
     }
@@ -2961,10 +3101,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred38_CustomRQLLexer
     public final void synpred38_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:14: ( 'like(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:15: 'like('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:15: ( 'gt(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:16: 'gt('
         {
-        match("like("); if (state.failed) return ;
+        match("gt("); if (state.failed) return ;
 
 
         }
@@ -2973,10 +3113,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred39_CustomRQLLexer
     public final void synpred39_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:34: ( 'l' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:73:35: 'l'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:31: ( 'g' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:70:32: 'g'
         {
-        match('l'); if (state.failed) return ;
+        match('g'); if (state.failed) return ;
 
         }
     }
@@ -2984,10 +3124,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred40_CustomRQLLexer
     public final void synpred40_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:15: ( 'le(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:16: 'le('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:15: ( 'in(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:16: 'in('
         {
-        match("le("); if (state.failed) return ;
+        match("in("); if (state.failed) return ;
 
 
         }
@@ -2996,10 +3136,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred41_CustomRQLLexer
     public final void synpred41_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:31: ( 'l' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:75:32: 'l'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:31: ( 'i' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:72:32: 'i'
         {
-        match('l'); if (state.failed) return ;
+        match('i'); if (state.failed) return ;
 
         }
     }
@@ -3007,10 +3147,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred42_CustomRQLLexer
     public final void synpred42_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:15: ( 'lt(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:16: 'lt('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:14: ( 'like(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:15: 'like('
         {
-        match("lt("); if (state.failed) return ;
+        match("like("); if (state.failed) return ;
 
 
         }
@@ -3019,8 +3159,8 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred43_CustomRQLLexer
     public final void synpred43_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:31: ( 'l' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:77:32: 'l'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:34: ( 'l' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:74:35: 'l'
         {
         match('l'); if (state.failed) return ;
 
@@ -3030,10 +3170,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred44_CustomRQLLexer
     public final void synpred44_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:15: ( 'ne(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:16: 'ne('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:15: ( 'le(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:16: 'le('
         {
-        match("ne("); if (state.failed) return ;
+        match("le("); if (state.failed) return ;
 
 
         }
@@ -3042,10 +3182,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred45_CustomRQLLexer
     public final void synpred45_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:31: ( 'n' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:79:32: 'n'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:31: ( 'l' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:76:32: 'l'
         {
-        match('n'); if (state.failed) return ;
+        match('l'); if (state.failed) return ;
 
         }
     }
@@ -3053,10 +3193,10 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred46_CustomRQLLexer
     public final void synpred46_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:14: ( 'or(' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:15: 'or('
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:15: ( 'lt(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:16: 'lt('
         {
-        match("or("); if (state.failed) return ;
+        match("lt("); if (state.failed) return ;
 
 
         }
@@ -3065,20 +3205,66 @@ public class CustomRQLLexer extends Lexer {
 
     // $ANTLR start synpred47_CustomRQLLexer
     public final void synpred47_CustomRQLLexer_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:30: ( 'o' )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:81:31: 'o'
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:31: ( 'l' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:78:32: 'l'
         {
-        match('o'); if (state.failed) return ;
+        match('l'); if (state.failed) return ;
 
         }
     }
     // $ANTLR end synpred47_CustomRQLLexer
 
-    public final boolean synpred30_CustomRQLLexer() {
+    // $ANTLR start synpred48_CustomRQLLexer
+    public final void synpred48_CustomRQLLexer_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:15: ( 'ne(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:16: 'ne('
+        {
+        match("ne("); if (state.failed) return ;
+
+
+        }
+    }
+    // $ANTLR end synpred48_CustomRQLLexer
+
+    // $ANTLR start synpred49_CustomRQLLexer
+    public final void synpred49_CustomRQLLexer_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:31: ( 'n' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:80:32: 'n'
+        {
+        match('n'); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred49_CustomRQLLexer
+
+    // $ANTLR start synpred50_CustomRQLLexer
+    public final void synpred50_CustomRQLLexer_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:14: ( 'or(' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:15: 'or('
+        {
+        match("or("); if (state.failed) return ;
+
+
+        }
+    }
+    // $ANTLR end synpred50_CustomRQLLexer
+
+    // $ANTLR start synpred51_CustomRQLLexer
+    public final void synpred51_CustomRQLLexer_fragment() throws RecognitionException {   
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:30: ( 'o' )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src/com/parallels/aps/ide/rqleditor/xtext/rql/lexer/CustomRQLLexer.g:82:31: 'o'
+        {
+        match('o'); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred51_CustomRQLLexer
+
+    public final boolean synpred48_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred30_CustomRQLLexer_fragment(); // can never throw exception
+            synpred48_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3130,81 +3316,11 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred35_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred35_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred19_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred19_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred26_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred26_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred39_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
         try {
             synpred39_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred9_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred9_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred7_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred7_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3242,48 +3358,6 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred2_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred2_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred17_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred17_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred47_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred47_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred34_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
@@ -3298,11 +3372,11 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred21_CustomRQLLexer() {
+    public final boolean synpred50_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred21_CustomRQLLexer_fragment(); // can never throw exception
+            synpred50_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3317,34 +3391,6 @@ public class CustomRQLLexer extends Lexer {
         int start = input.mark();
         try {
             synpred20_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred33_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred33_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred38_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred38_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3382,34 +3428,6 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred12_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred12_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred42_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred42_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred6_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
@@ -3438,67 +3456,11 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred11_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred11_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred16_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
         try {
             synpred16_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred24_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred24_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred1_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred1_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred37_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred37_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3564,20 +3526,6 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred41_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred41_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred28_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
@@ -3592,81 +3540,11 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred23_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred23_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred10_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred10_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
     public final boolean synpred31_CustomRQLLexer() {
         state.backtracking++;
         int start = input.mark();
         try {
             synpred31_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred36_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred36_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred40_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred40_CustomRQLLexer_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred18_CustomRQLLexer() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred18_CustomRQLLexer_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3732,55 +3610,549 @@ public class CustomRQLLexer extends Lexer {
         state.failed=false;
         return success;
     }
+    public final boolean synpred30_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred30_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred51_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred51_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred35_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred35_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred19_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred19_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred26_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred26_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred9_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred9_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred7_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred7_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred2_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred2_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred17_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred17_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred47_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred47_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred21_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred21_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred33_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred33_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred38_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred38_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred12_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred12_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred42_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred42_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred11_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred11_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred24_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred24_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred1_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred1_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred37_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred37_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred41_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred41_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred23_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred23_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred10_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred10_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred49_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred49_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred36_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred36_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred40_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred40_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred18_CustomRQLLexer() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred18_CustomRQLLexer_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
 
 
-    protected DFA26 dfa26 = new DFA26(this);
-    static final String DFA26_eotS =
-        "\1\uffff\1\51\1\uffff\1\55\1\57\1\uffff\1\65\1\72\2\uffff\1\73"+
-        "\2\uffff\1\100\1\uffff\1\103\1\105\1\106\101\uffff";
-    static final String DFA26_eofS =
-        "\123\uffff";
-    static final String DFA26_minS =
-        "\1\11\1\156\1\uffff\1\157\1\161\1\uffff\2\145\2\uffff\1\145\2\uffff"+
-        "\1\162\1\uffff\2\75\1\164\40\uffff\1\153\4\uffff\2\145\24\uffff"+
-        "\1\75\1\153\1\uffff\1\145\1\75\1\uffff";
-    static final String DFA26_maxS =
-        "\1\ua733\1\163\1\uffff\1\157\1\161\1\uffff\1\164\1\156\2\uffff"+
-        "\1\157\2\uffff\1\162\1\uffff\2\75\1\164\40\uffff\1\155\4\uffff\2"+
-        "\164\24\uffff\1\75\1\153\1\uffff\1\145\1\75\1\uffff";
-    static final String DFA26_acceptS =
-        "\2\uffff\1\2\2\uffff\1\6\2\uffff\1\14\1\16\1\uffff\1\21\1\22\1"+
-        "\uffff\1\25\3\uffff\1\41\1\42\1\43\1\44\1\45\1\46\1\47\1\50\1\51"+
-        "\1\52\1\53\1\54\1\55\1\57\1\61\1\62\1\63\1\64\1\65\1\66\1\67\1\70"+
-        "\1\71\1\1\1\3\1\33\1\2\1\4\1\20\1\5\1\30\1\6\1\uffff\1\35\1\36\1"+
-        "\7\1\10\2\uffff\1\15\1\13\1\17\1\23\1\37\1\21\1\22\1\24\1\40\1\26"+
-        "\1\56\1\27\1\60\1\31\1\32\1\66\1\67\1\34\1\11\1\12\2\uffff\1\13"+
-        "\2\uffff\1\13";
-    static final String DFA26_specialS =
-        "\123\uffff}>";
-    static final String[] DFA26_transitionS = {
-            "\1\50\26\uffff\1\50\1\16\2\uffff\1\22\1\23\1\24\1\uffff\1\25"+
-            "\1\26\1\27\1\30\1\31\1\32\1\33\1\34\12\45\1\35\1\36\1\17\1\7"+
-            "\1\20\1\40\1\41\6\46\24\47\4\uffff\1\42\1\uffff\1\14\1\47\1"+
-            "\2\1\47\1\4\1\5\1\21\1\47\1\1\2\47\1\6\1\47\1\12\1\15\3\47\1"+
-            "\3\1\13\6\47\1\uffff\1\43\1\uffff\1\44\u02a9\uffff\1\10\u513e"+
-            "\uffff\1\37\u52cb\uffff\1\11",
-            "\1\53\4\uffff\1\52",
-            "",
-            "\1\56",
-            "\1\60",
-            "",
-            "\1\63\3\uffff\1\62\12\uffff\1\64",
-            "\1\66\1\uffff\1\67\4\uffff\1\70\1\uffff\1\71",
+    protected DFA8 dfa8 = new DFA8(this);
+    protected DFA30 dfa30 = new DFA30(this);
+    static final String DFA8_eotS =
+        "\1\5\12\uffff";
+    static final String DFA8_eofS =
+        "\13\uffff";
+    static final String DFA8_minS =
+        "\3\145\10\uffff";
+    static final String DFA8_maxS =
+        "\1\156\2\164\10\uffff";
+    static final String DFA8_acceptS =
+        "\3\uffff\1\6\1\7\1\10\1\1\1\2\1\3\1\4\1\5";
+    static final String DFA8_specialS =
+        "\1\0\1\1\1\2\10\uffff}>";
+    static final String[] DFA8_transitionS = {
+            "\1\3\1\uffff\1\2\4\uffff\1\1\1\uffff\1\4",
+            "\1\6\3\uffff\1\7\12\uffff\1\10",
+            "\1\12\16\uffff\1\11",
             "",
             "",
-            "\1\75\11\uffff\1\74",
             "",
             "",
-            "\1\101",
             "",
-            "\1\102",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA8_eot = DFA.unpackEncodedString(DFA8_eotS);
+    static final short[] DFA8_eof = DFA.unpackEncodedString(DFA8_eofS);
+    static final char[] DFA8_min = DFA.unpackEncodedStringToUnsignedChars(DFA8_minS);
+    static final char[] DFA8_max = DFA.unpackEncodedStringToUnsignedChars(DFA8_maxS);
+    static final short[] DFA8_accept = DFA.unpackEncodedString(DFA8_acceptS);
+    static final short[] DFA8_special = DFA.unpackEncodedString(DFA8_specialS);
+    static final short[][] DFA8_transition;
+
+    static {
+        int numStates = DFA8_transitionS.length;
+        DFA8_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA8_transition[i] = DFA.unpackEncodedString(DFA8_transitionS[i]);
+        }
+    }
+
+    class DFA8 extends DFA {
+
+        public DFA8(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 8;
+            this.eot = DFA8_eot;
+            this.eof = DFA8_eof;
+            this.min = DFA8_min;
+            this.max = DFA8_max;
+            this.accept = DFA8_accept;
+            this.special = DFA8_special;
+            this.transition = DFA8_transition;
+        }
+        public String getDescription() {
+            return "33:18: ( ( 'le=' )=> 'le=' | ( 'like=' )=> 'like=' | ( 'lt=' )=> 'lt=' | ( 'gt=' )=> 'gt=' | ( 'ge=' )=> 'ge=' | ( 'eq=' )=> 'eq=' | ( 'ne=' )=> 'ne=' )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            IntStream input = _input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA8_0 = input.LA(1);
+
+                         
+                        int index8_0 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA8_0=='l') ) {s = 1;}
+
+                        else if ( (LA8_0=='g') ) {s = 2;}
+
+                        else if ( (LA8_0=='e') && (synpred20_CustomRQLLexer())) {s = 3;}
+
+                        else if ( (LA8_0=='n') && (synpred21_CustomRQLLexer())) {s = 4;}
+
+                        else s = 5;
+
+                         
+                        input.seek(index8_0);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA8_1 = input.LA(1);
+
+                         
+                        int index8_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA8_1=='e') && (synpred15_CustomRQLLexer())) {s = 6;}
+
+                        else if ( (LA8_1=='i') && (synpred16_CustomRQLLexer())) {s = 7;}
+
+                        else if ( (LA8_1=='t') && (synpred17_CustomRQLLexer())) {s = 8;}
+
+                         
+                        input.seek(index8_1);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA8_2 = input.LA(1);
+
+                         
+                        int index8_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA8_2=='t') && (synpred18_CustomRQLLexer())) {s = 9;}
+
+                        else if ( (LA8_2=='e') && (synpred19_CustomRQLLexer())) {s = 10;}
+
+                         
+                        input.seek(index8_2);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 8, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA30_eotS =
+        "\1\uffff\1\55\1\uffff\1\61\1\63\1\uffff\1\71\3\uffff\1\75\3\uffff"+
+        "\1\77\3\uffff\1\103\1\uffff\1\106\1\110\36\uffff\1\113\2\uffff\1"+
+        "\115\3\uffff\1\75\1\116\1\uffff\1\117\21\uffff\1\121\1\uffff";
+    static final String DFA30_eofS =
+        "\122\uffff";
+    static final String DFA30_minS =
+        "\1\11\1\156\1\uffff\1\157\1\161\1\uffff\1\145\3\uffff\1\145\3\uffff"+
+        "\1\145\3\uffff\1\162\1\uffff\2\75\36\uffff\1\75\1\uffff\1\153\1"+
+        "\75\3\uffff\2\75\1\uffff\1\75\15\uffff\1\145\3\uffff\1\75\1\uffff";
+    static final String DFA30_maxS =
+        "\1\ua737\1\163\1\uffff\1\157\1\161\1\uffff\1\164\3\uffff\1\164"+
+        "\3\uffff\1\157\3\uffff\1\162\1\uffff\2\75\36\uffff\1\75\1\uffff"+
+        "\1\155\1\75\3\uffff\2\75\1\uffff\1\75\15\uffff\1\145\3\uffff\1\75"+
+        "\1\uffff";
+    static final String DFA30_acceptS =
+        "\2\uffff\1\2\2\uffff\1\6\1\uffff\1\10\1\11\1\12\1\uffff\1\13\1"+
+        "\14\1\15\1\uffff\1\16\1\21\1\22\1\uffff\1\25\2\uffff\1\41\1\42\1"+
+        "\43\1\44\1\45\1\46\1\47\1\50\1\51\1\52\1\53\1\54\1\55\1\57\1\61"+
+        "\1\62\1\63\1\64\1\65\1\66\1\67\1\70\1\71\1\1\1\3\1\33\1\2\1\4\1"+
+        "\20\1\5\1\uffff\1\6\2\uffff\1\35\1\7\1\10\2\uffff\1\31\1\uffff\1"+
+        "\17\1\23\1\21\1\22\1\24\1\40\1\26\1\56\1\27\1\60\1\66\1\67\1\30"+
+        "\1\uffff\1\36\1\32\1\37\1\uffff\1\34";
+    static final String DFA30_specialS =
+        "\122\uffff}>";
+    static final String[] DFA30_transitionS = {
+            "\1\54\26\uffff\1\54\1\23\2\uffff\1\26\1\27\1\30\1\uffff\1\31"+
+            "\1\32\1\33\1\34\1\35\1\36\1\37\1\40\12\51\1\41\1\42\1\24\1\7"+
+            "\1\25\1\44\1\45\6\52\24\53\4\uffff\1\46\1\uffff\1\21\1\53\1"+
+            "\2\1\53\1\4\1\5\1\12\1\53\1\1\2\53\1\6\1\53\1\16\1\22\3\53\1"+
+            "\3\1\20\6\53\1\uffff\1\47\1\uffff\1\50\u02a9\uffff\1\10\u0f0b"+
+            "\uffff\1\43\u94fe\uffff\1\11\1\13\1\14\1\15\1\17",
+            "\1\57\4\uffff\1\56",
+            "",
+            "\1\62",
+            "\1\64",
+            "",
+            "\1\70\3\uffff\1\66\12\uffff\1\67",
+            "",
+            "",
+            "",
+            "\1\73\16\uffff\1\74",
+            "",
+            "",
+            "",
+            "\1\76\11\uffff\1\100",
+            "",
+            "",
+            "",
             "\1\104",
+            "",
+            "\1\105",
             "\1\107",
             "",
             "",
@@ -3812,20 +4184,17 @@ public class CustomRQLLexer extends Lexer {
             "",
             "",
             "",
+            "\1\15",
             "",
-            "",
-            "\1\112\1\uffff\1\65",
-            "",
-            "",
-            "",
-            "",
-            "\1\113\16\uffff\1\114",
-            "\1\72\3\uffff\1\116\12\uffff\1\115",
+            "\1\114\1\uffff\1\71",
+            "\1\10",
             "",
             "",
             "",
+            "\1\13",
+            "\1\14",
             "",
-            "",
+            "\1\17",
             "",
             "",
             "",
@@ -3839,47 +4208,45 @@ public class CustomRQLLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "\1\117",
             "\1\120",
             "",
-            "\1\121",
-            "\1\122",
+            "",
+            "",
+            "\1\11",
             ""
     };
 
-    static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
-    static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
-    static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
-    static final char[] DFA26_max = DFA.unpackEncodedStringToUnsignedChars(DFA26_maxS);
-    static final short[] DFA26_accept = DFA.unpackEncodedString(DFA26_acceptS);
-    static final short[] DFA26_special = DFA.unpackEncodedString(DFA26_specialS);
-    static final short[][] DFA26_transition;
+    static final short[] DFA30_eot = DFA.unpackEncodedString(DFA30_eotS);
+    static final short[] DFA30_eof = DFA.unpackEncodedString(DFA30_eofS);
+    static final char[] DFA30_min = DFA.unpackEncodedStringToUnsignedChars(DFA30_minS);
+    static final char[] DFA30_max = DFA.unpackEncodedStringToUnsignedChars(DFA30_maxS);
+    static final short[] DFA30_accept = DFA.unpackEncodedString(DFA30_acceptS);
+    static final short[] DFA30_special = DFA.unpackEncodedString(DFA30_specialS);
+    static final short[][] DFA30_transition;
 
     static {
-        int numStates = DFA26_transitionS.length;
-        DFA26_transition = new short[numStates][];
+        int numStates = DFA30_transitionS.length;
+        DFA30_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA26_transition[i] = DFA.unpackEncodedString(DFA26_transitionS[i]);
+            DFA30_transition[i] = DFA.unpackEncodedString(DFA30_transitionS[i]);
         }
     }
 
-    class DFA26 extends DFA {
+    class DFA30 extends DFA {
 
-        public DFA26(BaseRecognizer recognizer) {
+        public DFA30(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 26;
-            this.eot = DFA26_eot;
-            this.eof = DFA26_eof;
-            this.min = DFA26_min;
-            this.max = DFA26_max;
-            this.accept = DFA26_accept;
-            this.special = DFA26_special;
-            this.transition = DFA26_transition;
+            this.decisionNumber = 30;
+            this.eot = DFA30_eot;
+            this.eof = DFA30_eof;
+            this.min = DFA30_min;
+            this.max = DFA30_max;
+            this.accept = DFA30_accept;
+            this.special = DFA30_special;
+            this.transition = DFA30_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( KEYWORD_53 | KEYWORD_52 | KEYWORD_50 | KEYWORD_51 | KEYWORD_46 | KEYWORD_47 | KEYWORD_48 | KEYWORD_36 | KEYWORD_37 | KEYWORD_38 | KEYWORD_39 | KEYWORD_40 | KEYWORD_41 | KEYWORD_42 | KEYWORD_43 | KEYWORD_44 | KEYWORD_45 | KEYWORD_33 | KEYWORD_34 | KEYWORD_35 | KEYWORD_22 | KEYWORD_23 | KEYWORD_24 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_49 | KEYWORD_29 | KEYWORD_30 | KEYWORD_31 | KEYWORD_32 | KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP );";
+            return "1:1: Tokens : ( KEYWORD_55 | KEYWORD_54 | KEYWORD_52 | KEYWORD_53 | KEYWORD_48 | KEYWORD_49 | KEYWORD_50 | KEYWORD_41 | KEYWORD_42 | KEYWORD_51 | KEYWORD_39 | KEYWORD_40 | KEYWORD_38 | KEYWORD_43 | KEYWORD_45 | KEYWORD_46 | KEYWORD_47 | KEYWORD_35 | KEYWORD_36 | KEYWORD_37 | KEYWORD_24 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_29 | KEYWORD_30 | KEYWORD_44 | KEYWORD_31 | KEYWORD_32 | KEYWORD_33 | KEYWORD_34 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | KEYWORD_22 | KEYWORD_23 | RULE_DIGIT | RULE_XDIGIT | RULE_ALPHA | RULE_WSP );";
         }
     }
  

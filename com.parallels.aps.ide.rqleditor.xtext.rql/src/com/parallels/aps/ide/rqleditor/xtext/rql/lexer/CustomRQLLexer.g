@@ -16,112 +16,112 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 
 
-KEYWORD_53 : ('implementing(')=> 'implementing'| ('i')=> 'i' {$type = RULE_ALPHA;};
+KEYWORD_55 : ('implementing(')=> 'implementing'| ('i')=> 'i' {$type = RULE_ALPHA;};
 
-KEYWORD_52 : ('composing(')=> 'composing'| ('c')=> 'c' {$type = RULE_ALPHA;};
+KEYWORD_54 : ('composing(')=> 'composing'| ('c')=> 'c' {$type = RULE_ALPHA;};
 
-KEYWORD_50 : ('isnull(')=> 'isnull'| ('i')=> 'i' {$type = RULE_ALPHA;};
+KEYWORD_52 : ('isnull(')=> 'isnull'| ('i')=> 'i' {$type = RULE_ALPHA;};
 
-KEYWORD_51 :  ('select(')=> 'select'| ('s')=> 's' {$type = RULE_ALPHA;};
+KEYWORD_53 :  ('select(')=> 'select'| ('s')=> 's' {$type = RULE_ALPHA;};
 
-KEYWORD_46 :  ('empty(')=> 'empty'| ('e')=> 'e' {$type = RULE_ALPHA;};
+KEYWORD_48 :  ('empty(')=> 'empty'| ('e')=> 'e' {$type = RULE_ALPHA;};
 
-KEYWORD_47 :  ('false(')=> 'false'| ('f')=> 'f' {$type = RULE_ALPHA;};
+KEYWORD_49 :  ('false(')=> 'false'| ('f')=> 'f' {$type = RULE_ALPHA;};
 
-KEYWORD_48 :  ('limit(')=> 'limit'| ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_50 :  ('limit(')=> 'limit'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
-KEYWORD_36 : '=eq=';
+KEYWORD_41 : '=' (('le=')=> 'le=' | ('like=') => 'like=' {$type = KEYWORD_51;} | ('lt=')=> 'lt=' {$type = KEYWORD_42;} | 
+('gt=')=> 'gt=' {$type = KEYWORD_40;} | ('ge=')=> 'ge=' {$type = KEYWORD_39;} | ('eq=')=> 'eq=' {$type = KEYWORD_38;} | ('ne=')=> 'ne=' {$type = KEYWORD_43;})?;
 
-KEYWORD_37 : '=ge='; 	
+KEYWORD_42 : '=lt=' | '\u0328';	
 
-KEYWORD_38 : '=gt=';
+KEYWORD_51 : '=like=' | '\uA733';
 
-KEYWORD_39 : '=' (('le=')=> 'le=' | ('like=') => 'like=' {$type = KEYWORD_42;} | ('lt=')=> 'lt=' {$type = KEYWORD_40;})?;
+KEYWORD_39 : '=ge=' | '\uA734'; 	
 
-KEYWORD_40 : '=lt=' | '\u0328';
+KEYWORD_40 : '=gt=' | '\uA735';
 
-KEYWORD_41 : '=ne=';	
+KEYWORD_38 : '=eq=' | '\uA736';
 
-KEYWORD_42 : '=like=' | '\uA733';
+KEYWORD_43 : '=ne=' | '\uA737';
 
-KEYWORD_43 :  ('null(')=> 'null'| ('n')=> 'n' {$type = RULE_ALPHA;};
+KEYWORD_45 :  ('null(')=> 'null'| ('n')=> 'n' {$type = RULE_ALPHA;};
 
-KEYWORD_44 :  ('sort(')=> 'sort'| ('s')=> 's' {$type = RULE_ALPHA;};
+KEYWORD_46 :  ('sort(')=> 'sort'| ('s')=> 's' {$type = RULE_ALPHA;};
 
-KEYWORD_45 :  ('true(')=> 'true'| ('t')=> 't' {$type = RULE_ALPHA;};
+KEYWORD_47 :  ('true(')=> 'true'| ('t')=> 't' {$type = RULE_ALPHA;};
 
-KEYWORD_33 : ('and(')=> 'and'| ('a')=> 'a' {$type = RULE_ALPHA;};
+KEYWORD_35 : ('and(')=> 'and'| ('a')=> 'a' {$type = RULE_ALPHA;};
 
-KEYWORD_34 : ('not(')=> 'not'| ('n')=> 'n' {$type = RULE_ALPHA;};
+KEYWORD_36 : ('not(')=> 'not'| ('n')=> 'n' {$type = RULE_ALPHA;};
 
-KEYWORD_35 :  ('out(')=> 'out'| ('o')=> 'o' {$type = RULE_ALPHA;};
+KEYWORD_37 :  ('out(')=> 'out'| ('o')=> 'o' {$type = RULE_ALPHA;};
 
-KEYWORD_22 : '!=';
+KEYWORD_24 : '!=';
 
-KEYWORD_23 : '<=';
+KEYWORD_25 : '<=';
 
-KEYWORD_24 : '>=';
+KEYWORD_26 : '>=';
 
-KEYWORD_25 :  ('eq(')=> 'eq'| ('e')=> 'e' {$type = RULE_ALPHA;};
+KEYWORD_27 :  ('eq(')=> 'eq'| ('e')=> 'e' {$type = RULE_ALPHA;};
 
-KEYWORD_26 :  ('ge(')=> 'ge'| ('g')=> 'g' {$type = RULE_ALPHA;};
+KEYWORD_28 :  ('ge(')=> 'ge'| ('g')=> 'g' {$type = RULE_ALPHA;};
 
-KEYWORD_27 :  ('gt(')=> 'gt'| ('g')=> 'g' {$type = RULE_ALPHA;};
+KEYWORD_29 :  ('gt(')=> 'gt'| ('g')=> 'g' {$type = RULE_ALPHA;};
 
-KEYWORD_28 :  ('in(')=> 'in'| ('i')=> 'i' {$type = RULE_ALPHA;};
+KEYWORD_30 :  ('in(')=> 'in'| ('i')=> 'i' {$type = RULE_ALPHA;};
 
-KEYWORD_49 : ('like(')=> 'like'| ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_44 : ('like(')=> 'like'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
-KEYWORD_29 :  ('le(')=> 'le'| ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_31 :  ('le(')=> 'le'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
-KEYWORD_30 :  ('lt(')=> 'lt'| ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_32 :  ('lt(')=> 'lt'| ('l')=> 'l' {$type = RULE_ALPHA;};
 
-KEYWORD_31 :  ('ne(')=> 'ne'| ('n')=> 'n' {$type = RULE_ALPHA;};
+KEYWORD_33 :  ('ne(')=> 'ne'| ('n')=> 'n' {$type = RULE_ALPHA;};
 
-KEYWORD_32 : ('or(')=> 'or'| ('o')=> 'o' {$type = RULE_ALPHA;};
+KEYWORD_34 : ('or(')=> 'or'| ('o')=> 'o' {$type = RULE_ALPHA;};
 
-KEYWORD_1 : '$';
+KEYWORD_3 : '$';
 
-KEYWORD_2 : '%';
+KEYWORD_4 : '%';
 
-KEYWORD_3 : '&';
+KEYWORD_5 : '&';
 
-KEYWORD_4 : '(';
+KEYWORD_6 : '(';
 
-KEYWORD_5 : ')';
+KEYWORD_7 : ')';
 
-KEYWORD_6 : '*';
+KEYWORD_8 : '*';
 
-KEYWORD_7 : '+';
+KEYWORD_9 : '+';
 
-KEYWORD_8 : ',';
+KEYWORD_10 : ',';
 
-KEYWORD_9 : '-';
+KEYWORD_11 : '-';
 
-KEYWORD_10 : '.';
+KEYWORD_12 : '.';
 
-KEYWORD_11 : '/';
+KEYWORD_13 : '/';
 
-KEYWORD_12 : ':';
+KEYWORD_14 : ':';
 
-KEYWORD_13 : ';';
+KEYWORD_15 : ';';
 
-KEYWORD_14 : '<';
+KEYWORD_16 : '<';
 
-KEYWORD_15 : '='| '\u5467';
+KEYWORD_17 : '=' | '\u1234';
 
-KEYWORD_16 : '>';
+KEYWORD_18 : '>';
 
-KEYWORD_17 : '?';
+KEYWORD_19 : '?';
 
-KEYWORD_18 : '@';
+KEYWORD_20 : '@';
 
-KEYWORD_19 : '_';
+KEYWORD_21 : '_';
 
-KEYWORD_20 : '|';
+KEYWORD_22 : '|';
 
-KEYWORD_21 : '~';
-
+KEYWORD_23 : '~';
 
 
 RULE_DIGIT : '0'..'9';

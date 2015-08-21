@@ -19,10 +19,9 @@ HigherOrderCall:
 	LogicalOpAliases WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
 ;
 	
-BinaryOpAliasesWithEqualsSign: ('=ne='|'=eq='|'=lt='|'=le='|'=gt='|'=ge='|'=like=');
 BinaryOpAliases: ('ne'|'eq'|'lt'|'le'|'gt'|'ge'|'like');
-CompOps : ('!='|'='|'<'|'<='|'>'|'>=');
-Comparison : Strval WSP* ( ( BinaryOpAliasesWithEqualsSign ) | CompOps ) PrimaryExpr;
+CompOps : ('!='|'='|'<'|'<='|'>'|'>='|'=ne='|'=eq='|'=lt='|'=le='|'=gt='|'=ge='|'=like=');
+Comparison : Strval WSP* CompOps PrimaryExpr;
 
 CallOperator:
 	( BinaryOpAliases | FunctionsTbl ) WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')'
