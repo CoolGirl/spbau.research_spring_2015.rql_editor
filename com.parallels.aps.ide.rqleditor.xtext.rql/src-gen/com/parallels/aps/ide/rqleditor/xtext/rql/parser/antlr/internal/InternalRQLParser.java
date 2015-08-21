@@ -22,25 +22,25 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalRQLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_55", "KEYWORD_54", "KEYWORD_51", "KEYWORD_52", "KEYWORD_53", "KEYWORD_48", "KEYWORD_49", "KEYWORD_50", "KEYWORD_38", "KEYWORD_39", "KEYWORD_40", "KEYWORD_41", "KEYWORD_42", "KEYWORD_43", "KEYWORD_44", "KEYWORD_45", "KEYWORD_46", "KEYWORD_47", "KEYWORD_35", "KEYWORD_36", "KEYWORD_37", "KEYWORD_24", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_31", "KEYWORD_32", "KEYWORD_33", "KEYWORD_34", "KEYWORD_1", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_5", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_20", "KEYWORD_21", "KEYWORD_22", "KEYWORD_23", "RULE_DIGIT", "RULE_XDIGIT", "RULE_ALPHA", "RULE_WSP"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_53", "KEYWORD_52", "KEYWORD_49", "KEYWORD_50", "KEYWORD_51", "KEYWORD_46", "KEYWORD_47", "KEYWORD_48", "KEYWORD_36", "KEYWORD_37", "KEYWORD_38", "KEYWORD_39", "KEYWORD_40", "KEYWORD_41", "KEYWORD_42", "KEYWORD_43", "KEYWORD_44", "KEYWORD_45", "KEYWORD_33", "KEYWORD_34", "KEYWORD_35", "KEYWORD_22", "KEYWORD_23", "KEYWORD_24", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_31", "KEYWORD_32", "KEYWORD_1", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_5", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_20", "KEYWORD_21", "RULE_DIGIT", "RULE_XDIGIT", "RULE_ALPHA", "RULE_WSP"
     };
     public static final int KEYWORD_3=38;
     public static final int KEYWORD_2=37;
     public static final int KEYWORD_5=40;
     public static final int KEYWORD_4=39;
     public static final int KEYWORD_1=36;
-    public static final int RULE_WSP=62;
-    public static final int KEYWORD_29=30;
-    public static final int KEYWORD_28=29;
-    public static final int KEYWORD_27=28;
-    public static final int KEYWORD_26=27;
-    public static final int KEYWORD_25=26;
-    public static final int KEYWORD_24=25;
-    public static final int KEYWORD_23=58;
-    public static final int KEYWORD_22=57;
+    public static final int RULE_WSP=60;
+    public static final int KEYWORD_29=32;
+    public static final int KEYWORD_28=31;
+    public static final int KEYWORD_27=30;
+    public static final int KEYWORD_26=29;
+    public static final int KEYWORD_25=28;
+    public static final int KEYWORD_24=27;
+    public static final int KEYWORD_23=26;
+    public static final int KEYWORD_22=25;
     public static final int KEYWORD_21=56;
     public static final int KEYWORD_20=55;
-    public static final int RULE_DIGIT=59;
+    public static final int RULE_DIGIT=57;
     public static final int KEYWORD_19=54;
     public static final int KEYWORD_18=53;
     public static final int KEYWORD_17=52;
@@ -49,37 +49,35 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
     public static final int KEYWORD_14=49;
     public static final int KEYWORD_13=48;
     public static final int KEYWORD_12=47;
-    public static final int KEYWORD_55=4;
     public static final int KEYWORD_11=46;
-    public static final int KEYWORD_54=5;
     public static final int KEYWORD_10=45;
-    public static final int KEYWORD_53=8;
-    public static final int KEYWORD_52=7;
-    public static final int KEYWORD_51=6;
-    public static final int KEYWORD_50=11;
-    public static final int RULE_ALPHA=61;
-    public static final int KEYWORD_49=10;
-    public static final int KEYWORD_48=9;
-    public static final int KEYWORD_47=21;
-    public static final int KEYWORD_46=20;
-    public static final int KEYWORD_45=19;
-    public static final int KEYWORD_44=18;
-    public static final int KEYWORD_43=17;
-    public static final int KEYWORD_42=16;
-    public static final int KEYWORD_41=15;
+    public static final int KEYWORD_53=4;
+    public static final int KEYWORD_52=5;
+    public static final int KEYWORD_51=8;
+    public static final int KEYWORD_50=7;
+    public static final int RULE_ALPHA=59;
+    public static final int KEYWORD_49=6;
+    public static final int KEYWORD_48=11;
+    public static final int KEYWORD_47=10;
+    public static final int KEYWORD_46=9;
+    public static final int KEYWORD_45=21;
+    public static final int KEYWORD_44=20;
+    public static final int KEYWORD_43=19;
+    public static final int KEYWORD_42=18;
+    public static final int KEYWORD_41=17;
     public static final int EOF=-1;
-    public static final int KEYWORD_40=14;
-    public static final int KEYWORD_39=13;
-    public static final int KEYWORD_38=12;
-    public static final int KEYWORD_37=24;
-    public static final int KEYWORD_36=23;
-    public static final int KEYWORD_35=22;
-    public static final int KEYWORD_34=35;
-    public static final int RULE_XDIGIT=60;
-    public static final int KEYWORD_33=34;
-    public static final int KEYWORD_32=33;
-    public static final int KEYWORD_31=32;
-    public static final int KEYWORD_30=31;
+    public static final int KEYWORD_40=16;
+    public static final int KEYWORD_39=15;
+    public static final int KEYWORD_38=14;
+    public static final int KEYWORD_37=13;
+    public static final int KEYWORD_36=12;
+    public static final int KEYWORD_35=24;
+    public static final int KEYWORD_34=23;
+    public static final int RULE_XDIGIT=58;
+    public static final int KEYWORD_33=22;
+    public static final int KEYWORD_32=35;
+    public static final int KEYWORD_31=34;
+    public static final int KEYWORD_30=33;
     public static final int KEYWORD_7=42;
     public static final int KEYWORD_6=41;
     public static final int KEYWORD_9=44;
@@ -165,7 +163,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:70:1: ruleModel returns [EObject current=null] : ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:70:1: ruleModel returns [EObject current=null] : ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )* ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -177,11 +175,11 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:73:28: ( ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:1: ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:73:28: ( ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:1: ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:1: ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:2: ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:1: ( ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:2: ( (lv_operands_0_0= ruleHoOperand ) ) ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )*
             {
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:74:2: ( (lv_operands_0_0= ruleHoOperand ) )
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:75:1: (lv_operands_0_0= ruleHoOperand )
@@ -218,29 +216,29 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:2: ( (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:2: ( (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==KEYWORD_5||LA2_0==KEYWORD_10) ) {
+                if ( (LA2_0==KEYWORD_3||LA2_0==KEYWORD_8) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:3: (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 ) ruleHoOperand
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:3: (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 ) ruleHoOperand
             	    {
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:3: (otherlv_1= KEYWORD_10 | otherlv_2= KEYWORD_5 )
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:92:3: (otherlv_1= KEYWORD_8 | otherlv_2= KEYWORD_3 )
             	    int alt1=2;
             	    int LA1_0 = input.LA(1);
 
-            	    if ( (LA1_0==KEYWORD_10) ) {
+            	    if ( (LA1_0==KEYWORD_8) ) {
             	        alt1=1;
             	    }
-            	    else if ( (LA1_0==KEYWORD_5) ) {
+            	    else if ( (LA1_0==KEYWORD_3) ) {
             	        alt1=2;
             	    }
             	    else {
@@ -252,9 +250,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt1) {
             	        case 1 :
-            	            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:93:2: otherlv_1= KEYWORD_10
+            	            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:93:2: otherlv_1= KEYWORD_8
             	            {
-            	            otherlv_1=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleModel138); if (state.failed) return current;
+            	            otherlv_1=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleModel138); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getCommaKeyword_1_0_0());
@@ -264,9 +262,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:99:2: otherlv_2= KEYWORD_5
+            	            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:99:2: otherlv_2= KEYWORD_3
             	            {
-            	            otherlv_2=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleModel156); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleModel156); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getModelAccess().getAmpersandKeyword_1_0_1());
@@ -365,7 +363,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnd"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:128:1: ruleAnd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_5 this_HoOperand_1= ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:128:1: ruleAnd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_3 this_HoOperand_1= ruleHoOperand ) ;
     public final AntlrDatatypeRuleToken ruleAnd() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -376,13 +374,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:132:6: ( (kw= KEYWORD_5 this_HoOperand_1= ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:133:1: (kw= KEYWORD_5 this_HoOperand_1= ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:132:6: ( (kw= KEYWORD_3 this_HoOperand_1= ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:133:1: (kw= KEYWORD_3 this_HoOperand_1= ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:133:1: (kw= KEYWORD_5 this_HoOperand_1= ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:134:2: kw= KEYWORD_5 this_HoOperand_1= ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:133:1: (kw= KEYWORD_3 this_HoOperand_1= ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:134:2: kw= KEYWORD_3 this_HoOperand_1= ruleHoOperand
             {
-            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleAnd258); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleAnd258); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -473,7 +471,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOr"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:167:1: ruleOr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_15 | kw= KEYWORD_22 ) this_HoOperand_2= ruleHoOperand ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:167:1: ruleOr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_13 | kw= KEYWORD_20 ) this_HoOperand_2= ruleHoOperand ) ;
     public final AntlrDatatypeRuleToken ruleOr() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -484,20 +482,20 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:171:6: ( ( (kw= KEYWORD_15 | kw= KEYWORD_22 ) this_HoOperand_2= ruleHoOperand ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:1: ( (kw= KEYWORD_15 | kw= KEYWORD_22 ) this_HoOperand_2= ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:171:6: ( ( (kw= KEYWORD_13 | kw= KEYWORD_20 ) this_HoOperand_2= ruleHoOperand ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:1: ( (kw= KEYWORD_13 | kw= KEYWORD_20 ) this_HoOperand_2= ruleHoOperand )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:1: ( (kw= KEYWORD_15 | kw= KEYWORD_22 ) this_HoOperand_2= ruleHoOperand )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:2: (kw= KEYWORD_15 | kw= KEYWORD_22 ) this_HoOperand_2= ruleHoOperand
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:1: ( (kw= KEYWORD_13 | kw= KEYWORD_20 ) this_HoOperand_2= ruleHoOperand )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:2: (kw= KEYWORD_13 | kw= KEYWORD_20 ) this_HoOperand_2= ruleHoOperand
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:2: (kw= KEYWORD_15 | kw= KEYWORD_22 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:172:2: (kw= KEYWORD_13 | kw= KEYWORD_20 )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==KEYWORD_15) ) {
+            if ( (LA3_0==KEYWORD_13) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==KEYWORD_22) ) {
+            else if ( (LA3_0==KEYWORD_20) ) {
                 alt3=2;
             }
             else {
@@ -509,9 +507,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:173:2: kw= KEYWORD_15
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:173:2: kw= KEYWORD_13
                     {
-                    kw=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_ruleOr375); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleOr375); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -522,9 +520,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:180:2: kw= KEYWORD_22
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:180:2: kw= KEYWORD_20
                     {
-                    kw=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_ruleOr394); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_20,FOLLOW_KEYWORD_20_in_ruleOr394); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -621,7 +619,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHoOperand"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:213:1: ruleHoOperand returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )? (this_WSP_10= RULE_WSP )* (kw= KEYWORD_2 )? (kw= KEYWORD_1 )? ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:213:1: ruleHoOperand returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )? (this_WSP_10= RULE_WSP )* ) ;
     public final AntlrDatatypeRuleToken ruleHoOperand() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -646,11 +644,11 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:217:6: ( ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )? (this_WSP_10= RULE_WSP )* (kw= KEYWORD_2 )? (kw= KEYWORD_1 )? ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:1: ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )? (this_WSP_10= RULE_WSP )* (kw= KEYWORD_2 )? (kw= KEYWORD_1 )? )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:217:6: ( ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )? (this_WSP_10= RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:1: ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )? (this_WSP_10= RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:1: ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )? (this_WSP_10= RULE_WSP )* (kw= KEYWORD_2 )? (kw= KEYWORD_1 )? )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:2: (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )? (this_WSP_10= RULE_WSP )* (kw= KEYWORD_2 )? (kw= KEYWORD_1 )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:1: ( (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )? (this_WSP_10= RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:2: (this_WSP_0= RULE_WSP )* (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )? (this_WSP_10= RULE_WSP )*
             {
             // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:218:2: (this_WSP_0= RULE_WSP )*
             loop4:
@@ -687,58 +685,58 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:225:3: (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 ) )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:225:3: (this_HigherOrderCall_1= ruleHigherOrderCall | this_CallOperator_2= ruleCallOperator | this_Predicate_3= rulePredicate | this_Comparison_4= ruleComparison | (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 ) )?
             int alt6=6;
             switch ( input.LA(1) ) {
-                case KEYWORD_35:
-                case KEYWORD_36:
+                case KEYWORD_33:
                 case KEYWORD_34:
+                case KEYWORD_32:
                     {
                     alt6=1;
                     }
                     break;
-                case KEYWORD_52:
-                case KEYWORD_44:
-                case KEYWORD_37:
+                case KEYWORD_50:
+                case KEYWORD_42:
+                case KEYWORD_35:
+                case KEYWORD_25:
+                case KEYWORD_26:
                 case KEYWORD_27:
                 case KEYWORD_28:
                 case KEYWORD_29:
                 case KEYWORD_30:
                 case KEYWORD_31:
-                case KEYWORD_32:
-                case KEYWORD_33:
                     {
                     alt6=2;
                     }
                     break;
-                case KEYWORD_55:
-                case KEYWORD_54:
                 case KEYWORD_53:
-                case KEYWORD_50:
-                case KEYWORD_46:
+                case KEYWORD_52:
+                case KEYWORD_51:
+                case KEYWORD_48:
+                case KEYWORD_44:
                     {
                     alt6=3;
                     }
                     break;
-                case KEYWORD_3:
-                case KEYWORD_4:
-                case KEYWORD_8:
+                case KEYWORD_1:
+                case KEYWORD_2:
+                case KEYWORD_6:
+                case KEYWORD_7:
                 case KEYWORD_9:
+                case KEYWORD_10:
                 case KEYWORD_11:
                 case KEYWORD_12:
-                case KEYWORD_13:
-                case KEYWORD_14:
+                case KEYWORD_17:
+                case KEYWORD_18:
                 case KEYWORD_19:
-                case KEYWORD_20:
                 case KEYWORD_21:
-                case KEYWORD_23:
                 case RULE_DIGIT:
                 case RULE_ALPHA:
                     {
                     alt6=4;
                     }
                     break;
-                case KEYWORD_6:
+                case KEYWORD_4:
                     {
                     alt6=5;
                     }
@@ -851,12 +849,12 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:273:6: (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:273:6: (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:273:6: (kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7 )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:274:2: kw= KEYWORD_6 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_7
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:273:6: (kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:274:2: kw= KEYWORD_4 this_HoOperand_6= ruleHoOperand (this_And_7= ruleAnd | this_Or_8= ruleOr ) kw= KEYWORD_5
                     {
-                    kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleHoOperand668); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleHoOperand668); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -887,10 +885,10 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
-                    if ( (LA5_0==KEYWORD_5) ) {
+                    if ( (LA5_0==KEYWORD_3) ) {
                         alt5=1;
                     }
-                    else if ( (LA5_0==KEYWORD_15||LA5_0==KEYWORD_22) ) {
+                    else if ( (LA5_0==KEYWORD_13||LA5_0==KEYWORD_20) ) {
                         alt5=2;
                     }
                     else {
@@ -956,7 +954,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleHoOperand770); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleHoOperand770); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1007,54 +1005,6 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:326:3: (kw= KEYWORD_2 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==KEYWORD_2) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:327:2: kw= KEYWORD_2
-                    {
-                    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleHoOperand810); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getHoOperandAccess().getControl000dKeyword_3()); 
-                          
-                    }
-
-                    }
-                    break;
-
-            }
-
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:332:3: (kw= KEYWORD_1 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==KEYWORD_1) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:333:2: kw= KEYWORD_1
-                    {
-                    kw=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_ruleHoOperand826); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getHoOperandAccess().getControl000aKeyword_4()); 
-                          
-                    }
-
-                    }
-                    break;
-
-            }
-
 
             }
 
@@ -1079,7 +1029,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHigherOrderCall"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:346:1: entryRuleHigherOrderCall returns [String current=null] : iv_ruleHigherOrderCall= ruleHigherOrderCall EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:334:1: entryRuleHigherOrderCall returns [String current=null] : iv_ruleHigherOrderCall= ruleHigherOrderCall EOF ;
     public final String entryRuleHigherOrderCall() throws RecognitionException {
         String current = null;
 
@@ -1087,13 +1037,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:347:1: (iv_ruleHigherOrderCall= ruleHigherOrderCall EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:348:2: iv_ruleHigherOrderCall= ruleHigherOrderCall EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:335:1: (iv_ruleHigherOrderCall= ruleHigherOrderCall EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:336:2: iv_ruleHigherOrderCall= ruleHigherOrderCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getHigherOrderCallRule()); 
             }
-            pushFollow(FOLLOW_ruleHigherOrderCall_in_entryRuleHigherOrderCall868);
+            pushFollow(FOLLOW_ruleHigherOrderCall_in_entryRuleHigherOrderCall836);
             iv_ruleHigherOrderCall=ruleHigherOrderCall();
 
             state._fsp--;
@@ -1101,7 +1051,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleHigherOrderCall.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHigherOrderCall879); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHigherOrderCall847); if (state.failed) return current;
 
             }
 
@@ -1119,7 +1069,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHigherOrderCall"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:355:1: ruleHigherOrderCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_7 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:343:1: ruleHigherOrderCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleHigherOrderCall() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1135,18 +1085,18 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:359:6: ( (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_7 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:360:1: (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_7 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:347:6: ( (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_5 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:348:1: (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_5 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:360:1: (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_7 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:361:5: this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_7
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:348:1: (this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_5 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:349:5: this_LogicalOpAliases_0= ruleLogicalOpAliases (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* ) kw= KEYWORD_5
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getHigherOrderCallAccess().getLogicalOpAliasesParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleLogicalOpAliases_in_ruleHigherOrderCall926);
+            pushFollow(FOLLOW_ruleLogicalOpAliases_in_ruleHigherOrderCall894);
             this_LogicalOpAliases_0=ruleLogicalOpAliases();
 
             state._fsp--;
@@ -1161,22 +1111,22 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:371:1: (this_WSP_1= RULE_WSP )*
-            loop10:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:359:1: (this_WSP_1= RULE_WSP )*
+            loop8:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA10_0==RULE_WSP) ) {
-                    alt10=1;
+                if ( (LA8_0==RULE_WSP) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt8) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:371:6: this_WSP_1= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:359:6: this_WSP_1= RULE_WSP
             	    {
-            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleHigherOrderCall947); if (state.failed) return current;
+            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleHigherOrderCall915); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_1);
@@ -1192,26 +1142,26 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop8;
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleHigherOrderCall967); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleHigherOrderCall935); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getHigherOrderCallAccess().getLeftParenthesisKeyword_2()); 
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:384:1: (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:385:5: this_HoOperand_3= ruleHoOperand (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:372:1: (this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:373:5: this_HoOperand_3= ruleHoOperand (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getHigherOrderCallAccess().getHoOperandParserRuleCall_3_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleHoOperand_in_ruleHigherOrderCall990);
+            pushFollow(FOLLOW_ruleHoOperand_in_ruleHigherOrderCall958);
             this_HoOperand_3=ruleHoOperand();
 
             state._fsp--;
@@ -1226,22 +1176,22 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:395:1: (kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand )*
-            loop11:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:383:1: (kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand )*
+            loop9:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA11_0==KEYWORD_10) ) {
-                    alt11=1;
+                if ( (LA9_0==KEYWORD_8) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt9) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:396:2: kw= KEYWORD_10 this_HoOperand_5= ruleHoOperand
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:384:2: kw= KEYWORD_8 this_HoOperand_5= ruleHoOperand
             	    {
-            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleHigherOrderCall1009); if (state.failed) return current;
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleHigherOrderCall977); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -1253,7 +1203,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	              newCompositeNode(grammarAccess.getHigherOrderCallAccess().getHoOperandParserRuleCall_3_1_1()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_ruleHoOperand_in_ruleHigherOrderCall1031);
+            	    pushFollow(FOLLOW_ruleHoOperand_in_ruleHigherOrderCall999);
             	    this_HoOperand_5=ruleHoOperand();
 
             	    state._fsp--;
@@ -1273,14 +1223,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop9;
                 }
             } while (true);
 
 
             }
 
-            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleHigherOrderCall1052); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleHigherOrderCall1020); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -1310,8 +1260,222 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleHigherOrderCall"
 
 
+    // $ANTLR start "entryRuleBinaryOpAliasesWithEqualsSign"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:414:1: entryRuleBinaryOpAliasesWithEqualsSign returns [String current=null] : iv_ruleBinaryOpAliasesWithEqualsSign= ruleBinaryOpAliasesWithEqualsSign EOF ;
+    public final String entryRuleBinaryOpAliasesWithEqualsSign() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleBinaryOpAliasesWithEqualsSign = null;
+
+
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:415:1: (iv_ruleBinaryOpAliasesWithEqualsSign= ruleBinaryOpAliasesWithEqualsSign EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:416:2: iv_ruleBinaryOpAliasesWithEqualsSign= ruleBinaryOpAliasesWithEqualsSign EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getBinaryOpAliasesWithEqualsSignRule()); 
+            }
+            pushFollow(FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_entryRuleBinaryOpAliasesWithEqualsSign1060);
+            iv_ruleBinaryOpAliasesWithEqualsSign=ruleBinaryOpAliasesWithEqualsSign();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleBinaryOpAliasesWithEqualsSign.getText(); 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBinaryOpAliasesWithEqualsSign1071); if (state.failed) return current;
+
+            }
+
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleBinaryOpAliasesWithEqualsSign"
+
+
+    // $ANTLR start "ruleBinaryOpAliasesWithEqualsSign"
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:423:1: ruleBinaryOpAliasesWithEqualsSign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_41 | kw= KEYWORD_36 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_38 | kw= KEYWORD_37 | kw= KEYWORD_49 ) ;
+    public final AntlrDatatypeRuleToken ruleBinaryOpAliasesWithEqualsSign() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+
+         enterRule(); 
+            
+        try {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:427:6: ( (kw= KEYWORD_41 | kw= KEYWORD_36 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_38 | kw= KEYWORD_37 | kw= KEYWORD_49 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:428:1: (kw= KEYWORD_41 | kw= KEYWORD_36 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_38 | kw= KEYWORD_37 | kw= KEYWORD_49 )
+            {
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:428:1: (kw= KEYWORD_41 | kw= KEYWORD_36 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_38 | kw= KEYWORD_37 | kw= KEYWORD_49 )
+            int alt10=7;
+            switch ( input.LA(1) ) {
+            case KEYWORD_41:
+                {
+                alt10=1;
+                }
+                break;
+            case KEYWORD_36:
+                {
+                alt10=2;
+                }
+                break;
+            case KEYWORD_40:
+                {
+                alt10=3;
+                }
+                break;
+            case KEYWORD_39:
+                {
+                alt10=4;
+                }
+                break;
+            case KEYWORD_38:
+                {
+                alt10=5;
+                }
+                break;
+            case KEYWORD_37:
+                {
+                alt10=6;
+                }
+                break;
+            case KEYWORD_49:
+                {
+                alt10=7;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 10, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt10) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:429:2: kw= KEYWORD_41
+                    {
+                    kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleBinaryOpAliasesWithEqualsSign1109); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getNeKeyword_0()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:436:2: kw= KEYWORD_36
+                    {
+                    kw=(Token)match(input,KEYWORD_36,FOLLOW_KEYWORD_36_in_ruleBinaryOpAliasesWithEqualsSign1128); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getEqKeyword_1()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:443:2: kw= KEYWORD_40
+                    {
+                    kw=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_ruleBinaryOpAliasesWithEqualsSign1147); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLtKeyword_2()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:450:2: kw= KEYWORD_39
+                    {
+                    kw=(Token)match(input,KEYWORD_39,FOLLOW_KEYWORD_39_in_ruleBinaryOpAliasesWithEqualsSign1166); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLeKeyword_3()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 5 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:457:2: kw= KEYWORD_38
+                    {
+                    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_ruleBinaryOpAliasesWithEqualsSign1185); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGtKeyword_4()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 6 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:464:2: kw= KEYWORD_37
+                    {
+                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleBinaryOpAliasesWithEqualsSign1204); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getGeKeyword_5()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 7 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:471:2: kw= KEYWORD_49
+                    {
+                    kw=(Token)match(input,KEYWORD_49,FOLLOW_KEYWORD_49_in_ruleBinaryOpAliasesWithEqualsSign1223); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBinaryOpAliasesWithEqualsSignAccess().getLikeKeyword_6()); 
+                          
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule();
+                  
+            }
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleBinaryOpAliasesWithEqualsSign"
+
+
     // $ANTLR start "entryRuleBinaryOpAliases"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:426:1: entryRuleBinaryOpAliases returns [String current=null] : iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:484:1: entryRuleBinaryOpAliases returns [String current=null] : iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF ;
     public final String entryRuleBinaryOpAliases() throws RecognitionException {
         String current = null;
 
@@ -1319,13 +1483,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:427:1: (iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:428:2: iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:485:1: (iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:486:2: iv_ruleBinaryOpAliases= ruleBinaryOpAliases EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBinaryOpAliasesRule()); 
             }
-            pushFollow(FOLLOW_ruleBinaryOpAliases_in_entryRuleBinaryOpAliases1092);
+            pushFollow(FOLLOW_ruleBinaryOpAliases_in_entryRuleBinaryOpAliases1263);
             iv_ruleBinaryOpAliases=ruleBinaryOpAliases();
 
             state._fsp--;
@@ -1333,7 +1497,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBinaryOpAliases.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBinaryOpAliases1103); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBinaryOpAliases1274); if (state.failed) return current;
 
             }
 
@@ -1351,7 +1515,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBinaryOpAliases"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:435:1: ruleBinaryOpAliases returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_33 | kw= KEYWORD_27 | kw= KEYWORD_32 | kw= KEYWORD_31 | kw= KEYWORD_29 | kw= KEYWORD_28 | kw= KEYWORD_44 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:493:1: ruleBinaryOpAliases returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_31 | kw= KEYWORD_25 | kw= KEYWORD_30 | kw= KEYWORD_29 | kw= KEYWORD_27 | kw= KEYWORD_26 | kw= KEYWORD_42 ) ;
     public final AntlrDatatypeRuleToken ruleBinaryOpAliases() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1360,60 +1524,60 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:439:6: ( (kw= KEYWORD_33 | kw= KEYWORD_27 | kw= KEYWORD_32 | kw= KEYWORD_31 | kw= KEYWORD_29 | kw= KEYWORD_28 | kw= KEYWORD_44 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:440:1: (kw= KEYWORD_33 | kw= KEYWORD_27 | kw= KEYWORD_32 | kw= KEYWORD_31 | kw= KEYWORD_29 | kw= KEYWORD_28 | kw= KEYWORD_44 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:497:6: ( (kw= KEYWORD_31 | kw= KEYWORD_25 | kw= KEYWORD_30 | kw= KEYWORD_29 | kw= KEYWORD_27 | kw= KEYWORD_26 | kw= KEYWORD_42 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:498:1: (kw= KEYWORD_31 | kw= KEYWORD_25 | kw= KEYWORD_30 | kw= KEYWORD_29 | kw= KEYWORD_27 | kw= KEYWORD_26 | kw= KEYWORD_42 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:440:1: (kw= KEYWORD_33 | kw= KEYWORD_27 | kw= KEYWORD_32 | kw= KEYWORD_31 | kw= KEYWORD_29 | kw= KEYWORD_28 | kw= KEYWORD_44 )
-            int alt12=7;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:498:1: (kw= KEYWORD_31 | kw= KEYWORD_25 | kw= KEYWORD_30 | kw= KEYWORD_29 | kw= KEYWORD_27 | kw= KEYWORD_26 | kw= KEYWORD_42 )
+            int alt11=7;
             switch ( input.LA(1) ) {
-            case KEYWORD_33:
-                {
-                alt12=1;
-                }
-                break;
-            case KEYWORD_27:
-                {
-                alt12=2;
-                }
-                break;
-            case KEYWORD_32:
-                {
-                alt12=3;
-                }
-                break;
             case KEYWORD_31:
                 {
-                alt12=4;
+                alt11=1;
+                }
+                break;
+            case KEYWORD_25:
+                {
+                alt11=2;
+                }
+                break;
+            case KEYWORD_30:
+                {
+                alt11=3;
                 }
                 break;
             case KEYWORD_29:
                 {
-                alt12=5;
+                alt11=4;
                 }
                 break;
-            case KEYWORD_28:
+            case KEYWORD_27:
                 {
-                alt12=6;
+                alt11=5;
                 }
                 break;
-            case KEYWORD_44:
+            case KEYWORD_26:
                 {
-                alt12=7;
+                alt11=6;
+                }
+                break;
+            case KEYWORD_42:
+                {
+                alt11=7;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:441:2: kw= KEYWORD_33
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:499:2: kw= KEYWORD_31
                     {
-                    kw=(Token)match(input,KEYWORD_33,FOLLOW_KEYWORD_33_in_ruleBinaryOpAliases1141); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleBinaryOpAliases1312); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1424,9 +1588,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:448:2: kw= KEYWORD_27
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:506:2: kw= KEYWORD_25
                     {
-                    kw=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleBinaryOpAliases1160); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleBinaryOpAliases1331); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1437,9 +1601,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:455:2: kw= KEYWORD_32
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:513:2: kw= KEYWORD_30
                     {
-                    kw=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_ruleBinaryOpAliases1179); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleBinaryOpAliases1350); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1450,9 +1614,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:462:2: kw= KEYWORD_31
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:520:2: kw= KEYWORD_29
                     {
-                    kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleBinaryOpAliases1198); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleBinaryOpAliases1369); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1463,9 +1627,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:469:2: kw= KEYWORD_29
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:527:2: kw= KEYWORD_27
                     {
-                    kw=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleBinaryOpAliases1217); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleBinaryOpAliases1388); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1476,9 +1640,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:476:2: kw= KEYWORD_28
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:534:2: kw= KEYWORD_26
                     {
-                    kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleBinaryOpAliases1236); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleBinaryOpAliases1407); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1489,9 +1653,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:483:2: kw= KEYWORD_44
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:541:2: kw= KEYWORD_42
                     {
-                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_ruleBinaryOpAliases1255); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_ruleBinaryOpAliases1426); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1525,7 +1689,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompOps"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:496:1: entryRuleCompOps returns [String current=null] : iv_ruleCompOps= ruleCompOps EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:554:1: entryRuleCompOps returns [String current=null] : iv_ruleCompOps= ruleCompOps EOF ;
     public final String entryRuleCompOps() throws RecognitionException {
         String current = null;
 
@@ -1533,13 +1697,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:497:1: (iv_ruleCompOps= ruleCompOps EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:498:2: iv_ruleCompOps= ruleCompOps EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:555:1: (iv_ruleCompOps= ruleCompOps EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:556:2: iv_ruleCompOps= ruleCompOps EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompOpsRule()); 
             }
-            pushFollow(FOLLOW_ruleCompOps_in_entryRuleCompOps1295);
+            pushFollow(FOLLOW_ruleCompOps_in_entryRuleCompOps1466);
             iv_ruleCompOps=ruleCompOps();
 
             state._fsp--;
@@ -1547,7 +1711,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCompOps.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompOps1306); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompOps1477); if (state.failed) return current;
 
             }
 
@@ -1565,7 +1729,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompOps"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:505:1: ruleCompOps returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_24 | kw= KEYWORD_17 | kw= KEYWORD_16 | kw= KEYWORD_25 | kw= KEYWORD_18 | kw= KEYWORD_26 | kw= KEYWORD_43 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_41 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_51 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:563:1: ruleCompOps returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_22 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_23 | kw= KEYWORD_16 | kw= KEYWORD_24 ) ;
     public final AntlrDatatypeRuleToken ruleCompOps() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1574,90 +1738,55 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:509:6: ( (kw= KEYWORD_24 | kw= KEYWORD_17 | kw= KEYWORD_16 | kw= KEYWORD_25 | kw= KEYWORD_18 | kw= KEYWORD_26 | kw= KEYWORD_43 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_41 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_51 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:510:1: (kw= KEYWORD_24 | kw= KEYWORD_17 | kw= KEYWORD_16 | kw= KEYWORD_25 | kw= KEYWORD_18 | kw= KEYWORD_26 | kw= KEYWORD_43 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_41 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_51 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:567:6: ( (kw= KEYWORD_22 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_23 | kw= KEYWORD_16 | kw= KEYWORD_24 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:568:1: (kw= KEYWORD_22 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_23 | kw= KEYWORD_16 | kw= KEYWORD_24 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:510:1: (kw= KEYWORD_24 | kw= KEYWORD_17 | kw= KEYWORD_16 | kw= KEYWORD_25 | kw= KEYWORD_18 | kw= KEYWORD_26 | kw= KEYWORD_43 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_41 | kw= KEYWORD_40 | kw= KEYWORD_39 | kw= KEYWORD_51 )
-            int alt13=13;
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:568:1: (kw= KEYWORD_22 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_23 | kw= KEYWORD_16 | kw= KEYWORD_24 )
+            int alt12=6;
             switch ( input.LA(1) ) {
-            case KEYWORD_24:
+            case KEYWORD_22:
                 {
-                alt13=1;
+                alt12=1;
                 }
                 break;
-            case KEYWORD_17:
+            case KEYWORD_15:
                 {
-                alt13=2;
+                alt12=2;
+                }
+                break;
+            case KEYWORD_14:
+                {
+                alt12=3;
+                }
+                break;
+            case KEYWORD_23:
+                {
+                alt12=4;
                 }
                 break;
             case KEYWORD_16:
                 {
-                alt13=3;
+                alt12=5;
                 }
                 break;
-            case KEYWORD_25:
+            case KEYWORD_24:
                 {
-                alt13=4;
-                }
-                break;
-            case KEYWORD_18:
-                {
-                alt13=5;
-                }
-                break;
-            case KEYWORD_26:
-                {
-                alt13=6;
-                }
-                break;
-            case KEYWORD_43:
-                {
-                alt13=7;
-                }
-                break;
-            case KEYWORD_38:
-                {
-                alt13=8;
-                }
-                break;
-            case KEYWORD_42:
-                {
-                alt13=9;
-                }
-                break;
-            case KEYWORD_41:
-                {
-                alt13=10;
-                }
-                break;
-            case KEYWORD_40:
-                {
-                alt13=11;
-                }
-                break;
-            case KEYWORD_39:
-                {
-                alt13=12;
-                }
-                break;
-            case KEYWORD_51:
-                {
-                alt13=13;
+                alt12=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:511:2: kw= KEYWORD_24
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:569:2: kw= KEYWORD_22
                     {
-                    kw=(Token)match(input,KEYWORD_24,FOLLOW_KEYWORD_24_in_ruleCompOps1344); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_ruleCompOps1515); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1668,9 +1797,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:518:2: kw= KEYWORD_17
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:576:2: kw= KEYWORD_15
                     {
-                    kw=(Token)match(input,KEYWORD_17,FOLLOW_KEYWORD_17_in_ruleCompOps1363); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_ruleCompOps1534); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1681,9 +1810,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:525:2: kw= KEYWORD_16
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:583:2: kw= KEYWORD_14
                     {
-                    kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleCompOps1382); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleCompOps1553); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1694,9 +1823,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:532:2: kw= KEYWORD_25
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:590:2: kw= KEYWORD_23
                     {
-                    kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleCompOps1401); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleCompOps1572); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1707,9 +1836,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:539:2: kw= KEYWORD_18
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:597:2: kw= KEYWORD_16
                     {
-                    kw=(Token)match(input,KEYWORD_18,FOLLOW_KEYWORD_18_in_ruleCompOps1420); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleCompOps1591); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -1720,104 +1849,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:546:2: kw= KEYWORD_26
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:604:2: kw= KEYWORD_24
                     {
-                    kw=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleCompOps1439); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_24,FOLLOW_KEYWORD_24_in_ruleCompOps1610); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getCompOpsAccess().getGreaterThanSignEqualsSignKeyword_5()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:553:2: kw= KEYWORD_43
-                    {
-                    kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleCompOps1458); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getNeKeyword_6()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 8 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:560:2: kw= KEYWORD_38
-                    {
-                    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_ruleCompOps1477); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getEqKeyword_7()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 9 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:567:2: kw= KEYWORD_42
-                    {
-                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_ruleCompOps1496); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getLtKeyword_8()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 10 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:574:2: kw= KEYWORD_41
-                    {
-                    kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleCompOps1515); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getLeKeyword_9()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 11 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:581:2: kw= KEYWORD_40
-                    {
-                    kw=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_ruleCompOps1534); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getGtKeyword_10()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 12 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:588:2: kw= KEYWORD_39
-                    {
-                    kw=(Token)match(input,KEYWORD_39,FOLLOW_KEYWORD_39_in_ruleCompOps1553); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getGeKeyword_11()); 
-                          
-                    }
-
-                    }
-                    break;
-                case 13 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:595:2: kw= KEYWORD_51
-                    {
-                    kw=(Token)match(input,KEYWORD_51,FOLLOW_KEYWORD_51_in_ruleCompOps1572); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                              current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getCompOpsAccess().getLikeKeyword_12()); 
                           
                     }
 
@@ -1847,7 +1885,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComparison"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:608:1: entryRuleComparison returns [String current=null] : iv_ruleComparison= ruleComparison EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:617:1: entryRuleComparison returns [String current=null] : iv_ruleComparison= ruleComparison EOF ;
     public final String entryRuleComparison() throws RecognitionException {
         String current = null;
 
@@ -1855,13 +1893,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:609:1: (iv_ruleComparison= ruleComparison EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:610:2: iv_ruleComparison= ruleComparison EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:618:1: (iv_ruleComparison= ruleComparison EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:619:2: iv_ruleComparison= ruleComparison EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getComparisonRule()); 
             }
-            pushFollow(FOLLOW_ruleComparison_in_entryRuleComparison1612);
+            pushFollow(FOLLOW_ruleComparison_in_entryRuleComparison1650);
             iv_ruleComparison=ruleComparison();
 
             state._fsp--;
@@ -1869,7 +1907,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleComparison.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComparison1623); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComparison1661); if (state.failed) return current;
 
             }
 
@@ -1887,33 +1925,35 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparison"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:617:1: ruleComparison returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* this_CompOps_2= ruleCompOps this_PrimaryExpr_3= rulePrimaryExpr ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:626:1: ruleComparison returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps ) this_PrimaryExpr_4= rulePrimaryExpr ) ;
     public final AntlrDatatypeRuleToken ruleComparison() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_WSP_1=null;
         AntlrDatatypeRuleToken this_Strval_0 = null;
 
-        AntlrDatatypeRuleToken this_CompOps_2 = null;
+        AntlrDatatypeRuleToken this_BinaryOpAliasesWithEqualsSign_2 = null;
 
-        AntlrDatatypeRuleToken this_PrimaryExpr_3 = null;
+        AntlrDatatypeRuleToken this_CompOps_3 = null;
+
+        AntlrDatatypeRuleToken this_PrimaryExpr_4 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:621:6: ( (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* this_CompOps_2= ruleCompOps this_PrimaryExpr_3= rulePrimaryExpr ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:622:1: (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* this_CompOps_2= ruleCompOps this_PrimaryExpr_3= rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:630:6: ( (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps ) this_PrimaryExpr_4= rulePrimaryExpr ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:631:1: (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps ) this_PrimaryExpr_4= rulePrimaryExpr )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:622:1: (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* this_CompOps_2= ruleCompOps this_PrimaryExpr_3= rulePrimaryExpr )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:623:5: this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* this_CompOps_2= ruleCompOps this_PrimaryExpr_3= rulePrimaryExpr
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:631:1: (this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps ) this_PrimaryExpr_4= rulePrimaryExpr )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:632:5: this_Strval_0= ruleStrval (this_WSP_1= RULE_WSP )* (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps ) this_PrimaryExpr_4= rulePrimaryExpr
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getComparisonAccess().getStrvalParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleStrval_in_ruleComparison1670);
+            pushFollow(FOLLOW_ruleStrval_in_ruleComparison1708);
             this_Strval_0=ruleStrval();
 
             state._fsp--;
@@ -1928,22 +1968,22 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:633:1: (this_WSP_1= RULE_WSP )*
-            loop14:
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:642:1: (this_WSP_1= RULE_WSP )*
+            loop13:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA14_0==RULE_WSP) ) {
-                    alt14=1;
+                if ( (LA13_0==RULE_WSP) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt13) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:633:6: this_WSP_1= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:642:6: this_WSP_1= RULE_WSP
             	    {
-            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleComparison1691); if (state.failed) return current;
+            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleComparison1729); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_1);
@@ -1959,43 +1999,96 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop13;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getComparisonAccess().getCompOpsParserRuleCall_2()); 
-                  
-            }
-            pushFollow(FOLLOW_ruleCompOps_in_ruleComparison1720);
-            this_CompOps_2=ruleCompOps();
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:649:3: (this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign | this_CompOps_3= ruleCompOps )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
+            if ( (LA14_0==KEYWORD_49||(LA14_0>=KEYWORD_36 && LA14_0<=KEYWORD_41)) ) {
+                alt14=1;
+            }
+            else if ( ((LA14_0>=KEYWORD_22 && LA14_0<=KEYWORD_24)||(LA14_0>=KEYWORD_14 && LA14_0<=KEYWORD_16)) ) {
+                alt14=2;
+            }
+            else {
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 14, 0, input);
 
-              		current.merge(this_CompOps_2);
-                  
+                throw nvae;
             }
-            if ( state.backtracking==0 ) {
-               
-                      afterParserOrEnumRuleCall();
-                  
+            switch (alt14) {
+                case 1 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:650:5: this_BinaryOpAliasesWithEqualsSign_2= ruleBinaryOpAliasesWithEqualsSign
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getComparisonAccess().getBinaryOpAliasesWithEqualsSignParserRuleCall_2_0()); 
+                          
+                    }
+                    pushFollow(FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_ruleComparison1759);
+                    this_BinaryOpAliasesWithEqualsSign_2=ruleBinaryOpAliasesWithEqualsSign();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      		current.merge(this_BinaryOpAliasesWithEqualsSign_2);
+                          
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:662:5: this_CompOps_3= ruleCompOps
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getComparisonAccess().getCompOpsParserRuleCall_2_1()); 
+                          
+                    }
+                    pushFollow(FOLLOW_ruleCompOps_in_ruleComparison1792);
+                    this_CompOps_3=ruleCompOps();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      		current.merge(this_CompOps_3);
+                          
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+
             }
+
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getComparisonAccess().getPrimaryExprParserRuleCall_3()); 
                   
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_ruleComparison1747);
-            this_PrimaryExpr_3=rulePrimaryExpr();
+            pushFollow(FOLLOW_rulePrimaryExpr_in_ruleComparison1820);
+            this_PrimaryExpr_4=rulePrimaryExpr();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current.merge(this_PrimaryExpr_3);
+              		current.merge(this_PrimaryExpr_4);
                   
             }
             if ( state.backtracking==0 ) {
@@ -2027,7 +2120,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCallOperator"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:670:1: entryRuleCallOperator returns [String current=null] : iv_ruleCallOperator= ruleCallOperator EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:691:1: entryRuleCallOperator returns [String current=null] : iv_ruleCallOperator= ruleCallOperator EOF ;
     public final String entryRuleCallOperator() throws RecognitionException {
         String current = null;
 
@@ -2035,13 +2128,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:671:1: (iv_ruleCallOperator= ruleCallOperator EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:672:2: iv_ruleCallOperator= ruleCallOperator EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:692:1: (iv_ruleCallOperator= ruleCallOperator EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:693:2: iv_ruleCallOperator= ruleCallOperator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCallOperatorRule()); 
             }
-            pushFollow(FOLLOW_ruleCallOperator_in_entryRuleCallOperator1792);
+            pushFollow(FOLLOW_ruleCallOperator_in_entryRuleCallOperator1865);
             iv_ruleCallOperator=ruleCallOperator();
 
             state._fsp--;
@@ -2049,7 +2142,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCallOperator.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCallOperator1803); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCallOperator1876); if (state.failed) return current;
 
             }
 
@@ -2067,7 +2160,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCallOperator"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:679:1: ruleCallOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_7 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:700:1: ruleCallOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleCallOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2085,20 +2178,20 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:683:6: ( ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_7 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:684:1: ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_7 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:704:6: ( ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_5 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:705:1: ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_5 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:684:1: ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_7 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:684:2: (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_7
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:705:1: ( (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_5 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:705:2: (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl ) (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )? kw= KEYWORD_5
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:684:2: (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:705:2: (this_BinaryOpAliases_0= ruleBinaryOpAliases | this_FunctionsTbl_1= ruleFunctionsTbl )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==KEYWORD_44||(LA15_0>=KEYWORD_27 && LA15_0<=KEYWORD_29)||(LA15_0>=KEYWORD_31 && LA15_0<=KEYWORD_33)) ) {
+            if ( (LA15_0==KEYWORD_42||(LA15_0>=KEYWORD_25 && LA15_0<=KEYWORD_27)||(LA15_0>=KEYWORD_29 && LA15_0<=KEYWORD_31)) ) {
                 alt15=1;
             }
-            else if ( (LA15_0==KEYWORD_52||LA15_0==KEYWORD_37||LA15_0==KEYWORD_30) ) {
+            else if ( (LA15_0==KEYWORD_50||LA15_0==KEYWORD_35||LA15_0==KEYWORD_28) ) {
                 alt15=2;
             }
             else {
@@ -2110,14 +2203,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:685:5: this_BinaryOpAliases_0= ruleBinaryOpAliases
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:706:5: this_BinaryOpAliases_0= ruleBinaryOpAliases
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getCallOperatorAccess().getBinaryOpAliasesParserRuleCall_0_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleBinaryOpAliases_in_ruleCallOperator1851);
+                    pushFollow(FOLLOW_ruleBinaryOpAliases_in_ruleCallOperator1924);
                     this_BinaryOpAliases_0=ruleBinaryOpAliases();
 
                     state._fsp--;
@@ -2136,14 +2229,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:697:5: this_FunctionsTbl_1= ruleFunctionsTbl
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:718:5: this_FunctionsTbl_1= ruleFunctionsTbl
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getCallOperatorAccess().getFunctionsTblParserRuleCall_0_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleFunctionsTbl_in_ruleCallOperator1884);
+                    pushFollow(FOLLOW_ruleFunctionsTbl_in_ruleCallOperator1957);
                     this_FunctionsTbl_1=ruleFunctionsTbl();
 
                     state._fsp--;
@@ -2164,7 +2257,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:707:2: (this_WSP_2= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:728:2: (this_WSP_2= RULE_WSP )*
             loop16:
             do {
                 int alt16=2;
@@ -2177,9 +2270,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:707:7: this_WSP_2= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:728:7: this_WSP_2= RULE_WSP
             	    {
-            	    this_WSP_2=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleCallOperator1906); if (state.failed) return current;
+            	    this_WSP_2=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleCallOperator1979); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_2);
@@ -2199,30 +2292,30 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleCallOperator1926); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleCallOperator1999); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getCallOperatorAccess().getLeftParenthesisKeyword_2()); 
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:720:1: (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )* )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:741:1: (this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )* )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( ((LA18_0>=KEYWORD_48 && LA18_0<=KEYWORD_49)||LA18_0==KEYWORD_45||LA18_0==KEYWORD_47||(LA18_0>=KEYWORD_3 && LA18_0<=KEYWORD_4)||LA18_0==KEYWORD_6||(LA18_0>=KEYWORD_8 && LA18_0<=KEYWORD_9)||(LA18_0>=KEYWORD_11 && LA18_0<=KEYWORD_14)||(LA18_0>=KEYWORD_19 && LA18_0<=KEYWORD_21)||(LA18_0>=KEYWORD_23 && LA18_0<=RULE_DIGIT)||(LA18_0>=RULE_ALPHA && LA18_0<=RULE_WSP)) ) {
+            if ( ((LA18_0>=KEYWORD_46 && LA18_0<=KEYWORD_47)||LA18_0==KEYWORD_43||LA18_0==KEYWORD_45||(LA18_0>=KEYWORD_1 && LA18_0<=KEYWORD_2)||LA18_0==KEYWORD_4||(LA18_0>=KEYWORD_6 && LA18_0<=KEYWORD_7)||(LA18_0>=KEYWORD_9 && LA18_0<=KEYWORD_12)||(LA18_0>=KEYWORD_17 && LA18_0<=KEYWORD_19)||(LA18_0>=KEYWORD_21 && LA18_0<=RULE_DIGIT)||(LA18_0>=RULE_ALPHA && LA18_0<=RULE_WSP)) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:721:5: this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:742:5: this_PrimaryExpr_4= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )*
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getCallOperatorAccess().getPrimaryExprParserRuleCall_3_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulePrimaryExpr_in_ruleCallOperator1949);
+                    pushFollow(FOLLOW_rulePrimaryExpr_in_ruleCallOperator2022);
                     this_PrimaryExpr_4=rulePrimaryExpr();
 
                     state._fsp--;
@@ -2237,22 +2330,22 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:731:1: (kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:752:1: (kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr )*
                     loop17:
                     do {
                         int alt17=2;
                         int LA17_0 = input.LA(1);
 
-                        if ( (LA17_0==KEYWORD_10) ) {
+                        if ( (LA17_0==KEYWORD_8) ) {
                             alt17=1;
                         }
 
 
                         switch (alt17) {
                     	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:732:2: kw= KEYWORD_10 this_PrimaryExpr_6= rulePrimaryExpr
+                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:753:2: kw= KEYWORD_8 this_PrimaryExpr_6= rulePrimaryExpr
                     	    {
-                    	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleCallOperator1968); if (state.failed) return current;
+                    	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleCallOperator2041); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	              current.merge(kw);
@@ -2264,7 +2357,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     	              newCompositeNode(grammarAccess.getCallOperatorAccess().getPrimaryExprParserRuleCall_3_1_1()); 
                     	          
                     	    }
-                    	    pushFollow(FOLLOW_rulePrimaryExpr_in_ruleCallOperator1990);
+                    	    pushFollow(FOLLOW_rulePrimaryExpr_in_ruleCallOperator2063);
                     	    this_PrimaryExpr_6=rulePrimaryExpr();
 
                     	    state._fsp--;
@@ -2294,7 +2387,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleCallOperator2012); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleCallOperator2085); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -2325,7 +2418,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePredicate"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:762:1: entryRulePredicate returns [String current=null] : iv_rulePredicate= rulePredicate EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:783:1: entryRulePredicate returns [String current=null] : iv_rulePredicate= rulePredicate EOF ;
     public final String entryRulePredicate() throws RecognitionException {
         String current = null;
 
@@ -2333,13 +2426,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:763:1: (iv_rulePredicate= rulePredicate EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:764:2: iv_rulePredicate= rulePredicate EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:784:1: (iv_rulePredicate= rulePredicate EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:785:2: iv_rulePredicate= rulePredicate EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPredicateRule()); 
             }
-            pushFollow(FOLLOW_rulePredicate_in_entryRulePredicate2052);
+            pushFollow(FOLLOW_rulePredicate_in_entryRulePredicate2125);
             iv_rulePredicate=rulePredicate();
 
             state._fsp--;
@@ -2347,7 +2440,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePredicate.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePredicate2063); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePredicate2136); if (state.failed) return current;
 
             }
 
@@ -2365,7 +2458,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePredicate"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:771:1: rulePredicate returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_7 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:792:1: rulePredicate returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken rulePredicate() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2381,18 +2474,18 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:775:6: ( (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_7 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:776:1: (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_7 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:796:6: ( (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_5 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:797:1: (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_5 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:776:1: (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_7 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:777:5: this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_6 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_7
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:797:1: (this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_5 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:798:5: this_PredTbl_0= rulePredTbl (this_WSP_1= RULE_WSP )* kw= KEYWORD_4 (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )? kw= KEYWORD_5
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getPredicateAccess().getPredTblParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_rulePredTbl_in_rulePredicate2110);
+            pushFollow(FOLLOW_rulePredTbl_in_rulePredicate2183);
             this_PredTbl_0=rulePredTbl();
 
             state._fsp--;
@@ -2407,7 +2500,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:787:1: (this_WSP_1= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:808:1: (this_WSP_1= RULE_WSP )*
             loop19:
             do {
                 int alt19=2;
@@ -2420,9 +2513,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:787:6: this_WSP_1= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:808:6: this_WSP_1= RULE_WSP
             	    {
-            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePredicate2131); if (state.failed) return current;
+            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePredicate2204); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_1);
@@ -2442,30 +2535,30 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_rulePredicate2151); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulePredicate2224); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_2()); 
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:800:1: (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )* )?
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:821:1: (this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )* )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( ((LA21_0>=KEYWORD_48 && LA21_0<=KEYWORD_49)||LA21_0==KEYWORD_45||LA21_0==KEYWORD_47||(LA21_0>=KEYWORD_3 && LA21_0<=KEYWORD_4)||LA21_0==KEYWORD_6||(LA21_0>=KEYWORD_8 && LA21_0<=KEYWORD_9)||(LA21_0>=KEYWORD_11 && LA21_0<=KEYWORD_14)||(LA21_0>=KEYWORD_19 && LA21_0<=KEYWORD_21)||(LA21_0>=KEYWORD_23 && LA21_0<=RULE_DIGIT)||(LA21_0>=RULE_ALPHA && LA21_0<=RULE_WSP)) ) {
+            if ( ((LA21_0>=KEYWORD_46 && LA21_0<=KEYWORD_47)||LA21_0==KEYWORD_43||LA21_0==KEYWORD_45||(LA21_0>=KEYWORD_1 && LA21_0<=KEYWORD_2)||LA21_0==KEYWORD_4||(LA21_0>=KEYWORD_6 && LA21_0<=KEYWORD_7)||(LA21_0>=KEYWORD_9 && LA21_0<=KEYWORD_12)||(LA21_0>=KEYWORD_17 && LA21_0<=KEYWORD_19)||(LA21_0>=KEYWORD_21 && LA21_0<=RULE_DIGIT)||(LA21_0>=RULE_ALPHA && LA21_0<=RULE_WSP)) ) {
                 alt21=1;
             }
             switch (alt21) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:801:5: this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:822:5: this_PrimaryExpr_3= rulePrimaryExpr (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )*
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPredicateAccess().getPrimaryExprParserRuleCall_3_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulePrimaryExpr_in_rulePredicate2174);
+                    pushFollow(FOLLOW_rulePrimaryExpr_in_rulePredicate2247);
                     this_PrimaryExpr_3=rulePrimaryExpr();
 
                     state._fsp--;
@@ -2480,22 +2573,22 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:811:1: (kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:832:1: (kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr )*
                     loop20:
                     do {
                         int alt20=2;
                         int LA20_0 = input.LA(1);
 
-                        if ( (LA20_0==KEYWORD_10) ) {
+                        if ( (LA20_0==KEYWORD_8) ) {
                             alt20=1;
                         }
 
 
                         switch (alt20) {
                     	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:812:2: kw= KEYWORD_10 this_PrimaryExpr_5= rulePrimaryExpr
+                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:833:2: kw= KEYWORD_8 this_PrimaryExpr_5= rulePrimaryExpr
                     	    {
-                    	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_rulePredicate2193); if (state.failed) return current;
+                    	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulePredicate2266); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	              current.merge(kw);
@@ -2507,7 +2600,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     	              newCompositeNode(grammarAccess.getPredicateAccess().getPrimaryExprParserRuleCall_3_1_1()); 
                     	          
                     	    }
-                    	    pushFollow(FOLLOW_rulePrimaryExpr_in_rulePredicate2215);
+                    	    pushFollow(FOLLOW_rulePrimaryExpr_in_rulePredicate2288);
                     	    this_PrimaryExpr_5=rulePrimaryExpr();
 
                     	    state._fsp--;
@@ -2537,7 +2630,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_rulePredicate2237); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulePredicate2310); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -2568,7 +2661,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePredTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:842:1: entryRulePredTbl returns [String current=null] : iv_rulePredTbl= rulePredTbl EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:863:1: entryRulePredTbl returns [String current=null] : iv_rulePredTbl= rulePredTbl EOF ;
     public final String entryRulePredTbl() throws RecognitionException {
         String current = null;
 
@@ -2576,13 +2669,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:843:1: (iv_rulePredTbl= rulePredTbl EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:844:2: iv_rulePredTbl= rulePredTbl EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:864:1: (iv_rulePredTbl= rulePredTbl EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:865:2: iv_rulePredTbl= rulePredTbl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPredTblRule()); 
             }
-            pushFollow(FOLLOW_rulePredTbl_in_entryRulePredTbl2277);
+            pushFollow(FOLLOW_rulePredTbl_in_entryRulePredTbl2350);
             iv_rulePredTbl=rulePredTbl();
 
             state._fsp--;
@@ -2590,7 +2683,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePredTbl.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePredTbl2288); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePredTbl2361); if (state.failed) return current;
 
             }
 
@@ -2608,7 +2701,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePredTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:851:1: rulePredTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_53 | kw= KEYWORD_46 | kw= KEYWORD_50 | kw= KEYWORD_55 | kw= KEYWORD_54 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:872:1: rulePredTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_51 | kw= KEYWORD_44 | kw= KEYWORD_48 | kw= KEYWORD_53 | kw= KEYWORD_52 ) ;
     public final AntlrDatatypeRuleToken rulePredTbl() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2617,33 +2710,33 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:855:6: ( (kw= KEYWORD_53 | kw= KEYWORD_46 | kw= KEYWORD_50 | kw= KEYWORD_55 | kw= KEYWORD_54 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:856:1: (kw= KEYWORD_53 | kw= KEYWORD_46 | kw= KEYWORD_50 | kw= KEYWORD_55 | kw= KEYWORD_54 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:876:6: ( (kw= KEYWORD_51 | kw= KEYWORD_44 | kw= KEYWORD_48 | kw= KEYWORD_53 | kw= KEYWORD_52 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:877:1: (kw= KEYWORD_51 | kw= KEYWORD_44 | kw= KEYWORD_48 | kw= KEYWORD_53 | kw= KEYWORD_52 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:856:1: (kw= KEYWORD_53 | kw= KEYWORD_46 | kw= KEYWORD_50 | kw= KEYWORD_55 | kw= KEYWORD_54 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:877:1: (kw= KEYWORD_51 | kw= KEYWORD_44 | kw= KEYWORD_48 | kw= KEYWORD_53 | kw= KEYWORD_52 )
             int alt22=5;
             switch ( input.LA(1) ) {
-            case KEYWORD_53:
+            case KEYWORD_51:
                 {
                 alt22=1;
                 }
                 break;
-            case KEYWORD_46:
+            case KEYWORD_44:
                 {
                 alt22=2;
                 }
                 break;
-            case KEYWORD_50:
+            case KEYWORD_48:
                 {
                 alt22=3;
                 }
                 break;
-            case KEYWORD_55:
+            case KEYWORD_53:
                 {
                 alt22=4;
                 }
                 break;
-            case KEYWORD_54:
+            case KEYWORD_52:
                 {
                 alt22=5;
                 }
@@ -2658,9 +2751,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt22) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:857:2: kw= KEYWORD_53
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:878:2: kw= KEYWORD_51
                     {
-                    kw=(Token)match(input,KEYWORD_53,FOLLOW_KEYWORD_53_in_rulePredTbl2326); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_51,FOLLOW_KEYWORD_51_in_rulePredTbl2399); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -2671,9 +2764,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:864:2: kw= KEYWORD_46
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:885:2: kw= KEYWORD_44
                     {
-                    kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_rulePredTbl2345); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_rulePredTbl2418); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -2684,9 +2777,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:871:2: kw= KEYWORD_50
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:892:2: kw= KEYWORD_48
                     {
-                    kw=(Token)match(input,KEYWORD_50,FOLLOW_KEYWORD_50_in_rulePredTbl2364); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_rulePredTbl2437); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -2697,9 +2790,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:878:2: kw= KEYWORD_55
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:899:2: kw= KEYWORD_53
                     {
-                    kw=(Token)match(input,KEYWORD_55,FOLLOW_KEYWORD_55_in_rulePredTbl2383); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_53,FOLLOW_KEYWORD_53_in_rulePredTbl2456); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -2710,9 +2803,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:885:2: kw= KEYWORD_54
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:906:2: kw= KEYWORD_52
                     {
-                    kw=(Token)match(input,KEYWORD_54,FOLLOW_KEYWORD_54_in_rulePredTbl2402); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_52,FOLLOW_KEYWORD_52_in_rulePredTbl2475); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -2746,7 +2839,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimaryExpr"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:898:1: entryRulePrimaryExpr returns [String current=null] : iv_rulePrimaryExpr= rulePrimaryExpr EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:919:1: entryRulePrimaryExpr returns [String current=null] : iv_rulePrimaryExpr= rulePrimaryExpr EOF ;
     public final String entryRulePrimaryExpr() throws RecognitionException {
         String current = null;
 
@@ -2754,13 +2847,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:899:1: (iv_rulePrimaryExpr= rulePrimaryExpr EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:900:2: iv_rulePrimaryExpr= rulePrimaryExpr EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:920:1: (iv_rulePrimaryExpr= rulePrimaryExpr EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:921:2: iv_rulePrimaryExpr= rulePrimaryExpr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimaryExprRule()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpr_in_entryRulePrimaryExpr2442);
+            pushFollow(FOLLOW_rulePrimaryExpr_in_entryRulePrimaryExpr2515);
             iv_rulePrimaryExpr=rulePrimaryExpr();
 
             state._fsp--;
@@ -2768,7 +2861,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePrimaryExpr.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrimaryExpr2453); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrimaryExpr2526); if (state.failed) return current;
 
             }
 
@@ -2786,7 +2879,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimaryExpr"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:907:1: rulePrimaryExpr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:928:1: rulePrimaryExpr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* ) ;
     public final AntlrDatatypeRuleToken rulePrimaryExpr() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2805,13 +2898,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:911:6: ( ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:912:1: ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:932:6: ( ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:933:1: ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:912:1: ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:912:2: (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:933:1: ( (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )* )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:933:2: (this_WSP_0= RULE_WSP )* ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval ) ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )*
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:912:2: (this_WSP_0= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:933:2: (this_WSP_0= RULE_WSP )*
             loop23:
             do {
                 int alt23=2;
@@ -2824,9 +2917,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:912:7: this_WSP_0= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:933:7: this_WSP_0= RULE_WSP
             	    {
-            	    this_WSP_0=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2494); if (state.failed) return current;
+            	    this_WSP_0=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2567); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_0);
@@ -2846,34 +2939,34 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:919:3: ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:940:3: ( (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 ) | this_Array_6= ruleArray | this_Strval_7= ruleStrval )
             int alt26=3;
             switch ( input.LA(1) ) {
-            case KEYWORD_48:
-            case KEYWORD_49:
-            case KEYWORD_45:
+            case KEYWORD_46:
             case KEYWORD_47:
+            case KEYWORD_43:
+            case KEYWORD_45:
                 {
                 alt26=1;
                 }
                 break;
-            case KEYWORD_6:
+            case KEYWORD_4:
                 {
                 alt26=2;
                 }
                 break;
-            case KEYWORD_3:
-            case KEYWORD_4:
-            case KEYWORD_8:
+            case KEYWORD_1:
+            case KEYWORD_2:
+            case KEYWORD_6:
+            case KEYWORD_7:
             case KEYWORD_9:
+            case KEYWORD_10:
             case KEYWORD_11:
             case KEYWORD_12:
-            case KEYWORD_13:
-            case KEYWORD_14:
+            case KEYWORD_17:
+            case KEYWORD_18:
             case KEYWORD_19:
-            case KEYWORD_20:
             case KEYWORD_21:
-            case KEYWORD_23:
             case RULE_DIGIT:
             case RULE_ALPHA:
                 {
@@ -2890,17 +2983,17 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt26) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:919:4: (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:940:4: (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 )
                     {
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:919:4: (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7 )
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:920:5: this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_6 (this_WSP_4= RULE_WSP )* kw= KEYWORD_7
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:940:4: (this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5 )
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:941:5: this_ConstFuncTbl_1= ruleConstFuncTbl (this_WSP_2= RULE_WSP )* kw= KEYWORD_4 (this_WSP_4= RULE_WSP )* kw= KEYWORD_5
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPrimaryExprAccess().getConstFuncTblParserRuleCall_1_0_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleConstFuncTbl_in_rulePrimaryExpr2525);
+                    pushFollow(FOLLOW_ruleConstFuncTbl_in_rulePrimaryExpr2598);
                     this_ConstFuncTbl_1=ruleConstFuncTbl();
 
                     state._fsp--;
@@ -2915,7 +3008,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:930:1: (this_WSP_2= RULE_WSP )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:951:1: (this_WSP_2= RULE_WSP )*
                     loop24:
                     do {
                         int alt24=2;
@@ -2928,9 +3021,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                         switch (alt24) {
                     	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:930:6: this_WSP_2= RULE_WSP
+                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:951:6: this_WSP_2= RULE_WSP
                     	    {
-                    	    this_WSP_2=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2546); if (state.failed) return current;
+                    	    this_WSP_2=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2619); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      		current.merge(this_WSP_2);
@@ -2950,14 +3043,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_rulePrimaryExpr2566); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulePrimaryExpr2639); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getPrimaryExprAccess().getLeftParenthesisKeyword_1_0_2()); 
                           
                     }
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:943:1: (this_WSP_4= RULE_WSP )*
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:964:1: (this_WSP_4= RULE_WSP )*
                     loop25:
                     do {
                         int alt25=2;
@@ -2970,9 +3063,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                         switch (alt25) {
                     	case 1 :
-                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:943:6: this_WSP_4= RULE_WSP
+                    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:964:6: this_WSP_4= RULE_WSP
                     	    {
-                    	    this_WSP_4=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2582); if (state.failed) return current;
+                    	    this_WSP_4=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2655); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      		current.merge(this_WSP_4);
@@ -2992,7 +3085,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_rulePrimaryExpr2602); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulePrimaryExpr2675); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3006,14 +3099,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:958:5: this_Array_6= ruleArray
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:979:5: this_Array_6= ruleArray
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPrimaryExprAccess().getArrayParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleArray_in_rulePrimaryExpr2631);
+                    pushFollow(FOLLOW_ruleArray_in_rulePrimaryExpr2704);
                     this_Array_6=ruleArray();
 
                     state._fsp--;
@@ -3032,14 +3125,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:970:5: this_Strval_7= ruleStrval
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:991:5: this_Strval_7= ruleStrval
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getPrimaryExprAccess().getStrvalParserRuleCall_1_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleStrval_in_rulePrimaryExpr2664);
+                    pushFollow(FOLLOW_ruleStrval_in_rulePrimaryExpr2737);
                     this_Strval_7=ruleStrval();
 
                     state._fsp--;
@@ -3060,7 +3153,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:980:2: ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1001:2: ( ( RULE_WSP )=>this_WSP_8= RULE_WSP )*
             loop27:
             do {
                 int alt27=2;
@@ -3079,9 +3172,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:980:3: ( RULE_WSP )=>this_WSP_8= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1001:3: ( RULE_WSP )=>this_WSP_8= RULE_WSP
             	    {
-            	    this_WSP_8=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2690); if (state.failed) return current;
+            	    this_WSP_8=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_rulePrimaryExpr2763); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_8);
@@ -3125,7 +3218,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunctionsTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:995:1: entryRuleFunctionsTbl returns [String current=null] : iv_ruleFunctionsTbl= ruleFunctionsTbl EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1016:1: entryRuleFunctionsTbl returns [String current=null] : iv_ruleFunctionsTbl= ruleFunctionsTbl EOF ;
     public final String entryRuleFunctionsTbl() throws RecognitionException {
         String current = null;
 
@@ -3133,13 +3226,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:996:1: (iv_ruleFunctionsTbl= ruleFunctionsTbl EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:997:2: iv_ruleFunctionsTbl= ruleFunctionsTbl EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1017:1: (iv_ruleFunctionsTbl= ruleFunctionsTbl EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1018:2: iv_ruleFunctionsTbl= ruleFunctionsTbl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFunctionsTblRule()); 
             }
-            pushFollow(FOLLOW_ruleFunctionsTbl_in_entryRuleFunctionsTbl2737);
+            pushFollow(FOLLOW_ruleFunctionsTbl_in_entryRuleFunctionsTbl2810);
             iv_ruleFunctionsTbl=ruleFunctionsTbl();
 
             state._fsp--;
@@ -3147,7 +3240,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFunctionsTbl.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctionsTbl2748); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctionsTbl2821); if (state.failed) return current;
 
             }
 
@@ -3165,7 +3258,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunctionsTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1004:1: ruleFunctionsTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_52 | kw= KEYWORD_30 | kw= KEYWORD_37 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1025:1: ruleFunctionsTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_50 | kw= KEYWORD_28 | kw= KEYWORD_35 ) ;
     public final AntlrDatatypeRuleToken ruleFunctionsTbl() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3174,23 +3267,23 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1008:6: ( (kw= KEYWORD_52 | kw= KEYWORD_30 | kw= KEYWORD_37 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1009:1: (kw= KEYWORD_52 | kw= KEYWORD_30 | kw= KEYWORD_37 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1029:6: ( (kw= KEYWORD_50 | kw= KEYWORD_28 | kw= KEYWORD_35 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1030:1: (kw= KEYWORD_50 | kw= KEYWORD_28 | kw= KEYWORD_35 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1009:1: (kw= KEYWORD_52 | kw= KEYWORD_30 | kw= KEYWORD_37 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1030:1: (kw= KEYWORD_50 | kw= KEYWORD_28 | kw= KEYWORD_35 )
             int alt28=3;
             switch ( input.LA(1) ) {
-            case KEYWORD_52:
+            case KEYWORD_50:
                 {
                 alt28=1;
                 }
                 break;
-            case KEYWORD_30:
+            case KEYWORD_28:
                 {
                 alt28=2;
                 }
                 break;
-            case KEYWORD_37:
+            case KEYWORD_35:
                 {
                 alt28=3;
                 }
@@ -3205,9 +3298,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt28) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1010:2: kw= KEYWORD_52
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1031:2: kw= KEYWORD_50
                     {
-                    kw=(Token)match(input,KEYWORD_52,FOLLOW_KEYWORD_52_in_ruleFunctionsTbl2786); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_50,FOLLOW_KEYWORD_50_in_ruleFunctionsTbl2859); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3218,9 +3311,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1017:2: kw= KEYWORD_30
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1038:2: kw= KEYWORD_28
                     {
-                    kw=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleFunctionsTbl2805); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleFunctionsTbl2878); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3231,9 +3324,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1024:2: kw= KEYWORD_37
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1045:2: kw= KEYWORD_35
                     {
-                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleFunctionsTbl2824); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_35,FOLLOW_KEYWORD_35_in_ruleFunctionsTbl2897); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3267,7 +3360,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstFuncTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1037:1: entryRuleConstFuncTbl returns [String current=null] : iv_ruleConstFuncTbl= ruleConstFuncTbl EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1058:1: entryRuleConstFuncTbl returns [String current=null] : iv_ruleConstFuncTbl= ruleConstFuncTbl EOF ;
     public final String entryRuleConstFuncTbl() throws RecognitionException {
         String current = null;
 
@@ -3275,13 +3368,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1038:1: (iv_ruleConstFuncTbl= ruleConstFuncTbl EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1039:2: iv_ruleConstFuncTbl= ruleConstFuncTbl EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1059:1: (iv_ruleConstFuncTbl= ruleConstFuncTbl EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1060:2: iv_ruleConstFuncTbl= ruleConstFuncTbl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstFuncTblRule()); 
             }
-            pushFollow(FOLLOW_ruleConstFuncTbl_in_entryRuleConstFuncTbl2864);
+            pushFollow(FOLLOW_ruleConstFuncTbl_in_entryRuleConstFuncTbl2937);
             iv_ruleConstFuncTbl=ruleConstFuncTbl();
 
             state._fsp--;
@@ -3289,7 +3382,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleConstFuncTbl.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstFuncTbl2875); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstFuncTbl2948); if (state.failed) return current;
 
             }
 
@@ -3307,7 +3400,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstFuncTbl"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1046:1: ruleConstFuncTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_47 | kw= KEYWORD_49 | kw= KEYWORD_48 | kw= KEYWORD_45 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1067:1: ruleConstFuncTbl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_45 | kw= KEYWORD_47 | kw= KEYWORD_46 | kw= KEYWORD_43 ) ;
     public final AntlrDatatypeRuleToken ruleConstFuncTbl() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3316,28 +3409,28 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1050:6: ( (kw= KEYWORD_47 | kw= KEYWORD_49 | kw= KEYWORD_48 | kw= KEYWORD_45 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1051:1: (kw= KEYWORD_47 | kw= KEYWORD_49 | kw= KEYWORD_48 | kw= KEYWORD_45 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1071:6: ( (kw= KEYWORD_45 | kw= KEYWORD_47 | kw= KEYWORD_46 | kw= KEYWORD_43 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1072:1: (kw= KEYWORD_45 | kw= KEYWORD_47 | kw= KEYWORD_46 | kw= KEYWORD_43 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1051:1: (kw= KEYWORD_47 | kw= KEYWORD_49 | kw= KEYWORD_48 | kw= KEYWORD_45 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1072:1: (kw= KEYWORD_45 | kw= KEYWORD_47 | kw= KEYWORD_46 | kw= KEYWORD_43 )
             int alt29=4;
             switch ( input.LA(1) ) {
-            case KEYWORD_47:
+            case KEYWORD_45:
                 {
                 alt29=1;
                 }
                 break;
-            case KEYWORD_49:
+            case KEYWORD_47:
                 {
                 alt29=2;
                 }
                 break;
-            case KEYWORD_48:
+            case KEYWORD_46:
                 {
                 alt29=3;
                 }
                 break;
-            case KEYWORD_45:
+            case KEYWORD_43:
                 {
                 alt29=4;
                 }
@@ -3352,9 +3445,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt29) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1052:2: kw= KEYWORD_47
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1073:2: kw= KEYWORD_45
                     {
-                    kw=(Token)match(input,KEYWORD_47,FOLLOW_KEYWORD_47_in_ruleConstFuncTbl2913); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleConstFuncTbl2986); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3365,9 +3458,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1059:2: kw= KEYWORD_49
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1080:2: kw= KEYWORD_47
                     {
-                    kw=(Token)match(input,KEYWORD_49,FOLLOW_KEYWORD_49_in_ruleConstFuncTbl2932); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_47,FOLLOW_KEYWORD_47_in_ruleConstFuncTbl3005); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3378,9 +3471,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1066:2: kw= KEYWORD_48
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1087:2: kw= KEYWORD_46
                     {
-                    kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleConstFuncTbl2951); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_ruleConstFuncTbl3024); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3391,9 +3484,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1073:2: kw= KEYWORD_45
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1094:2: kw= KEYWORD_43
                     {
-                    kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleConstFuncTbl2970); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleConstFuncTbl3043); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3427,7 +3520,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArray"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1086:1: entryRuleArray returns [String current=null] : iv_ruleArray= ruleArray EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1107:1: entryRuleArray returns [String current=null] : iv_ruleArray= ruleArray EOF ;
     public final String entryRuleArray() throws RecognitionException {
         String current = null;
 
@@ -3435,13 +3528,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1087:1: (iv_ruleArray= ruleArray EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1088:2: iv_ruleArray= ruleArray EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1108:1: (iv_ruleArray= ruleArray EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1109:2: iv_ruleArray= ruleArray EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArrayRule()); 
             }
-            pushFollow(FOLLOW_ruleArray_in_entryRuleArray3010);
+            pushFollow(FOLLOW_ruleArray_in_entryRuleArray3083);
             iv_ruleArray=ruleArray();
 
             state._fsp--;
@@ -3449,7 +3542,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleArray.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArray3021); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArray3094); if (state.failed) return current;
 
             }
 
@@ -3467,7 +3560,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArray"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1095:1: ruleArray returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_6 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_7 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1116:1: ruleArray returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleArray() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3484,20 +3577,20 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1099:6: ( (kw= KEYWORD_6 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_7 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1100:1: (kw= KEYWORD_6 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_7 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1120:6: ( (kw= KEYWORD_4 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_5 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1121:1: (kw= KEYWORD_4 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_5 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1100:1: (kw= KEYWORD_6 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_7 )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1101:2: kw= KEYWORD_6 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_7
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1121:1: (kw= KEYWORD_4 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_5 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1122:2: kw= KEYWORD_4 (this_WSP_1= RULE_WSP )* this_Strval_2= ruleStrval (this_WSP_3= RULE_WSP )* (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )* kw= KEYWORD_5
             {
-            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleArray3059); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleArray3132); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getArrayAccess().getLeftParenthesisKeyword_0()); 
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1106:1: (this_WSP_1= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1127:1: (this_WSP_1= RULE_WSP )*
             loop30:
             do {
                 int alt30=2;
@@ -3510,9 +3603,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1106:6: this_WSP_1= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1127:6: this_WSP_1= RULE_WSP
             	    {
-            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3075); if (state.failed) return current;
+            	    this_WSP_1=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3148); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_1);
@@ -3537,7 +3630,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getArrayAccess().getStrvalParserRuleCall_2()); 
                   
             }
-            pushFollow(FOLLOW_ruleStrval_in_ruleArray3104);
+            pushFollow(FOLLOW_ruleStrval_in_ruleArray3177);
             this_Strval_2=ruleStrval();
 
             state._fsp--;
@@ -3552,7 +3645,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1124:1: (this_WSP_3= RULE_WSP )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1145:1: (this_WSP_3= RULE_WSP )*
             loop31:
             do {
                 int alt31=2;
@@ -3565,9 +3658,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
                 switch (alt31) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1124:6: this_WSP_3= RULE_WSP
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1145:6: this_WSP_3= RULE_WSP
             	    {
-            	    this_WSP_3=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3125); if (state.failed) return current;
+            	    this_WSP_3=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3198); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      		current.merge(this_WSP_3);
@@ -3587,29 +3680,29 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1131:3: (kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )*
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1152:3: (kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )* )*
             loop34:
             do {
                 int alt34=2;
                 int LA34_0 = input.LA(1);
 
-                if ( (LA34_0==KEYWORD_10) ) {
+                if ( (LA34_0==KEYWORD_8) ) {
                     alt34=1;
                 }
 
 
                 switch (alt34) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1132:2: kw= KEYWORD_10 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )*
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1153:2: kw= KEYWORD_8 (this_WSP_5= RULE_WSP )* this_Strval_6= ruleStrval (this_WSP_7= RULE_WSP )*
             	    {
-            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleArray3146); if (state.failed) return current;
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleArray3219); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
             	              newLeafNode(kw, grammarAccess.getArrayAccess().getCommaKeyword_4_0()); 
             	          
             	    }
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1137:1: (this_WSP_5= RULE_WSP )*
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1158:1: (this_WSP_5= RULE_WSP )*
             	    loop32:
             	    do {
             	        int alt32=2;
@@ -3622,9 +3715,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt32) {
             	    	case 1 :
-            	    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1137:6: this_WSP_5= RULE_WSP
+            	    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1158:6: this_WSP_5= RULE_WSP
             	    	    {
-            	    	    this_WSP_5=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3162); if (state.failed) return current;
+            	    	    this_WSP_5=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3235); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
             	    	      		current.merge(this_WSP_5);
@@ -3649,7 +3742,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	              newCompositeNode(grammarAccess.getArrayAccess().getStrvalParserRuleCall_4_2()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_ruleStrval_in_ruleArray3191);
+            	    pushFollow(FOLLOW_ruleStrval_in_ruleArray3264);
             	    this_Strval_6=ruleStrval();
 
             	    state._fsp--;
@@ -3664,7 +3757,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	              afterParserOrEnumRuleCall();
             	          
             	    }
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1155:1: (this_WSP_7= RULE_WSP )*
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1176:1: (this_WSP_7= RULE_WSP )*
             	    loop33:
             	    do {
             	        int alt33=2;
@@ -3677,9 +3770,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt33) {
             	    	case 1 :
-            	    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1155:6: this_WSP_7= RULE_WSP
+            	    	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1176:6: this_WSP_7= RULE_WSP
             	    	    {
-            	    	    this_WSP_7=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3212); if (state.failed) return current;
+            	    	    this_WSP_7=(Token)match(input,RULE_WSP,FOLLOW_RULE_WSP_in_ruleArray3285); if (state.failed) return current;
             	    	    if ( state.backtracking==0 ) {
 
             	    	      		current.merge(this_WSP_7);
@@ -3708,7 +3801,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleArray3234); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleArray3307); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -3739,7 +3832,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNchar"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1176:1: entryRuleNchar returns [String current=null] : iv_ruleNchar= ruleNchar EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1197:1: entryRuleNchar returns [String current=null] : iv_ruleNchar= ruleNchar EOF ;
     public final String entryRuleNchar() throws RecognitionException {
         String current = null;
 
@@ -3747,13 +3840,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1177:1: (iv_ruleNchar= ruleNchar EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1178:2: iv_ruleNchar= ruleNchar EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1198:1: (iv_ruleNchar= ruleNchar EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1199:2: iv_ruleNchar= ruleNchar EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNcharRule()); 
             }
-            pushFollow(FOLLOW_ruleNchar_in_entryRuleNchar3274);
+            pushFollow(FOLLOW_ruleNchar_in_entryRuleNchar3347);
             iv_ruleNchar=ruleNchar();
 
             state._fsp--;
@@ -3761,7 +3854,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleNchar.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNchar3285); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNchar3358); if (state.failed) return current;
 
             }
 
@@ -3779,7 +3872,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNchar"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1185:1: ruleNchar returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_11 | kw= KEYWORD_12 | kw= KEYWORD_21 | kw= KEYWORD_23 | kw= KEYWORD_3 | kw= KEYWORD_14 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_19 | kw= KEYWORD_13 | kw= KEYWORD_20 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1206:1: ruleNchar returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_9 | kw= KEYWORD_10 | kw= KEYWORD_19 | kw= KEYWORD_21 | kw= KEYWORD_1 | kw= KEYWORD_12 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_17 | kw= KEYWORD_11 | kw= KEYWORD_18 ) ;
     public final AntlrDatatypeRuleToken ruleNchar() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3790,10 +3883,10 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1189:6: ( (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_11 | kw= KEYWORD_12 | kw= KEYWORD_21 | kw= KEYWORD_23 | kw= KEYWORD_3 | kw= KEYWORD_14 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_19 | kw= KEYWORD_13 | kw= KEYWORD_20 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1190:1: (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_11 | kw= KEYWORD_12 | kw= KEYWORD_21 | kw= KEYWORD_23 | kw= KEYWORD_3 | kw= KEYWORD_14 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_19 | kw= KEYWORD_13 | kw= KEYWORD_20 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1210:6: ( (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_9 | kw= KEYWORD_10 | kw= KEYWORD_19 | kw= KEYWORD_21 | kw= KEYWORD_1 | kw= KEYWORD_12 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_17 | kw= KEYWORD_11 | kw= KEYWORD_18 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1211:1: (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_9 | kw= KEYWORD_10 | kw= KEYWORD_19 | kw= KEYWORD_21 | kw= KEYWORD_1 | kw= KEYWORD_12 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_17 | kw= KEYWORD_11 | kw= KEYWORD_18 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1190:1: (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_11 | kw= KEYWORD_12 | kw= KEYWORD_21 | kw= KEYWORD_23 | kw= KEYWORD_3 | kw= KEYWORD_14 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_19 | kw= KEYWORD_13 | kw= KEYWORD_20 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1211:1: (this_ALPHA_0= RULE_ALPHA | this_DIGIT_1= RULE_DIGIT | kw= KEYWORD_9 | kw= KEYWORD_10 | kw= KEYWORD_19 | kw= KEYWORD_21 | kw= KEYWORD_1 | kw= KEYWORD_12 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_17 | kw= KEYWORD_11 | kw= KEYWORD_18 )
             int alt35=13;
             switch ( input.LA(1) ) {
             case RULE_ALPHA:
@@ -3806,57 +3899,57 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                 alt35=2;
                 }
                 break;
-            case KEYWORD_11:
+            case KEYWORD_9:
                 {
                 alt35=3;
                 }
                 break;
-            case KEYWORD_12:
+            case KEYWORD_10:
                 {
                 alt35=4;
                 }
                 break;
-            case KEYWORD_21:
+            case KEYWORD_19:
                 {
                 alt35=5;
                 }
                 break;
-            case KEYWORD_23:
+            case KEYWORD_21:
                 {
                 alt35=6;
                 }
                 break;
-            case KEYWORD_3:
+            case KEYWORD_1:
                 {
                 alt35=7;
                 }
                 break;
-            case KEYWORD_14:
+            case KEYWORD_12:
                 {
                 alt35=8;
                 }
                 break;
-            case KEYWORD_8:
+            case KEYWORD_6:
                 {
                 alt35=9;
                 }
                 break;
-            case KEYWORD_9:
+            case KEYWORD_7:
                 {
                 alt35=10;
                 }
                 break;
-            case KEYWORD_19:
+            case KEYWORD_17:
                 {
                 alt35=11;
                 }
                 break;
-            case KEYWORD_13:
+            case KEYWORD_11:
                 {
                 alt35=12;
                 }
                 break;
-            case KEYWORD_20:
+            case KEYWORD_18:
                 {
                 alt35=13;
                 }
@@ -3871,9 +3964,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt35) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1190:6: this_ALPHA_0= RULE_ALPHA
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1211:6: this_ALPHA_0= RULE_ALPHA
                     {
-                    this_ALPHA_0=(Token)match(input,RULE_ALPHA,FOLLOW_RULE_ALPHA_in_ruleNchar3325); if (state.failed) return current;
+                    this_ALPHA_0=(Token)match(input,RULE_ALPHA,FOLLOW_RULE_ALPHA_in_ruleNchar3398); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ALPHA_0);
@@ -3888,9 +3981,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1198:10: this_DIGIT_1= RULE_DIGIT
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1219:10: this_DIGIT_1= RULE_DIGIT
                     {
-                    this_DIGIT_1=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_ruleNchar3351); if (state.failed) return current;
+                    this_DIGIT_1=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_ruleNchar3424); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_DIGIT_1);
@@ -3905,9 +3998,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1207:2: kw= KEYWORD_11
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1228:2: kw= KEYWORD_9
                     {
-                    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleNchar3375); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleNchar3448); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3918,9 +4011,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1214:2: kw= KEYWORD_12
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1235:2: kw= KEYWORD_10
                     {
-                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleNchar3394); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleNchar3467); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3931,9 +4024,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1221:2: kw= KEYWORD_21
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1242:2: kw= KEYWORD_19
                     {
-                    kw=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_ruleNchar3413); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_ruleNchar3486); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3944,9 +4037,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1228:2: kw= KEYWORD_23
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1249:2: kw= KEYWORD_21
                     {
-                    kw=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleNchar3432); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_ruleNchar3505); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3957,9 +4050,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1235:2: kw= KEYWORD_3
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1256:2: kw= KEYWORD_1
                     {
-                    kw=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleNchar3451); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_ruleNchar3524); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3970,9 +4063,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1242:2: kw= KEYWORD_14
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1263:2: kw= KEYWORD_12
                     {
-                    kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleNchar3470); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleNchar3543); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3983,9 +4076,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1249:2: kw= KEYWORD_8
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1270:2: kw= KEYWORD_6
                     {
-                    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleNchar3489); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleNchar3562); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -3996,9 +4089,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1256:2: kw= KEYWORD_9
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1277:2: kw= KEYWORD_7
                     {
-                    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleNchar3508); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleNchar3581); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4009,9 +4102,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1263:2: kw= KEYWORD_19
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1284:2: kw= KEYWORD_17
                     {
-                    kw=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_ruleNchar3527); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_17,FOLLOW_KEYWORD_17_in_ruleNchar3600); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4022,9 +4115,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1270:2: kw= KEYWORD_13
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1291:2: kw= KEYWORD_11
                     {
-                    kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleNchar3546); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleNchar3619); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4035,9 +4128,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1277:2: kw= KEYWORD_20
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1298:2: kw= KEYWORD_18
                     {
-                    kw=(Token)match(input,KEYWORD_20,FOLLOW_KEYWORD_20_in_ruleNchar3565); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_18,FOLLOW_KEYWORD_18_in_ruleNchar3638); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4071,7 +4164,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePct_encoded"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1290:1: entryRulePct_encoded returns [String current=null] : iv_rulePct_encoded= rulePct_encoded EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1311:1: entryRulePct_encoded returns [String current=null] : iv_rulePct_encoded= rulePct_encoded EOF ;
     public final String entryRulePct_encoded() throws RecognitionException {
         String current = null;
 
@@ -4079,13 +4172,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1291:1: (iv_rulePct_encoded= rulePct_encoded EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1292:2: iv_rulePct_encoded= rulePct_encoded EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1312:1: (iv_rulePct_encoded= rulePct_encoded EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1313:2: iv_rulePct_encoded= rulePct_encoded EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPct_encodedRule()); 
             }
-            pushFollow(FOLLOW_rulePct_encoded_in_entryRulePct_encoded3605);
+            pushFollow(FOLLOW_rulePct_encoded_in_entryRulePct_encoded3678);
             iv_rulePct_encoded=rulePct_encoded();
 
             state._fsp--;
@@ -4093,7 +4186,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePct_encoded.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePct_encoded3616); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePct_encoded3689); if (state.failed) return current;
 
             }
 
@@ -4111,7 +4204,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePct_encoded"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1299:1: rulePct_encoded returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1320:1: rulePct_encoded returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_2 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT ) ;
     public final AntlrDatatypeRuleToken rulePct_encoded() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4122,20 +4215,20 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1303:6: ( (kw= KEYWORD_4 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1304:1: (kw= KEYWORD_4 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1324:6: ( (kw= KEYWORD_2 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1325:1: (kw= KEYWORD_2 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1304:1: (kw= KEYWORD_4 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1305:2: kw= KEYWORD_4 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1325:1: (kw= KEYWORD_2 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1326:2: kw= KEYWORD_2 this_XDIGIT_1= RULE_XDIGIT this_XDIGIT_2= RULE_XDIGIT
             {
-            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulePct_encoded3654); if (state.failed) return current;
+            kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_rulePct_encoded3727); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getPct_encodedAccess().getPercentSignKeyword_0()); 
                   
             }
-            this_XDIGIT_1=(Token)match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rulePct_encoded3669); if (state.failed) return current;
+            this_XDIGIT_1=(Token)match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rulePct_encoded3742); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_XDIGIT_1);
@@ -4146,7 +4239,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                   newLeafNode(this_XDIGIT_1, grammarAccess.getPct_encodedAccess().getXDIGITTerminalRuleCall_1()); 
                   
             }
-            this_XDIGIT_2=(Token)match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rulePct_encoded3689); if (state.failed) return current;
+            this_XDIGIT_2=(Token)match(input,RULE_XDIGIT,FOLLOW_RULE_XDIGIT_in_rulePct_encoded3762); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(this_XDIGIT_2);
@@ -4181,7 +4274,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStrval"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1332:1: entryRuleStrval returns [String current=null] : iv_ruleStrval= ruleStrval EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1353:1: entryRuleStrval returns [String current=null] : iv_ruleStrval= ruleStrval EOF ;
     public final String entryRuleStrval() throws RecognitionException {
         String current = null;
 
@@ -4189,13 +4282,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1333:1: (iv_ruleStrval= ruleStrval EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1334:2: iv_ruleStrval= ruleStrval EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1354:1: (iv_ruleStrval= ruleStrval EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1355:2: iv_ruleStrval= ruleStrval EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStrvalRule()); 
             }
-            pushFollow(FOLLOW_ruleStrval_in_entryRuleStrval3734);
+            pushFollow(FOLLOW_ruleStrval_in_entryRuleStrval3807);
             iv_ruleStrval=ruleStrval();
 
             state._fsp--;
@@ -4203,7 +4296,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleStrval.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStrval3745); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStrval3818); if (state.failed) return current;
 
             }
 
@@ -4221,7 +4314,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStrval"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1341:1: ruleStrval returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+ ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1362:1: ruleStrval returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+ ;
     public final AntlrDatatypeRuleToken ruleStrval() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4233,34 +4326,34 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1345:6: ( (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+ )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1346:1: (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1366:6: ( (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+ )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1367:1: (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1346:1: (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1367:1: (this_Nchar_0= ruleNchar | this_Pct_encoded_1= rulePct_encoded )+
             int cnt36=0;
             loop36:
             do {
                 int alt36=3;
                 int LA36_0 = input.LA(1);
 
-                if ( (LA36_0==KEYWORD_3||(LA36_0>=KEYWORD_8 && LA36_0<=KEYWORD_9)||(LA36_0>=KEYWORD_11 && LA36_0<=KEYWORD_14)||(LA36_0>=KEYWORD_19 && LA36_0<=KEYWORD_21)||(LA36_0>=KEYWORD_23 && LA36_0<=RULE_DIGIT)||LA36_0==RULE_ALPHA) ) {
+                if ( (LA36_0==KEYWORD_1||(LA36_0>=KEYWORD_6 && LA36_0<=KEYWORD_7)||(LA36_0>=KEYWORD_9 && LA36_0<=KEYWORD_12)||(LA36_0>=KEYWORD_17 && LA36_0<=KEYWORD_19)||(LA36_0>=KEYWORD_21 && LA36_0<=RULE_DIGIT)||LA36_0==RULE_ALPHA) ) {
                     alt36=1;
                 }
-                else if ( (LA36_0==KEYWORD_4) ) {
+                else if ( (LA36_0==KEYWORD_2) ) {
                     alt36=2;
                 }
 
 
                 switch (alt36) {
             	case 1 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1347:5: this_Nchar_0= ruleNchar
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1368:5: this_Nchar_0= ruleNchar
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	              newCompositeNode(grammarAccess.getStrvalAccess().getNcharParserRuleCall_0()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_ruleNchar_in_ruleStrval3792);
+            	    pushFollow(FOLLOW_ruleNchar_in_ruleStrval3865);
             	    this_Nchar_0=ruleNchar();
 
             	    state._fsp--;
@@ -4279,14 +4372,14 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1359:5: this_Pct_encoded_1= rulePct_encoded
+            	    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1380:5: this_Pct_encoded_1= rulePct_encoded
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	              newCompositeNode(grammarAccess.getStrvalAccess().getPct_encodedParserRuleCall_1()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_rulePct_encoded_in_ruleStrval3825);
+            	    pushFollow(FOLLOW_rulePct_encoded_in_ruleStrval3898);
             	    this_Pct_encoded_1=rulePct_encoded();
 
             	    state._fsp--;
@@ -4336,7 +4429,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLogicalOpAliases"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1377:1: entryRuleLogicalOpAliases returns [String current=null] : iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1398:1: entryRuleLogicalOpAliases returns [String current=null] : iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF ;
     public final String entryRuleLogicalOpAliases() throws RecognitionException {
         String current = null;
 
@@ -4344,13 +4437,13 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1378:1: (iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1379:2: iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1399:1: (iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1400:2: iv_ruleLogicalOpAliases= ruleLogicalOpAliases EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLogicalOpAliasesRule()); 
             }
-            pushFollow(FOLLOW_ruleLogicalOpAliases_in_entryRuleLogicalOpAliases3871);
+            pushFollow(FOLLOW_ruleLogicalOpAliases_in_entryRuleLogicalOpAliases3944);
             iv_ruleLogicalOpAliases=ruleLogicalOpAliases();
 
             state._fsp--;
@@ -4358,7 +4451,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLogicalOpAliases.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLogicalOpAliases3882); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLogicalOpAliases3955); if (state.failed) return current;
 
             }
 
@@ -4376,7 +4469,7 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLogicalOpAliases"
-    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1386:1: ruleLogicalOpAliases returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_34 | kw= KEYWORD_35 | kw= KEYWORD_36 ) ;
+    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1407:1: ruleLogicalOpAliases returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_32 | kw= KEYWORD_33 | kw= KEYWORD_34 ) ;
     public final AntlrDatatypeRuleToken ruleLogicalOpAliases() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4385,23 +4478,23 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1390:6: ( (kw= KEYWORD_34 | kw= KEYWORD_35 | kw= KEYWORD_36 ) )
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1391:1: (kw= KEYWORD_34 | kw= KEYWORD_35 | kw= KEYWORD_36 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1411:6: ( (kw= KEYWORD_32 | kw= KEYWORD_33 | kw= KEYWORD_34 ) )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1412:1: (kw= KEYWORD_32 | kw= KEYWORD_33 | kw= KEYWORD_34 )
             {
-            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1391:1: (kw= KEYWORD_34 | kw= KEYWORD_35 | kw= KEYWORD_36 )
+            // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1412:1: (kw= KEYWORD_32 | kw= KEYWORD_33 | kw= KEYWORD_34 )
             int alt37=3;
             switch ( input.LA(1) ) {
-            case KEYWORD_34:
+            case KEYWORD_32:
                 {
                 alt37=1;
                 }
                 break;
-            case KEYWORD_35:
+            case KEYWORD_33:
                 {
                 alt37=2;
                 }
                 break;
-            case KEYWORD_36:
+            case KEYWORD_34:
                 {
                 alt37=3;
                 }
@@ -4416,9 +4509,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
             switch (alt37) {
                 case 1 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1392:2: kw= KEYWORD_34
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1413:2: kw= KEYWORD_32
                     {
-                    kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleLogicalOpAliases3920); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_ruleLogicalOpAliases3993); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4429,9 +4522,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1399:2: kw= KEYWORD_35
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1420:2: kw= KEYWORD_33
                     {
-                    kw=(Token)match(input,KEYWORD_35,FOLLOW_KEYWORD_35_in_ruleLogicalOpAliases3939); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_33,FOLLOW_KEYWORD_33_in_ruleLogicalOpAliases4012); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4442,9 +4535,9 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1406:2: kw= KEYWORD_36
+                    // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1427:2: kw= KEYWORD_34
                     {
-                    kw=(Token)match(input,KEYWORD_36,FOLLOW_KEYWORD_36_in_ruleLogicalOpAliases3958); if (state.failed) return current;
+                    kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleLogicalOpAliases4031); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -4478,10 +4571,10 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalRQLParser
     public final void synpred1_InternalRQLParser_fragment() throws RecognitionException {   
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:980:3: ( RULE_WSP )
-        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:980:4: RULE_WSP
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1001:3: ( RULE_WSP )
+        // ../com.parallels.aps.ide.rqleditor.xtext.rql/src-gen/com/parallels/aps/ide/rqleditor/xtext/rql/parser/antlr/internal/InternalRQLParser.g:1001:4: RULE_WSP
         {
-        match(input,RULE_WSP,FOLLOW_RULE_WSP_in_synpred1_InternalRQLParser2681); if (state.failed) return ;
+        match(input,RULE_WSP,FOLLOW_RULE_WSP_in_synpred1_InternalRQLParser2754); if (state.failed) return ;
 
         }
     }
@@ -4509,161 +4602,162 @@ public class InternalRQLParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel67 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel77 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_ruleModel123 = new BitSet(new long[]{0x0000210000000002L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleModel138 = new BitSet(new long[]{0x6DC3FBFFF1D409B0L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleModel156 = new BitSet(new long[]{0x6DC3FBFFF1D409B0L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_ruleModel172 = new BitSet(new long[]{0x0000210000000002L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_ruleModel123 = new BitSet(new long[]{0x0000084000000002L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleModel138 = new BitSet(new long[]{0x1B70FEFFF1D409B0L});
+    public static final BitSet FOLLOW_KEYWORD_3_in_ruleModel156 = new BitSet(new long[]{0x1B70FEFFF1D409B0L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_ruleModel172 = new BitSet(new long[]{0x0000084000000002L});
     public static final BitSet FOLLOW_ruleAnd_in_entryRuleAnd209 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAnd220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleAnd258 = new BitSet(new long[]{0x6DC3DAFFF1D409B0L});
+    public static final BitSet FOLLOW_KEYWORD_3_in_ruleAnd258 = new BitSet(new long[]{0x1B70F6BFF1D409B0L});
     public static final BitSet FOLLOW_ruleHoOperand_in_ruleAnd280 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOr_in_entryRuleOr325 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOr336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_15_in_ruleOr375 = new BitSet(new long[]{0x6DC3DAFFF1D409B0L});
-    public static final BitSet FOLLOW_KEYWORD_22_in_ruleOr394 = new BitSet(new long[]{0x6DC3DAFFF1D409B0L});
+    public static final BitSet FOLLOW_KEYWORD_13_in_ruleOr375 = new BitSet(new long[]{0x1B70F6BFF1D409B0L});
+    public static final BitSet FOLLOW_KEYWORD_20_in_ruleOr394 = new BitSet(new long[]{0x1B70F6BFF1D409B0L});
     public static final BitSet FOLLOW_ruleHoOperand_in_ruleOr417 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleHoOperand_in_entryRuleHoOperand462 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleHoOperand473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleHoOperand514 = new BitSet(new long[]{0x6DC3DAFFF1D409B2L});
-    public static final BitSet FOLLOW_ruleHigherOrderCall_in_ruleHoOperand544 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_ruleCallOperator_in_ruleHoOperand577 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_ruleHoOperand610 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_ruleHoOperand643 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleHoOperand668 = new BitSet(new long[]{0x6FC7DBFFF1D409B0L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHoOperand690 = new BitSet(new long[]{0x6FC7DBFFF1D409B0L});
-    public static final BitSet FOLLOW_ruleAnd_in_ruleHoOperand718 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_ruleOr_in_ruleHoOperand751 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleHoOperand770 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleHoOperand789 = new BitSet(new long[]{0x4000003000000002L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_ruleHoOperand810 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_KEYWORD_1_in_ruleHoOperand826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHigherOrderCall_in_entryRuleHigherOrderCall868 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHigherOrderCall879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_ruleHigherOrderCall926 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleHigherOrderCall947 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleHigherOrderCall967 = new BitSet(new long[]{0x6DC3FEFFF1D409B0L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHigherOrderCall990 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleHigherOrderCall1009 = new BitSet(new long[]{0x6DC3FEFFF1D409B0L});
-    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHigherOrderCall1031 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleHigherOrderCall1052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_entryRuleBinaryOpAliases1092 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBinaryOpAliases1103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_33_in_ruleBinaryOpAliases1141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_27_in_ruleBinaryOpAliases1160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_32_in_ruleBinaryOpAliases1179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_31_in_ruleBinaryOpAliases1198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_ruleBinaryOpAliases1217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_28_in_ruleBinaryOpAliases1236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_44_in_ruleBinaryOpAliases1255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompOps_in_entryRuleCompOps1295 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompOps1306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_24_in_ruleCompOps1344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_17_in_ruleCompOps1363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_16_in_ruleCompOps1382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_25_in_ruleCompOps1401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_18_in_ruleCompOps1420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_26_in_ruleCompOps1439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_43_in_ruleCompOps1458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_38_in_ruleCompOps1477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_42_in_ruleCompOps1496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_41_in_ruleCompOps1515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_40_in_ruleCompOps1534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_39_in_ruleCompOps1553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_51_in_ruleCompOps1572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparison_in_entryRuleComparison1612 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComparison1623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_ruleComparison1670 = new BitSet(new long[]{0x403800000E03F040L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleComparison1691 = new BitSet(new long[]{0x403800000E03F040L});
-    public static final BitSet FOLLOW_ruleCompOps_in_ruleComparison1720 = new BitSet(new long[]{0x6DC3DAC000280600L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleComparison1747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCallOperator_in_entryRuleCallOperator1792 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCallOperator1803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_ruleCallOperator1851 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_ruleFunctionsTbl_in_ruleCallOperator1884 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleCallOperator1906 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleCallOperator1926 = new BitSet(new long[]{0x6DC3DEC000280600L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleCallOperator1949 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleCallOperator1968 = new BitSet(new long[]{0x6DC3DAC000280600L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleCallOperator1990 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleCallOperator2012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_entryRulePredicate2052 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePredicate2063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredTbl_in_rulePredicate2110 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rulePredicate2131 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_rulePredicate2151 = new BitSet(new long[]{0x6DC3DEC000280600L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rulePredicate2174 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_rulePredicate2193 = new BitSet(new long[]{0x6DC3DAC000280600L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_rulePredicate2215 = new BitSet(new long[]{0x0000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_rulePredicate2237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredTbl_in_entryRulePredTbl2277 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePredTbl2288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_53_in_rulePredTbl2326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_46_in_rulePredTbl2345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_50_in_rulePredTbl2364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_55_in_rulePredTbl2383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_54_in_rulePredTbl2402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpr_in_entryRulePrimaryExpr2442 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrimaryExpr2453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2494 = new BitSet(new long[]{0x6DC3DAC000280600L});
-    public static final BitSet FOLLOW_ruleConstFuncTbl_in_rulePrimaryExpr2525 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2546 = new BitSet(new long[]{0x4000020000000000L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_rulePrimaryExpr2566 = new BitSet(new long[]{0x4000040000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2582 = new BitSet(new long[]{0x4000040000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_rulePrimaryExpr2602 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_rulePrimaryExpr2631 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_rulePrimaryExpr2664 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2690 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionsTbl_in_entryRuleFunctionsTbl2737 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunctionsTbl2748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_52_in_ruleFunctionsTbl2786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_30_in_ruleFunctionsTbl2805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_37_in_ruleFunctionsTbl2824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstFuncTbl_in_entryRuleConstFuncTbl2864 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstFuncTbl2875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_47_in_ruleConstFuncTbl2913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_49_in_ruleConstFuncTbl2932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_48_in_ruleConstFuncTbl2951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_45_in_ruleConstFuncTbl2970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray3010 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArray3021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleArray3059 = new BitSet(new long[]{0x6DC3D8C000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3075 = new BitSet(new long[]{0x6DC3D8C000000000L});
-    public static final BitSet FOLLOW_ruleStrval_in_ruleArray3104 = new BitSet(new long[]{0x4000240000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3125 = new BitSet(new long[]{0x4000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleArray3146 = new BitSet(new long[]{0x6DC3D8C000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3162 = new BitSet(new long[]{0x6DC3D8C000000000L});
-    public static final BitSet FOLLOW_ruleStrval_in_ruleArray3191 = new BitSet(new long[]{0x4000240000000000L});
-    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3212 = new BitSet(new long[]{0x4000240000000000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleArray3234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNchar_in_entryRuleNchar3274 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNchar3285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ALPHA_in_ruleNchar3325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_ruleNchar3351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_11_in_ruleNchar3375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_ruleNchar3394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_21_in_ruleNchar3413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_23_in_ruleNchar3432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_3_in_ruleNchar3451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_14_in_ruleNchar3470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleNchar3489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_9_in_ruleNchar3508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_19_in_ruleNchar3527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_13_in_ruleNchar3546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_20_in_ruleNchar3565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePct_encoded_in_entryRulePct_encoded3605 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePct_encoded3616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_rulePct_encoded3654 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_RULE_XDIGIT_in_rulePct_encoded3669 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_RULE_XDIGIT_in_rulePct_encoded3689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrval_in_entryRuleStrval3734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStrval3745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNchar_in_ruleStrval3792 = new BitSet(new long[]{0x2DC3D8C000000002L});
-    public static final BitSet FOLLOW_rulePct_encoded_in_ruleStrval3825 = new BitSet(new long[]{0x2DC3D8C000000002L});
-    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_entryRuleLogicalOpAliases3871 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLogicalOpAliases3882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_34_in_ruleLogicalOpAliases3920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_35_in_ruleLogicalOpAliases3939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_36_in_ruleLogicalOpAliases3958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_WSP_in_synpred1_InternalRQLParser2681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleHoOperand514 = new BitSet(new long[]{0x1B70F6BFF1D409B2L});
+    public static final BitSet FOLLOW_ruleHigherOrderCall_in_ruleHoOperand544 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleCallOperator_in_ruleHoOperand577 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_ruleHoOperand610 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_ruleHoOperand643 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleHoOperand668 = new BitSet(new long[]{0x1BF1F6FFF1D409B0L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHoOperand690 = new BitSet(new long[]{0x1BF1F6FFF1D409B0L});
+    public static final BitSet FOLLOW_ruleAnd_in_ruleHoOperand718 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_ruleOr_in_ruleHoOperand751 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleHoOperand770 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleHoOperand789 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleHigherOrderCall_in_entryRuleHigherOrderCall836 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHigherOrderCall847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_ruleHigherOrderCall894 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleHigherOrderCall915 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleHigherOrderCall935 = new BitSet(new long[]{0x1B70FFBFF1D409B0L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHigherOrderCall958 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleHigherOrderCall977 = new BitSet(new long[]{0x1B70FFBFF1D409B0L});
+    public static final BitSet FOLLOW_ruleHoOperand_in_ruleHigherOrderCall999 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleHigherOrderCall1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_entryRuleBinaryOpAliasesWithEqualsSign1060 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBinaryOpAliasesWithEqualsSign1071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_41_in_ruleBinaryOpAliasesWithEqualsSign1109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_36_in_ruleBinaryOpAliasesWithEqualsSign1128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_40_in_ruleBinaryOpAliasesWithEqualsSign1147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_39_in_ruleBinaryOpAliasesWithEqualsSign1166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_38_in_ruleBinaryOpAliasesWithEqualsSign1185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_37_in_ruleBinaryOpAliasesWithEqualsSign1204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_49_in_ruleBinaryOpAliasesWithEqualsSign1223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_entryRuleBinaryOpAliases1263 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBinaryOpAliases1274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_31_in_ruleBinaryOpAliases1312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_25_in_ruleBinaryOpAliases1331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_30_in_ruleBinaryOpAliases1350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_ruleBinaryOpAliases1369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_27_in_ruleBinaryOpAliases1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_26_in_ruleBinaryOpAliases1407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_42_in_ruleBinaryOpAliases1426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompOps_in_entryRuleCompOps1466 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompOps1477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_22_in_ruleCompOps1515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_15_in_ruleCompOps1534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_14_in_ruleCompOps1553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_23_in_ruleCompOps1572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_16_in_ruleCompOps1591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_24_in_ruleCompOps1610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparison_in_entryRuleComparison1650 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComparison1661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_ruleComparison1708 = new BitSet(new long[]{0x100E00000E03F040L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleComparison1729 = new BitSet(new long[]{0x100E00000E03F040L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliasesWithEqualsSign_in_ruleComparison1759 = new BitSet(new long[]{0x1B70F6B000280600L});
+    public static final BitSet FOLLOW_ruleCompOps_in_ruleComparison1792 = new BitSet(new long[]{0x1B70F6B000280600L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleComparison1820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCallOperator_in_entryRuleCallOperator1865 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCallOperator1876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBinaryOpAliases_in_ruleCallOperator1924 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_ruleFunctionsTbl_in_ruleCallOperator1957 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleCallOperator1979 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleCallOperator1999 = new BitSet(new long[]{0x1B70F7B000280600L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleCallOperator2022 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleCallOperator2041 = new BitSet(new long[]{0x1B70F6B000280600L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_ruleCallOperator2063 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleCallOperator2085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_entryRulePredicate2125 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePredicate2136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredTbl_in_rulePredicate2183 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rulePredicate2204 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_rulePredicate2224 = new BitSet(new long[]{0x1B70F7B000280600L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rulePredicate2247 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulePredicate2266 = new BitSet(new long[]{0x1B70F6B000280600L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_rulePredicate2288 = new BitSet(new long[]{0x0000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_rulePredicate2310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredTbl_in_entryRulePredTbl2350 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePredTbl2361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_51_in_rulePredTbl2399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_44_in_rulePredTbl2418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_48_in_rulePredTbl2437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_53_in_rulePredTbl2456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_52_in_rulePredTbl2475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpr_in_entryRulePrimaryExpr2515 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrimaryExpr2526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2567 = new BitSet(new long[]{0x1B70F6B000280600L});
+    public static final BitSet FOLLOW_ruleConstFuncTbl_in_rulePrimaryExpr2598 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2619 = new BitSet(new long[]{0x1000008000000000L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_rulePrimaryExpr2639 = new BitSet(new long[]{0x1000010000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2655 = new BitSet(new long[]{0x1000010000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_rulePrimaryExpr2675 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_rulePrimaryExpr2704 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_rulePrimaryExpr2737 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_rulePrimaryExpr2763 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionsTbl_in_entryRuleFunctionsTbl2810 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunctionsTbl2821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_50_in_ruleFunctionsTbl2859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_28_in_ruleFunctionsTbl2878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_35_in_ruleFunctionsTbl2897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstFuncTbl_in_entryRuleConstFuncTbl2937 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstFuncTbl2948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_45_in_ruleConstFuncTbl2986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_47_in_ruleConstFuncTbl3005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_46_in_ruleConstFuncTbl3024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_43_in_ruleConstFuncTbl3043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray3083 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArray3094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleArray3132 = new BitSet(new long[]{0x1B70F63000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3148 = new BitSet(new long[]{0x1B70F63000000000L});
+    public static final BitSet FOLLOW_ruleStrval_in_ruleArray3177 = new BitSet(new long[]{0x1000090000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3198 = new BitSet(new long[]{0x1000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleArray3219 = new BitSet(new long[]{0x1B70F63000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3235 = new BitSet(new long[]{0x1B70F63000000000L});
+    public static final BitSet FOLLOW_ruleStrval_in_ruleArray3264 = new BitSet(new long[]{0x1000090000000000L});
+    public static final BitSet FOLLOW_RULE_WSP_in_ruleArray3285 = new BitSet(new long[]{0x1000090000000000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleArray3307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNchar_in_entryRuleNchar3347 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNchar3358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ALPHA_in_ruleNchar3398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DIGIT_in_ruleNchar3424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_9_in_ruleNchar3448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_10_in_ruleNchar3467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_19_in_ruleNchar3486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_21_in_ruleNchar3505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_1_in_ruleNchar3524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_ruleNchar3543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_6_in_ruleNchar3562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_7_in_ruleNchar3581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_17_in_ruleNchar3600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_11_in_ruleNchar3619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_18_in_ruleNchar3638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePct_encoded_in_entryRulePct_encoded3678 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePct_encoded3689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_rulePct_encoded3727 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_RULE_XDIGIT_in_rulePct_encoded3742 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_RULE_XDIGIT_in_rulePct_encoded3762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrval_in_entryRuleStrval3807 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStrval3818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNchar_in_ruleStrval3865 = new BitSet(new long[]{0x0B70F63000000002L});
+    public static final BitSet FOLLOW_rulePct_encoded_in_ruleStrval3898 = new BitSet(new long[]{0x0B70F63000000002L});
+    public static final BitSet FOLLOW_ruleLogicalOpAliases_in_entryRuleLogicalOpAliases3944 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLogicalOpAliases3955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_32_in_ruleLogicalOpAliases3993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_33_in_ruleLogicalOpAliases4012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_34_in_ruleLogicalOpAliases4031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_WSP_in_synpred1_InternalRQLParser2754 = new BitSet(new long[]{0x0000000000000002L});
 
 }

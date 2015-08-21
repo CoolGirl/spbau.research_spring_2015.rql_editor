@@ -16,115 +16,111 @@ import org.eclipse.xtext.parser.antlr.Lexer;
 
 
 
-KEYWORD_55 : 'implementing';
+KEYWORD_53 : 'implementing';
 
-KEYWORD_54 : 'composing';
+KEYWORD_52 : 'composing';
 
-KEYWORD_51 : '=like=';
+KEYWORD_49 : '=like=';
 
-KEYWORD_52 : 'isnull';
+KEYWORD_50 : 'isnull';
 
-KEYWORD_53 : 'select';
+KEYWORD_51 : 'select';
 
-KEYWORD_48 : 'empty';
+KEYWORD_46 : 'empty';
 
-KEYWORD_49 : 'false';
+KEYWORD_47 : 'false';
 
-KEYWORD_50 : 'limit';
+KEYWORD_48 : 'limit';
 
-KEYWORD_38 : '=eq=';
+KEYWORD_36 : '=eq=';
 
-KEYWORD_39 : '=ge=';
+KEYWORD_37 : '=ge=';
 
-KEYWORD_40 : '=gt=';
+KEYWORD_38 : '=gt=';
 
-KEYWORD_41 : '=le=';
+KEYWORD_39 : '=le=';
 
-KEYWORD_42 : '=lt=';
+KEYWORD_40 : '=lt=';
 
-KEYWORD_43 : '=ne=';
+KEYWORD_41 : '=ne=';
 
-KEYWORD_44 : 'like';
+KEYWORD_42 : 'like';
 
-KEYWORD_45 : 'null';
+KEYWORD_43 : 'null';
 
-KEYWORD_46 : 'sort';
+KEYWORD_44 : 'sort';
 
-KEYWORD_47 : 'true';
+KEYWORD_45 : 'true';
 
-KEYWORD_35 : 'and';
+KEYWORD_33 : 'and';
 
-KEYWORD_36 : 'not';
+KEYWORD_34 : 'not';
 
-KEYWORD_37 : 'out';
+KEYWORD_35 : 'out';
 
-KEYWORD_24 : '!=';
+KEYWORD_22 : '!=';
 
-KEYWORD_25 : '<=';
+KEYWORD_23 : '<=';
 
-KEYWORD_26 : '>=';
+KEYWORD_24 : '>=';
 
-KEYWORD_27 : 'eq';
+KEYWORD_25 : 'eq';
 
-KEYWORD_28 : 'ge';
+KEYWORD_26 : 'ge';
 
-KEYWORD_29 : 'gt';
+KEYWORD_27 : 'gt';
 
-KEYWORD_30 : 'in';
+KEYWORD_28 : 'in';
 
-KEYWORD_31 : 'le';
+KEYWORD_29 : 'le';
 
-KEYWORD_32 : 'lt';
+KEYWORD_30 : 'lt';
 
-KEYWORD_33 : 'ne';
+KEYWORD_31 : 'ne';
 
-KEYWORD_34 : 'or';
+KEYWORD_32 : 'or';
 
-KEYWORD_1 : '\n';
+KEYWORD_1 : '$';
 
-KEYWORD_2 : '\r';
+KEYWORD_2 : '%';
 
-KEYWORD_3 : '$';
+KEYWORD_3 : '&';
 
-KEYWORD_4 : '%';
+KEYWORD_4 : '(';
 
-KEYWORD_5 : '&';
+KEYWORD_5 : ')';
 
-KEYWORD_6 : '(';
+KEYWORD_6 : '*';
 
-KEYWORD_7 : ')';
+KEYWORD_7 : '+';
 
-KEYWORD_8 : '*';
+KEYWORD_8 : ',';
 
-KEYWORD_9 : '+';
+KEYWORD_9 : '-';
 
-KEYWORD_10 : ',';
+KEYWORD_10 : '.';
 
-KEYWORD_11 : '-';
+KEYWORD_11 : '/';
 
-KEYWORD_12 : '.';
+KEYWORD_12 : ':';
 
-KEYWORD_13 : '/';
+KEYWORD_13 : ';';
 
-KEYWORD_14 : ':';
+KEYWORD_14 : '<';
 
-KEYWORD_15 : ';';
+KEYWORD_15 : '=';
 
-KEYWORD_16 : '<';
+KEYWORD_16 : '>';
 
-KEYWORD_17 : '=';
+KEYWORD_17 : '?';
 
-KEYWORD_18 : '>';
+KEYWORD_18 : '@';
 
-KEYWORD_19 : '?';
+KEYWORD_19 : '_';
 
-KEYWORD_20 : '@';
+KEYWORD_20 : '|';
 
-KEYWORD_21 : '_';
-
-KEYWORD_22 : '|';
-
-KEYWORD_23 : '~';
+KEYWORD_21 : '~';
 
 
 

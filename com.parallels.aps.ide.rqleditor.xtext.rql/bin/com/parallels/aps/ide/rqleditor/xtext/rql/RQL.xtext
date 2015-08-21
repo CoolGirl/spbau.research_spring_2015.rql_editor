@@ -12,16 +12,17 @@ And: '&' HoOperand;
 Or: (';'|'|') HoOperand;
 
 HoOperand:
-	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And | Or) ')' ))? WSP* '\r'? '\n'?
+	WSP* ( HigherOrderCall | CallOperator | Predicate | Comparison | ( '(' HoOperand (And | Or) ')' ))? WSP*
 ;
 	
 HigherOrderCall:
 	LogicalOpAliases WSP* '(' ( HoOperand ( ',' HoOperand )* ) ')'
 ;
 	
+BinaryOpAliasesWithEqualsSign: ('=ne='|'=eq='|'=lt='|'=le='|'=gt='|'=ge='|'=like=');
 BinaryOpAliases: ('ne'|'eq'|'lt'|'le'|'gt'|'ge'|'like');
-CompOps : ('!='|'='|'<'|'<='|'>'|'>='|'=ne='|'=eq='|'=lt='|'=le='|'=gt='|'=ge='|'=like=');
-Comparison : Strval WSP* CompOps PrimaryExpr;
+CompOps : ('!='|'='|'<'|'<='|'>'|'>=');
+Comparison : Strval WSP* ( ( BinaryOpAliasesWithEqualsSign ) | CompOps ) PrimaryExpr;
 
 CallOperator:
 	( BinaryOpAliases | FunctionsTbl ) WSP* '(' ( PrimaryExpr ( ',' PrimaryExpr )* )? ')'
@@ -48,4 +49,3 @@ terminal DIGIT:	('0'..'9');
 terminal XDIGIT: (DIGIT|'A'..'F');		
 terminal ALPHA:	('A'..'Z'|'a'..'z');
 terminal WSP: (' '|'\t');
-	

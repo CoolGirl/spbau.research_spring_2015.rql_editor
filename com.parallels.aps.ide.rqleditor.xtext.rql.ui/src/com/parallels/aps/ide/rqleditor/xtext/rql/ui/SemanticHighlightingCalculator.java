@@ -23,7 +23,9 @@ public class SemanticHighlightingCalculator implements ISemanticHighlightingCalc
 		                EObject c = grammarElement.eContainer();
 
 		                // It tests whether the node represents a name of an element (class, method, parameter).
-		                if(r.getName().equals("LogicalOpAliases")) {
+		                if(r.getName().equals("LogicalOpAliases") || r.getName().equals("BinaryOpAliasesWithEqualsSign") || r.getName().equals("CompOps")
+		                		|| r.getName().equals("BinaryOpAliases") || r.getName().equals("PredTbl") || r.getName().equals("FunctionsTbl")
+		                		|| r.getName().equals("ConstFuncTbl")) {
 		                    INode p = node.getParent();
 		                    if (p != null && p.getGrammarElement() instanceof RuleCall) {
 		                        rc = (RuleCall)p.getGrammarElement();

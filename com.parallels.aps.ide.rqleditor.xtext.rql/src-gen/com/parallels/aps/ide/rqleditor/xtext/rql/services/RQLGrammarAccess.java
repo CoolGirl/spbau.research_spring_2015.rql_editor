@@ -122,14 +122,12 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOrParserRuleCall_1_4_2_1 = (RuleCall)cAlternatives_1_4_2.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_1_4_3 = (Keyword)cGroup_1_4.eContents().get(3);
 		private final RuleCall cWSPTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Keyword cControl000dKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cControl000aKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//HoOperand:
-		//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?;
+		//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP*;
 		public ParserRule getRule() { return rule; }
 
-		//WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?
+		//WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP*
 		public Group getGroup() { return cGroup; }
 
 		//WSP*
@@ -173,12 +171,6 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_2() { return cWSPTerminalRuleCall_2; }
-
-		//"\r"?
-		public Keyword getControl000dKeyword_3() { return cControl000dKeyword_3; }
-
-		//"\n"?
-		public Keyword getControl000aKeyword_4() { return cControl000aKeyword_4; }
 	}
 
 	public class HigherOrderCallElements extends AbstractParserRuleElementFinder {
@@ -227,6 +219,46 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+
+	public class BinaryOpAliasesWithEqualsSignElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryOpAliasesWithEqualsSign");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cNeKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cEqKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cLtKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cLeKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cGtKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cGeKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cLikeKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		
+		//BinaryOpAliasesWithEqualsSign:
+		//	"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+		public ParserRule getRule() { return rule; }
+
+		//"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like="
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"=ne="
+		public Keyword getNeKeyword_0() { return cNeKeyword_0; }
+
+		//"=eq="
+		public Keyword getEqKeyword_1() { return cEqKeyword_1; }
+
+		//"=lt="
+		public Keyword getLtKeyword_2() { return cLtKeyword_2; }
+
+		//"=le="
+		public Keyword getLeKeyword_3() { return cLeKeyword_3; }
+
+		//"=gt="
+		public Keyword getGtKeyword_4() { return cGtKeyword_4; }
+
+		//"=ge="
+		public Keyword getGeKeyword_5() { return cGeKeyword_5; }
+
+		//"=like="
+		public Keyword getLikeKeyword_6() { return cLikeKeyword_6; }
 	}
 
 	public class BinaryOpAliasesElements extends AbstractParserRuleElementFinder {
@@ -278,19 +310,12 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLessThanSignEqualsSignKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		private final Keyword cGreaterThanSignEqualsSignKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
-		private final Keyword cNeKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
-		private final Keyword cEqKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
-		private final Keyword cLtKeyword_8 = (Keyword)cAlternatives.eContents().get(8);
-		private final Keyword cLeKeyword_9 = (Keyword)cAlternatives.eContents().get(9);
-		private final Keyword cGtKeyword_10 = (Keyword)cAlternatives.eContents().get(10);
-		private final Keyword cGeKeyword_11 = (Keyword)cAlternatives.eContents().get(11);
-		private final Keyword cLikeKeyword_12 = (Keyword)cAlternatives.eContents().get(12);
 		
 		//CompOps:
-		//	"!=" | "=" | "<" | "<=" | ">" | ">=" | "=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+		//	"!=" | "=" | "<" | "<=" | ">" | ">=";
 		public ParserRule getRule() { return rule; }
 
-		//"!=" | "=" | "<" | "<=" | ">" | ">=" | "=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like="
+		//"!=" | "=" | "<" | "<=" | ">" | ">="
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"!="
@@ -310,27 +335,6 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//">="
 		public Keyword getGreaterThanSignEqualsSignKeyword_5() { return cGreaterThanSignEqualsSignKeyword_5; }
-
-		//"=ne="
-		public Keyword getNeKeyword_6() { return cNeKeyword_6; }
-
-		//"=eq="
-		public Keyword getEqKeyword_7() { return cEqKeyword_7; }
-
-		//"=lt="
-		public Keyword getLtKeyword_8() { return cLtKeyword_8; }
-
-		//"=le="
-		public Keyword getLeKeyword_9() { return cLeKeyword_9; }
-
-		//"=gt="
-		public Keyword getGtKeyword_10() { return cGtKeyword_10; }
-
-		//"=ge="
-		public Keyword getGeKeyword_11() { return cGeKeyword_11; }
-
-		//"=like="
-		public Keyword getLikeKeyword_12() { return cLikeKeyword_12; }
 	}
 
 	public class ComparisonElements extends AbstractParserRuleElementFinder {
@@ -338,14 +342,16 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cStrvalParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final RuleCall cWSPTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cCompOpsParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final RuleCall cBinaryOpAliasesWithEqualsSignParserRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final RuleCall cCompOpsParserRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		private final RuleCall cPrimaryExprParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//Comparison:
-		//	Strval WSP* CompOps PrimaryExpr;
+		//	Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr;
 		public ParserRule getRule() { return rule; }
 
-		//Strval WSP* CompOps PrimaryExpr
+		//Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr
 		public Group getGroup() { return cGroup; }
 
 		//Strval
@@ -354,8 +360,14 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		//WSP*
 		public RuleCall getWSPTerminalRuleCall_1() { return cWSPTerminalRuleCall_1; }
 
+		//BinaryOpAliasesWithEqualsSign | CompOps
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
+		//BinaryOpAliasesWithEqualsSign
+		public RuleCall getBinaryOpAliasesWithEqualsSignParserRuleCall_2_0() { return cBinaryOpAliasesWithEqualsSignParserRuleCall_2_0; }
+
 		//CompOps
-		public RuleCall getCompOpsParserRuleCall_2() { return cCompOpsParserRuleCall_2; }
+		public RuleCall getCompOpsParserRuleCall_2_1() { return cCompOpsParserRuleCall_2_1; }
 
 		//PrimaryExpr
 		public RuleCall getPrimaryExprParserRuleCall_3() { return cPrimaryExprParserRuleCall_3; }
@@ -795,6 +807,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	private OrElements pOr;
 	private HoOperandElements pHoOperand;
 	private HigherOrderCallElements pHigherOrderCall;
+	private BinaryOpAliasesWithEqualsSignElements pBinaryOpAliasesWithEqualsSign;
 	private BinaryOpAliasesElements pBinaryOpAliases;
 	private CompOpsElements pCompOps;
 	private ComparisonElements pComparison;
@@ -875,7 +888,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HoOperand:
-	//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP* "\r"? "\n"?;
+	//	WSP* (HigherOrderCall | CallOperator | Predicate | Comparison | "(" HoOperand (And | Or) ")")? WSP*;
 	public HoOperandElements getHoOperandAccess() {
 		return (pHoOperand != null) ? pHoOperand : (pHoOperand = new HoOperandElements());
 	}
@@ -894,6 +907,16 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 		return getHigherOrderCallAccess().getRule();
 	}
 
+	//BinaryOpAliasesWithEqualsSign:
+	//	"=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+	public BinaryOpAliasesWithEqualsSignElements getBinaryOpAliasesWithEqualsSignAccess() {
+		return (pBinaryOpAliasesWithEqualsSign != null) ? pBinaryOpAliasesWithEqualsSign : (pBinaryOpAliasesWithEqualsSign = new BinaryOpAliasesWithEqualsSignElements());
+	}
+	
+	public ParserRule getBinaryOpAliasesWithEqualsSignRule() {
+		return getBinaryOpAliasesWithEqualsSignAccess().getRule();
+	}
+
 	//BinaryOpAliases:
 	//	"ne" | "eq" | "lt" | "le" | "gt" | "ge" | "like";
 	public BinaryOpAliasesElements getBinaryOpAliasesAccess() {
@@ -905,7 +928,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CompOps:
-	//	"!=" | "=" | "<" | "<=" | ">" | ">=" | "=ne=" | "=eq=" | "=lt=" | "=le=" | "=gt=" | "=ge=" | "=like=";
+	//	"!=" | "=" | "<" | "<=" | ">" | ">=";
 	public CompOpsElements getCompOpsAccess() {
 		return (pCompOps != null) ? pCompOps : (pCompOps = new CompOpsElements());
 	}
@@ -915,7 +938,7 @@ public class RQLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Comparison:
-	//	Strval WSP* CompOps PrimaryExpr;
+	//	Strval WSP* (BinaryOpAliasesWithEqualsSign | CompOps) PrimaryExpr;
 	public ComparisonElements getComparisonAccess() {
 		return (pComparison != null) ? pComparison : (pComparison = new ComparisonElements());
 	}

@@ -35,6 +35,9 @@ public class AbstractRQLProposalProvider extends org.eclipse.xtext.ui.editor.con
 	public void complete_HigherOrderCall(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
+	public void complete_BinaryOpAliasesWithEqualsSign(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
 	public void complete_BinaryOpAliases(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
