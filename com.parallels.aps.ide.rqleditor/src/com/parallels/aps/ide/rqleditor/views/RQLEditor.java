@@ -37,7 +37,7 @@ public class RQLEditor extends ViewPart {
 	private Action myAction1; // for button at up right bottom
 	private MessageConsole myOutConsole;
 	private EmbeddedEditorModelAccess myEditor;
-	private ToolBarCombo myControllersCmbBox;
+	private PanelSettingsCombo myControllersCmbBox;
 
 	public RQLEditor() {
 	}
@@ -50,14 +50,6 @@ public class RQLEditor extends ViewPart {
 		IEditedResourceProvider resourceProvider = new IEditedResourceProvider() {
 
 			private IProject project;
-
-			public IProject getProject() {
-				return project;
-			}
-
-			public void setProject(IProject project) {
-				this.project = project;
-			}
 
 			@Override
 			public XtextResource createResource() {
@@ -110,7 +102,7 @@ public class RQLEditor extends ViewPart {
 
 	private void fillLocalToolBar(IToolBarManager manager) {
 		manager.add(myAction1);
-		myControllersCmbBox = new ToolBarCombo("RQL Controller");
+		myControllersCmbBox = new PanelSettingsCombo("RQL Controller");
 		manager.add(myControllersCmbBox);
 	}
 
@@ -120,10 +112,10 @@ public class RQLEditor extends ViewPart {
 				MessageConsoleStream out = myOutConsole.newMessageStream();
 				String editablePart = myEditor.getEditablePart();
 				ObjectMapper mapper = new ObjectMapper();
-				SiteWithCredentials requestSite = myControllersCmbBox.getCurrent();
-				String request = editablePart;
+				SiteWithCredentials xmlrpcSite = myControllersCmbBox.getCurrentXmlrpcSite();
+				SiteWithCredentials requestSite = xmlrpcSite;
 				String restType = "GET ";
-				JsonNode resultNode = PanelRequest.request(myControllersCmbBox.getCurrent(), editablePart);
+				JsonNode resultNode = PanelRequest.request(xmlrpcSite, editablePart);
 				String indented = "Error occured.";
 				try {
 					indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultNode);
