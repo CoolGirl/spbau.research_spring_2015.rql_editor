@@ -9,6 +9,7 @@ package com.parallels.aps.ide.rqleditor.xtext.rql.lexer;
 
 // Hack: Use our own Lexer superclass by means of import. 
 // Currently there is no other way to specify the superclass for the lexer.
+
 import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
@@ -19,13 +20,14 @@ KEYWORD_53 : ('implementing(')=> 'implementing' | ('i')=> 'i' {$type = RULE_ALPH
 
 KEYWORD_52 : ('composing(')=> 'composing' | ('c')=> 'c' {$type = RULE_ALPHA;};
 
-KEYWORD_49 : '=' (('like=')=> 'like=' | ('le=') => 'le=' {$type = KEYWORD_39;} | ('lt=') => 'lt=' {$type = KEYWORD_40;} | 
-('l') => 'l' {$type = RULE_ALPHA;}  |
- ('eq=') => 'eq=' {$type = KEYWORD_36;} | ('eq') => 'e' {$type = RULE_ALPHA;} | ('e') => 'e' {$type = RULE_ALPHA;} |
-('ne=') => 'ne=' {$type = KEYWORD_41;} | ('ne') => 'n' {$type = RULE_ALPHA;} | ('n') => 'n' {$type = RULE_ALPHA;} |
-('ge=') => 'ge=' {$type = KEYWORD_37;} | ('gt=') => 'gt=' {$type = KEYWORD_38;} | 
- ('ge') => 'g' {$type = RULE_ALPHA;} | ('gt') => 'g' {$type = RULE_ALPHA;} |
- ('g') => 'g' {$type = RULE_ALPHA;})?;
+KEYWORD_49 : '=' (
+	('like=')=> 'like=' | ('le=') => 'le=' {$type = KEYWORD_39;} | ('lt=') => 'lt=' {$type = KEYWORD_40;} | 
+	('l') => 'l' {$type = RULE_ALPHA;}  |
+	('eq=') => 'eq=' {$type = KEYWORD_36;} | ('e') => 'e' {$type = RULE_ALPHA;} |
+	('ne=') => 'ne=' {$type = KEYWORD_41;} | ('n') => 'n' {$type = RULE_ALPHA;} |
+	('ge=') => 'ge=' {$type = KEYWORD_37;} | ('gt=') => 'gt=' {$type = KEYWORD_38;} | 
+	('g') => 'g' {$type = RULE_ALPHA;}
+)?;
 
 KEYWORD_50 : ('isnull(') => 'isnull' | ('i')=> 'i' {$type = RULE_ALPHA;};
 
@@ -35,21 +37,22 @@ KEYWORD_46 : ('empty(') => 'empty' | ('e')=> 'e' {$type = RULE_ALPHA;};
 
 KEYWORD_47 : ('false(') => 'false' | ('f')=> 'f' {$type = RULE_ALPHA;};
 
-KEYWORD_48 : ('limit(') => 'limit' | ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_48 : ('limit(') => 'limit' | 
+	('li'|'l')=> 'l' {$type = RULE_ALPHA;};
 
-KEYWORD_36 : '=eq=' | 'u9797';
+KEYWORD_36 : '\u9797';
 
-KEYWORD_37 : '=ge=' | 'u9696';
+KEYWORD_37 : '\u9696';
 
-KEYWORD_38 : '=gt=' | 'u9595';
+KEYWORD_38 : '\u9595';
 
-KEYWORD_39 : '=le=' | 'u9876';
+KEYWORD_39 : '\u9876';
 
-KEYWORD_40 : '=lt=' | 'u9875';
+KEYWORD_40 : '\u9875';
 
-KEYWORD_41 : '=ne=' | 'u9494';
+KEYWORD_41 : '\u9494';
 
-KEYWORD_42 : ('like(') => 'like' | ('l')=> 'l' {$type = RULE_ALPHA;};
+KEYWORD_42 : ('like(') => 'like' | ('lik')=> 'lik' {$type = RULE_ALPHA;} | ('li')=> 'li' {$type = RULE_ALPHA;} | ('l')=> 'l' {$type = RULE_ALPHA;};
 
 KEYWORD_43 : ('null(') => 'null' | ('n')=> 'n' {$type = RULE_ALPHA;};
 
