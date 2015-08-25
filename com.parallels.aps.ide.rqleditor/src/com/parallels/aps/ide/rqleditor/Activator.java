@@ -4,11 +4,12 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
+
 /**
  * The activator class controls the plug-in life cycle
  */
 public class Activator extends AbstractUIPlugin {
-
+	
 	// The plug-in ID
 	public static final String OUR_PLUGIN_ID = "rql_editor"; //$NON-NLS-1$
 
@@ -44,7 +45,7 @@ public class Activator extends AbstractUIPlugin {
 		ourPlugin = null;
 		super.stop(context);
 	}
-
+	
 	/**
 	 * Returns the shared instance
 	 *

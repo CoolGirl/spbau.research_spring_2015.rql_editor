@@ -34,11 +34,11 @@ public class RQLEditor extends ViewPart {
 
 	public static final String OUR_ID = "rql_editor.views.RQLEditor";
 
-	private Action myAction1; // for button at up right bottom
-	private MessageConsole myOutConsole;
-	private EmbeddedEditorModelAccess myEditor;
-	private PanelSettingsCombo myControllersCmbBox;
-	private TypesOrResourcesCombo myTypesOrResourcesCombo;
+	private static Action myAction1; // for button at up right bottom
+	private static MessageConsole myOutConsole;
+	private static EmbeddedEditorModelAccess myEditor;
+	private static PanelSettingsCombo myPanelSettingsCombo;
+	private static TypesOrResourcesCombo myTypesOrResourcesCombo;
 
 	public RQLEditor() {
 	}
@@ -78,7 +78,7 @@ public class RQLEditor extends ViewPart {
 
 			@Override
 			public void propertyChange(PropertyChangeEvent event) {
-				myControllersCmbBox.updateList(); // doesn't react
+				myPanelSettingsCombo.updateList(); // doesn't react
 				myTypesOrResourcesCombo.updateList();
 			}
 		});
@@ -104,9 +104,9 @@ public class RQLEditor extends ViewPart {
 
 	private void fillLocalToolBar(IToolBarManager manager) {
 		manager.add(myAction1);
-		myControllersCmbBox = new PanelSettingsCombo("RQL Controller");
+		myPanelSettingsCombo = new PanelSettingsCombo("RQL Controller");
 		myTypesOrResourcesCombo = new TypesOrResourcesCombo("Types or resources");
-		manager.add(myControllersCmbBox);
+		manager.add(myPanelSettingsCombo);
 		manager.add(myTypesOrResourcesCombo);
 	}
 
@@ -116,7 +116,7 @@ public class RQLEditor extends ViewPart {
 				MessageConsoleStream out = myOutConsole.newMessageStream();
 				String editablePart = myEditor.getEditablePart();
 				ObjectMapper mapper = new ObjectMapper();
-				SiteWithCredentials xmlrpcSite = myControllersCmbBox.getCurrentXmlrpcSite();
+				SiteWithCredentials xmlrpcSite = myPanelSettingsCombo.getCurrentXmlrpcSite();
 				SiteWithCredentials requestSite = xmlrpcSite;
 				String restType = "GET ";
 				String typesOrResources = myTypesOrResourcesCombo.getCurrent();
@@ -127,7 +127,7 @@ public class RQLEditor extends ViewPart {
 				} catch (JsonProcessingException e) {
 					System.err.println(e.getLocalizedMessage());
 				}
-				out.println("Request: " + restType + requestSite.getAddress() + typesOrResources + "?" + editablePart );
+				out.println("Request: " + restType + requestSite.getAddress() + typesOrResources + "?" + editablePart);
 				out.println("Response:");
 				out.println(indented);
 				myOutConsole.activate();
