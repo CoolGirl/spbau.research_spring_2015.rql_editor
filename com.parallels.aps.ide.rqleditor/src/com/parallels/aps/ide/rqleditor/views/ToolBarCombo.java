@@ -4,11 +4,15 @@ import java.util.List;
 
 import org.eclipse.jface.action.ControlContribution;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
-public abstract class ToolBarCombo<T> extends ControlContribution {
+import com.parallels.aps.ide.ui.preferences.PanelSettings;
+
+public class ToolBarCombo<T> extends ControlContribution implements SelectionListener{
 
 	protected Combo myCombo;
 	protected List<T> myComboContent;
@@ -20,15 +24,23 @@ public abstract class ToolBarCombo<T> extends ControlContribution {
 	@Override
 	protected Control createControl(Composite parent) {
 		myCombo = new Combo(parent, SWT.NONE | SWT.DROP_DOWN | SWT.READ_ONLY);
-		myCombo.select(0);
+		myCombo.addSelectionListener(this);
 		updateList();
 		reloadCombo();
+		myCombo.select(0);
 		return myCombo;
-	}
 
-	abstract public void updateList();
+	}
 	
-	abstract protected void reloadCombo();
+	protected void reloadCombo(){
+		return;
+	}
+	
+	public void updateList(){
+		return;
+	}
+	
+
 	
 	public T getCurrent() {
 		return myComboContent.get(myCombo.getSelectionIndex());
@@ -38,5 +50,17 @@ public abstract class ToolBarCombo<T> extends ControlContribution {
 	public void setValue(int index) {
 		myCombo.select(index);
 	}
+	
 
+	@Override
+	public void widgetSelected(SelectionEvent e) {
+		//getSelectionIndex()
+	}
+
+	@Override
+	public void widgetDefaultSelected(SelectionEvent e) {
+		return;
+	}
+
+	
 }

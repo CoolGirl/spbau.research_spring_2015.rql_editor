@@ -38,6 +38,7 @@ public class RQLEditor extends ViewPart {
 	private MessageConsole myOutConsole;
 	private EmbeddedEditorModelAccess myEditor;
 	private PanelSettingsCombo myControllersCmbBox;
+	private TypesOrResourcesCombo myTypesOrResourcesCombo;
 
 	public RQLEditor() {
 	}
@@ -78,6 +79,7 @@ public class RQLEditor extends ViewPart {
 			@Override
 			public void propertyChange(PropertyChangeEvent event) {
 				myControllersCmbBox.updateList(); // doesn't react
+				myTypesOrResourcesCombo.updateList();
 			}
 		});
 	}
@@ -103,7 +105,9 @@ public class RQLEditor extends ViewPart {
 	private void fillLocalToolBar(IToolBarManager manager) {
 		manager.add(myAction1);
 		myControllersCmbBox = new PanelSettingsCombo("RQL Controller");
+		myTypesOrResourcesCombo = new TypesOrResourcesCombo("Types or resources");
 		manager.add(myControllersCmbBox);
+		manager.add(myTypesOrResourcesCombo);
 	}
 
 	private void makeActions() {
@@ -115,14 +119,15 @@ public class RQLEditor extends ViewPart {
 				SiteWithCredentials xmlrpcSite = myControllersCmbBox.getCurrentXmlrpcSite();
 				SiteWithCredentials requestSite = xmlrpcSite;
 				String restType = "GET ";
-				JsonNode resultNode = PanelRequest.request(xmlrpcSite, editablePart);
+				String typesOrResources = myTypesOrResourcesCombo.getCurrent();
+				JsonNode resultNode = PanelRequest.request(xmlrpcSite, editablePart, typesOrResources);
 				String indented = "Error occured.";
 				try {
 					indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultNode);
 				} catch (JsonProcessingException e) {
 					System.err.println(e.getLocalizedMessage());
 				}
-				out.println("Request: " + restType + requestSite.getAddress() + " aps/2/resources" + "?" + editablePart );
+				out.println("Request: " + restType + requestSite.getAddress() + typesOrResources + "?" + editablePart );
 				out.println("Response:");
 				out.println(indented);
 				myOutConsole.activate();

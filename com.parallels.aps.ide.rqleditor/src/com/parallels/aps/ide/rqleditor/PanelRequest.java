@@ -35,16 +35,16 @@ public class PanelRequest {
 	}
 
 	// TODO: Deal with unathorized status in map and continue testing
-	public static JsonNode request(SiteWithCredentials controllerXmlRpcSite, String request) {
+	public static JsonNode request(SiteWithCredentials controllerXmlRpcSite, String request, String typesOrResources) {
 		if (!ourControllerTokensAndUris.containsKey(controllerXmlRpcSite)) {
 			ourControllerTokensAndUris.put(controllerXmlRpcSite, getTokenAndURI(controllerXmlRpcSite.getAddress()));
 		}
 		ControllerTokenAndUri tokenAndUri = ourControllerTokensAndUris.get(controllerXmlRpcSite);
-		JsonNode response = sendRequest(tokenAndUri.myApsControllerURI + "aps/2/resources" + "?" + request,
+		JsonNode response = sendRequest(tokenAndUri.myApsControllerURI + typesOrResources  + "?" + request,
 				tokenAndUri.myApsToken);
 		if (tokenIsExpired(response)) {
 			ourControllerTokensAndUris.remove(controllerXmlRpcSite);
-			request(controllerXmlRpcSite, request);
+			request(controllerXmlRpcSite, request, typesOrResources);
 		}
 		return response;
 	}

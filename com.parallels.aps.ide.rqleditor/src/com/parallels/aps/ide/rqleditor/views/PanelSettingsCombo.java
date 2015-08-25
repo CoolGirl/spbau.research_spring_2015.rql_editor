@@ -22,7 +22,7 @@ public class PanelSettingsCombo extends ToolBarCombo<PanelSettings> {
 			}
 		}
 	}
-
+	
 	protected void reloadCombo() {
 		myCombo.removeAll();
 		for (PanelSettings settings : myComboContent) {
