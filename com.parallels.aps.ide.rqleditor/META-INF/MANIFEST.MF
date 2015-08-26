@@ -18,4 +18,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.xtext.resource,
  org.eclipse.xtext.ui.editor.embedded,
- org.eclipse.xtext.ui.resource
+ org.eclipse.xtext.ui.resource,
+ org.eclipse.e4.ui.di

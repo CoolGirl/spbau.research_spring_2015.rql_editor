@@ -104,26 +104,6 @@ public class PanelRequest {
 				.equals(messageValue));
 	}
 
-	/*
-	 * public static int provisionApplicationInstance(int subID, int appID,
-	 * String resourceType, String endPoint, String packageVersion,
-	 * List<PanelSettings> settings) throws CoreException { // Collect
-	 * parameters HashMap<String, Object> params = new HashMap<String,
-	 * Object>(); params.put("subscription_id", subID); params.put("rt_id", new
-	 * Integer(0) //*resource type*); params.put("app_id", appID);
-	 * params.put("url_path", endPoint); params.put("package_version",
-	 * packageVersion); if (settings.size() > 0) { params.put("settings",
-	 * settings); } // Send request
-	 * 
-	 * @SuppressWarnings("rawtypes") Map result =
-	 * executeRemoteMethod("pem.APS.provideApplicationInstance", new Object[] {
-	 * params }); if (result == null) { throw new CoreException( (IStatus) new
-	 * Status(IStatus.ERROR, Activator.PLUGIN_ID,
-	 * "Unexpected error during provision. See POA log for more detail")); } //
-	 * Get response int appInstanceId = (Integer)
-	 * result.get("application_instance_id"); return appInstanceId; }
-	 */
-
 	@SuppressWarnings("rawtypes")
 	private static Object getResult(Object response, String responsePart, Class classToken) {
 		return classToken.cast(((Map) (response)).get(responsePart));

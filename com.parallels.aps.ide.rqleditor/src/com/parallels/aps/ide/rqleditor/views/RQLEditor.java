@@ -2,6 +2,7 @@ package com.parallels.aps.ide.rqleditor.views;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsoleManager;
@@ -13,6 +14,10 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.action.*;
 import org.eclipse.ui.*;
 import org.eclipse.core.resources.*;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.editor.embedded.EmbeddedEditor;
@@ -20,6 +25,7 @@ import org.eclipse.xtext.ui.editor.embedded.EmbeddedEditorFactory;
 import org.eclipse.xtext.ui.editor.embedded.EmbeddedEditorModelAccess;
 import org.eclipse.xtext.ui.editor.embedded.IEditedResourceProvider;
 import org.eclipse.xtext.ui.resource.XtextResourceSetProvider;
+import org.eclipse.e4.ui.di.UISynchronize;
 
 import com.parallels.aps.ide.rqleditor.Activator;
 import com.parallels.aps.ide.rqleditor.PanelRequest;
@@ -28,6 +34,7 @@ import com.parallels.aps.ide.ui.preferences.SiteWithCredentials;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 
 public class RQLEditor extends ViewPart {
@@ -39,9 +46,6 @@ public class RQLEditor extends ViewPart {
 	private static EmbeddedEditorModelAccess myEditor;
 	private static PanelSettingsCombo myPanelSettingsCombo;
 	private static TypesOrResourcesCombo myTypesOrResourcesCombo;
-
-	public RQLEditor() {
-	}
 
 	public void createPartControl(Composite parent) {
 
@@ -113,24 +117,39 @@ public class RQLEditor extends ViewPart {
 	private void makeActions() {
 		myAction1 = new Action() {
 			public void run() {
-				MessageConsoleStream out = myOutConsole.newMessageStream();
-				String editablePart = myEditor.getEditablePart();
-				ObjectMapper mapper = new ObjectMapper();
-				SiteWithCredentials xmlrpcSite = myPanelSettingsCombo.getCurrentXmlrpcSite();
-				SiteWithCredentials requestSite = xmlrpcSite;
-				String restType = "GET ";
-				String typesOrResources = myTypesOrResourcesCombo.getCurrent();
-				JsonNode resultNode = PanelRequest.request(xmlrpcSite, editablePart, typesOrResources);
-				String indented = "Error occured.";
-				try {
-					indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultNode);
-				} catch (JsonProcessingException e) {
-					System.err.println(e.getLocalizedMessage());
-				}
-				out.println("Request: " + restType + requestSite.getAddress() + typesOrResources + "?" + editablePart);
-				out.println("Response:");
-				out.println(indented);
-				myOutConsole.activate();
+				final MessageConsoleStream out = myOutConsole.newMessageStream();
+				final String editablePart = myEditor.getEditablePart();
+				final ObjectMapper mapper = new ObjectMapper();
+				final SiteWithCredentials xmlrpcSite = myPanelSettingsCombo.getCurrentXmlrpcSite();
+				final SiteWithCredentials requestSite = xmlrpcSite;
+				final String restType = "GET ";
+				final String typesOrResources = myTypesOrResourcesCombo.getCurrent();
+				Job job = new Job("GET request") {
+					@Override
+					protected IStatus run(IProgressMonitor monitor) {
+						JsonNode resultNode = PanelRequest.request(xmlrpcSite, editablePart, typesOrResources);
+						String indented = "Error has occured.";
+						try {
+							 indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(resultNode);
+						} catch (JsonProcessingException e) {
+							System.err.println(e.getLocalizedMessage());
+						}
+						final String result = indented;
+						Display.getDefault().asyncExec(new Runnable() {
+							@Override
+							public void run() {
+								out.println("Request: " + restType + requestSite.getAddress() + typesOrResources + "?"
+										+ editablePart);
+								out.println("Response:");
+								out.println(result);
+								myOutConsole.activate();
+							}
+						});
+						return Status.OK_STATUS;
+					}
+				};
+				// Start the Job
+				job.schedule();
 			}
 		};
 		myAction1.setText("Execute");
